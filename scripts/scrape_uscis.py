@@ -1,6 +1,16 @@
 import requests
+import re
+import os
 from bs4 import BeautifulSoup
 from pprint import pprint
+
+# Function to create a safe streamlined filename from a given text
+def make_safe_filename(text):
+    text = text.lower().replace(" ", "_")
+    text = re.sub(r"[^a-z0-9_]", "", text)
+    text = re.sub(r"_+", "_", text)
+    return text.strip("_")
+
 
 # Extract raw text from USCIS policy manual page
 response = requests.get("https://www.uscis.gov/policy-manual/table-of-contents")
@@ -63,7 +73,11 @@ for part in all_parts_raw:
 
 
 # Fetch the content of each chapter and create files for each chapter's body text and metadata
+os.makedirs("data/raw", exist_ok=True)  # Create new directory to store scraped text files
+
 for part in all_parts_master:
+    part_name = make_safe_filename(part['title'])
+
     for chapter in part["chapters"]:
         chapter_response = requests.get(chapter["chapter_url"])
         chapter_soup = BeautifulSoup(chapter_response.text, "html.parser")
@@ -94,3 +108,35 @@ for part in all_parts_master:
                     text_parts.append(row_line)
 
         chapter_body = "\n".join(text_parts)
+
+        # Create file names for chapter body text and metadata
+        chapter_name = make_safe_filename(chapter['chapter_title'])
+        filename = f"data/raw/{part_name}_{chapter_name}.txt"
+        metadata_filename = f"data/raw/{part_name}_{chapter_name}_metadata.txt"
+
+        # Create a file for each chapter's body text
+        with open(filename, "w") as f:
+            f.write(chapter_body)
+
+        # Create a metadata file for each chapter
+        with open(metadata_filename, "w") as f:
+            f.write(f"Part Title: {part['title']}\n")
+            f.write(f"Chapter Title: {chapter['chapter_title']}\n")
+            f.write(f"Chapter URL: {chapter['chapter_url']}\n")
+
+
+
+
+
+
+    """ # Create a file for each chapter's body text
+    filename = f"{part['title'].replace(' ', '_')}_{chapter['chapter_title'].replace(' ', '_')}.txt"
+    with open(filename, "w") as f:
+        f.write(chapter_body)
+
+    # Create a metadata file for each chapter
+    metadata_filename = f"{part['title'].replace(' ', '_')}_{chapter['chapter_title'].replace(' ', '_')}_metadata.txt"
+    with open(metadata_filename, "w") as f:
+        f.write(f"Part Title: {part['title']}\n")
+        f.write(f"Chapter Title: {chapter['chapter_title']}\n")
+        f.write(f"Chapter URL: {chapter['chapter_url']}\n") """
