@@ -32,7 +32,6 @@ while current is not None and "level--2" not in current.get("class", []):
     if "level--3" in current.get("class", []):
         all_parts_raw.append(current)
     current = current.find_next_sibling()
-print(len(all_parts_raw))
 
 
 # Extract part title, URL, and chapter information from each part block.
@@ -68,8 +67,8 @@ for part in all_parts_master:
     for chapter in part["chapters"]:
         chapter_response = requests.get(chapter["chapter_url"])
         chapter_soup = BeautifulSoup(chapter_response.text, "html.parser")
-        
-        chapter_body = chapter_soup.find("div", class_="field--name-body")
+        guidance = chapter_soup.find("div", id="guidance")  # Find guidance container under which content lies
+        chapter_body = guidance.find("div", class_="field--name-body")
         text_parts = []
 
         # Applying formatting to the extracted text based on HTML structure (paragraph, list, table, etc.)
@@ -84,16 +83,14 @@ for part in all_parts_master:
                 for item in items:
                     item_text = item.get_text(strip=True)
                     if item_text:
-                        text_parts.append(f"- {item_text}")
+                        text_parts.append(f"- {item_text}")  # Reformat to reflect bullet list style
 
             elif child.name == "table":
                 rows = child.find_all("tr")
                 for row in rows:
                     cells = row.find_all(["td", "th"])
                     cell_texts = [cell.get_text(strip=True) for cell in cells]
-                    row_line = "| " + " | ".join(cell_texts) + " |"
+                    row_line = "| " + " | ".join(cell_texts) + " |"   # Reformat for markdown table style
                     text_parts.append(row_line)
 
         chapter_body = "\n".join(text_parts)
-
-        
