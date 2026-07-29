@@ -59,5 +59,41 @@ for part in all_parts_raw:
     all_parts_master.append({
         "title": part_title,
         "url": part_url,
-        "chapters": chapters
+        "chapters": chapters  # Each chapter has its own chapter_title and chapter_url
     })
+
+
+# Fetch the content of each chapter and create files for each chapter's body text and metadata
+for part in all_parts_master:
+    for chapter in part["chapters"]:
+        chapter_response = requests.get(chapter["chapter_url"])
+        chapter_soup = BeautifulSoup(chapter_response.text, "html.parser")
+        
+        chapter_body = chapter_soup.find("div", class_="field--name-body")
+        text_parts = []
+
+        # Applying formatting to the extracted text based on HTML structure (paragraph, list, table, etc.)
+        for child in chapter_body.find_all(recursive=False):
+            if child.name in ["p", "h2", "h3", "h4"]:
+                text = child.get_text(strip=True)
+                if text:
+                    text_parts.append(text)
+
+            elif child.name in ["ul", "ol"]:
+                items = child.find_all("li")
+                for item in items:
+                    item_text = item.get_text(strip=True)
+                    if item_text:
+                        text_parts.append(f"- {item_text}")
+
+            elif child.name == "table":
+                rows = child.find_all("tr")
+                for row in rows:
+                    cells = row.find_all(["td", "th"])
+                    cell_texts = [cell.get_text(strip=True) for cell in cells]
+                    row_line = "| " + " | ".join(cell_texts) + " |"
+                    text_parts.append(row_line)
+
+        chapter_body = "\n".join(text_parts)
+
+        
