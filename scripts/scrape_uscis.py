@@ -1,8 +1,10 @@
 import requests
 import re
 import os
+import json
 from bs4 import BeautifulSoup
 from pprint import pprint
+from datetime import date
 
 # Function to create a safe streamlined filename from a given text
 def make_safe_filename(text):
@@ -112,31 +114,19 @@ for part in all_parts_master:
         # Create file names for chapter body text and metadata
         chapter_name = make_safe_filename(chapter['chapter_title'])
         filename = f"data/raw/{part_name}_{chapter_name}.txt"
-        metadata_filename = f"data/raw/{part_name}_{chapter_name}_metadata.txt"
+        metadata_filename = f"data/raw/{part_name}_{chapter_name}_metadata.json"
 
         # Create a file for each chapter's body text
         with open(filename, "w") as f:
             f.write(chapter_body)
 
-        # Create a metadata file for each chapter
+        # Create a metadata sidecar for each chapter
+        metadata = {
+            "part_title": part['title'],
+            "chapter_title": chapter['chapter_title'],
+            "chapter_url": chapter['chapter_url'],
+            "scraped_date": str(date.today())
+        }
+
         with open(metadata_filename, "w") as f:
-            f.write(f"Part Title: {part['title']}\n")
-            f.write(f"Chapter Title: {chapter['chapter_title']}\n")
-            f.write(f"Chapter URL: {chapter['chapter_url']}\n")
-
-
-
-
-
-
-    """ # Create a file for each chapter's body text
-    filename = f"{part['title'].replace(' ', '_')}_{chapter['chapter_title'].replace(' ', '_')}.txt"
-    with open(filename, "w") as f:
-        f.write(chapter_body)
-
-    # Create a metadata file for each chapter
-    metadata_filename = f"{part['title'].replace(' ', '_')}_{chapter['chapter_title'].replace(' ', '_')}_metadata.txt"
-    with open(metadata_filename, "w") as f:
-        f.write(f"Part Title: {part['title']}\n")
-        f.write(f"Chapter Title: {chapter['chapter_title']}\n")
-        f.write(f"Chapter URL: {chapter['chapter_url']}\n") """
+            json.dump(metadata, f, indent=2)
