@@ -76,7 +76,7 @@ for part in all_parts_master:
     part_name = make_safe_filename(part['title'])
 
     for chapter in part["chapters"]:
-        # Establish safeguard in case structure of chapter URLs change in the future
+        # Attempt to fetch chapter page, skip this chapter and record failure if request fails
         try:
             chapter_response = requests.get(chapter["chapter_url"])
         except Exception as e:
@@ -91,12 +91,33 @@ for part in all_parts_master:
         # Successfully obtained chapter content, now extract the body text
         chapter_soup = BeautifulSoup(chapter_response.text, "html.parser")
         guidance = chapter_soup.find("div", id="guidance")  # Find guidance container under which content lies
+
+        # If guidance container is not found, probably 404 error, so record failure and skip this chapter
+        if guidance is None:
+            failed_chapters.append({
+                "part_title": part['title'],
+                "chapter_title": chapter['chapter_title'],
+                "url": chapter['chapter_url'],
+                "error": "Could not find 'guidance' div — page may be missing or structured differently"
+            })
+            continue
+
+        # Perform same check for finding chapter body content within guidance container, if not found, record failure and skip this chapter
         chapter_body = guidance.find("div", class_="field--name-body")
+        if chapter_body is None:
+            failed_chapters.append({
+                "part_title": part['title'],
+                "chapter_title": chapter['chapter_title'],
+                "url": chapter['chapter_url'],
+                "error": "Could not find 'field--name-body' div inside guidance section"
+            })
+            continue
+
         text_parts = []
 
         # Applying formatting to the extracted text based on HTML structure (paragraph, list, table, etc.)
         for child in chapter_body.find_all(recursive=False):
-            if child.name in ["p", "h2", "h3", "h4"]:
+            if child.name in ["p", "h2", "h3", "h4", "section"]:
                 text = child.get_text(strip=True)
                 if text:
                     text_parts.append(text)
