@@ -29,12 +29,6 @@ for volume in all_volumes:
         volume_12 = volume
         break
 
-""" # Safeguard to check that volume 12 was found and is correct
-if volume_12 is None:
-    raise ValueError("Volume 12 not found in the table of contents.")
-print(volume_12.find("div", class_="level__title").get_text()) """
-
-
 # Find all part blocks within volume 12
 all_parts_raw = []
 current = volume_12.find_next_sibling()
@@ -76,12 +70,25 @@ for part in all_parts_raw:
 
 # Fetch the content of each chapter and create files for each chapter's body text and metadata
 os.makedirs("data/raw", exist_ok=True)  # Create new directory to store scraped text files
+failed_chapters = []  # List to keep track of chapters that failed to scrape
 
 for part in all_parts_master:
     part_name = make_safe_filename(part['title'])
 
     for chapter in part["chapters"]:
-        chapter_response = requests.get(chapter["chapter_url"])
+        # Establish safeguard in case structure of chapter URLs change in the future
+        try:
+            chapter_response = requests.get(chapter["chapter_url"])
+        except Exception as e:
+            failed_chapters.append({
+                "part_title": part['title'],
+                "chapter_title": chapter['chapter_title'],
+                "url": chapter['chapter_url'],
+                "error": str(e)
+            })
+            continue
+
+        # Successfully obtained chapter content, now extract the body text
         chapter_soup = BeautifulSoup(chapter_response.text, "html.parser")
         guidance = chapter_soup.find("div", id="guidance")  # Find guidance container under which content lies
         chapter_body = guidance.find("div", class_="field--name-body")
@@ -130,3 +137,7 @@ for part in all_parts_master:
 
         with open(metadata_filename, "w") as f:
             json.dump(metadata, f, indent=2)
+
+print(f"\nScrape complete. {len(failed_chapters)} chapter(s) failed:")
+for failure in failed_chapters:
+    print(f"  - {failure['part_title']} / {failure['chapter_title']} ({failure['url']}): {failure['error']}")
