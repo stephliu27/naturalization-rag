@@ -60,6 +60,15 @@ def make_safe_filename(text):
     return text.strip("_")
 
 
+# Get an element's visible text with word boundaries preserved. Collapse runs of whitespace
+# and pulls punctuation back onto the word it belongs to.
+def clean_text(element):
+    text = element.get_text(" ", strip=True)
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"\s+([,.;:)\]])", r"\1", text)
+    return re.sub(r"([(\[])\s+", r"\1", text)
+
+
 # Translate an HTTP status code into one of our failure categories
 def category_for_status(status):
     if status == 404:
@@ -145,14 +154,14 @@ def parse_chapter(html):
     # Applying formatting to the extracted text based on HTML structure (paragraph, list, table, etc.)
     for child in body.find_all(recursive=False):
         if child.name in ["p", "h2", "h3", "h4", "section"]:
-            text = child.get_text(strip=True)
+            text = clean_text(child)
             if text:
                 text_parts.append(text)
 
         elif child.name in ["ul", "ol"]:
             items = child.find_all("li")
             for item in items:
-                item_text = item.get_text(strip=True)
+                item_text = clean_text(item)
                 if item_text:
                     text_parts.append(f"- {item_text}")  # Reformat to reflect bullet list style
 
@@ -160,7 +169,7 @@ def parse_chapter(html):
             rows = child.find_all("tr")
             for row in rows:
                 cells = row.find_all(["td", "th"])
-                cell_texts = [cell.get_text(strip=True) for cell in cells]
+                cell_texts = [clean_text(cell) for cell in cells]
                 row_line = "| " + " | ".join(cell_texts) + " |"   # Reformat for markdown table style
                 text_parts.append(row_line)
 
@@ -306,8 +315,8 @@ def main():
             if CRAWL_DELAY:
                 time.sleep(CRAWL_DELAY)
 
-            # Fetching and parsing raise the same kind of error, so one handler covers
-            # hangs, throttling, missing pages and unexpected HTML alike.
+            # Fetching and parsing raise the same kind of error, so one handler covers all
+            # hangs, throttling, missing pages and unexpected HTML.
             try:
                 html, attempts = fetch_page(session, chapter["chapter_url"])
                 chapter_text = parse_chapter(html)
