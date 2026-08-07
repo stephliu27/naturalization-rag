@@ -10,6 +10,21 @@ BASE_URL = "https://www.uscis.gov"
 TOC_URL = "https://www.uscis.gov/policy-manual/table-of-contents"
 OUTPUT_DIR = "data/raw"
 
+# Sentinel for "every part in this volume". Named so a typo is a NameError, not a silent miss.
+ALL_PARTS = "all"
+
+# What to scrape: volume label -> the parts we want, or ALL_PARTS for the whole volume.
+# Adding a volume is one line; going full-manual is setting every value to ALL_PARTS.
+TARGETS = {
+    "Volume 12": ALL_PARTS,            # Citizenship and Naturalization — the core corpus
+    "Volume 1": ["Part B", "Part E"],  # Fee waivers (part B ch 4) and adjudications
+}
+
+# TOC titles read "Volume 12 - Citizenship..." but also "Part I – Deferred Action" with an
+# en dash. Capturing only the label keeps us out of the separator's business entirely.
+# \b matters: without it "Volume 1" also matches "Volume 12".
+TOC_LABEL_RE = re.compile(r"^(Volume\s+\d+|Part\s+[A-Z])\b")
+
 # Identify this scraper instead of sending the default "python-requests/x.y.z" user agent
 HEADERS = {
     "User-Agent": "naturalization-rag/0.1 (+https://github.com/stephliu27/naturalization-rag)"
@@ -19,8 +34,8 @@ HEADERS = {
 # when something is genuinely broken.
 TIMEOUT = (5, 30)
 
-# Seconds between chapter requests. robots.txt asks for 10, which would turn a 64-chapter
-# run into 11 minutes. Raise it manually if the summary reports rate_limited or forbidden.
+# Seconds between chapter requests. robots.txt asks for 10, which at 80 chapters would be
+# 13 minutes. Raise it manually if the summary reports rate_limited or forbidden.
 CRAWL_DELAY = 0
 
 # Retry settings. Waits grow 5s, 10s, 20s.
@@ -77,6 +92,19 @@ def make_safe_filename(text):
     text = re.sub(r"[^a-z0-9_]", "", text)
     text = re.sub(r"_+", "_", text)
     return text.strip("_")
+
+
+def toc_label(title):
+    """"Volume 12 - Citizenship..." -> "Volume 12"; None if the title is neither.
+
+    Reduces a TOC heading to just its label so we can compare exactly. Simple substring matching
+    would make "Volume 1" match Volume 10, 11 and 12.
+    """
+    match = TOC_LABEL_RE.match(title)
+    if match is None:
+        return None
+    # Collapse odd spacing: the manual is full of non-breaking spaces.
+    return re.sub(r"\s+", " ", match.group(1))
 
 
 def clean_text(element):
@@ -210,26 +238,34 @@ def parse_chapter(html):
     return "\n".join(text_parts)
 
 
-def collect_volume_12_parts(toc_html):
-    """Read the table of contents into a list of parts, each with its chapters."""
+def collect_volume_parts(toc_html, volume_label, wanted_parts):
+    """Read one volume out of the table of contents into a list of parts with their chapters.
+
+    wanted_parts is a list of labels like ["Part B"], or ALL_PARTS for the whole volume.
+    """
     soup = BeautifulSoup(toc_html, "html.parser")
 
-    # Loop through all level 2 divs to find volume 12 (Citizenship and Naturalization)
-    all_volumes = soup.find_all("div", class_="level--2")
-    volume_12 = None
+    volume_div = None
+    volume_title = None
 
-    for volume in all_volumes:
+    for volume in soup.find_all("div", class_="level--2"):
         title_tag = volume.find("div", class_="level__title")
-        title_link = title_tag.find("a")
-        if "Volume 12" in title_link.get_text(strip=True):
-            volume_12 = volume
+        title_link = title_tag.find("a") if title_tag else None
+        # The TOC carries Search and Updates blocks at this level too; they have no label.
+        if title_link is None:
+            continue
+
+        title = title_link.get_text(strip=True)
+        if toc_label(title) == volume_label:
+            volume_div = volume
+            volume_title = title
             break
 
-    if volume_12 is None:
-        raise ParseError("structure_changed", "Volume 12 not found in the table of contents")
+    if volume_div is None:
+        raise ParseError("structure_changed", f"{volume_label} not found in the table of contents")
 
     all_parts_raw = []
-    current = volume_12.find_next_sibling()
+    current = volume_div.find_next_sibling()
 
     # Parts are siblings of the volume div, not children, so walk forward and stop at the
     # next level--2 — that is where the following volume starts.
@@ -240,52 +276,84 @@ def collect_volume_12_parts(toc_html):
 
     # One dict per part, each carrying its own list of chapter dicts.
     all_parts_master = []
+    seen_labels = []  # Every part label in this volume, so we can flag a target that never matched
 
     for part in all_parts_raw:
         part_title_tag = part.find("li", class_="level__item--3")
+        if part_title_tag is None:
+            raise ParseError("structure_changed", f"{volume_label}: a part has no title element")
+
+        # Reserved and unpublished parts are listed without a link, so read the title off
+        # whichever tag we have. The label still has to count as seen for the check below.
         part_link_tag = part_title_tag.find("a")
-        part_url = BASE_URL + part_link_tag.get("href")
-        part_title = part_link_tag.get_text(strip=True)
+        part_title = (part_link_tag or part_title_tag).get_text(" ", strip=True)
+        part_label = toc_label(part_title)
+        seen_labels.append(part_label)
 
-        # Extract chapter information for single part
-        chapters = []
+        if wanted_parts != ALL_PARTS and part_label not in wanted_parts:
+            continue
+
+        # An unlinked part always has zero chapters (checked across all 12 volumes), and
+        # Vol 1 Part F has a link but no chapter list. Both are empty, neither is an error.
         chapter_wrapper = part.find("ul", class_="level--4")
-        chapter_blocks = chapter_wrapper.find_all("li", class_="level__item--4")
-        for chapter in chapter_blocks:
-            chapter_link_tag = chapter.find("a")
-            chapter_url = BASE_URL + chapter_link_tag.get("href")
-            chapter_title = chapter_link_tag.get_text(strip=True)
-            chapters.append({"chapter_title": chapter_title, "chapter_url": chapter_url})
+        if part_link_tag is None or chapter_wrapper is None:
+            print(f"  {volume_label} / {part_title}: no chapters listed, skipping.")
+            continue
 
-        # Append part information to master list
+        chapters = []
+        for chapter in chapter_wrapper.find_all("li", class_="level__item--4"):
+            chapter_link_tag = chapter.find("a")
+            if chapter_link_tag is None:
+                # Reserved chapter numbers: Vol 1 Part E lists a slot for 7 with no page.
+                continue
+            chapters.append({
+                "chapter_title": chapter_link_tag.get_text(strip=True),
+                "chapter_url": BASE_URL + chapter_link_tag.get("href"),
+            })
+
+        # The volume rides on the part so save_chapter can name files and write metadata
+        # without it being threaded through every call in between.
         all_parts_master.append({
+            "volume_label": volume_label,  # "Volume 1" — short, used in filenames
+            "volume_title": volume_title,  # full heading — used for citations
             "title": part_title,
-            "url": part_url,
+            "url": BASE_URL + part_link_tag.get("href"),
             "chapters": chapters  # Each chapter has its own chapter_title and chapter_url
         })
+
+    # A typo'd target would otherwise scrape nothing and still report success.
+    if wanted_parts != ALL_PARTS:
+        missing = [label for label in wanted_parts if label not in seen_labels]
+        if missing:
+            raise ParseError("structure_changed",
+                             f"{volume_label}: no such part(s): {', '.join(missing)}")
 
     return all_parts_master
 
 
 def save_chapter(part, chapter, chapter_text):
     """Write the chapter body text and its metadata sidecar."""
+    # Volume leads the name because part and chapter titles repeat across volumes: both
+    # Vol 1 and Vol 12 have a "Part B" and a "Chapter 1 - Purpose and Background". Without
+    # it the second write silently overwrites the first.
+    volume_name = make_safe_filename(part["volume_label"])
     part_name = make_safe_filename(part["title"])
     chapter_name = make_safe_filename(chapter["chapter_title"])
 
-    filename = f"{OUTPUT_DIR}/{part_name}_{chapter_name}.txt"
-    metadata_filename = f"{OUTPUT_DIR}/{part_name}_{chapter_name}_metadata.json"
+    stem = f"{OUTPUT_DIR}/{volume_name}_{part_name}_{chapter_name}"
 
-    with open(filename, "w") as f:
+    with open(f"{stem}.txt", "w") as f:
         f.write(chapter_text)
 
     metadata = {
+        "volume_title": part["volume_title"],
         "part_title": part["title"],
         "chapter_title": chapter["chapter_title"],
         "chapter_url": chapter["chapter_url"],
         "scraped_date": str(date.today())
     }
 
-    with open(metadata_filename, "w") as f:
+    with open(f"{stem}_metadata.json", "w") as f:
         json.dump(metadata, f, indent=2)
 
 
@@ -331,13 +399,16 @@ def print_summary(saved, failed_chapters, retried_chapters, total, aborted):
 
 def main():
     # One session for the whole run: user agent set once, one TCP connection reused across
-    # all 65 requests. No retry adapter — fetch_page retries, so failures keep their status.
+    # every request. No retry adapter — fetch_page retries, so failures keep their status.
     session = requests.Session()
     session.headers.update(HEADERS)
 
     try:
         toc_html, _ = fetch_page(session, TOC_URL)
-        all_parts_master = collect_volume_12_parts(toc_html)
+        # One TOC fetch feeds every volume — it is a single page listing all of them.
+        all_parts_master = []
+        for volume_label, wanted_parts in TARGETS.items():
+            all_parts_master.extend(collect_volume_parts(toc_html, volume_label, wanted_parts))
     except ScrapeError as error:
         print(f"Could not read the table of contents [{error.category}]: {error}")
         return
@@ -351,11 +422,15 @@ def main():
     jobs = [(part, chapter) for part in all_parts_master for chapter in part["chapters"]]
 
     total = len(jobs)
+    scope = ", ".join(
+        label if parts == ALL_PARTS else f"{label} ({', '.join(parts)})"
+        for label, parts in TARGETS.items()
+    )
     if CRAWL_DELAY:
-        print(f"Found {total} chapter(s) in Volume 12. "
+        print(f"Found {total} chapter(s) in {scope}. "
               f"Waiting {CRAWL_DELAY}s between requests (~{total * CRAWL_DELAY // 60} min).")
     else:
-        print(f"Found {total} chapter(s) in Volume 12. Fetching at full speed.")
+        print(f"Found {total} chapter(s) in {scope}. Fetching at full speed.")
 
     consecutive_failures = 0  # Reset by anything that proves the server is still answering
     aborted = False
