@@ -5,10 +5,20 @@ import json
 import time
 from bs4 import BeautifulSoup
 from datetime import date
+from scraping import (
+    ScrapeError,
+    FetchError,
+    ParseError,
+    make_safe_filename,
+    category_for_status,
+    retry_after_seconds,
+    backoff_seconds,
+)
 
 BASE_URL = "https://www.uscis.gov"
 TOC_URL = "https://www.uscis.gov/policy-manual/table-of-contents"
-OUTPUT_DIR = "data/raw"
+# Per-source subdirectory to separate from case law (which lands in data/raw/caselaw).
+OUTPUT_DIR = "data/raw/uscis"
 
 # Sentinel for "every part in this volume". Named so a typo is a NameError, not a silent miss.
 ALL_PARTS = "all"
@@ -67,33 +77,6 @@ BREAKER_CATEGORIES = {
 CONSECUTIVE_FAILURE_LIMIT = 3
 
 
-class ScrapeError(Exception):
-    """One failure type for the whole scrape, so the main loop catches one thing.
-
-    The category, not just the message, is what the breaker and the summary act on.
-    """
-
-    def __init__(self, category, message):
-        super().__init__(message)
-        self.category = category
-
-
-class FetchError(ScrapeError):
-    """Could not get the page: network problem, timeout, or an error status."""
-
-
-class ParseError(ScrapeError):
-    """Got a real page, but it was not shaped the way we expect."""
-
-
-def make_safe_filename(text):
-    """Lowercase, underscores, alphanumerics only."""
-    text = text.lower().replace(" ", "_")
-    text = re.sub(r"[^a-z0-9_]", "", text)
-    text = re.sub(r"_+", "_", text)
-    return text.strip("_")
-
-
 def toc_label(title):
     """"Volume 12 - Citizenship..." -> "Volume 12"; None if the title is neither.
 
@@ -115,37 +98,6 @@ def clean_text(element):
     text = re.sub(r"\s+", " ", text)
     text = re.sub(r"\s+([,.;:)\]])", r"\1", text)
     return re.sub(r"([(\[])\s+", r"\1", text)
-
-
-def category_for_status(status):
-    """Translate an HTTP status code into one of our failure categories."""
-    if status == 403:
-        return "forbidden"
-    if status == 404:
-        return "not_found"
-    if status == 429:
-        return "rate_limited"
-    if status >= 500:
-        return "server_error"
-    return "client_error"
-
-
-def retry_after_seconds(response):
-    """Seconds the server asked us to wait (429, 503), or None if it did not say."""
-    value = response.headers.get("Retry-After")
-    if value is None:
-        return None
-    try:
-        # Clamped: time.sleep rejects a negative, so a malformed header would crash the run.
-        return max(0, int(value))
-    except ValueError:
-        # Retry-After may also be an HTTP date; fall back to our own backoff in that case.
-        return None
-
-
-def backoff_seconds(attempt):
-    """How long to wait before attempt N when the server gave us no guidance."""
-    return min(BACKOFF_BASE * (2 ** (attempt - 1)), MAX_BACKOFF)
 
 
 def fetch_page(session, url):
@@ -190,7 +142,7 @@ def fetch_page(session, url):
         # Only reached when the failure was retryable
         if attempt < MAX_ATTEMPTS:
             if wait is None:
-                wait = backoff_seconds(attempt)
+                wait = backoff_seconds(attempt, BACKOFF_BASE, MAX_BACKOFF)
             time.sleep(wait)
 
     raise last_error
