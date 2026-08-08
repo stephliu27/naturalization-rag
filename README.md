@@ -56,7 +56,7 @@ CourtListener API ────┘                  (+ metadata)                 
 |---|---|
 | USCIS Policy Manual scraper (`scripts/scrape_uscis.py`) | Shipped |
 | Volume-agnostic scraping; Vol. 1 added alongside Vol. 12 | Shipped |
-| Case-law ingestion via CourtListener API | In progress |
+| Case-law ingestion via CourtListener API (`scripts/fetch_caselaw.py`) | Written, corpus not yet fetched |
 | Cleaning pass + metadata sidecar | In progress |
 | Chunking and embedding layer (ChromaDB) | Planned |
 | RAG query loop with forced citation | Planned |
