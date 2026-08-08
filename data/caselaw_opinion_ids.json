@@ -1,0 +1,441 @@
+{
+  "generated": "2026-08-08",
+  "source": "CourtListener REST API v4",
+  "method": "One search per barrier type; top 20 of each read by hand. 'barrier' is derived from which searches a case appeared in, not asserted \u2014 a case in two searches is genuinely multi-label. Judgment lives in 'why'.",
+  "queries": {
+    "delay": "\"1447(b)\" AND naturalization AND dateFiled:[2005-01-01 TO 2026-08-07]",
+    "procedural": "\"1421(c)\" AND (\"de novo\" OR \"denial of naturalization\") AND dateFiled:[2010-01-01 TO 2026-08-07]",
+    "character": "\"good moral character\" AND (\"1101(f)\" OR \"1427(a)\") AND dateFiled:[2010-01-01 TO 2026-08-07]",
+    "linguistic": "(\"1423\" OR \"N-648\" OR \"Medical Certification for Disability Exception\" OR \"English and civics\") AND naturaliz* AND dateFiled:[2000-01-01 TO 2026-08-07]",
+    "financial": "(\"I-912\" OR \"fee waiver\") AND naturaliz* AND dateFiled:[2000-01-01 TO 2026-08-07]"
+  },
+  "result_counts": {
+    "delay": 179,
+    "procedural": 111,
+    "character": 200,
+    "linguistic": 44,
+    "financial": 6
+  },
+  "selected": [
+    {
+      "opinion_id": 11060627,
+      "cluster_id": 10594039,
+      "case_name": "Avdeeva v. Tucker",
+      "court_id": "ca1",
+      "date_filed": "2025-05-28",
+      "citation": "138 F.4th 641",
+      "cite_count": 1,
+      "barrier": [
+        "delay"
+      ],
+      "why": "Recent 1st Cir. on failure to adjudicate within the statutory period"
+    },
+    {
+      "opinion_id": 7798407,
+      "cluster_id": 7854541,
+      "case_name": "Elvis Leonel Morfa Diaz v. Acting Secretary, Department of Homeland Security",
+      "court_id": "ca11",
+      "date_filed": "2022-08-05",
+      "citation": null,
+      "cite_count": 0,
+      "barrier": [
+        "character"
+      ],
+      "why": "Aggravated felony as a permanent GMC bar under 1101(f)(8) and 1427(a)"
+    },
+    {
+      "opinion_id": 4565506,
+      "cluster_id": 4785159,
+      "case_name": "Moya v. United States Department of Homeland Security",
+      "court_id": "ca2",
+      "date_filed": "2020-09-15",
+      "citation": "975 F.3d 120",
+      "cite_count": 44,
+      "barrier": [
+        "linguistic"
+      ],
+      "why": "Denied disability exemptions from the English and civics tests; review barred until exhaustion"
+    },
+    {
+      "opinion_id": 6349504,
+      "cluster_id": 6477393,
+      "case_name": "Donnelly v. CARRP",
+      "court_id": "ca2",
+      "date_filed": "2022-06-14",
+      "citation": null,
+      "cite_count": 0,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Exhaustion is not jurisdictional but is enforceable; lost for missing his N-336 hearing"
+    },
+    {
+      "opinion_id": 625607,
+      "cluster_id": 625607,
+      "case_name": "Gonzalez v. Secretary of Department of HomeLand Security",
+      "court_id": "ca3",
+      "date_filed": "2012-03-19",
+      "citation": "678 F.3d 254",
+      "cite_count": 196,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Courts can hear a denial case with removal pending; declaratory relief is available",
+      "note": "combined-opinion of a two-opinion cluster"
+    },
+    {
+      "opinion_id": 9781657,
+      "cluster_id": 9423536,
+      "case_name": "Muhanad Al-Hasani v. Secretary United States Department of Homeland Sec",
+      "court_id": "ca3",
+      "date_filed": "2023-08-30",
+      "citation": "81 F.4th 291",
+      "cite_count": 5,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Recent 3d Cir.; summary judgment for the government under 1421(c)"
+    },
+    {
+      "opinion_id": 821040,
+      "cluster_id": 821040,
+      "case_name": "Anthony Kariuki v. Tracy Tarango",
+      "court_id": "ca5",
+      "date_filed": "2013-02-21",
+      "citation": "709 F.3d 495",
+      "cite_count": 108,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Conduct predating the application by over a year counts toward GMC; oral affirmation of false written statements is false testimony",
+      "note": "108 cites are largely summary-judgment boilerplate; kept for the GMC holding"
+    },
+    {
+      "opinion_id": 1035207,
+      "cluster_id": 1035207,
+      "case_name": "Mazen Shweika v. Dep't of Homeland Security",
+      "court_id": "ca6",
+      "date_filed": "2013-07-25",
+      "citation": "723 F.3d 710",
+      "cite_count": 26,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Whether the administrative-hearing requirement is jurisdictional; same question as Donnelly, different circuit"
+    },
+    {
+      "opinion_id": 10846400,
+      "cluster_id": 10379812,
+      "case_name": "Joseph Ebu v. USCIS",
+      "court_id": "ca6",
+      "date_filed": "2025-04-16",
+      "citation": null,
+      "cite_count": 0,
+      "barrier": [
+        "delay",
+        "procedural"
+      ],
+      "why": "Concurrent naturalization and removal proceedings"
+    },
+    {
+      "opinion_id": 8412814,
+      "cluster_id": 8441666,
+      "case_name": "Aljabri v. Holder",
+      "court_id": "ca7",
+      "date_filed": "2014-03-11",
+      "citation": "745 F.3d 816",
+      "cite_count": 51,
+      "barrier": [
+        "delay"
+      ],
+      "why": "Foundational: 1447(b) gives the district court exclusive jurisdiction until remand; nine-year pending application",
+      "note": "reporter-cited member of a duplicate pair; the other is cluster 2708817"
+    },
+    {
+      "opinion_id": 4416725,
+      "cluster_id": 4639472,
+      "case_name": "Emad Haroun v. U.S. Dept of Homeland Security",
+      "court_id": "ca8",
+      "date_filed": "2019-07-15",
+      "citation": "929 F.3d 1007",
+      "cite_count": 37,
+      "barrier": [
+        "delay",
+        "procedural"
+      ],
+      "why": "Same exclusive-jurisdiction holding as Aljabri; USCIS denied for lack of good moral character five days after suit"
+    },
+    {
+      "opinion_id": 7798290,
+      "cluster_id": 7854424,
+      "case_name": "Hafils Akpovi v. David Douglas",
+      "court_id": "ca8",
+      "date_filed": "2022-08-05",
+      "citation": "43 F.4th 832",
+      "cite_count": 17,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Clean de novo review of an N-400 denial"
+    },
+    {
+      "opinion_id": 4243031,
+      "cluster_id": 4465778,
+      "case_name": "Seanlim Yith v. Kirstjen Nielsen",
+      "court_id": "ca9",
+      "date_filed": "2018-02-07",
+      "citation": "881 F.3d 1155",
+      "cite_count": 30,
+      "barrier": [
+        "delay"
+      ],
+      "why": "Section 1429 removal proceedings do not strip the district court's power to naturalize",
+      "note": "combined-opinion of a three-opinion cluster"
+    },
+    {
+      "opinion_id": 4766320,
+      "cluster_id": 4958126,
+      "case_name": "Gunay Miriyeva v. USCIS",
+      "court_id": "cadc",
+      "date_filed": "2021-08-17",
+      "citation": null,
+      "cite_count": 0,
+      "barrier": [
+        "procedural"
+      ],
+      "why": "Section 1421(c) is the exclusive route to review; forecloses APA and constitutional claims"
+    },
+    {
+      "opinion_id": 7245087,
+      "cluster_id": 7327171,
+      "case_name": "Shawuti v. U.S. Citizenship & Immigration Services",
+      "court_id": "dcd",
+      "date_filed": "2017-08-08",
+      "citation": "273 F. Supp. 3d 260",
+      "cite_count": 0,
+      "barrier": [
+        "delay"
+      ],
+      "why": "District-level 1447(b)",
+      "note": "reporter-cited member of a duplicate pair; the other is cluster 4416747"
+    },
+    {
+      "opinion_id": 4574859,
+      "cluster_id": 4794512,
+      "case_name": "Northwest Immigrant Rights Project v. United States Citizenship and Immigration Services",
+      "court_id": "dcd",
+      "date_filed": "2020-10-08",
+      "citation": null,
+      "cite_count": 0,
+      "barrier": [
+        "financial"
+      ],
+      "why": "Enjoined the 2020 fee rule that eliminated most fee waivers and raised naturalization fees",
+      "note": "duplicate pair is byte-identical (same docket, same snippet, no reporter citation); this choice is arbitrary, the other is cluster 4794701"
+    },
+    {
+      "opinion_id": 7239370,
+      "cluster_id": 7321460,
+      "case_name": "Dos Reis v. McCleary",
+      "court_id": "mad",
+      "date_filed": "2016-08-11",
+      "citation": "200 F. Supp. 3d 291",
+      "cite_count": 0,
+      "barrier": [
+        "character"
+      ],
+      "why": "Sham marriage and GMC across the five-year statutory period"
+    },
+    {
+      "opinion_id": 7252016,
+      "cluster_id": 7334096,
+      "case_name": "Dilone v. Nielsen",
+      "court_id": "mdd",
+      "date_filed": "2019-02-01",
+      "citation": "358 F. Supp. 3d 490",
+      "cite_count": 9,
+      "barrier": [
+        "delay",
+        "linguistic",
+        "procedural"
+      ],
+      "why": "Surfaced in three of the five searches \u2014 richest multi-label opinion in the corpus"
+    },
+    {
+      "opinion_id": 2391590,
+      "cluster_id": 2391590,
+      "case_name": "Rico v. Immigration & Naturalization Service",
+      "court_id": "nyed",
+      "date_filed": "2003-05-09",
+      "citation": "262 F. Supp. 2d 6",
+      "cite_count": 3,
+      "barrier": [
+        "linguistic"
+      ],
+      "why": "Five DUIs and lack of candor; the Article III counterpart to the BIA's Castillo-Perez"
+    },
+    {
+      "opinion_id": 1980523,
+      "cluster_id": 1980523,
+      "case_name": "Gizzo v. Immigration & Naturalization Service",
+      "court_id": "nysd",
+      "date_filed": "2007-07-10",
+      "citation": "510 F. Supp. 2d 210",
+      "cite_count": 3,
+      "barrier": [
+        "delay"
+      ],
+      "why": "Name-check backlog era"
+    },
+    {
+      "opinion_id": 7223114,
+      "cluster_id": 7305211,
+      "case_name": "Rivera v. U.S. Citizenship & Immigration Services",
+      "court_id": "nysd",
+      "date_filed": "2014-03-10",
+      "citation": "5 F. Supp. 3d 439",
+      "cite_count": 6,
+      "barrier": [
+        "character"
+      ],
+      "why": "District-level GMC denial"
+    },
+    {
+      "opinion_id": 7252751,
+      "cluster_id": 7334831,
+      "case_name": "De Dandrade v. U.S. Dep't of Homeland Sec.",
+      "court_id": "nysd",
+      "date_filed": "2019-02-15",
+      "citation": "367 F. Supp. 3d 174",
+      "cite_count": 7,
+      "barrier": [
+        "linguistic",
+        "procedural"
+      ],
+      "why": "Nine plaintiffs' individual N-648 facts; trial level of Moya",
+      "note": "API returns court_id 'ilsd', which is wrong: docket 1:17-cv-09604 is S.D.N.Y."
+    },
+    {
+      "opinion_id": 7238503,
+      "cluster_id": 7320593,
+      "case_name": "Iqbal v. Secretary U.S. Department of Homeland Security",
+      "court_id": "nywd",
+      "date_filed": "2016-06-06",
+      "citation": "190 F. Supp. 3d 322",
+      "cite_count": 3,
+      "barrier": [
+        "delay",
+        "procedural"
+      ],
+      "why": "Lays out the three avenues of judicial review"
+    },
+    {
+      "opinion_id": 8709858,
+      "cluster_id": 8726661,
+      "case_name": "Dar v. Olivares",
+      "court_id": "oknd",
+      "date_filed": "2013-07-25",
+      "citation": "956 F. Supp. 2d 1287",
+      "cite_count": 1,
+      "barrier": [
+        "character"
+      ],
+      "why": "GMC finding rendering the applicant ineligible"
+    },
+    {
+      "opinion_id": 7231393,
+      "cluster_id": 7313488,
+      "case_name": "Martinez v. Johnson",
+      "court_id": "txwd",
+      "date_filed": "2015-05-15",
+      "citation": "104 F. Supp. 3d 835",
+      "cite_count": 2,
+      "barrier": [
+        "delay"
+      ],
+      "why": "Suit to compel adjudication"
+    },
+    {
+      "opinion_id": 7230471,
+      "cluster_id": 7312567,
+      "case_name": "Hassan v. Johnson",
+      "court_id": "vaed",
+      "date_filed": "2015-02-20",
+      "citation": "93 F. Supp. 3d 457",
+      "cite_count": 0,
+      "barrier": [
+        "character"
+      ],
+      "why": "GMC preclusion during the statutory period"
+    },
+    {
+      "opinion_id": 7252103,
+      "cluster_id": 7334183,
+      "case_name": "Yemer v. U.S. Citizenship & Immigration Servs.",
+      "court_id": "vaed",
+      "date_filed": "2019-02-12",
+      "citation": "359 F. Supp. 3d 423",
+      "cite_count": 5,
+      "barrier": [
+        "character",
+        "procedural"
+      ],
+      "why": "District-level de novo merits decision"
+    }
+  ],
+  "rejected": [
+    {
+      "case_name": "Ge v. USCIS",
+      "citation": "20 F.4th 147",
+      "cite_count": 12,
+      "why": "EAJA prevailing-party attorney's fees, not the delay merits"
+    },
+    {
+      "case_name": "Asemani v. USCIS",
+      "citation": "797 F.3d 1069",
+      "cite_count": 31,
+      "why": "Prisoner IFP under the PLRA three-strikes rule; naturalization is only the underlying action"
+    },
+    {
+      "case_name": "Bourtzakis v. U.S. Att'y Gen.",
+      "citation": "940 F.3d 616",
+      "cite_count": 13,
+      "why": "Categorical-approach analysis of an aggravated felony; GMC is the consequence, not the reasoning. Redundant with Morfa Diaz"
+    },
+    {
+      "case_name": "Escaler v. USCIS",
+      "citation": "582 F.3d 288",
+      "cite_count": 45,
+      "why": "Fifth exhaustion case, in a circuit already covered twice by Moya and Donnelly"
+    },
+    {
+      "case_name": "Kuzova v. DHS",
+      "citation": "686 F. App'x 506",
+      "cite_count": 4,
+      "why": "Unpublished; Yith covers the 9th Circuit better"
+    },
+    {
+      "case_name": "Hernandez v. Garland",
+      "citation": "59 F.4th 762",
+      "cite_count": 18,
+      "why": "Cancellation of removal, not naturalization"
+    },
+    {
+      "category": "denaturalization",
+      "count": 8,
+      "why": "United States v. captions under 18 U.S.C. 1425 or 8 U.S.C. 1451 \u2014 the government stripping citizenship, the opposite posture from an applicant"
+    },
+    {
+      "category": "BIA and A.G. decisions",
+      "count": 5,
+      "court_id": "bia",
+      "why": "Administrative tribunal inside DOJ with no jurisdiction over naturalization. Matter of Castillo-Perez is the close call, since USCIS implemented it for naturalization GMC"
+    },
+    {
+      "category": "OLC opinion",
+      "count": 1,
+      "court_id": "olc",
+      "why": "Executive-branch legal memo, not precedent"
+    }
+  ]
+}
