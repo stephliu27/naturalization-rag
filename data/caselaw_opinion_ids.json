@@ -18,22 +18,6 @@
   },
   "selected": [
     {
-      "opinion_id": 11060627,
-      "cluster_id": 10594039,
-      "case_name": "Avdeeva v. Tucker",
-      "court_id": "ca1",
-      "date_filed": "2025-05-28",
-      "citation": "138 F.4th 641",
-      "cite_count": 1,
-      "found_by": [
-        "delay"
-      ],
-      "barrier": [
-        "delay"
-      ],
-      "why": "Recent 1st Cir. on failure to adjudicate within the statutory period"
-    },
-    {
       "opinion_id": 7798407,
       "cluster_id": 7854541,
       "case_name": "Elvis Leonel Morfa Diaz v. Acting Secretary, Department of Homeland Security",
@@ -528,6 +512,12 @@
       "count": 1,
       "court_id": "olc",
       "why": "Executive-branch legal memo, not precedent"
+    },
+    {
+      "case_name": "Avdeeva v. Tucker",
+      "citation": "138 F.4th 641",
+      "cite_count": 1,
+      "why": "EAJA prevailing-party attorney's fees; the underlying 1447(b) suit settled, so the First Circuit never reached the delay merits. Same shape as Ge \u2014 caught on a second pass, after fetching"
     }
   ]
 }

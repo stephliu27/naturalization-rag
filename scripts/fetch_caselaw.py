@@ -85,7 +85,8 @@ QUERIES = {
         'AND dateFiled:[2000-01-01 TO 2026-08-07]',
 }
 
-# From the browser pass on 2026-08-07. Drift means the index moved under us.
+# Counts from the browser pass on 2026-08-07. A different number means the search results
+# have changed since then, so the same query would not rebuild the same corpus today.
 EXPECTED_COUNTS = {
     "delay": 179,
     "procedural": 111,
