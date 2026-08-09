@@ -95,9 +95,13 @@ CONTAINER_TAGS = {"section", "div"}
 # only thing separating them — and a class does not survive into a text file. Marked rather
 # than dropped because they are not equivalent: one is a Volume 7 cross-reference worth
 # discarding, another is a court order vacating the policy memos behind its own chapter.
-# Processing decides; doing it here would bake a contestable call into a 105s network step.
+# Processing decides; doing it here would bake a contestable call into a network step.
 ALERT_CLASS = "alert-message"
-ALERT_PREFIX = "> "
+
+# Not "> ". Case law has 47 real blockquotes and that is what "> " means everywhere else, so
+# reusing it would make provenance indistinguishable from quotation the moment both halves of
+# the corpus meet. Cannot collide with a footnote: that pattern needs "^" right after "[".
+ALERT_PREFIX = "[ALERT] "
 
 
 def toc_label(title):
