@@ -1,7 +1,7 @@
 {
   "generated": "2026-08-08",
   "source": "CourtListener REST API v4",
-  "method": "One search per barrier type; top 20 of each read by hand. 'barrier' is derived from which searches a case appeared in, not asserted \u2014 a case in two searches is genuinely multi-label. Judgment lives in 'why'.",
+  "method": "One search per barrier type; top 20 of each read by hand. Two label fields, deliberately: 'found_by' is mechanical provenance (which searches returned the case), 'barrier' is judgment (what the case holds), cross-checked against term frequency in the full text. They usually agree. Where they don't, found_by is the unreliable one \u2014 a case can match a citation it only mentions in passing.",
   "queries": {
     "delay": "\"1447(b)\" AND naturalization AND dateFiled:[2005-01-01 TO 2026-08-07]",
     "procedural": "\"1421(c)\" AND (\"de novo\" OR \"denial of naturalization\") AND dateFiled:[2010-01-01 TO 2026-08-07]",
@@ -25,6 +25,9 @@
       "date_filed": "2025-05-28",
       "citation": "138 F.4th 641",
       "cite_count": 1,
+      "found_by": [
+        "delay"
+      ],
       "barrier": [
         "delay"
       ],
@@ -38,6 +41,9 @@
       "date_filed": "2022-08-05",
       "citation": null,
       "cite_count": 0,
+      "found_by": [
+        "character"
+      ],
       "barrier": [
         "character"
       ],
@@ -51,8 +57,12 @@
       "date_filed": "2020-09-15",
       "citation": "975 F.3d 120",
       "cite_count": 44,
-      "barrier": [
+      "found_by": [
         "linguistic"
+      ],
+      "barrier": [
+        "linguistic",
+        "procedural"
       ],
       "why": "Denied disability exemptions from the English and civics tests; review barred until exhaustion"
     },
@@ -64,6 +74,9 @@
       "date_filed": "2022-06-14",
       "citation": null,
       "cite_count": 0,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
         "procedural"
       ],
@@ -77,7 +90,11 @@
       "date_filed": "2012-03-19",
       "citation": "678 F.3d 254",
       "cite_count": 196,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
+        "character",
         "procedural"
       ],
       "why": "Courts can hear a denial case with removal pending; declaratory relief is available",
@@ -91,7 +108,11 @@
       "date_filed": "2023-08-30",
       "citation": "81 F.4th 291",
       "cite_count": 5,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
+        "character",
         "procedural"
       ],
       "why": "Recent 3d Cir.; summary judgment for the government under 1421(c)"
@@ -104,7 +125,11 @@
       "date_filed": "2013-02-21",
       "citation": "709 F.3d 495",
       "cite_count": 108,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
+        "character",
         "procedural"
       ],
       "why": "Conduct predating the application by over a year counts toward GMC; oral affirmation of false written statements is false testimony",
@@ -118,6 +143,9 @@
       "date_filed": "2013-07-25",
       "citation": "723 F.3d 710",
       "cite_count": 26,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
         "procedural"
       ],
@@ -131,6 +159,10 @@
       "date_filed": "2025-04-16",
       "citation": null,
       "cite_count": 0,
+      "found_by": [
+        "delay",
+        "procedural"
+      ],
       "barrier": [
         "delay",
         "procedural"
@@ -145,6 +177,9 @@
       "date_filed": "2014-03-11",
       "citation": "745 F.3d 816",
       "cite_count": 51,
+      "found_by": [
+        "delay"
+      ],
       "barrier": [
         "delay"
       ],
@@ -159,6 +194,10 @@
       "date_filed": "2019-07-15",
       "citation": "929 F.3d 1007",
       "cite_count": 37,
+      "found_by": [
+        "delay",
+        "procedural"
+      ],
       "barrier": [
         "delay",
         "procedural"
@@ -173,6 +212,9 @@
       "date_filed": "2022-08-05",
       "citation": "43 F.4th 832",
       "cite_count": 17,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
         "procedural"
       ],
@@ -186,8 +228,12 @@
       "date_filed": "2018-02-07",
       "citation": "881 F.3d 1155",
       "cite_count": 30,
-      "barrier": [
+      "found_by": [
         "delay"
+      ],
+      "barrier": [
+        "delay",
+        "procedural"
       ],
       "why": "Section 1429 removal proceedings do not strip the district court's power to naturalize",
       "note": "combined-opinion of a three-opinion cluster"
@@ -200,6 +246,9 @@
       "date_filed": "2021-08-17",
       "citation": null,
       "cite_count": 0,
+      "found_by": [
+        "procedural"
+      ],
       "barrier": [
         "procedural"
       ],
@@ -213,6 +262,9 @@
       "date_filed": "2017-08-08",
       "citation": "273 F. Supp. 3d 260",
       "cite_count": 0,
+      "found_by": [
+        "delay"
+      ],
       "barrier": [
         "delay"
       ],
@@ -227,6 +279,9 @@
       "date_filed": "2020-10-08",
       "citation": null,
       "cite_count": 0,
+      "found_by": [
+        "financial"
+      ],
       "barrier": [
         "financial"
       ],
@@ -241,6 +296,9 @@
       "date_filed": "2016-08-11",
       "citation": "200 F. Supp. 3d 291",
       "cite_count": 0,
+      "found_by": [
+        "character"
+      ],
       "barrier": [
         "character"
       ],
@@ -254,12 +312,16 @@
       "date_filed": "2019-02-01",
       "citation": "358 F. Supp. 3d 490",
       "cite_count": 9,
-      "barrier": [
+      "found_by": [
         "delay",
         "linguistic",
         "procedural"
       ],
-      "why": "Surfaced in three of the five searches \u2014 richest multi-label opinion in the corpus"
+      "barrier": [
+        "delay",
+        "procedural"
+      ],
+      "why": "delay and procedural; the single English-and-civics mention is background, not a holding"
     },
     {
       "opinion_id": 2391590,
@@ -269,10 +331,13 @@
       "date_filed": "2003-05-09",
       "citation": "262 F. Supp. 2d 6",
       "cite_count": 3,
-      "barrier": [
+      "found_by": [
         "linguistic"
       ],
-      "why": "Five DUIs and lack of candor; the Article III counterpart to the BIA's Castillo-Perez"
+      "barrier": [
+        "character"
+      ],
+      "why": "term scan: 19 character hits vs 1 linguistic; found by the 1423 query only because the character query's 2010 floor excludes a 2003 case"
     },
     {
       "opinion_id": 1980523,
@@ -282,10 +347,13 @@
       "date_filed": "2007-07-10",
       "citation": "510 F. Supp. 2d 210",
       "cite_count": 3,
-      "barrier": [
+      "found_by": [
         "delay"
       ],
-      "why": "Name-check backlog era"
+      "barrier": [
+        "procedural"
+      ],
+      "why": "1421(c) case: CIS vacated its denial mid-appeal, so no final agency denial remained. Cites 1447(b) only to distinguish it \u2014 that provision divests the agency, 1421(c) does not"
     },
     {
       "opinion_id": 7223114,
@@ -295,6 +363,9 @@
       "date_filed": "2014-03-10",
       "citation": "5 F. Supp. 3d 439",
       "cite_count": 6,
+      "found_by": [
+        "character"
+      ],
       "barrier": [
         "character"
       ],
@@ -308,6 +379,10 @@
       "date_filed": "2019-02-15",
       "citation": "367 F. Supp. 3d 174",
       "cite_count": 7,
+      "found_by": [
+        "linguistic",
+        "procedural"
+      ],
       "barrier": [
         "linguistic",
         "procedural"
@@ -323,6 +398,10 @@
       "date_filed": "2016-06-06",
       "citation": "190 F. Supp. 3d 322",
       "cite_count": 3,
+      "found_by": [
+        "delay",
+        "procedural"
+      ],
       "barrier": [
         "delay",
         "procedural"
@@ -337,6 +416,9 @@
       "date_filed": "2013-07-25",
       "citation": "956 F. Supp. 2d 1287",
       "cite_count": 1,
+      "found_by": [
+        "character"
+      ],
       "barrier": [
         "character"
       ],
@@ -350,6 +432,9 @@
       "date_filed": "2015-05-15",
       "citation": "104 F. Supp. 3d 835",
       "cite_count": 2,
+      "found_by": [
+        "delay"
+      ],
       "barrier": [
         "delay"
       ],
@@ -363,6 +448,9 @@
       "date_filed": "2015-02-20",
       "citation": "93 F. Supp. 3d 457",
       "cite_count": 0,
+      "found_by": [
+        "character"
+      ],
       "barrier": [
         "character"
       ],
@@ -376,6 +464,10 @@
       "date_filed": "2019-02-12",
       "citation": "359 F. Supp. 3d 423",
       "cite_count": 5,
+      "found_by": [
+        "character",
+        "procedural"
+      ],
       "barrier": [
         "character",
         "procedural"
