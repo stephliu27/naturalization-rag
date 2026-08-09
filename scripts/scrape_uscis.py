@@ -76,6 +76,17 @@ BREAKER_CATEGORIES = {
 # Low because each one already failed MAX_ATTEMPTS times: 3 here is ~12 failed requests.
 CONSECUTIVE_FAILURE_LIMIT = 3
 
+# Heading tag -> the marker written into the .txt. The tag itself does not survive into a
+# text file, so without this a section title is indistinguishable from a paragraph — which
+# is what the chunker splits on and what a citation names.
+# A dict rather than "#" * int(name[1]) on purpose: an unexpected level should land in the
+# unhandled report below, not silently produce a depth nothing downstream expects.
+HEADING_MARKERS = {"h2": "##", "h3": "###", "h4": "####"}
+
+# Top-level tags carrying no chapter text. Listed so they stay out of the unhandled report —
+# <hr> sits above the footnotes on every page and would otherwise drown the real signal.
+IGNORED_TAGS = {"hr"}
+
 
 def toc_label(title):
     """"Volume 12 - Citizenship..." -> "Volume 12"; None if the title is neither.
@@ -151,6 +162,10 @@ def fetch_page(session, url):
 def parse_chapter(html):
     """Pull the readable chapter text out of a page we already fetched.
 
+    Returns (text, unhandled_tags). unhandled_tags is every top-level tag we had no branch
+    for: empty on a normal page, and evidence USCIS moved something when it is not. A parser
+    that drops what it does not recognize reports 79/79 while shipping chapters with holes.
+
     Only called on a 200, so anything missing is a real structural surprise.
     """
     soup = BeautifulSoup(html, "html.parser")
@@ -164,10 +179,19 @@ def parse_chapter(html):
         raise ParseError("structure_changed", "no 'field--name-body' div inside guidance section")
 
     text_parts = []
+    unhandled_tags = set()
 
-    # Format by tag: paragraphs plain, list items bulleted, tables as markdown rows.
+    # Format by tag: headings marked, paragraphs plain, list items bulleted, tables as
+    # markdown rows. "section" is a container, not a paragraph — clean_text flattens its
+    # whole subtree onto one line, losing the breaks. A stopgap that keeps the text until
+    # the loop descends into containers properly.
     for child in body.find_all(recursive=False):
-        if child.name in ["p", "h2", "h3", "h4", "section"]:
+        if child.name in HEADING_MARKERS:
+            text = clean_text(child)
+            if text:
+                text_parts.append(f"{HEADING_MARKERS[child.name]} {text}")
+
+        elif child.name in ["p", "section"]:
             text = clean_text(child)
             if text:
                 text_parts.append(text)
@@ -187,7 +211,11 @@ def parse_chapter(html):
                 row_line = "| " + " | ".join(cell_texts) + " |"   # Reformat for markdown table style
                 text_parts.append(row_line)
 
-    return "\n".join(text_parts)
+        elif child.name not in IGNORED_TAGS:
+            # A set, not a list: one chapter mentioning <div> forty times is still one finding.
+            unhandled_tags.add(child.name)
+
+    return "\n".join(text_parts), unhandled_tags
 
 
 def collect_volume_parts(toc_html, volume_label, wanted_parts):
@@ -309,7 +337,7 @@ def save_chapter(part, chapter, chapter_text):
         json.dump(metadata, f, indent=2)
 
 
-def print_summary(saved, failed_chapters, retried_chapters, total, aborted):
+def print_summary(saved, failed_chapters, retried_chapters, unhandled_tags, total, aborted):
     """Print what happened, grouped by category so the counts are diagnostic.
 
     An aborted run must say so: "12 saved, 3 failed" hides the 49 we never reached.
@@ -330,6 +358,14 @@ def print_summary(saved, failed_chapters, retried_chapters, total, aborted):
         print(f"\n{len(retried_chapters)} chapter(s) needed more than one attempt:")
         for record in retried_chapters:
             print(f"  - {record['chapter_title']} (succeeded on attempt {record['attempts']})")
+
+    # Louder than it looks: these chapters saved successfully with that content missing.
+    if unhandled_tags:
+        print(f"\n{len(unhandled_tags)} unhandled top-level tag(s) — that content was dropped:")
+        for tag in sorted(unhandled_tags):
+            chapters = unhandled_tags[tag]
+            shown = ", ".join(chapters[:3]) + (", ..." if len(chapters) > 3 else "")
+            print(f"  <{tag}> in {len(chapters)} chapter(s): {shown}")
 
     if not failed_chapters:
         return
@@ -368,6 +404,7 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     failed_chapters = []   # Chapters we could not save, with the reason why
     retried_chapters = []  # Chapters that succeeded but not on the first try
+    unhandled_tags = {}    # Tag name -> the chapters it showed up in, so a hit is actionable
     saved = 0
 
     # Flatten into one work list: the breaker needs a single loop it can break out of.
@@ -395,7 +432,7 @@ def main():
         # hangs, throttling, missing pages and unexpected HTML.
         try:
             html, attempts = fetch_page(session, chapter["chapter_url"])
-            chapter_text = parse_chapter(html)
+            chapter_text, chapter_unhandled = parse_chapter(html)
         except ScrapeError as error:
             failed_chapters.append({
                 "part_title": part["title"],
@@ -421,13 +458,17 @@ def main():
         saved += 1
         consecutive_failures = 0
 
+        # setdefault ≈ std::map::operator[] — creates the empty list on first sight of a tag.
+        for tag in chapter_unhandled:
+            unhandled_tags.setdefault(tag, []).append(chapter["chapter_title"])
+
         if attempts > 1:
             retried_chapters.append({
                 "chapter_title": chapter["chapter_title"],
                 "attempts": attempts
             })
 
-    print_summary(saved, failed_chapters, retried_chapters, total, aborted)
+    print_summary(saved, failed_chapters, retried_chapters, unhandled_tags, total, aborted)
 
 
 if __name__ == "__main__":
