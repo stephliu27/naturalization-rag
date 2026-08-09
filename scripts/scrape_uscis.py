@@ -87,6 +87,18 @@ HEADING_MARKERS = {"h2": "##", "h3": "###", "h4": "####"}
 # <hr> sits above the footnotes on every page and would otherwise drown the real signal.
 IGNORED_TAGS = {"hr"}
 
+# Boxes, not content: their children are the p/ul/table we already know how to format.
+# Flattening one with clean_text welds its paragraphs onto a single line, so we descend.
+CONTAINER_TAGS = {"section", "div"}
+
+# USCIS site banners arrive in the same <div> as real chapter content, so this class is the
+# only thing separating them — and a class does not survive into a text file. Marked rather
+# than dropped because they are not equivalent: one is a Volume 7 cross-reference worth
+# discarding, another is a court order vacating the policy memos behind its own chapter.
+# Processing decides; doing it here would bake a contestable call into a 105s network step.
+ALERT_CLASS = "alert-message"
+ALERT_PREFIX = "> "
+
 
 def toc_label(title):
     """"Volume 12 - Citizenship..." -> "Volume 12"; None if the title is neither.
@@ -159,6 +171,65 @@ def fetch_page(session, url):
     raise last_error
 
 
+def extract_elements(elements, text_parts, unhandled_tags, prefix=""):
+    """Format one level of the DOM into lines, descending into containers.
+
+    Pre-order traversal: each element contributes its own lines before we look inside it, so
+    document order survives. text_parts and unhandled_tags accumulate across whole recursion.
+
+    prefix rides down so an alert marks every line beneath it, however deep it nests.
+    """
+    for child in elements:
+        if child.name in HEADING_MARKERS:
+            text = clean_text(child)
+            if text:
+                text_parts.append(f"{prefix}{HEADING_MARKERS[child.name]} {text}")
+
+        elif child.name == "p":
+            text = clean_text(child)
+            if text:
+                text_parts.append(prefix + text)
+
+        elif child.name in ["ul", "ol"]:
+            # find_all reaches the whole subtree, so nested lists are already covered here.
+            # That is also why ul/ol and table must never be descended into: we would
+            # extract their contents a second time.
+            items = child.find_all("li")
+            for item in items:
+                item_text = clean_text(item)
+                if item_text:
+                    text_parts.append(f"{prefix}- {item_text}")  # Reformat to reflect bullet list style
+
+        elif child.name == "table":
+            # The caption is the table's title and is not a row, so find_all("tr") misses it.
+            # Without it a reader — or a retrieved chunk — gets rows with nothing naming them.
+            caption = child.find("caption")
+            if caption:
+                caption_text = clean_text(caption)
+                if caption_text:
+                    text_parts.append(prefix + caption_text)
+
+            rows = child.find_all("tr")
+            for row in rows:
+                cells = row.find_all(["td", "th"])
+                cell_texts = [clean_text(cell) for cell in cells]
+                row_line = "| " + " | ".join(cell_texts) + " |"   # Reformat for markdown table style
+                text_parts.append(prefix + row_line)
+
+        elif child.name in CONTAINER_TAGS:
+            # Marked at the outermost alert only: an alert wraps a second div, and re-testing
+            # inside would be harmless but re-prefixing an already-prefixed line would not.
+            child_prefix = prefix
+            if not child_prefix and ALERT_CLASS in (child.get("class") or []):
+                child_prefix = ALERT_PREFIX
+            extract_elements(child.find_all(recursive=False), text_parts, unhandled_tags,
+                             child_prefix)
+
+        elif child.name not in IGNORED_TAGS:
+            # A set, not a list: one chapter mentioning <div> forty times is still one finding.
+            unhandled_tags.add(child.name)
+
+
 def parse_chapter(html):
     """Pull the readable chapter text out of a page we already fetched.
 
@@ -168,7 +239,10 @@ def parse_chapter(html):
 
     Only called on a 200, so anything missing is a real structural surprise.
     """
-    soup = BeautifulSoup(html, "html.parser")
+    # lxml, not html.parser: USCIS ships malformed markup on some chapters and the two
+    # parsers repair it differently. html.parser invents empty <body> elements and buries
+    # real content inside them — 1495 chars of a court order in Vol 1 Part E Ch 8 alone.
+    soup = BeautifulSoup(html, "lxml")
 
     guidance = soup.find("div", id="guidance")  # Find guidance container under which content lies
     if guidance is None:
@@ -181,39 +255,7 @@ def parse_chapter(html):
     text_parts = []
     unhandled_tags = set()
 
-    # Format by tag: headings marked, paragraphs plain, list items bulleted, tables as
-    # markdown rows. "section" is a container, not a paragraph — clean_text flattens its
-    # whole subtree onto one line, losing the breaks. A stopgap that keeps the text until
-    # the loop descends into containers properly.
-    for child in body.find_all(recursive=False):
-        if child.name in HEADING_MARKERS:
-            text = clean_text(child)
-            if text:
-                text_parts.append(f"{HEADING_MARKERS[child.name]} {text}")
-
-        elif child.name in ["p", "section"]:
-            text = clean_text(child)
-            if text:
-                text_parts.append(text)
-
-        elif child.name in ["ul", "ol"]:
-            items = child.find_all("li")
-            for item in items:
-                item_text = clean_text(item)
-                if item_text:
-                    text_parts.append(f"- {item_text}")  # Reformat to reflect bullet list style
-
-        elif child.name == "table":
-            rows = child.find_all("tr")
-            for row in rows:
-                cells = row.find_all(["td", "th"])
-                cell_texts = [clean_text(cell) for cell in cells]
-                row_line = "| " + " | ".join(cell_texts) + " |"   # Reformat for markdown table style
-                text_parts.append(row_line)
-
-        elif child.name not in IGNORED_TAGS:
-            # A set, not a list: one chapter mentioning <div> forty times is still one finding.
-            unhandled_tags.add(child.name)
+    extract_elements(body.find_all(recursive=False), text_parts, unhandled_tags)
 
     return "\n".join(text_parts), unhandled_tags
 
