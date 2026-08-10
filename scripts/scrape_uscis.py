@@ -9,6 +9,7 @@ from scraping import (
     ScrapeError,
     FetchError,
     ParseError,
+    clean_text,
     make_safe_filename,
     category_for_status,
     retry_after_seconds,
@@ -115,16 +116,6 @@ def toc_label(title):
         return None
     # Collapse odd spacing: the manual is full of non-breaking spaces.
     return re.sub(r"\s+", " ", match.group(1))
-
-
-def clean_text(element):
-    """Visible text with word boundaries kept, then punctuation pulled back onto its word.
-    Without the " " separator inline links weld to their neighbours: "an initialForm N-648as".
-    """
-    text = element.get_text(" ", strip=True)
-    text = re.sub(r"\s+", " ", text)
-    text = re.sub(r"\s+([,.;:)\]])", r"\1", text)
-    return re.sub(r"([(\[])\s+", r"\1", text)
 
 
 def fetch_page(session, url):
