@@ -1,0 +1,48 @@
+## A. Exemption or Discharge from Military Service Because of "Alienage"
+### 1. Permanent Bar for Exemption or Discharge from Military Service
+An applicant who requested, applied for, and obtained a discharge or exemption from military service from the U.S. armed forces on the ground that he or she is an alien (“alienage discharge”) is permanently ineligible for naturalization unless he or she qualifies for an exception (discussed below).
+An exemption from military service is either a permanent exemption from induction into the U.S. armed services or the release or discharge from military training or service in the U.S. armed forces. [2] Induction means compulsory entrance into military service of the United States by conscription or by enlistment after being notified of a pending conscription.
+[^ 2] See 8 CFR 315.1. The Ninth Circuit has found that an exemption from voluntary military service is not a permanent bar under INA 315. See Gallarde v. I.N.S., 486 F.3d 1136 (9th Cir 2007). INA 329 has similar language about exemptions, and that language has been found to cover discharges based on alienage even in cases of voluntary enlistment. See Sakarapanee v. USCIS, 616 F.3d 595, (6th Cir 2010). Officers should consult with local OCC counsel in handling discharges based on alienage.
+Until 1975, applicants were required to register for the military draft. The failure to register for the draft or to comply with an induction notice is relevant to the determination of whether the applicant was liable for military service, especially in cases where an exemption was based on "alienage."
+Certain persons were granted exemptions from the draft for reasons other than alienage, including medical disability and conscientious objector. An applicant may present a draft registration card with an exempt classification under circumstances that do not relate to alienage.
+### 2. Exceptions to Permanent Bar
+There are exceptions to the permanent bar to naturalization for obtaining a discharge or exemption from military service on the ground of alienage.
+The permanent bar does not apply to the applicant if he or she establishes by clear and convincing evidence that:
+- The applicant had no liability for military service (even in the absence of an exemption) at the time he or she requested an exemption from military service;
+- The applicant did not request or apply for the exemption from military service, but such exemption was automatically granted by the U.S. Government;
+- The exemption from military service was based upon a ground other than the applicant's alienage;
+- The applicant was unable to make an intelligent choice between an exemption from military service and citizenship because he or she was misled by an authority from the U.S. Government or from the government of his or her country of nationality;
+- The applicant applied for and received an exemption from military service on the basis of alienage, but was subsequently inducted into the U.S. armed forces or the National Security Training Corps; [5]
+[^ 5] However, an applicant who voluntarily enlists in and serves in the U.S. armed forces after applying for and receiving an exemption from military service on the basis of alienage is not exempt from the permanent bar.
+- Prior to requesting the exemption from military service, the applicant served a minimum of eighteen months in the armed forces of a nation that was a member of the North Atlantic Treaty Organization at the time of his or her service, or the applicant served a minimum of twelve months and applied for registration with the Selective Service Administration after September 28, 1971; or
+- Prior to requesting the exemption from military service, the applicant was a “treaty national” [6] who had served in the armed forces of the country of which he or she was a national.
+[^ 6] “Treaty national” means a person who is a national of a country with which the United States has a treaty relating to the reciprocal exemption of aliens from military training or military service.
+### 3. Countries with Treaties Providing Reciprocal Exemption from Military Service
+The tables below provide lists of countries that currently have (or previously had) effective treaties providing reciprocal exemption from military service.
+| Countries with Effective Treaties Providing Reciprocal Exemption from Military Service |
+| Argentina | Art. X, 10 Stat. 1005, 1009, effective 1853 |
+| Austria | Art. VI, 47 Stat. 1876, 1880, effective 1928 |
+| China | Art. XIV, 63 Stat. 1299, 1311, effective 1946 |
+| Costa Rica | Art. IX, 10 Stat. 916, 921, effective 1851 |
+| Estonia | Art. VI, 44 Stat. 2379, 2381, effective 1925 |
+| Honduras | Art. VI, 45 Stat. 2618, 2622, effective 1927 |
+| Ireland | Art. III, 1 US 785, 789, effective 1950 |
+| Italy | Art. XIII, 63 Stat. 2255, 2272, effective 1948 |
+| Latvia | Art. VI, 45 Stat. 2641, 2643, effective 1928 |
+| Liberia | Art. VI, 54 Stat. 1739, 1742, effective 1938 |
+| Norway | Art. VI, 47 Stat. 2135, 2139, effective 1928 |
+| Paraguay | Art. XI, 12 Stat. 1091, 1096, effective 1859 |
+| Spain | Art. V, 33 Stat. 2105, 2108, effective 1902 |
+| Switzerland | Art. II, 11 Stat. 587, 589, effective 1850 |
+| Yugoslavia Serbia | Art. IV, 22 Stat. 963, 964, effective 1881 |
+| Countries with Expired Treaties Providing Reciprocal Exemption from Military Service |
+| El Salvador | Art. VI, 46 Stat. 2817, 2821 (effective 1926 to February 8, 1958) |
+| Germany | Art. VI, 44 Stat. 2132, 2136 (effective 1923 to June 2, 1954) |
+| Hungary | Art. VI, 44 Stat, 2441, 2445 (effective 1925 to July 5, 1952) |
+| Thailand (Siam) | Art. 1, 53 Stat. 1731, 1732 (effective 1937 to June 8, 1968) |
+### 4. Documentation and Evidence
+The Application for Naturalization (Form N-400) and Request for Certification of Military or Naval Service (Form N-426) contain questions pertaining to discharge due to alienage. The fact that an applicant is exempted or discharged from service in the U.S. armed forces on the grounds that he or she is an alien may impact the applicant’s eligibility for naturalization.
+Selective Service and military department records are conclusive evidence of service and discharge. Proof of an applicant’s request and approval for an exemption or discharge from military service because the applicant is an alien may be grounds for denial of the naturalization application.
+## B. Deserters or Persons Absent Without Official Leave (AWOL)
+An alien who is convicted by court martial as a deserter may be permanently barred from naturalization. A person not ultimately court martialed for being a deserter or for being Absent without Official Leave (AWOL), however, is not permanently barred from naturalization.
+An alien who deserted or was AWOL during the relevant period for good moral character may be ineligible for naturalization under the “unlawful acts” provision.

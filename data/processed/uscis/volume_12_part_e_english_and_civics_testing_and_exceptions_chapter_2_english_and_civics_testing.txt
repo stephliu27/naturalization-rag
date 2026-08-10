@@ -1,0 +1,110 @@
+## A. Educational Requirements
+An officer administers a naturalization test to determine whether an alien meets the English and civics requirements. [1] The naturalization test consists of two components:
+[^ 1] USCIS coordinates with external stakeholders to provide instruction and training materials related to the citizenship educational requirements. USCIS provides these educational materials and a list of all naturalization civics test items to aliens for study through the USCIS Citizenship Resource Center site.
+- English language proficiency, which is determined by the alien’s ability to read, write, speak and understand English; and
+- Knowledge of U.S. history and government, which is determined by a civics test.
+An alien has two opportunities to pass the English and civics tests: the initial examination and the re-examination interview. USCIS denies the naturalization application if the alien fails to pass any portion of the tests after two attempts. In cases where an alien requests a USCIS hearing on the denial, officers must administer any failed portion of the tests. [2]
+[^ 2] Only one opportunity to pass the failed portion of the tests is provided at the hearing. See Part B, Naturalization Examination, Chapter 6, USCIS Hearing and Judicial Review, Section B, Review of Timely Filed Hearing Request [12 USCIS-PM B.6(B)].
+Unless excused by USCIS, the alien’s failure to appear at the re-examination for testing or to take the tests at an examination or hearing counts as a failed attempt to pass the test.
+## B. Exceptions
+An alien may qualify for an exception from the English requirement, civics requirement, or both requirements. The table below serves as a quick reference guide on the exceptions to the English and civics requirements for naturalization.
+Exceptions to English and Civics Requirements for Naturalization
+| Exceptions [INA 312(b)] | English Educational Requirements: Read, write, speak, and understand | Civics Educational Requirements: Knowledge of U.S. history and government |
+| Age 50 or older and resided in the United States as a lawful permanent resident (LPR) for at least 20 years at time of filing | Exempt | Still required. Aliens may take civics test in their language of choice using an interpreter. |
+| Age 55 or older and resided in the United States as an LPR for at least 15 years at time of filing | Exempt |
+| Age 65 or older and resided in the United States as an LPR for at least 20 years at time of filing | Exempt | Still required but officers administer specially designated test forms. Aliens may take the civics test in their language of choice using an interpreter. |
+| Medical Disability Exception (Form N-648) | May be exempt from English, civics, or both |
+### 1. Age and Residency Exceptions to English
+An alien is exempt from the English language requirement but is still required to meet the civics requirement if:
+- The alien is age 50 or older at the time of filing for naturalization and has lived as an LPR in the United States for at least 20 years; or
+- The alien is age 55 or older at the time of filing for naturalization and has lived as an LPR in the United States for at least 15 years.
+The alien may take the civics test in his or her language of choice with the use of an interpreter.
+### 2. Special Consideration for Civics Test
+An alien receives special consideration in the civics test if, at the time of filing the application, the alien is 65 years of age or older and has been living in the United States for periods totaling at least 20 years subsequent to a lawful admission for permanent residence. An alien who qualifies for special consideration is administered specific test forms.
+### 3. Medical Disability Exception to English and Civics
+An alien who cannot meet the English and civics requirements because of a medical disability may be exempt from the English requirement, the civics requirement, or both requirements.
+## C. Meeting Requirements under IRCA 1986
+The Immigration Reform and Control Act of 1986 (IRCA) mandated that persons legalized under INA 245A meet a basic citizenship skills requirement in order to be eligible for adjustment to LPR status. An alien was permitted to demonstrate basic citizenship skills by:
+- Passing the English and civics tests administered by legacy Immigration and Naturalization Service (INS); or
+- Passing standardized English and civics tests administered by organizations then authorized by the INS. [4]
+[^ 4] See Pub. L. 99-603 (PDF), 100 Stat. 3359, 3396 (November 6, 1986). The INS Standardized Citizenship Testing Program was conducted by five non-government companies on behalf of the INS. That program was established in 1991 and ended on August 30, 1998. See 63 FR 25080 (May 6, 1998).
+At the time of the naturalization re-examination, the officer only retests the alien on any portion of the test that the applicant did not satisfy under IRCA. In all cases, the alien must demonstrate the ability to speak English at the time of the naturalization examination, unless the alien meets one of the age and time as resident exemptions of English or qualifies for a medical waiver.
+## D. English Portion of the Test
+An alien applying for naturalization must only demonstrate an ability to read, write, speak, and understand words in ordinary usage. Ordinary usage means comprehensible and pertinent communication through simple vocabulary and grammar, which may include noticeable errors in pronouncing, constructing, spelling, and understanding completely certain words, phrases, and sentences.
+An alien may ask for words to be repeated or rephrased and may make some errors in pronunciation, spelling, and grammar and still meet the English requirement for naturalization. An officer should repeat and rephrase questions until the officer is satisfied that the alien either fully understands the question or is unable to understand English.
+### 1. Speaking Test
+An officer determines an alien’s ability to speak and understand English based on the alien's ability to respond to questions normally asked in the course of the naturalization examination. The officer’s questions relate to eligibility and include questions provided in the naturalization application. The officer should repeat and rephrase questions during the naturalization examination until the officer is satisfied that the alien either understands the questions or does not understand English.
+An alien who does not qualify for a waiver of the English requirement must be able to communicate in English about his or her application and eligibility for naturalization. An alien does not need to understand every word or phrase on the application.
+Passing the Speaking Test
+If the alien generally understands and responds meaningfully to questions relevant to his or her naturalization eligibility, then he or she has sufficiently demonstrated the ability to speak English.
+Failing the Speaking Test
+An alien fails the speaking test when he or she does not understand sufficient English to be placed under oath or to answer the eligibility questions on his or her naturalization application. The officer must still administer all other parts of the naturalization test, including the portions on reading, writing, and civics.
+An officer cannot offer or accept a withdrawal of a naturalization application from an alien who does not speak English unless the alien has an interpreter present who is able to clearly understand the consequences of withdrawing the application.
+### 2. Reading Test
+To sufficiently demonstrate the ability to read in English, aliens must read one sentence out of three sentences. The reading test is administered by the officer using standardized reading test forms. Once the alien reads one of the three sentences correctly, the officer stops the reading test.
+Passing the Reading Test
+An alien passes the reading test if the alien reads one of the three sentences without extended pauses in a manner that the alien is able to convey the meaning of the sentence and the officer is able to understand the sentence. In general, the alien must read all content words but may omit short words or make pronunciation or intonation errors that do not interfere with the meaning.
+Failing the Reading Test
+An alien fails the reading test if he or she does not successfully read at least one of the three sentences. An alien fails to read a sentence successfully when he or she:
+- Omits a content word or substitutes another word for a content word;
+- Pauses for extended periods of time while reading the sentence; or
+- Makes pronunciation or intonation errors to the extent that the alien is not able to convey the meaning of the sentence and the officer is not able to understand the sentence.
+### 3. Writing Test
+To sufficiently demonstrate the ability to write in English, the alien must write one sentence out of three sentences in a manner that the officer understands. The officer dictates the sentence to the alien using standardized writing test forms. An alien must not abbreviate any of the words. Once the alien writes one of the three sentences in a manner that the officer understands, the officer stops the writing test.
+An alien does not fail the writing test because of spelling, capitalization, or punctuation errors, unless the errors interfere with the meaning of the sentence and the officer is unable to understand the sentence.
+Passing the Writing Test
+The alien passes the writing test if the alien is able to convey the meaning of one of the three sentences to the officer. The alien’s writing sample may have the following:
+- Some grammatical, spelling, or capitalization errors;
+- Omitted short words that do not interfere with meaning; or
+- Numbers spelled out or written as digits.
+Failing the Writing Test
+An alien fails the writing test if he or she makes errors to a degree that the alien does not convey the meaning of the sentence and the officer is not able to understand the sentence.
+An alien fails the writing test if he or she writes the following:
+- A different sentence or words;
+- An abbreviation for a dictated word; [10]
+[^ 10] An abbreviation for a dictated word may be accepted if the officer has approved the abbreviation.
+- Nothing or only one or two isolated words; or
+- A sentence that is completely illegible.
+## E. Civics Portion of the Test
+### 1. Civics Test
+Aliens applying for naturalization must demonstrate a knowledge and understanding of the fundamentals of the history, the principles, and the form of government of the United States (civics). USCIS is committed to administering a test that is an instrument of civic learning and fosters civic assimilation as part of the test preparation process.
+Depending on the date an application for naturalization is filed, an alien applying for naturalization may be required to take either the 2008 Naturalization Civics Test or the 2025 Naturalization Civics Test. The percentage of questions required to pass either version of the civics test remains at 60 percent.
+Additionally, USCIS updates responses to certain questions on a rolling basis for accuracy. For example, USCIS will update responses because of federal or state elections, certain judicial appointments, or due to statutory changes or updates. When civics test questions are updated, so is the public-facing bank of questions and study materials, if applicable. [12]
+[^ 12] See the Check for Test Updates webpage.
+2008 Naturalization Civics Test
+Aliens who filed a naturalization application before October 20, 2025, must take the 2008 Naturalization Civics Test.
+To sufficiently demonstrate knowledge of civics, the applicant must answer correctly at least six out of 10 questions (also called test items) from the standardized civics test form administered by an officer.
+The 2008 Naturalization Civics Test contains a bank of 100 questions from which a USCIS system randomly selects the test questions, and an officer administers the test orally. The standardized civics test contains 10 questions. The officer stops the test once the alien correctly answers the minimum number of six questions required to pass the test, or answers five questions incorrectly.
+Passing the Civics Test
+An applicant passes the civics test if he or she provides a correct answer or provides an alternative phrasing of the correct answer for six of the 10 questions.
+Failing the Civics Test
+An applicant fails the civics test if he or she provides an incorrect answer or fails to respond to five out of the 10 questions from the standardized test form.
+2025 Naturalization Civics Test
+Aliens who file a naturalization application on or after October 20, 2025, must take the 2025 Naturalization Civics Test.
+To sufficiently demonstrate knowledge of civics, an alien applying for naturalization must pass a civics test by answering at least 12 of 20 questions correctly.
+The 2025 Naturalization Civics Test contains a bank of 128 questions from which a USCIS system randomly selects the test questions, and an officer administers the test orally. The standardized civics test contains 20 questions. The officer stops the test once the alien correctly answers the minimum of 12 questions required to pass the test, or answers nine questions incorrectly. Stopping the test after the requisite number of questions is answered either correctly or incorrectly is a departure from the 2020 Naturalization Civics Test. In other respects, the 2025 Naturalization Civics Test remains the same.
+Passing the Civics Test
+An alien passes the civics test if he or she provides a correct answer or provides an alternative phrasing of the correct answer for at least 12 out of the 20 questions.
+Failing the Civics Test
+An alien fails the civics test if he or she provides an incorrect answer or fails to respond to nine out of the 20 questions.
+### 2. Special Consideration
+An officer gives special consideration to an alien who is 65 years of age or older and who has been living in the United States for periods totaling at least 20 years subsequent to a lawful admission for permanent residence. The age and time requirements must be met at the time of filing the naturalization application.
+The bank of civics test questions for aliens given special consideration contains 20 specially designated civics questions to study. The civics test for aliens given special consideration contains 10 questions.
+- Aliens who filed a naturalization application before October 20, 2025, are given a 10-question test from the 20 specially designated questions on the 2008 Naturalization Civics Test.
+- Aliens who file a naturalization application on or after October 20, 2025, are given a 10-question test from the 20 specially designated questions on the 2025 Naturalization Civics Test.
+An alien who meets the criteria for special consideration passes the civics test if he or she provides a correct answer or provides an alternative phrasing of the correct answer for at least six of 10 civics test questions from the specially designated list of 20 questions.
+### 3. Due Consideration
+An officer should exercise “due consideration” on a case-by-case basis in choosing subject matters, phrasing questions, and evaluating responses when administering the civics test. The officer’s decision to exercise due consideration should be based on a review of the alien's:
+- Age;
+- Background;
+- Level of education;
+- Length of residence in the United States;
+- Opportunities available and efforts made to acquire the requisite knowledge; and
+- Any other relevant factors relating to the alien’s knowledge and understanding.
+## F. Failure to Meet the English or Civics Requirements
+If an alien fails any portion of the English test, the civics test, or all tests during the initial naturalization examination, USCIS reschedules the alien to appear for a second examination between 60 and 90 days after the initial examination. [17]
+[^ 17] See 8 CFR 335.3(b) (re-examination no earlier than 60 days from initial examination). See 8 CFR 312.5(a) (re-examination no later than 90 days from initial examination).
+In cases where the alien appears for a re-examination, the reexamining officer must not administer the same English or civics test forms administered during the initial examination. The officer must only retest the alien in those areas that the alien previously failed. For example, if the alien passed the English speaking, reading, and civics portions but failed the writing portion during the initial examination, the officer must only administer the English writing test during the re-examination.
+If an alien fails any portion of the naturalization test a second time, the officer must deny the application based upon the alien’s failure to meet the educational requirements for naturalization. The officer also must address any other areas of ineligibility in the denial notice. An alien who refuses to be tested or to respond to individual questions on the reading, writing, or civics test, or fails to respond to eligibility questions because he or she did not understand the questions as asked or rephrased, fails to meet to the educational requirements. An officer should treat an alien’s refusal to be tested or to respond to test questions as a failure of the test.
+## G. Documenting Test Results
+All officers administering the English and civics tests are required to record the test results in the alien’s A-file. Officers are required to complete and provide to each alien at the end of the naturalization examination the results of the examination and testing, unless the officer serves the applicant with a denial notice at that time. The results of the examination include the results of the English and civics tests.

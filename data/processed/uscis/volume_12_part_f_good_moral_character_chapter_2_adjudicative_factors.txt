@@ -1,0 +1,82 @@
+## A. Applicable Statutory Period
+The applicable period during which an applicant must show that he or she has been a person of good moral character (GMC) depends on the corresponding naturalization provision. [1] In general, the statutory period for GMC for an applicant filing under the general naturalization provision starts 5 years prior to the date of filing.
+[^ 1] See the relevant Volume 12 [12 USCIS-PM] part for the specific statutory period pertaining to each naturalization provision.
+The statutory period starts 3 years prior to the date of filing for certain spouses of U.S. citizens. The period during which certain service members or veterans must show GMC starts 1 or 5 years from the date of filing depending on the military provision.
+In all cases, the applicant must also show that he or she continues to be a person of GMC until the time of his or her naturalization.
+## B. Conduct Outside of the Statutory Period
+USCIS is not limited to reviewing the applicant's conduct only during the applicable GMC period. An applicant’s conduct prior to the GMC period may affect the applicant’s ability to establish GMC if the applicant’s present conduct does not reflect a reformation of character or the earlier conduct is relevant to the applicant’s present moral character.
+In general, an officer must consider the totality of the circumstances and weigh all factors, favorable and unfavorable, when considering reformation of character in conjunction with GMC within the relevant period. [7] The following factors may be relevant in assessing an applicant’s current moral character and reformation of character:
+[^ 7] See Ralich v. United States, 185 F.2d 784 (1950) (provided false testimony within the statutory period and operated a house of prostitution prior to the statutory period). See Marcantonio v. United States, 185 F.2d 934 (1950) (applicant had rehabilitated his character after multiple arrests before statutory period).
+- Family ties and background;
+- Absence or presence of other criminal history;
+- Education;
+- Employment history;
+- Other law-abiding behavior (for example, meeting financial obligations, paying taxes);
+- Community involvement;
+- Credibility of the applicant;
+- Compliance with probation; and
+- Length of time in United States.
+## C. Definition of Conviction
+### 1. Statutory Definition of Conviction for Immigration Purposes
+Most of the criminal offenses that preclude a finding of GMC require a conviction for the disqualifying offense or arrest. A “conviction” for immigration purposes means a formal judgment of guilt entered by the court. A conviction for immigration purposes also exists in cases where the adjudication of guilt is withheld if the following conditions are met:
+- A judge or jury has found the person guilty or the person entered a plea of guilty or nolo contendere [8] or has admitted sufficient facts to warrant a finding of guilt; and
+[^ 8] The term “nolo contendere” is Latin for “I do not wish to contest.”
+- The judge has ordered some form of punishment, penalty, or imposed a restraint on the person’s liberty.
+It is not always clear if the outcome of the arrest resulted in a conviction. Various states have provisions for diminishing the effects of a conviction. In some states, adjudication may be deferred upon a finding or confession of guilt. Some states have a pretrial diversion program whereby the case is removed from the normal criminal proceedings. This way the person may enter into a counseling or treatment program and potentially avoid criminal prosecution.
+If the accused is directed to attend a pre-trial diversion or intervention program, where no admission or finding of guilt is required, the order may not count as a conviction for immigration purposes.
+### 2. Juvenile Convictions
+In general, a guilty verdict, ruling, or judgment in a juvenile court does not constitute a conviction for immigration purposes. A conviction for a person who is under 18 years of age and who was charged as an adult constitutes a conviction for immigration purposes.
+### 3. Court Martial Convictions
+A general “court martial” is defined as a criminal proceeding under the governing laws of the U.S. armed forces. A judgment of guilt by a court martial has the same force and effect as a conviction by a criminal court. However, disciplinary actions in lieu of a court martial are not convictions for immigration purposes.
+### 4. Deferrals of Adjudication
+In cases where adjudication is deferred, the original finding or confession of guilt and imposition of punishment is sufficient to establish a conviction for immigration purposes because both conditions establishing a conviction are met. If the court does not impose some form of punishment, then it is not considered a conviction even with a finding or confession of guilt. A decision or ruling of nolle prosequi [13] does not meet the definition of conviction.
+[^ 13] The term “nolle prosequi” is Latin for “we shall no longer prosecute.”
+### 5. Vacated Judgments
+If a judgment is vacated for cause due to Constitutional defects, statutory defects, or pre-conviction errors affecting guilt, it is not considered a conviction for immigration purposes. The judgment is considered a conviction for immigration purposes if it was dismissed for any other reason, such as completion of a rehabilitative period (rather than on its merits) or to avoid adverse immigration consequences.
+A conviction vacated where a criminal court failed to advise a defendant of the immigration consequences of a plea, which resulted from a defect in the underlying criminal proceeding, is not a conviction for immigration purposes.
+### 6. Foreign Convictions
+USCIS considers a foreign conviction to be a “conviction” in the immigration context if the conviction was the result of an offense deemed to be criminal by United States standards. In addition, federal United States standards on sentencing govern the determination of whether the offense is a felony or a misdemeanor regardless of the punishment imposed by the foreign jurisdiction. The officer may consult with local USCIS counsel in cases involving foreign convictions.
+### 7. Pardons
+An applicant who has received a full and unconditional executive pardon [18] prior to the start of the statutory period may establish GMC if the applicant shows that he or she has been reformed and rehabilitated prior to the statutory period. If the applicant received a pardon during the statutory period, the applicant may establish GMC if he or she shows evidence of extenuating or exonerating circumstances that would establish his or her GMC.
+[^ 18] Executive pardons are given by the President or a governor of the United States.
+Foreign pardons do not eliminate a conviction for immigration purposes.
+### 8. Expunged Records
+Expunged Records and the Underlying Conviction
+A record of conviction that has been expunged does not remove the underlying conviction. For example, an expunged record of conviction for a controlled substance violation [23] or any crime involving moral turpitude (CIMT) does not relieve the applicant from the conviction in the immigration context. In addition, foreign expungements are still considered convictions for immigration purposes.
+[^ 23] For cases arising in the Ninth Circuit involving state law convictions for simple possession of a controlled substance, please consult local counsel as the date of the conviction may affect whether possible treatment under the Federal First Offender Act renders the conviction invalid for immigration purposes. See Nunez-Reyes v. Holder, 646 F.3d 684 (9th Cir 2011).
+The Board of Immigration Appeals (BIA) has held that a state court action to “expunge, dismiss, cancel, vacate, discharge, or otherwise remove a guilty plea or other record of guilt or conviction by operation of a state rehabilitative statute” has no effect on removing the underlying conviction for immigration purposes. [26]
+[^ 26] See In re Roldan-Santoyo (PDF), 22 I&N Dec. 512 (BIA 1999).
+The officer may require the applicant to submit evidence of a conviction regardless of whether the record of the conviction has been expunged. It remains the applicant’s responsibility to obtain his or her records regardless of whether they have been expunged or sealed by the court. USCIS may file a motion with the court to obtain a copy of the record in states where the applicant is unable to obtain the record.
+### 9. Change in Sentence
+“Term of imprisonment or a sentence” generally refers to a person’s original criminal sentence, without regard to post-sentencing alterations. [28] Therefore, state-court orders that modify, clarify, or otherwise alter a criminal person’s original sentence will only be relevant for immigration purposes if they are based on a procedural or substantive defect in the underlying criminal proceeding. [29]
+[^ 28] See Matter of Thomas and Thompson, 27 I&N Dec. 674 (A.G. 2019) (“the phrase ‘term of imprisonment or a sentence’ in paragraph (B) [of INA 101(a)(48)] is best read to concern an alien’s original criminal sentence, without regard to post-sentencing alterations that, like a suspension, merely alleviate the impact of that sentence.”).
+[^ 29] See Matter of Thomas and Thompson, 27 I&N Dec. 674, 682 (A.G. 2019) (holding that the tests set forth in Matter of Cota-Vargas (PDF), 23 I&N Dec. 849 (BIA 2005), Matter of Song (PDF), 23 I&N Dec. 173 (BIA 2001), and Matter of Estrada, 26 I&N Dec. 749 (BIA 2016), will no longer govern the effect of state-court orders that modify, clarify, or otherwise alter a criminal's sentence.) For questions on procedural or substantive defects, officers should consult the Office of the Chief Counsel (OCC).
+## D. Effect of Probation
+An officer may not approve a naturalization application while the applicant is on probation, parole, or under a suspended sentence. However, an applicant who has satisfactorily completed probation, parole, or a suspended sentence during the relevant statutory period is not automatically precluded from establishing GMC. The fact that an applicant was on probation, parole, or under a suspended sentence during the statutory period, however, may affect the overall GMC determination.
+## E. Admission of Certain Criminal Acts
+An applicant may be unable to establish GMC if he or she admits committing certain offenses even if the applicant has never been formally charged, indicted, arrested or convicted. This applies to offenses involving “moral turpitude” or any violation of, or a conspiracy or attempt to violate, any law or regulation relating to a controlled substance. [32] When determining whether an applicant committed a particular offense, the officer must review the relevant statute in the jurisdiction where it is alleged to have been committed.
+[^ 32] See Chapter 5, Conditional Bars for Acts in Statutory Period [12 USCIS-PM F.5]. See 8 CFR 316.10(b)(2)(i) (offenses involving “moral turpitude”). See 8 CFR 316.10(b)(2)(iii) (violation of controlled substance law).
+The officer must provide the applicant with a full explanation of the purpose of the questioning stemming from the applicant’s declaration that he or she committed an offense. In order for the applicant’s declaration to be considered an “admission,” it must meet the long held requirements for a valid “admission” of an offense:
+- The officer must provide the applicant the text of the specific law from the jurisdiction where the offense was committed;
+- The officer must provide an explanation of the offense and its essential elements in “ordinary” language; and
+- The applicant must voluntarily admit to having committed the particular elements of the offense under oath.
+The officer must ensure that the applicant is under oath when taking the sworn statement to record the admission. The sworn statement must cover the requirements for a valid admission, to include the specifics of the act or acts that may prevent the applicant from establishing GMC. The officer may consult with his or her supervisor to ensure that sufficient written testimony has been received from the applicant prior to making a decision on the application.
+## F. “Purely Political Offense” Exception
+There is an exception to certain conditional bars to GMC in cases where the offense was a “purely political offense” that resulted in conviction, or in conviction and imprisonment, outside of the United States. [35] Purely political offenses are generally offenses that “resulted in convictions obviously based on fabricated charges or predicated upon repressive measures against racial, religious or political minorities.”
+[^ 35] See In re O'Cealleagh (PDF), 23 I&N Dec. 976 (BIA 2006) (finding that a CIMT offense must be completely or totally political for “purely political offense” exception to apply).
+The “purely political offense” exception applies to the following conditional bars to GMC: [37]
+[^ 37] See Chapter 5, Conditional Bars for Acts in Statutory Period [12 USCIS-PM F.5], for further guidance on each bar to GMC.
+- Conviction for one or more crimes involving moral turpitude (CIMTs);
+- Conviction of two or more offenses with a combined sentence of 5 years or more; and
+- Incarceration for a total period of 180 days or more.
+These conditional bars to GMC do not apply if the underlying conviction was for a “purely political offense” abroad. The officer should rely on local USCIS counsel in cases where there is a question about whether a particular offense should be considered a “purely political offense.”
+## G. Extenuating Circumstances
+Certain conditional bars to GMC should not adversely affect the GMC determination if the applicant shows extenuating circumstances. The extenuating circumstance must precede or be contemporaneous with the commission of the offense. USCIS does not consider any conduct or equity (including evidence of reformation or rehabilitation) subsequent to the commission of the offense as an extenuating circumstance.
+The “extenuating circumstances” provision applies to the following conditional bars to GMC:
+- Failure to support dependents;
+- Adultery; and
+- Unlawful acts.
+These conditional bars to GMC do not apply if the applicant shows extenuating circumstances. The officer should provide the applicant with an opportunity during the interview to provide evidence and testimony of extenuating circumstances in relevant cases.
+## H. Removability and GMC
+Certain permanent and conditional bars to GMC may also render the applicant amenable to removal proceedings. [46] This depends on various factors specific to each case. Not all applicants who are found to lack GMC are removable. An applicant may be found to lack GMC and have his or her naturalization application denied under those grounds without DHS issuing a Notice to Appear.
+[^ 46] See INA 237 (“general classes of deportable aliens”).

@@ -1,0 +1,32 @@
+## A. Background Investigation
+USCIS conducts an investigation of the applicant upon his or her filing for naturalization. The investigation consists of certain criminal background and security checks. The background and security checks include collecting fingerprints and requesting a “name check” from the Federal Bureau of Investigations (FBI). In addition, USCIS conducts other inter-agency criminal background and security checks on all applicants for naturalization. The background and security checks apply to most applicants and must be conducted and completed before the applicant is scheduled for his or her naturalization interview.
+## B. Fingerprints
+### 1. Fingerprint Requirement
+USCIS must collect fingerprint records as part of the background check process on applicants for naturalization regardless of their age. [3] In general, applicants receive a biometric service appointment at a local Application Support Center (ASC) for collection of their biometrics (fingerprints, photographs, and signature).
+[^ 3] See 8 CFR 103.2(b)(9), 8 CFR 335.1, and 8 CFR 335.2. See Part I, Military Members and their Families, Chapter 6, Required Background Checks [12 USCIS-PM I.6], for guidance on the background and security check procedures for members or veterans of the U.S. armed forces.
+USCIS notifies applicants in writing to appear for fingerprinting after filing the naturalization application. Fingerprints are valid for 15 months from the date of processing by the FBI. An applicant abandons his or her naturalization application if the applicant fails to appear for the fingerprinting appointment without good cause and without notifying USCIS.
+Previously, USCIS had waived the fingerprint requirements for applicants 75 years old or older because it was difficult to capture readable fingerprints from this age group. As a result, applicants 75 years old or older were not required to appear at an ASC. Electronic processing of applications and improved technology now allows USCIS to capture fingerprints for applicants of all ages and enhances the ability to confirm identity and perform required background checks.
+Once an ASC collects an applicant’s biometrics, USCIS submits the records to the FBI for a full criminal background check. The response from the FBI that a full criminal background check has been completed includes confirmation that:
+- The applicant does not have an administrative or a criminal record;
+- The applicant has an administrative or a criminal record; or
+- The applicant’s submitted fingerprint records have been determined unclassifiable for the purpose of conducting a criminal background check and have been rejected.
+Accommodations
+USCIS makes special arrangements to accommodate the needs of applicants who are unable to attend an appointment, including applicants with disabilities and homebound or hospitalized applicants. All domestic USCIS facilities are accessible to applicants with disabilities. Applicants who are homebound or hospitalized may request an accommodation when unable to appear at an ASC for biometrics processing. Applicants should submit a copy of the appointment notice and medical documentation verifying the need for an in-home appointment with the local field office.
+Applicants who need to request an accommodation for their appointment can submit a request online or call the USCIS Contact Center at any time at 800-375-5283 (TDD: 800-767-1833). [8]
+[^ 8] See USCIS web pages on Homebound Processing and How to Request Special Accommodation.
+### 2. Fingerprint Waivers
+Applicants with Certain Medical Conditions
+An applicant may qualify for a waiver of the fingerprint requirement if the applicant is unable to provide fingerprints because of a medical condition, to include birth defects, physical deformities, skin conditions, and psychiatric conditions. Only certain USCIS officers are authorized to grant a fingerprint waiver.
+An officer responsible for overseeing applicant fingerprinting may grant the waiver in the following situations:
+- The officer has met with the applicant in person;
+- The officer or authorized technician has attempted to fingerprint the applicant; and
+- The officer determines that the applicant is unable to be fingerprinted at all or is unable to provide a single legible fingerprint.
+An applicant who is granted a fingerprint waiver must bring local police clearance letters covering the relevant period of good moral character to his or her naturalization interview. All clearance letters become part of the record. In cases where the applicant is granted a fingerprint waiver or has two unclassifiable fingerprint results, the officer must take a sworn statement from the applicant covering the period of good moral character.
+An officer should not grant a waiver if the waiver is solely based on:
+- The applicant has fewer than 10 fingers;
+- The officer considers that the applicant’s fingerprints are unclassifiable; or
+- The applicant’s condition preventing the fingerprint capturing is temporary.
+An officer’s decision to deny a fingerprint waiver is final and may not be appealed.
+## C. FBI Name Checks
+The FBI conducts “name checks” on all naturalization applicants, and disseminates the information contained in the FBI’s files to USCIS in response to the name check requests. The FBI’s National Name Check Program (NNCP) includes a search against the FBI’s Universal Index (UNI), which contains personnel, administrative, applicant, and criminal files compiled for law enforcement purposes. The FBI disseminates the information contained in the FBI’s files to USCIS in response to the name check requests.
+The FBI name check must be completed and cleared before an applicant for naturalization is scheduled for his or her naturalization interview. A definitive FBI name check response of “NR” (No Record) or “PR” (Positive Response) is valid for the duration of the application for which they were conducted. Definitive responses used to support other applications are valid for 15 months from the FBI process date. A new name check is required in cases where the final adjudication and naturalization have not occurred within that timeframe or the name check was processed incorrectly.

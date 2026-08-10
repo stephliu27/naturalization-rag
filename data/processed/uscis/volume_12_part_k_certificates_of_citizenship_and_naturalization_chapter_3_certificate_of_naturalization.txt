@@ -1,0 +1,30 @@
+## A. Eligibility for Certificate of Naturalization
+An applicant submits to USCIS an Application for Naturalization (Form N-400) along with supporting evidence to establish eligibility for naturalization. The application must be submitted in accordance with the form instructions and with appropriate fee. The applicant must establish that he or she has met all of the pertinent naturalization eligibility requirements for issuance of a Certificate of Naturalization.
+## B. Contents of Certificate of Naturalization
+### 1. Information about the Applicant
+The Certificate of Naturalization contains certain required information identifying the person and confirming the person's U.S. citizenship through naturalization. Specifically, the Certificate of Naturalization contains:
+- USCIS registration number (A-number);
+- Complete name;
+- Marital status;
+- Place of residence;
+- Country of former nationality; [3]
+[^ 3] Applicants with Taiwan passports may indicate Taiwan as country of nationality on their Form N-400 (Taiwan passports show “Republic of China”). Such applicants’ Certificates of Naturalization are issued showing Taiwan as country of former nationality. USCIS does not issue certificates showing “Taiwan, PRC,” “Taiwan, China,” “Taiwan, Republic of China,” or “Taiwan, ROC.” People’s Republic of China (PRC) is the country name used for applicants with PRC passports.
+- Photograph;
+- Signature of applicant; and
+- Other descriptors: sex, date of birth, and height.
+### 2. Additional Information on Certificates of Naturalization
+- Certificate number;
+- Statement by the USCIS Director indicating that the applicant complied with all the eligibility requirements for naturalization under the laws of the United States;
+- Date of issuance, which is the date the holder became a U.S. citizen through naturalization; and
+- DHS seal and Director’s signature as the authority under which the certificate is issued.
+### 3. Name Changes
+Change of Legal Name on Certificate of Naturalization
+In general, a Certificate of Naturalization includes an applicant’s full legal name as the name appears on the applicant’s Form N-400. [6] If the applicant’s name changes after filing Form N-400 but before naturalization, the applicant must provide supporting documentation of the name change before USCIS may issue the Certificate of Naturalization in the new name. [7]
+[^ 6] A full legal name includes the person’s first name (or given name), middle name(s) (if any), and family name (or surname) without any initials or nicknames. See 6 CFR 37.3. See Real ID Act of 2005, Pub. L. 109-13 (PDF) (May 11, 2005), 49 U.S.C. 30301. See Volume 1, General Policies and Procedures, Part E, Adjudications, Chapter 5, Verification of Identifying Information, Section A, Full Legal Name [1 USCIS-PM E.5(A)].
+[^ 7] See Volume 1, General Policies and Procedures, Part E, Adjudications, Chapter 5, Verification of Identifying Information, Section A, Full Legal Name [1 USCIS-PM E.5(A)]. USCIS does not suspend the adjudication of a benefit request pending a court determination of a name change or other efforts by the requestor to establish a new legal name. USCIS creates the Certificate of Naturalization using the legal name in place when the benefit request is decided.
+An applicant for naturalization may also request a legal name change from the court performing the naturalization ceremony and administering the Oath of Allegiance. The name change requested is not final until the applicant is naturalized by the court. The Certificate of Naturalization is issued in the applicant’s new name, as ordered by the court.
+If a naturalized person changes their legal name after naturalizing, they may file an Application for Replacement Naturalization/Citizenship Document (Form N-565), together with the required fees and proof of the legal change of name. However, USCIS is prohibited from making any changes to an applicant’s name on a Certificate of Naturalization if the applicant now claims that the name sworn to during the naturalization process was not the correct name, and the applicant did not obtain a legal name change as described above.
+## C. Issuance of Certificate of Naturalization
+In general, USCIS issues a Certificate of Naturalization after an officer approves the Application for Naturalization and the applicant has taken the Oath of Allegiance. USCIS will not issue a Certificate of Naturalization to a person who has not surrendered his or her Permanent Resident Card (PRC) or Alien Registration Card (ARC) evidencing the person’s lawful permanent residence. If the person established that his or her card was lost or destroyed, USCIS may waive the requirement of surrendering the card. [12]
+[^ 12] See 8 CFR 338.3. The requirement to surrender the PRC or ARC does not apply to applicants naturalizing under INA 329 who qualify for naturalization without being permanent residents.
+An applicant is not required to take the Oath of Allegiance or appear at the oath ceremony if USCIS waives the oath requirement due to the applicant’s medical disability. In these cases, USCIS issues the certificate in person or by certified mail to the person or his or her legal guardian, surrogate, or designated representative.

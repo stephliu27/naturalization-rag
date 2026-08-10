@@ -1,0 +1,101 @@
+## A. Roles and Responsibilities
+### 1. USCIS Officers
+Authority to Conduct Examination
+USCIS officers have authority to conduct the investigation and examination, to include the naturalization interview. The officer should introduce him or herself and explain the purpose of the naturalization examination and place the applicant under oath at the start of the interview.
+USCIS’ authority includes the legal authority for officers to:
+- Place an applicant under oath;
+- Obtain oral and written testimony during an in-person interview;
+- Subpoena witnesses;
+- Request evidence; and
+- Administer the Oath of Allegiance (when delegated by the Field Office Director).
+Questions on Eligibility
+An officer’s questioning of an applicant during the applicant’s naturalization interview must cover all of the requirements for naturalization. In general, the officer’s questions focus on the information in the naturalization application. The officer may ask any questions that are pertinent to the eligibility determination. The officer should provide the applicant with suitable opportunities to respond to questions in all instances.
+In general, the officer’s questions may include, but are not limited to, the following questions:
+- Biographical information, to include marital history and military service;
+- Admission and length of time as a lawful permanent resident (LPR);
+- Absences from the United States after becoming an LPR;
+- Places of residence and employment history;
+- Knowledge of English and of U.S. history and government (civics);
+- Moral character and any criminal history;
+- Attachment to the principles of the U.S. Constitution;
+- Affiliations or memberships in certain organizations;
+- Willingness to take an Oath of Allegiance to the United States; and
+- Any other topic pertinent to the eligibility determination.
+In most cases, the officer conducting the naturalization interview administers the required tests relating to the applicant’s ability to read and write English, and his or her knowledge of U.S. history and government (civics), unless the applicant is exempt. The officer who conducts the naturalization interview and who determines the applicant’s ability to speak and understand English is not required to also administer the English reading and writing, and civics tests. Accordingly, a different officer may administer the tests.
+Grounding Decisions on Applicable Laws
+An officer must analyze the facts of each case to make a legally sound decision on the naturalization application. The officer must base his or her decision to approve or deny the application on the relevant laws, regulations, precedent decisions, and agency guidance:
+- The Immigration and Nationality Act (INA) is the primary source of pertinent statutory law.
+- The corresponding regulations explain the statutes further and provide guidance on how the statutes are applied. [5]
+[^ 5] See Title 8 of the Code of Federal Regulations (8 CFR). Most of the corresponding regulations have been promulgated by legacy INS or USCIS.
+- Precedent decisions have the force of law and are binding on cases within the jurisdiction of the court or appellate body making the decision. [6]
+[^ 6] Precedent decisions are judicial decisions that serve as an authority for deciding an immigration matter. Precedent decisions are decisions designated as such by the Board of Immigration Appeals (BIA), Administrative Appeals Office (AAO), and appellate court decisions. Decisions from district courts are not precedent decisions in other cases.
+- USCIS guidance provides the agency’s policies and procedures supporting the laws and regulations. The USCIS Policy Manual is the primary source for agency guidance. [7]
+[^ 7] The Adjudicator’s Field Manual (AFM) and policy memoranda also serve as key sources for guidance on topics that are not covered in the Policy Manual.
+### 2. Authorized Representatives
+An applicant may request the presence and counsel of a representative, to include attorneys or other representatives, at the applicant’s in-person interview. The representative must submit to USCIS a properly completed notice of entry of appearance. [8]
+[^ 8] See 8 CFR 335.2(a). The representative must use the Notice of Entry of Appearance as Attorney or Representative (Form G-28).
+In cases where an applicant requests to proceed without the assistance of a representative, the applicant must sign a waiver of representation. If the applicant does not want to proceed with the interview without his or her representative, the officer must reschedule the interview. Officers should consult with a supervisor if the representative fails to appear for multiple scheduled interviews.
+The representative’s role is to ensure that the applicant’s legal rights are protected. A representative may advise his or her client on points of law but should not respond to questions the officer has directed to the applicant.
+An applicant may be represented by any of the following:
+- Attorneys in the United States;
+- Certain law students and law graduates not yet admitted to the bar;
+- Certain reputable individuals who are of good moral character, have a pre-existing relationship with the applicant and are not receiving any payment for the representation;
+- Accredited representatives from organizations accredited by the Board of Immigration Appeals (BIA);
+- Accredited officials of the government to which a person owes allegiance; or
+- Attorneys outside the United States. [14]
+[^ 14] See 8 CFR 292.1(a)(6). In naturalization cases, attorneys licensed only outside the United States may represent an applicant only when the naturalization proceeding can occur overseas and where DHS allows the representation as a matter of discretion. Attorneys licensed only outside the United States cannot represent an applicant whose naturalization application is processed solely within the United States unless the attorney also qualifies under another representation category.
+No other person may represent an applicant.
+### 3. Interpreters
+An interpreter may be selected either by the applicant or by USCIS in cases where the applicant is permitted to use an interpreter. The interpreter must:
+- Translate what the officer and the applicant say word for word to the best of his or her ability without providing the interpreter’s own opinion, commentary, or answer; and
+- Complete an interpreter’s oath and privacy release statement and submit a copy of his or her government-issued identification at the naturalization interview.
+A disinterested party should be used as an interpreter. If the USCIS officer is fluent in the applicant’s native language, the officer may conduct the examination in the applicant’s language of choice.
+USCIS reserves the right to disqualify an interpreter provided by the applicant if an officer considers that the integrity of the examination is compromised by the interpreter’s participation.
+## B. Preliminary Review of Application
+A USCIS officer who is designated to conduct the naturalization interview should review the applicant’s “A-file” and naturalization application before the interview. The A-file is the applicant’s record of his or her interaction with USCIS, legacy Immigration and Naturalization Service (INS), and other governmental organizations with which the applicant has had proceedings pertinent to his or her immigration record. The officer addresses all pertinent issues during the naturalization interview.
+### 1. General Contents of A-File
+The applicant’s A-file may include the following information along with his or her naturalization application:
+- Documents that show how the applicant became an LPR;
+- Other applications or forms for immigration benefits submitted by the applicant;
+- Correspondence between USCIS and the applicant;
+- Memoranda and forms from officers that may be pertinent to the applicant’s eligibility;
+- Materials such as any criminal records, [16] correspondence from other agencies, and investigative reports and enforcement actions from DHS or other agencies.
+[^ 16] For example, a Record of Arrest and Prosecution (“RAP” sheet).
+### 2. Jurisdiction for Application
+In most cases, the USCIS office having jurisdiction over the applicant’s residence at the time of filing has the responsibility for processing and adjudicating the naturalization application. [18] An officer should review whether the jurisdiction of a case has changed because the applicant has moved after filing his or her naturalization application. The USCIS office may transfer the application to the appropriate office with jurisdiction when appropriate. In addition, an applicant for naturalization as a battered spouse of a U.S. citizen or child may use a different address for safety which does not affect the jurisdiction requirements.
+[^ 18] An applicant who is a student or a member of the U.S. armed forces may have different places of residence that may affect the jurisdiction requirement. See 8 CFR 316.5(b).
+In cases where an officer becomes aware of a change in jurisdiction during the naturalization interview, the officer may complete the interview and then forward the applicant’s A-file with the pending application to the office having jurisdiction. The officer informs the applicant that the application’s jurisdiction has changed. The applicant will receive a new appointment notice from the current office with jurisdiction.
+### 3. Results of Background and Security Checks
+An officer should ensure that all of the appropriate background and security checks have been conducted on the naturalization applicant. The results of the background and security checks should be included as part of the record.
+### 4. Other Documents or Requests in the Record
+Requests for Accommodations or Disability Exceptions
+USCIS accommodates applicants with disabilities by making modifications to the naturalization examination process. An officer reviews the application for any accommodations request, any oath waiver request, or for a medical disability exception from the educational requirements for naturalization.
+Previous Notice to Appear, Order to Show Cause, or Removal Order
+An officer reviews an applicant’s record and relevant databases to identify any current removal proceedings or previous proceedings resulting in a final order of removal from the United States. If an applicant is in removal proceedings, a Notice to Appear or the previously issued “Order to Show Cause” may appear in the applicant’s record. [24] USCIS denies any naturalization application from an applicant who is in removal proceedings, except for certain cases involving naturalization based on military service. [25]
+[^ 24] An Order to Show Cause was the notice used prior to enactment of the Illegal Immigration Reform and Immigrant Responsibility Act (IIRIRA), Pub. L. 104–208 (PDF), 110 Stat. 3009 (September 30, 1996).
+[^ 25] See INA 328(b)(2) (applicants currently in the U.S. armed forces and eligible for military naturalization under INA 328(a)). See INA 329(b)(1) (applicants eligible for military naturalization under INA 329(a)). See Part D, General Naturalization Requirements, Chapter 2, Lawful Permanent Resident Admission for Naturalization [12 USCIS-PM D.2].
+The officer should deny the naturalization application if the applicant has already received a final order of removal from an immigration judge, unless:
+- The applicant was removed from the United States and later reentered with the proper documentation and authorization; or
+- The applicant is filing for naturalization under the military naturalization provisions.
+## C. Initial Naturalization Examination
+All naturalization applicants must appear for an in-person examination before a USCIS officer after filing an Application for Naturalization (Form N-400). The applicant’s examination includes both the interview and the administration of the English and civics tests. The applicant’s interview is a central part of the naturalization examination. The officer conducts the interview with the applicant to review and examine all factors relating to the applicant’s eligibility.
+The officer places the applicant under oath and interviews the applicant on the questions and responses in the applicant’s naturalization application. [28] The initial naturalization examination includes:
+[^ 28] If an applicant is unable to undergo any part of the naturalization examination because of a physical or developmental disability or mental impairment, a legal guardian, surrogate or an eligible designated representative completes the naturalization process for the applicant. See Part J, Oath of Allegiance, Chapter 3, Oath of Allegiance Modifications and Waivers [12 USCIS-PM J.3].
+- An officer’s review of information provided in the applicant’s naturalization application;
+- The administration of tests on the educational requirements for naturalization; [29] and
+[^ 29] See Part E, English and Civics Testing and Exceptions [12 USCIS-PM E]. USCIS may administer the test separately from the interview.
+- An officer’s questions relating to the applicant’s eligibility for naturalization. [30]
+[^ 30] See the relevant Volume 12 [12 USCIS-PM] part for the specific eligibility requirements for each naturalization provision.
+The applicant’s written responses to questions on his or her naturalization application are part of the documentary record signed under penalty of perjury. The written record includes any amendments to the responses in the application that the officer makes in the course of the naturalization interview as a result of the applicant’s testimony. The amendments, sworn affidavits, and oral statements and answers document the applicant’s testimony and representations during the naturalization interview(s).
+At the officer’s discretion, he or she may record the interview by a mechanical, electronic, or videotaped device, may have a transcript made, or may prepare an affidavit covering the testimony of the applicant. The applicant or his or her authorized attorney or representative may request a copy of the record of proceedings through the Freedom of Information Act (FOIA). [32]
+[^ 32] The applicant or authorized attorney or representative may request a copy of the record of proceedings by filing a Freedom of Information/Privacy Act Request (Form G-639).
+The officer provides the applicant with a notice of results at the end of the examination regardless of the outcome. The notice provides the outcome of the examination and should explain what the next steps are in cases that are continued.
+## D. Subsequent Re-examination
+USCIS may schedule an applicant for a subsequent examination (re-examination) to determine the applicant’s eligibility. [35] During the re-examination:
+[^ 35] A USCIS field office may allow the applicant to provide documentation by mail in order to overcome any deficiencies without scheduling the applicant to come in person for another interview.
+- The officer reviews any evidence provided by the applicant in a response to a Request for Evidence issued during or after the initial interview.
+- The officer considers new oral and written testimony and determines whether the applicant meets all of the naturalization eligibility requirements, to include re-testing the applicant on the educational requirements (if necessary).
+In general, the re-examination provides the applicant with an opportunity to overcome deficiencies in his or her naturalization application. Where the re-examination is scheduled for failure to meet the educational requirements for naturalization during the initial examination, the subsequent re-examination is scheduled between 60 and 90 days from the initial examination. [36]
+[^ 36] See 8 CFR 335.3(b) (Re-examination no earlier than 60 days from initial examination). See 8 CFR 312.5(a) (Re-examination for educational requirements scheduled no later than 90 days from initial examination). In cases where an applicant does not meet the educational requirements for naturalization during the re-examination, USCIS denies the application. See Part E, English and Civics Testing and Exceptions, Chapter 2, English and Civics Testing [12 USCIS-PM E.2].
+If the applicant is unable to overcome the deficiencies in his or her naturalization application, the officer denies the naturalization application. An applicant or his or her authorized representative may request a USCIS hearing before an officer on the denial of the applicant’s naturalization application. [37]
+[^ 37] See Chapter 6, USCIS Hearing and Judicial Review [12 USCIS-PM B.6]. See Section A, Roles and Responsibilities [12 USCIS-PM B.3(A)], for a list of authorized representatives. See 8 CFR 292.1.

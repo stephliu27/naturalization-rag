@@ -1,0 +1,69 @@
+As part of the adjudication of immigration benefits requests, USCIS reviews evidence, including biographical and biometrics information, submitted by the benefit requestor, as well as DHS systems, to verify identifying information.
+## A. Full Legal Name
+In general, the requestor’s full legal name is comprised of the requestor’s:
+- Given name (first name);
+- Middle name(s) (if any); and
+- Family name (last name).
+The legal name is one of the following:
+- The requestor’s name at birth as it appears on the birth certificate (or other qualifying identity documentation when a birth certificate is unavailable); [1]
+[^ 1] There may be instances in which a birth certificate is unobtainable because of country conditions or personal circumstances. In these instances, a requestor may submit secondary evidence or affidavits to establish the requestor’s identity. Any affidavit should explain the reasons primary evidence is unavailable. For more information, see the Department of State (DOS) Reciprocity Tables for identity documents that cannot be obtained in particular countries and during specific time periods. Asylum applicants may be able to establish their identity, including their full legal name, with testimony alone.
+- The requestor’s name following a legal name change (such as a petition for name change or adoption decree or order); or
+- The requestor’s name following a common law name change evidenced by a state-issued identification document. [2]
+[^ 2] Certain states recognize common law name changes. USCIS recognizes common law name changes if the benefit requestor’s state of residence has recognized such a name change through the issuance of a state-issued identification document. See Subsection 1, Name Changes [1 USCIS-PM E.5(A)(1)].
+Determining a Benefit Requestor’s Legal Name
+When reviewing an immigration benefit request, the officer must review all evidence to support the name provided on the request. [3] Examples of evidence that the name used is the requestor’s legal name are as follows:
+[^ 3] In addition, various regulatory provisions specifically discuss name change requirements. See 8 CFR 204.2 (certain family-based immigrant petitions). See 8 CFR 320.3(b) and 8 CFR 322.3(b) (Certificates of Citizenship for certain children born outside the United States).
+- Birth certificate; [4]
+[^ 4] An adoption decree or order may result in the issuance of a birth certificate in a new name.
+- Civil marriage certificates, certificates of domestic partnership, and civil union certificates;
+- Divorce decree;
+- Family registry entry;
+- Government-issued identity document (including passport);
+- Certificate of naming;
+- Court order; or
+- Documentation demonstrating change of name by operation of state or local law. [5]
+[^ 5] In the United States, including its territories and possessions, state and local law govern name changes. Therefore, USCIS may issue a document in a new name based on the operation of the provisions of any state law that recognizes a new name. If the requestor resides in a state that recognizes common law name changes, the requestor may provide a state-issued identification document recognizing a common law name change based upon customary usage. The documentary evidence should show the issue date, acquired name, and one other piece of identifying data such as the applicant’s date of birth, place of birth, age, photograph, or Social Security number. Acceptable documentary evidence includes but is not limited to driver’s licenses or non-driver state-issued identification. See Subsection 1, Name Changes [1 USCIS-PM E.5(A)(1)].
+Officers may determine the legal name by examining any one document or a combination of documents. Officers should use the requestor’s expressed preference for their name from the evidence reviewed if their preferred name is confirmed by the governing state or local law. [6] If documents submitted in support of the benefit request do not support the name desired or claimed by the requestor, an officer may request additional evidence.
+[^ 6] Additional considerations may apply when adjudicating refugee and asylum-based adjustment of status applications. See Volume 7, Adjustment of Status, Part L, Refugee Adjustment, Chapter 5, Adjudication Procedures, Section C, Requests to Change Name or Date of Birth [7 USCIS-PM L.5(C)] and Section D, Spelling of Names and Naming Convention Issues [7 USCIS-PM L.5(D)]; and Part M, Asylee Adjustment, Chapter 5, Adjudication Procedures, Section D, Requests to Change Name or Date of Birth [7 USCIS-PM M.5(D)], and Section E, Spelling of Names and Naming Convention Issues [7 USCIS-PM M.5(E)].
+### 1. Name Changes
+The place of jurisdiction controls whether the name change is legally valid.
+Foreign Law
+If the benefit requestor changes their name while under foreign jurisdiction, USCIS considers the name change to be legally valid if the country has jurisdiction over the requestor at the time of the change and the change is legally valid and documented under that country’s law. For questions relating to the validity of a legal name change that occurred in a foreign country, officers may review the case with local counsel, review the U.S. Department of State’s Reciprocity Schedule for available documentation, and request a Library of Congress report.
+Common Law
+In the United States, including its territories and possessions, state and local law govern name changes. Therefore, USCIS may issue a document in a new name based on the operation of the provisions of any state or local law that recognizes a new name. If the requestor resides in a state that recognizes common law name changes, the requestor may provide a state-issued identification document and appropriate documentation issued by the state or locality recognizing a common law name change based upon customary usage. The documentary evidence should show the issue date, acquired name, and at least one other piece of identifying data such as the applicant’s date of birth, place of birth, age, photograph, or Social Security number. Acceptable documentary evidence includes but is not limited to driver’s licenses and non-driver state-issued identification. For questions relating to the validity of a common law name change, officers may review the case with local counsel.
+Name After Marriage or Divorce
+A married person may retain their pre-marital name or use a different legal married name (such as a spouse’s surname or a hyphenated name combining the pre-marital name and spouse’s surname). This change is often dependent on the married person’s preferences and may not be the name as it appears on a marriage license or certificate. However, if the marriage occurred in the United States, the officer should refer to the applicable state law to determine if the name change should be reflected on the marriage license or certificate.
+Similarly, a divorce might result in a change of name. Such change may be reflected on the divorce decree or order in support of the decree. As with marriages, the officer should refer to the applicable state law to determine if the name change should be reflected on the divorce decree.
+### 2. Construction of Foreign Names
+Construction of foreign names varies from culture to culture. [8] For example, certain countries’ birth certificates display names in this order: family name, middle name, given name. This contrasts with most birth certificates issued in the United States, which display names in this order: given name, middle name, family name. [9]
+[^ 8] For more information on the construction of foreign names and country or region-specific information, see A Guide to Names and Naming Practices (PDF).
+[^ 9] For more information, see 8 Foreign Affairs Manual (FAM) 403.1, Name Usage and Name Change.
+When determining a benefit requestor’s legal name, officers should be aware of the varying construction of foreign names. Officers also can consider the requestor’s preferences if consistent with the governing state or local law. [10] Officers should verify that the legal name entered in USCIS systems reflects U.S. customary name order (given name, middle name, family name) to avoid USCIS issuing an incorrect name on USCIS secure identity documents. [11]
+[^ 10] Additional considerations may apply when adjudicating refugee and asylum-based adjustment of status applications. See Volume 7, Adjustment of Status, Part L, Refugee Adjustment, Chapter 5, Adjudication Procedures, Section C, Requests to Change Name or Date of Birth [7 USCIS-PM L.5(C)] and Section D, Spelling of Names and Naming Convention Issues [7 USCIS-PM L.5(D)]; and Part M, Asylee Adjustment, Chapter 5, Adjudication Procedures, Section D, Requests to Change Name or Date of Birth [7 USCIS-PM M.5(D)], and Section E, Spelling of Names and Naming Convention Issues [7 USCIS-PM M.5(E)].
+[^ 11] Benefit requestors may seek a new USCIS-issued secure document, often without a new application or fee, if based on correction of a USCIS error on the document. See Volume 11, Travel and Identity Documents, Part A, Secure Identity Documents Policies and Procedures, Chapter 3, Reissuance of Secure Identity Documents [11 USCIS-PM A.3].
+For purposes of determining a requestor’s legal name, officers consider the foreign construction of the name. For example, a Vietnamese birth certificate or passport might read:
+Nguyen [Family Name] Van [Middle Name] Nam [Given Name]
+Although the foreign government-issued documentation may display in that order, USCIS considers the legal name to be Nam Van Nguyen.
+In some cultures, a person may have two first names and two last names and may use all their names or only some through customary usage. For example, a Mexican birth certificate or passport might read:
+Maria [Given Name] Guadalupe [Given Name] Gonzalez [Father’s Paternal Last Name] Gomez [Mother’s Paternal Last Name]
+Although the foreign government-issued documentation may be displayed in that order, USCIS may consider the legal name to be any of the following, if supported by evidence:
+- Maria Guadalupe Gonzalez Gomez
+- Maria Gonzalez Gomez
+- Guadalupe Gonzalez Gomez
+- Maria Gonzalez
+- Guadalupe Gonzalez
+One-Word Names
+Some benefit requestors may only have a one-word name, or mononym. The mononym may be a given name only, or a family name (last name) only. For example, in Afghanistan, it is common to have a name that consists of a given name only:
+- Laila [Given Name]
+For purposes of properly filing benefit requests, data entry in USCIS systems, and issuing secure documents such as Permanent Resident Cards or travel documents, when a benefit requestor has a single name, USCIS considers the single name as the family name. USCIS may insert No Name Given as the given name in this circumstance.
+## B. Personal Information
+### 1. Date of Birth [Reserved]
+[Reserved]
+### 2. Sex
+Certain USCIS applications, petitions, and requests require a benefit requestor to indicate his or her sex. In these cases, a benefit requestor must provide his or her biological sex as generally evidenced on his or her birth certificate issued at the time of birth or issued closest to the time of birth. Sex is not “gender identity.”
+Many immigration benefits require sex (male (M) or female (F)) and not gender, two examples of which are INA 338 that requires the bearer’s “sex” on the Certificate of Naturalization, and a host of immigration benefits that rely on the binary legal term “sons or daughters” for the allocation of immigrant visas, such as family-sponsored visas under INA 203(a), alien witness or informant (S) visas under INA 101(a)(15)(S), and employment-based investor (EB-5) visas under INA 203(b)(5). [12]
+[^ 12] See INA 203(b)(5)(A)(ii), which specifies “sons, or daughters.”
+USCIS only recognizes the two biological sexes: male (M) or female (F). If there is a discrepancy between the requestor’s selection and the birth certificate issued at the time of birth or issued closest to the time of birth, USCIS considers the sex indicated on the requestor’s birth certificate to be controlling, provided the birth certificate issued at the time of birth or issued closest to the time of birth indicates a male or female sex. Where a birth certificate issued at the time of birth or issued closest to the time of birth indicates a sex other than male or female, USCIS may base the determination of sex on secondary evidence in the record, where available.
+USCIS does not deny immigration benefits solely based on a failure to properly indicate the benefit requestor’s sex. However, USCIS must indicate the benefit requestor’s sex when issuing certain documents, [14] and USCIS does not issue a document indicating a sex that is inconsistent with the benefit requestor’s biological sex as generally evidenced on a birth certificate issued at the time of birth or issued closest to the time of birth (provided the birth certificate indicates a male or female sex). [15] Therefore, if a benefit requestor does not indicate their sex or indicates a sex different from the sex on his or her birth certificate issued at the time of birth or issued closest to the time of birth, it may cause delays in adjudication.
+[^ 14] For example, USCIS indicates the benefit requestor’s sex on Permanent Resident Cards, Employment Authorization Documents, Certificates of Naturalization, and Certificates of Citizenship.
+[^ 15] USCIS may provide notice to benefit requestors if USCIS issues a USCIS document reflecting a sex different than that indicated by the benefit requestor on the request.

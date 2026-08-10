@@ -1,0 +1,21 @@
+## A. Approvals
+If the requestor properly filed the benefit request and the officer determines that the requestor meets all eligibility requirements, then the officer may approve the request. Upon approval, the officer updates all relevant electronic systems to reflect the approval.
+## B. Denials [1]
+[^ 1] See 8 CFR 103.3. Generally, applications for asylum are not subject to denial under 8 CFR 103.2(b), unlike most other benefit requests. See 8 CFR 208.14(d).
+If, after evaluating all evidence submitted (including in response to a Request for Evidence (RFE) or Notice of Intent to Deny (NOID), if applicable), the officer determines the requestor is ineligible for the benefit sought, the officer denies the benefit request. [2] Upon denial of a request, the officer updates all relevant electronic systems and issues a written decision informing the requestor of the reason(s) for denial.
+[^ 2] Except that, if an asylum applicant appears to be deportable, excludable, or removable, the asylum officer must either grant asylum or refer the application to an immigration judge for adjudication in deportation, exclusion, or removal proceedings. See 8 CFR 208.14.
+If the denial notice is returned as undeliverable, USCIS verifies the mailing address and places the notice, including the original mailing envelope, in the appropriate file as evidence of service of the decision.
+Written decisions should use plain language that the requestor can understand. When applicable, the decision includes guidance on the procedures for filing appeals and motions, including instructions for where to find the appropriate forms. [5]
+[^ 5] See 8 CFR 103.3(a)(1)(iii)(A) (appeal) and 8 CFR 103.5 (motion to reopen or reconsider). When USCIS denies a benefit request for lack of prosecution due to abandonment, the denial cannot be appealed (although the requestor can file a motion). See 8 CFR 103.2(b)(15).
+### 1. Denials Based on Lack of Legal Basis
+Generally, if a benefit request does not have a legal basis for approval, the officer should issue a denial without first issuing an RFE or NOID.
+This includes any filing in which the benefit requestor has no legal basis for the benefit sought or submits a request for an inactive or terminated program. For example, this includes family-based petitions filed for family members based on claimed relationships under categories not provided by statute (such as a grandparent filing a petition for a grandchild).
+### 2. Abandonment Denials [6]
+[^ 6] Asylum officers should refer to asylum-specific procedures regarding abandonment of an asylum application.
+USCIS denies the benefit request as abandoned if the requestor fails to appear for a required interview or biometrics appointment or fails to provide an original document or other evidence when requested to do so. When USCIS denies an application for abandonment, USCIS must notify the requestor, and the authorized representative, as appropriate, of the decision in writing. [8] Such a denial is without prejudice to a later re-filing of the benefit request. [9] The priority or processing date of a withdrawn or abandoned benefit request may not be applied to a later benefit request.
+[^ 8] See 8 CFR 103.3(a)(1)(i). A denial due to abandonment may not be appealed. See 8 CFR 103.2(b)(15).
+[^ 9] A denial due to abandonment may not be appealed, but an applicant or petitioner may file a motion to reopen. See 8 CFR 103.2(b)(15).
+### 3. Discretionary Denials
+Many immigration benefits require requestors to demonstrate that their request merits a favorable exercise of discretion. For these benefits, a discretionary analysis is a separate, additional component of adjudicating the benefit request. Whether to favorably exercise discretion is typically assessed after an officer has determined that the requestor meets all applicable threshold eligibility requirements.
+The discretionary analysis involves the review of all relevant, specific facts and circumstances in an individual case, both favorable and unfavorable to the exercise of discretion. However, there are limitations on how the officer may exercise discretion; the officer may not exercise discretion arbitrarily, inconsistently, or in reliance on biases or assumptions.
+If the officer denies a request as a matter of discretion, the denial will explain the reasons the request was not granted.

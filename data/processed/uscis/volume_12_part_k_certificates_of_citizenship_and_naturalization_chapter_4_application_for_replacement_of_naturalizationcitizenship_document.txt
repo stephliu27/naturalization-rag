@@ -1,0 +1,24 @@
+The table below serves as a quick reference guide for requests to replace certificates of naturalization or citizenship. [1] The sections and paragraphs that follow the table provide further guidance.
+[^ 1] Where the table indicates a fee is required, applicants may be eligible for a waiver. See Additional Information on Filing a Fee Waiver.
+Basis for Application for Replacement Naturalization/Citizenship Document (Form N-565)
+| Type of Certificate | Correct USCIS Clerical Error | Date of Birth Correction (Not USCIS Clerical Error) | Legal Name Change | Lost or Mutilated Certificate |
+| Certificate of Naturalization | Permitted (no fee required) | Not permitted per 8 CFR 338.5 | Permitted if name change through court order or operation of law, including common law name change evidenced by a state-issued identification document [3] (fee required) | Permitted (fee required) |
+[^ 3] Certain states recognize common law name changes. See Volume 1, Policies and Procedures, Part E, Adjudications, Chapter 5, Verification of Identifying Information, Section A, Full Legal Name [1 USCIS-PM E.5(A)].
+| Certificate of Citizenship | Permitted (no fee required) | Permitted if correction through U.S. state court order or similar state vital record (fee required) | Permitted if name change through court order or operation of law, including common law name change evidenced by a state-issued identification document [4] (fee required) | Permitted (fee required) |
+[^ 4] Certain states recognize common law name changes. See Volume 1, Policies and Procedures, Part E, Adjudications, Chapter 5, Verification of Identifying Information, Section A, Full Legal Name [1 USCIS-PM E.5(A)].
+## A. General Provisions
+In general, an applicant submits an Application for Replacement Naturalization/Citizenship Document (Form N-565) to request a replacement Certificate of Citizenship or Certificate of Naturalization. The application must be submitted with the appropriate fee and in accordance with the form instructions.
+A person may request a replacement certificate to replace a lost or mutilated certificate. A person may also request a replacement certificate, without fee, in cases where:
+- USCIS issued a certificate that does not conform to the supportable facts shown on the applicant’s citizenship or naturalization application; [6] or
+[^ 6] If an applicant’s sex is incorrectly listed on the certificate or declaration, USCIS updates the certificate or declaration to be consistent with the sex at birth as generally evidenced by the birth certificate issued at the time of birth or issued closest to the time of birth.
+- USCIS committed a clerical error in preparing the certificate.
+## B. Requests to Change Name or Date of Birth
+### 1. Certificates of Naturalization
+Applicants may submit Form N-565 to update their name on a replacement Certificate of Naturalization based on a name change ordered by a state court with jurisdiction, or by operation of law, including a common law name change evidenced by a state-issued identification document, or a name change resulting from marriage or divorce.
+Unless there is a USCIS clerical error, regulations prohibit USCIS from making any changes to a date of birth on a Certificate of Naturalization if the applicant has completed the naturalization process and sworn to the facts of the application, including the date of birth (DOB). [9]
+[^ 9] See 8 CFR 338.5(e). The regulation at 8 CFR 338.5(e) specifically provides that USCIS will not deem a request to change a DOB justified if the naturalization certificate contains the DOB provided by the applicant at the time of naturalization.
+### 2. Certificates of Citizenship
+Applicants may submit Form N-565 to request issuance of a replacement Certificate of Citizenship to correct the name or DOB if they have obtained a state-issued document with a corrected name or DOB. Along with their application and the appropriate fee, applicants must submit the court order or other state vital record.
+## C. Clerical Errors
+Applicants may submit Form N-565 to request issuance of a replacement Certificate of Citizenship or a Certificate of Naturalization to correct the name or DOB if the correction is justified due to USCIS error. [11] No filing fee is required when an application is filed based on a USCIS error.
+[^ 11] See 8 CFR 338.5(a), 8 CFR 338.5(c), and 8 CFR 338.5(e). See the Immigration Act of 1990, Pub. L. 101-649 (PDF) (November 29, 1990), which transferred the authority over naturalization from the courts to the executive branch. For naturalization certificates issued by a court prior to 1991, the regulations provide that USCIS may “authorize” the court to make a change on the certificate if it is the result of clerical error. However, USCIS plays a minimal role in these cases. See 8 CFR 338.5(b) and 8 CFR 338.5(e).

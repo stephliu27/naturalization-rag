@@ -1,0 +1,17 @@
+## A. Purpose
+In administering U.S. immigration laws, one of USCIS’ primary functions is to adjudicate immigration benefit requests.
+Upon proper filing, each benefit request must be thoroughly reviewed to determine jurisdiction, presence of required supporting documentation, existence of related files, and eligibility.
+This part provides general guidance on how USCIS adjudicates across the various types of benefit requests. [1] Variations in requirements and procedures may exist, depending on the benefit type, and are discussed in more detail in the program-specific parts of the Policy Manual. [2]
+[^ 1] For purposes of this Policy Manual part, the term requestor means the person, organization, or business requesting an immigration benefit from USCIS. This may include an applicant or petitioner, depending on the request. The term benefit request means any application, petition, appeal, motion, or other request submitted to USCIS for adjudication.
+[^ 2] Certain immigration benefit requests, such as asylum or refugee applications, are governed by different regulations and procedures. Therefore, the guidance in this chapter may not apply to these immigration benefits governed by different regulations. Officers should consult the corresponding Policy Manual part and procedures for program-specific guidance.
+## B. Background [Reserved]
+[Reserved]
+## C. Legal Authorities
+- Homeland Security Act of 2002
+- Federal Records Act of 1950, 44 U.S.C. 31, as amended – Records management by federal agencies
+- Privacy Act of 1974, 5 U.S.C. 552a, as amended – Records maintained on individuals
+- Freedom of Information Act, 5 U.S.C. 552 – Public information; agency rules, opinions, orders, records, and proceedings
+- INA 103 – Powers and duties of the Secretary, Under Secretary, and Attorney General
+- 8 CFR 103.2 – Submission and adjudication of benefit requests
+- INA 291 – Burden of proof upon alien
+- Delegation of Authority 0150.1 – Delegation to the Bureau of Citizenship and Immigration Services

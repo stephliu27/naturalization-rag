@@ -1,0 +1,104 @@
+## A. General Requirements: Child Residing Outside the United States
+The Child Citizenship Act of 2000 (CCA) amended the Immigration and Nationality Act (INA) to cover foreign-born children who did not automatically acquire citizenship under INA 320 and who reside outside the United States with a U.S. citizen parent.
+A child who regularly resides outside the United States is eligible for naturalization if all of the following conditions have been met:
+- The person is a child of a parent who is a U.S. citizen by birth or through naturalization (including an adoptive parent); [3]
+[^ 3] For cases based on an adoptive relationship, the requirements of INA 101(b)(1)(E), INA 101(b)(1)(F), or INA 101(b)(1)(G) must be met. See Volume 5, Adoptions, Part E, Family-Based Adoption Petitions [5 USCIS-PM E]. See Volume 5, Adoptions, Part C, Child Eligibility Determinations (Orphan) [5 USCIS-PM C]. See Volume 5, Adoptions, Part D, Child Eligibility Determinations (Hague) [5 USCIS-PM D]. For information on citizenship for adopted children, see Volume 5, Adoptions, Part F, Citizenship for Adopted Children [5 USCIS-PM F].
+- The child’s U.S. citizen parent or citizen grandparent meets certain physical presence requirements in the United States or an outlying possession;
+- The child is under 18 years of age; [5]
+[^ 5] USCIS considers a child to be under the age of 18 years until the end of the day on the child’s 18th birthday. See Matter of L. M. and C. Y. C., 4 I&N Dec. 617 (BIA 1952).
+- The child is residing outside the United States in the legal and physical custody [6] of the U.S. citizen parent, or of a person who does not object to the application if the U.S. citizen parent is deceased; and
+[^ 6] For information on legal and physical custody, see Chapter 4, Automatic Acquisition of Citizenship after Birth (INA 320), Section B, Child in Legal and Physical Custody of U.S. Citizen Parent [12 USCIS-PM H.4(B)]. See 8 CFR 322.1(1)-(2).
+- The child is lawfully admitted, physically present, and maintaining a lawful status in the United States at the time the application is approved and the time of naturalization.
+There are certain exceptions to these requirements for children of U.S. citizens in the U.S. armed forces accompanying their parent outside the United States on official orders.
+## B. Eligibility to Apply on the Child’s Behalf
+Typically, a child’s U.S. citizen parent files a Certificate of Citizenship application on the child’s behalf. If the U.S. citizen parent has died, the child’s citizen grandparent or the child’s U.S. citizen legal guardian may file the application on the child’s behalf within 5 years of the parent's death. [8]
+[^ 8] As of November 2, 2002, a U.S. citizen grandparent or U.S. citizen legal guardian became eligible to apply for naturalization under this provision on behalf of a child. See the 21st Century Department of Justice Appropriations Authorization Act for Fiscal 2002, Pub. L. 107-273 (PDF) (November 2, 2002), which amended INA 322 to permit U.S. citizen grandparents or U.S. citizen legal guardians to apply for naturalization on behalf of a child if the child’s U.S. citizen parent has died.
+## C. Physical Presence of the U.S. Citizen Parent or Grandparent
+### 1. Physical Presence of Child’s U.S. Citizen Parent
+A child’s U.S. citizen parent must meet the following physical presence requirements:
+- The parent has been physically present in the United States or its outlying possessions for at least 5 years; and
+- The parent met such physical presence for at least 2 years after he or she reached 14 years of age.
+A parent’s physical presence is calculated in the aggregate and includes time accrued in the United States during periods when the parent was not a U.S. citizen.
+### 2. Exception for U.S. Citizen Member of the U.S. Armed Forces
+The child’s U.S. citizen service member parent may count any period of time he or she has resided abroad on official orders as physical presence in the United States.
+### 3. Reliance on Physical Presence of Child’s U.S. Citizen Grandparent
+If the child’s parent does not meet the physical presence requirement, the child may rely on the physical presence of the child’s U.S. citizen grandparent to meet the requirement. In such cases, the officer first must verify that the citizen grandparent, the citizen parent’s mother or father, is a U.S. citizen at the time of filing. If the grandparent has died, the grandparent must have been a U.S. citizen and met the physical presence requirements at the time of his or her death.
+Like in the case of the citizen parent, the officer also must ensure that:
+- The U.S. citizen grandparent has been physically present in the United States or its outlying possessions for at least 5 years; and
+- The U.S. citizen grandparent met such physical presence for at least 2 years after he or she reached 14 years of age.
+Like the citizen parent, a grandparent’s physical presence is calculated in the aggregate and includes time accrued in the United States during periods when the grandparent was not a U.S. citizen.
+## D. Temporary Presence by Lawful Admission and Status in United States
+### 1. Temporary Presence and Status Requirements
+In most cases, the citizenship process for a child residing abroad cannot take place solely overseas.
+- The child is required to be lawfully admitted to United States, in any status, and be physically present in the United States;
+- The child is required to maintain the lawful status that he or she was admitted under while in the United States; and
+- The child is required to take the Oath of Allegiance in the United States unless the oath requirement is waived.
+### 2. Exception for Child of U.S. Citizen Service Member of the U.S. Armed Forces
+Certain children of U.S. citizen members of the U.S. armed forces are not required to be lawfully admitted to or physically present in the United States.
+## E. Children of U.S. Government Employees and Members of the Armed Forces Employed or Stationed Outside the United States
+In addition to certain provisions for children of U.S. armed forces members and U.S. government employees stationed or employed outside the United States under INA 320, such U.S. citizen parents may apply for U.S. citizenship under INA 322 on behalf of their children under age 18 (if the children have not acquired citizenship under INA 320). [15] Children of members of the U.S. armed forces who are accompanying their parents outside of the United States on official orders may be eligible to complete all aspects of the naturalization proceedings outside the United States. This includes interviews, filings, oaths, ceremonies, or other proceedings relating to naturalization.
+[^ 15] See INA 322(a). To be eligible for citizenship under INA 322, the child must be under 18 and “residing outside of the United States in the legal and physical custody of the applicant.” If the child has already acquired U.S. citizenship under INA 320, USCIS denies the Application for Citizenship and Issuance of Certificate Under Section 322 (Form N-600K).
+## F. Application for Citizenship and Issuance of Certificate under Section 322 (Form N-600K)
+### 1. Submission of Application
+A U.S. citizen parent of a child [17] born outside of the United States who did not acquire citizenship automatically may file an Application for Citizenship and Issuance of Certificate Under Section 322 (Form N-600K) for the child to become a U.S. citizen and obtain a Certificate of Citizenship. The application may be filed from outside of the United States.
+[^ 17] For more information about citizenship for adopted children, see Volume 5, Adoptions, Part F, Citizenship for Adopted Children, Chapter 3, Eligibility, Documentation and Evidence, Section C, Child Residing Outside of the United States [5 USCIS-PM F.3(C)].
+If the U.S. citizen parent has died, the child’s U.S. citizen grandparent or U.S. citizen legal guardian may submit the application, provided the application is filed not more than 5 years after the death of the U.S. citizen parent.
+The child of a U.S. citizen member of the U.S. armed forces accompanying their parent outside the United States on official orders may be eligible to become a U.S. citizen and obtain a Certificate of Citizenship under INA 322 without having to travel to the United States for any part of the naturalization process.
+USCIS issues proof of U.S. citizenship in the form of a Certificate of Citizenship if the Application for Citizenship and Issuance of Certificate under Section 322 is approved and the person takes the Oath of Allegiance, if required to do so. The Certificate of Citizenship evidences the date of citizenship as of the date of the applicant’s naturalization, which is the date of taking the Oath of Allegiance (unless waived).
+USCIS does not mail Certificates of Citizenship outside the United States except when a military member is issued a Certificate of Citizenship under INA 320 or a military member’s dependent child naturalizes under INA 322(d).
+### 2. U.S. Passport or Consular Report of Birth Abroad as Evidence of Citizenship
+A valid, unexpired U.S. passport or a Consular Report of Birth Abroad (CRBA) issued by the Department of State (DOS) is conclusive proof of U.S. citizenship. [22] A person who holds a valid, unexpired U.S. passport or a CRBA has conclusive evidence that they are already a U.S. citizen, so they are not eligible for naturalization under INA 322.
+[^ 22] See Matter of Villanueva (PDF), 19 I&N Dec. 101 (BIA 1984) (Unless void on its face, a valid U.S. passport issued to a person as a citizen of the United States constitutes conclusive proof of the person’s U.S. citizenship). See 22 U.S.C. 2705 (A valid U.S. passport or CRBA has the same force and effect as proof of U.S. citizenship as Certificates of Naturalization or Certificates of Citizenship issued by USCIS).
+The officer must review the valid U.S. passport or CRBA and the documentation submitted with the application and contained in the record to determine if it was issued properly.
+### 3. Request to Revoke U.S. Passport or Cancel Consular Report of Birth Abroad
+If USCIS has evidence indicating that a U.S. passport or CRBA submitted as evidence was obtained or issued illegally, fraudulently, or erroneously, the officer reviews the case with USCIS counsel and, if appropriate, submits a formal request for revocation of the passport or cancellation of the CRBA [23] to DOS.
+[^ 23] The process to request cancellation of a CRBA to DOS is the same as that for a passport revocation. The same process should be followed to request the revocation of a parent’s or grandparent’s U.S. passport or CRBA, when USCIS, while adjudicating an Application for Citizenship and Issuance of Certificate under Section 322, determines that it was issued illegally, fraudulently, or erroneously.
+Only DOS has the authority to revoke a U.S. passport or cancel a CRBA. [24] DOS may revoke a U.S. passport or cancel a CRBA in cases where the passport or CRBA was obtained or issued illegally, fraudulently, or erroneously.
+[^ 24] See 22 U.S.C. 211a. See 22 CFR 51.60. See INA 361. See Rules Governing the Granting, Issuing, and Verifying of United States Passports, 31 FR 10603 (PDF) (Aug. 5, 1966).
+USCIS provides the following information to DOS in the passport revocation or CRBA cancellation request:
+- The applicant’s complete biographic information, including name and any known aliases;
+- The applicant’s last known address;
+- All previous unexpired U.S. passport numbers and alien registration numbers (A-numbers);
+- A copy of the CRBA or of the biographical page of the U.S. passport submitted as evidence (if available);
+- An explanation for requesting revocation or cancellation, including reasons for the request, analysis of the facts and dates used in determining that the passport or CRBA should be revoked or cancelled, and evaluation of evidence indicating that the applicant did not acquire U.S. citizenship;
+- Copies of all documentary evidence in support of the request, including certified translations of any documents written or originally prepared in a foreign language; and
+- The contact information of the USCIS office making the request.
+Adjudication of Application with Revocation or Cancellation Request
+After reviewing the case on the merits and requesting a revocation of a U.S. passport or a cancellation of a CRBA from DOS, the officer generally may not complete the adjudication of the Application for Citizenship and Issuance of Certificate Under Section 322 until DOS responds.
+If DOS notifies USCIS that it does not intend to revoke the passport or cancel the CRBA, USCIS cannot naturalize a U.S. citizen and must deny the Application for Citizenship and Issuance of Certificate under Section 322. However, a child with a properly issued U.S. passport or CRBA who has met all of the requirements for acquisition of citizenship under a different section of law may file an Application for Certificate of Citizenship (Form N-600) to obtain a Certificate of Citizenship.
+If the passport was valid at the time of filing but is expired at the time of adjudication, the officer should review the case with USCIS counsel and, if appropriate, consult with DOS before adjudicating. [28]
+[^ 28] An expired U.S. passport is not sufficient evidence of citizenship. See 22 U.S.C. 2705.
+If DOS revokes the U.S. passport or cancels the CRBA, the applicant may become eligible for naturalization under INA 322. After the U.S. passport is revoked or the CRBA is cancelled, the officer may then approve the Application for Certificate of Citizenship and Issuance of Certificate under Section 322, if all other eligibility requirements are met.
+## G. Documentation and Evidence
+The applicant must submit the following required documents unless such documents are already contained in USCIS administrative record or do not apply.
+- The child's birth certificate or record.
+- Marriage certificate of child's parents, if applicable.
+- Proof of termination of any previous marriage of each parent if either parent was previously married and divorced or widowed, for example: Divorce Decree; or Death Certificate.
+- Divorce Decree; or
+- Death Certificate.
+- Evidence of United States citizenship of parent: Birth Certificate; Naturalization Certificate; Consular Report of Birth Abroad (FS-240); A valid unexpired U.S. passport; or Certificate of Citizenship.
+- Birth Certificate;
+- Naturalization Certificate;
+- Consular Report of Birth Abroad (FS-240);
+- A valid unexpired U.S. passport; or
+- Certificate of Citizenship.
+- Documents verifying legitimation according to the laws of the child's residence or domicile or biological U.S. citizen father's residence or domicile if the child was born out of wedlock.
+- Documentation of legal custody in the case of divorce, legal separation, or adoption.
+- Documentation establishing that the U.S. citizen parent or U.S. citizen grandparent meets the required physical presence requirements, such as school records, military records, utility bills, medical records, deeds, mortgages, contracts, insurance policies, receipts, or attestations by churches, unions, or other organizations.
+- Evidence that the child is present in the United States pursuant to a lawful admission and is maintaining such lawful status or evidence establishing that the child qualifies for an exception to these requirements as provided for children of members of the U.S. armed forces. Such evidence may be presented at the time of interview when appropriate.
+- Copy of the full, final adoption decree, if applicable.
+- Evidence of all legal name changes, if applicable, for the child, U.S. citizen parent, U.S. citizen grandparent or U.S. citizen legal guardian.
+An applicant does not need to submit documents that were submitted in connection with:
+- An immigrant visa application retained by the American Consulate for inclusion in the immigrant visa package; or
+- An immigrant petition or application included in a USCIS administrative file.
+If necessary, an officer may request additional documentation to make a decision on the application.
+## H. Citizenship Interview and Waiver
+In general, an applicant must appear in person for an interview before a USCIS officer after filing an Application for Citizenship and Issuance of Certificate Under Section 322 (Form N-600K). This includes the U.S. citizen parent or parents if the application is filed on behalf of a child under 18 years of age. USCIS, however, waives the interview requirement if all the required documentation necessary to establish the applicant's eligibility is already included in USCIS administrative records or if any of the following documentation is submitted along with the application.
+## I. Decision and Oath of Allegiance
+### 1. Approval of Application, Oath of Allegiance, and Waiver for Children under 14 Years of Age
+If an officer approves the Form N-600K, USCIS administers the Oath of Allegiance before issuing a Certificate of Citizenship.
+However, the INA permits USCIS to waive the taking of the Oath of Allegiance if USCIS determines the person is unable to understand its meaning. USCIS has determined that children under the age of 14 are generally unable to understand the meaning of the oath.
+Accordingly, USCIS waives the oath requirement for a child younger than 14 years of age. If USCIS waives the oath requirement, USCIS issues a Certificate of Citizenship after the officer approves the application.
+If an applicant does not take the Oath of Allegiance and is not eligible for a waiver, USCIS cannot issue a Certificate of Citizenship.
+### 2. Denial of Application
+If an officer denies the Certificate of Citizenship application, the officer must notify the applicant in writing of the reasons for denial and include information on the right to appeal in the notice. An applicant may file an appeal within 30 days of service of the decision.

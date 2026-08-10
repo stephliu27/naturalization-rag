@@ -1,0 +1,294 @@
+## A. General
+### 1. Eligibility to Request a Fee Waiver
+USCIS permits certain categories of benefit requestors to submit a Request for Fee Waiver (Form I-912) for certain immigration benefits and services. There is no fee required for filing a fee waiver request.
+A benefit requestor may request a fee waiver from USCIS if:
+- The form is eligible for a fee waiver and the benefit requestor meets any applicable conditions; and
+- The benefit requestor is unable to pay the requisite fee based on one of three criteria described below (Section D, Basis for Inability to Pay).
+If a benefit request includes both the appropriate filing fee and a fee waiver request, USCIS does not adjudicate the fee waiver request. In such a case, USCIS deposits the fee and processes the immigration benefit request, if it is otherwise acceptable.
+USCIS cannot waive any fees that are required by the One Big Beautiful Bill Act (H.R.-1), which apply to certain benefit requests as listed in the USCIS Fee Schedule (Form G-1055). [2] USCIS rejects these benefit requests if they are postmarked or electronically submitted on or after August 21, 2025 and the proper fees are not included. If a benefit request is otherwise eligible for a fee waiver under 8 CFR 106.3(a), the requestor may seek a waiver of the filing fee listed at 8 CFR 106.2, but must submit a separate payment for the fee required by H.R.-1.
+[^ 2] See H.R.1—One Big Beautiful Bill Act (H.R.-1), Subtitle A, Title X of Pub. L. 119-21 (PDF) (Jul. 4, 2025). See 90 FR 34511 (PDF) (July 22, 2025).
+### 2. Filing a Fee Waiver Request
+To request a fee waiver, a benefit requestor must submit:
+- A Request for Fee Waiver (Form I-912) or written statement requesting a fee waiver; and
+- Documentation establishing eligibility for a fee waiver.
+Generally, each person requesting a fee waiver must submit a separate Form I-912 or written statement and supporting documentation. [3] The requestor must sign the Form I-912 or written statement. [4]
+[^ 3] There is an exception for family-related applications or petitions filed at the same time. See Section F, Adjudication [1 USCIS-PM B.4(F)].
+[^ 4] For information on valid signatures and who may sign, see Chapter 2, Signatures [1 USCIS-PM B.2].
+USCIS does not review fee waiver requests submitted for benefit requests that USCIS rejected for reasons unrelated to the fee. For example, USCIS does not review fee waiver requests if an application is defective due to a missing signature.
+### 3. Burden of Proof and Standard of Proof
+The burden of proof is on the requestor to establish an inability to pay the required fee by a preponderance of the evidence by establishing at least one of the criteria for eligibility. [5] The requestor satisfies the standard of proof if they submit relevant, probative, and credible evidence that leads the USCIS officer to conclude that it is “probably true” or “more likely than not” that the requestor is unable to pay the required fee. [6]
+[^ 5] See Section D, Basis for Inability to Pay [1 USCIS-PM B.4(D)]. See Matter of Chawathe (PDF), 25 I&N Dec. 369 (AAO 2010) (identifying preponderance of the evidence as the standard for immigration benefits generally, and in that case specifically naturalization).
+[^ 6] See Matter of Chawathe (PDF), 25 I&N Dec. 369, 376 (AAO 2010) (preponderance of the evidence means more likely than not). See U.S. v. Cardozo-Fonseca, 480 U.S. 421 (1987) (defining “more likely than not” as a greater than 50 percent probability of something occurring).
+## B. Forms Eligible for Fee Waiver
+If not otherwise exempt from paying the fee, a benefit requestor may submit a request for a fee waiver for certain eligible forms. There are three general categories of fee waivers allowed for eligible forms:
+- General fee waivers;
+- Conditional fee waivers; and
+- Humanitarian fee waivers.
+General fee waivers are available for eligible forms for requestors who demonstrate an inability to pay. Conditional fee waivers are available for eligible forms for requestors who demonstrate an inability to pay and meet certain conditions. Humanitarian fee waivers are available for eligible forms for requestors for humanitarian purposes as authorized by statute.
+### 1. General Fee Waivers
+The following table provides a list of forms for which USCIS may waive the fees based on a requestor’s inability to pay.
+| Forms Eligible for General Fee Waivers |
+| Application to Replace Permanent Resident Card (Form I-90) |
+| Application for Relief Under Former Section 212(c) of the Immigration and Nationality Act (INA) (Form I-191) [8] |
+[^ 8] Also known as the Application for Advance Permission to Return to Unrelinquished Domicile.
+| Petition to Remove Conditions on Residence (Form I-751) |
+| Application for Family Unity Benefits (Form I-817) |
+| Application for Temporary Protected Status (Form I-821) (biometric services fee only) [9] |
+[^ 9] See 8 CFR 106.2(a)(50). Re-registrants are exempt from paying the Form I-821 fee.
+| Application for Suspension of Deportation or Special Rule Cancellation of Removal (Form I-881) |
+| Application to File Declaration of Intention (Form N-300) |
+| Request for a Hearing on a Decision in Naturalization Proceedings (Form N-336) |
+| Application for Naturalization (Form N-400) |
+| Application to Preserve Residence for Naturalization Purposes (Form N-470) |
+| Application for Replacement Naturalization/Citizenship Document (Form N-565) |
+| Application for Certificate of Citizenship (Form N-600) |
+| Application for Citizenship and Issuance of Certificate under Section 322 (Form N-600K) |
+### 2. Conditional Fee Waivers
+Certain fee waivers depend on specific conditions. The following table provides a list of forms for which USCIS may waive fees, other than those required by H.R.-1, based on the requestor’s inability to pay and if they meet the specified conditions.
+| Forms Eligible for Conditional Fee Waivers |
+| Petition for a CNMI-Only Nonimmigrant Transitional Worker (Form I–129CW) petitioning for a CW-1 CNMI-only transitional worker [10] |
+[^ 10] Waiver of the fee for Form I-129CW does not waive the requirement for an employer petitioning for a CW-1, CNMI-only transitional worker to pay any fees in 8 CFR 106.2(c) that may apply. See 8 CFR 106.3(a)(3)(ii)(A).
+| Application to Extend/Change Nonimmigrant Status (Form I–539), only in the case of an alien applying for CW–2 nonimmigrant status |
+| Application for Travel Documents, Parole Documents, and Arrival/Departure Records (Form I-131) for those applying for humanitarian parole [11] |
+[^ 11] “Humanitarian parole” refers to parole requests filed by (or on behalf of) aliens outside the United States, and re-parole requests filed by (or on behalf of) such aliens. See Fee Schedule (Form G-1055).
+| Notice of Appeal or Motion (Form I-290B) if the underlying benefit request was fee exempt, the fee was waived, or it was eligible for a fee waiver |
+| Petition for a CNMI-Only Nonimmigrant Transitional Worker (Form I-129CW), or an Application to Extend/Change Nonimmigrant Status (Form I-539) for an applicant applying for CW-2 nonimmigrant status |
+| Notice of Appeal of Decision Under Sections 210 or 245A of the Immigration and Nationality Act (Form I-694) if the underlying application or petition was fee exempt, the filing fee was waived, or was eligible for a fee waiver |
+| Application for Employment Authorization (Form I-765), except persons filing under category (c)(33), Deferred Action for Childhood Arrivals (DACA) [12] |
+[^ 12] USCIS cannot waive any fees required by Sections 100003 or 100010-12 of H.R.-1. See H.R.1—One Big Beautiful Bill Act (H.R.-1), Subtitle A, Title X of Pub. L. 119-21 (PDF) (July 4, 2025).
+| For the following forms if the applicant is exempt from public charge ground of inadmissibility under INA 212(a)(4): [13] Application for Advance Permission to Enter as a Nonimmigrant (Form I-192); Application for Waiver of Passport and/or Visa (Form I-193); Application to Register Permanent Residence or Adjust Status (Form I-485); and Application for Waiver of Grounds of Inadmissibility (Form I-601). |
+[^ 13] See INA 212(a)(4). The receipt of public benefits does not negatively affect the review of a fee waiver request. For detailed guidance on the public charge grounds of inadmissibility, see Volume 8, Admissibility, Part G, Public Charge Ground of Inadmissibility [8 USCIS-PM G]. USCIS cannot waive any fees required by Section 100013 of H.R.-1. See H.R.-1—One Big Beautiful Bill Act (H.R.-1), Subtitle A, Title X of Pub. L. 119-21 (PDF) (July 4, 2025).
+### 3. Humanitarian Fee Waivers
+USCIS provides fee exemptions for many forms filed by certain humanitarian categories of requestors. If not otherwise exempt from paying the fee, an individual may request a fee waiver for any application or petition that is related to any of the following humanitarian categories (except for fees required by H.R.-1):
+- Battered spouses of A, G, E-3, or H nonimmigrants;
+- Battered spouses or children of a lawful permanent resident or U.S. citizen under INA Section 240A(b)(2);
+- T nonimmigrants;
+- Temporary Protected Status (TPS);
+- U nonimmigrants;
+- VAWA self-petitioners and derivative(s);
+- Conditional permanent residents (CPRs) filing a waiver of the joint filing requirement based on battery or extreme cruelty;
+- Abused spouses and children adjusting status under the Cuban Adjustment Act (CAA) and Haitian Refugee Immigration Fairness Act of 1998 (HRIFA);
+- Abused spouses and children seeking benefits under Nicaraguan Adjustment and Central American Relief Act (NACARA);
+- Special immigrant juveniles;
+- Asylees; or
+- Refugees.
+## C. Category of Requestor Eligible for Fee Waiver
+### 1. Documentation of an Eligible Category
+A requestor must submit documentation to show that they fall into a category eligible for a fee waiver. Such documentation may include:
+- A copy of any type of Notice of Action (Form I-797) for the eligible benefit;
+- A copy of a permanent resident card with the eligible category annotated; or
+- Any other evidence of a petition or application pending with USCIS for an eligible benefit category.
+For concurrently filed applications, USCIS officers review the type of benefit request submitted and the category requested to determine whether the requestor is eligible for a fee waiver.
+For separately filed applications, if the primary benefit eligible for a fee waiver has already been filed, the requestor may submit a copy of the primary benefit petition or application that was filed with the fee waiver request.
+An officer may verify in the available systems whether the requestor has applied for or received a benefit for one of the eligible categories.
+### 2. Other Agency Fee Waiver Request
+USCIS cannot waive the fee for any U.S. Department of Justice (DOJ) Executive Office for Immigration Review (EOIR) forms, but an immigration judge may waive fees for EOIR forms as well as requests filed on USCIS forms in an immigration court proceeding.
+Immigration judges may also request that USCIS consider a fee waiver request for a party in their court. In such cases, the requestor must still submit Form I-912 or written statement along with evidence of eligibility for the fee waiver.
+## D. Basis for Inability to Pay
+USCIS evaluates whether the requestor is unable to pay the filing fee based on the following criteria:
+- The requestor or qualifying member of the requestor’s household is receiving a means-tested benefit;
+- The requestor’s household income level is at or below 150 percent of the Federal Poverty Guidelines (FPG); or
+- The requestor is experiencing extreme financial hardship due to extraordinary expenses or other circumstances that render the individual unable to pay the fee.
+An officer must evaluate whether the requestor establishes an inability to pay under any of these three criteria.
+### 1. Means-Tested Benefit
+USCIS approves a request for fee waiver if the requestor or their qualifying family member is receiving a means-tested benefit at the time of filing the request for fee waiver. A means-tested benefit is a public benefit where a person’s eligibility for the benefit, the amount of the benefit, or both, is based on the person’s income and resources.
+The benefit-granting agency determines whether the person is lawfully eligible for the means-tested benefit. USCIS considers means-tested benefits that are federally, state, locally, or tribal funded and granted by the benefit agency.
+Examples of means-tested benefit programs include, but are not limited to:
+- Any federal, state, local, or tribal cash assistance for income maintenance, such as: Supplemental Security Income (SSI); Temporary Assistance for Needy Families (TANF), which may be provided under another TANF-Program state name; Other federal, state, or local cash benefit programs for income maintenance (often called “General Assistance” in the state context, but which may exist under other names);
+- Supplemental Security Income (SSI);
+- Temporary Assistance for Needy Families (TANF), which may be provided under another TANF-Program state name;
+- Other federal, state, or local cash benefit programs for income maintenance (often called “General Assistance” in the state context, but which may exist under other names);
+- Supplemental Nutrition Assistance Program (SNAP);
+- Medicaid (federally funded Medicaid may also be provided under a Medicaid Program state name);
+- Section 8 Housing Assistance under the Housing Choice Voucher program, Section 8 Project-Based Rental Assistance (including Moderate Rehabilitation), and housing assistance under the McKinney-Vento Homeless Assistance Act;
+- Housing under the Housing Act of 1937;
+- Low Income Home Energy Assistance Program (LIHEAP) and other energy assistance programs;
+- CNMI Nutrition Assistance Program (NAP);
+- Any services provided under the Robert T. Stafford Disaster Relief and Emergency Assistance Act (Stafford Act);
+- Any cash benefit provided by the Department of Veteran's Affairs or other federal or state, local, or tribal benefit provided based on veteran status;
+- Benefits under the Emergency Food Assistance Program (TEFAP);
+- Child and Adult Care Food Program (CACFP);
+- Food Distribution Program on Indian Reservations (FDPIR);
+- Benefits through the Child Nutrition Act, Benefits from the National School Lunch Act and Summer Food Service program;
+- Child Care and Development Block Grant Program (CCDBGP);
+- Special Supplemental Nutrition Program for Women, Infants, and Children (WIC); and
+- Children's Health Insurance Program (CHIP) and State Children's Health Insurance Program (SCHIP).
+Family Member’s Means-Tested Benefit
+A requestor’s spouse and unmarried children under 21 years of age who reside with the requestor are generally eligible for a fee waiver based on the requestor’s receipt of a means-tested benefit. If the requestor is legally separated from the spouse or not living with the spouse, then the requestor is ineligible for the fee waiver based on the spouse’s means-tested benefit.
+A requestor may be eligible for a fee waiver based on their child’s receipt of a means-tested benefit so long as their child is unmarried, under 21 years of age, resides with the requestor, and the child’s eligibility for the benefit is based on the requestor’s income. [18]
+[^ 18] The requestor may also use the child’s means-tested benefit to support a fee waiver request based on household income. See Subsection 2, Household Income at or Below 150 Percent of the Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)] for further discussion of qualifying members of a household.
+For example, a parent may use evidence of a child’s receipt of public housing, WIC, or SNAP as proof of inability to pay when the parent resides in the same residence because the child’s eligibility for public housing is partly based on the parent's income.
+In general, a child over 21 years of age cannot use a parent’s means-tested benefit to qualify for a fee waiver. However, if the child is disabled and the parent is the child’s legal guardian or surrogate, the child may use the parent’s means-tested benefit to support a request for fee waiver. [19]
+[^ 19] In this situation, the child may also use the parent’s means-tested benefit to support a fee waiver request based on household income. See Subsection 2, Household Income at or Below 150 Percent of the Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)].
+Documentation
+In general, if a requestor provides documentation of receipt of a means-tested benefit, the request for fee waiver is approved and no further information is required. To demonstrate that an individual is currently receiving a means-tested benefit, the requestor must provide a letter, notice, or other agency document(s) containing the following information:
+- The name of the individual receiving the means-tested benefit;
+- The name of the agency granting the public benefit; [20]
+[^ 20] USCIS may accept documentations from school for meal-related public benefits.
+- The type of benefit; and
+- Indication that the benefit is currently being received (for example, a recently dated letter or document with effective dates, date of renewal or period the approval ends, if available). If the documentation is more than 12 months old, the requestor must provide additional evidence that shows the benefit is currently being received.
+If the basis of a request for fee waiver is a qualifying family member’s receipt of a means-tested benefit, then the requestor must also provide documentation establishing that the requestor is listed as a person receiving the means-tested benefit or documentation establishing the qualifying familial relationship and that the requestor is residing in the same household as the individual that is receiving the means-tested benefit.
+### 2. Household Income at or Below 150 percent of the Federal Poverty Guidelines
+USCIS approves a request for fee waiver if the requestor demonstrates that their total adjusted gross household income at the time of the request is at or below 150 percent of the current FPG based on household size. USCIS does not review the requestor’s past history of income or future income or financial situation when determining household income.
+The Secretary of the U.S. Department of Health and Human Services (HHS) establishes the FPG annually. USCIS uses the adjusted gross income from an IRS Form 1040 or the gross income from an IRS Form W-2 including any overtime and irregular hours as listed to calculate the annual income.
+For fee waiver purposes, a household [21] may include:
+[^ 21] If the requestor submits any joint-filed federal tax returns, USCIS reviews the household size to determine household members or spouses.
+- The requestor;
+- The head of household (if not the requestor); [22]
+[^ 22] In general, the head of the household is the person who files the most recent federal tax return with the Internal Revenue Service (IRS) for the household, or the person who earns most of the income for the household.
+- The requestor’s spouse, if living with the requestor (if the requestor and spouse are separated or not living together, then the spouse is not included as part of the household); [23] and
+[^ 23] However, any additional income or financial support provided by the spouses must be included in the request, as discussed later in this subsection.
+- Any family members living in the requestor’s household who are dependent on the applicant’s income, the spouse’s income, or the head of household’s income.
+Family members living in the requestor’s household may include:
+- The requestor’s children or legal wards who are unmarried and under 21 years of age;
+- The requestor’s children or legal wards who are unmarried, are 21 years of age or over, but under 24 years of age, and are full-time students;
+- The requestor’s children or legal wards who are unmarried and for whom the requestor is the legal guardian because the child or legal ward is physically or developmentally disabled, or mentally impaired and unable to self-care, establish, maintain, or re-establish their own household;
+- The requestor’s parents; and
+- Any other dependents listed on the requestor’s federal income tax return, or the spouse’s or head of household’s federal income tax return. [24]
+[^ 24] USCIS reviews the IRS federal income tax return to examine whether the requestor listed any dependents.
+For a fee waiver request, USCIS does not include people who are cohabitating with the applicant, but not financially supported by the applicant, such as roommates or nannies, within the definition of household or household member.
+Additionally, if the requestor has been deemed legally incompetent [25] by a court of law, then the requestor’s individual income is still used to determine household income. However, the income of any household member, legal guardian or surrogate, or any other care provider, does not count towards the calculation of household income for such requestors.
+[^ 25] See Black’s Law Dictionary (11th ed. 2019) (incompetency is generally defined as the quality, state, or condition of being unable or unqualified to do something).
+Documentation
+To demonstrate household income at or below 150 percent of the FPG, the requestor may provide a copy of one or more of the following, where applicable, for each household member:
+- Most recent federal tax return with signature (or transcript); [26]
+[^ 26] The requestor is not required to have the IRS certify the tax return or transcript. A copy of an unsigned tax return alone is insufficient to establish income.
+- Most recent Wage and Tax Statement (IRS Form W-2);
+- Consecutive pay statements (stubs) for a minimum period of one month dated within the three months preceding the receipt of the fee waiver request;
+- Certain Government Payments (Form 1099-G);
+- Form SSA-1099; or
+- Documentation of any additional financial assistance. [27]
+[^ 27] Documentation of additional financial assistance is discussed later in this subsection.
+An officer may grant a request for fee waiver in the absence of some of this documentation so long as the available documentation supports that the requestor is more likely than not unable to pay the fee.
+If the household member’s income has changed since the tax return filing because of unemployment, the requestor provides evidence of the household member’s unemployment such as a termination letter or unemployment insurance receipt. If the household member’s income has changed since the tax return filing due to a change in employment or change in income, the requestor provides information on the current employment and income, such as recent pay statements (stubs) or Form W-2.
+If the household members reside and filed tax returns in a U.S. territory and were not required to file a federal tax return, the requestor must submit the tax returns (or transcript) from the territory instead of a federal tax return.
+Tax Returns
+A copy of the most recent tax return with signature alone may provide sufficient proof of income for fee waiver purposes. However, where the requestor provides other proof of income (or lack of income), a request for fee waiver should not be rejected solely based on the absence of tax return(s).
+If the request for fee waiver is filed between January 1 and the deadline for filing income taxes for the year, and the household member has not yet filed the previous year’s income tax return, the requestor may submit the household member’s tax return (or transcript [28]) for the most recently filed year. The requestor must certify by signing their fee waiver request that their income has not changed since the most recently filed tax return. If the household member’s income has changed since their most recently filed tax return, the requester must submit additional evidence of the household member’s income. [29]
+[^ 28] For information on obtaining federal income tax transcripts without a fee, see the IRS' Get Your Tax Record webpage.
+[^ 29] Details on the type of documentation required to show the household member’s income is discussed earlier in this subsection.
+USCIS does not accept Earned Income Tax Credit (EITC) statements, Miscellaneous Income (Form 1099-MISC), and Certain Government Payments (Form 1099-G) or other G-1099 forms as proof of income without the tax returns, tax transcripts, W-2s, or Social Security statements.
+If the requestor’s current situation is different from the documentation provided, the requestor must provide an explanation regarding the inconsistency in the documentation. For example, if a tax return or transcript indicates the requestor is married, but the requestor is currently separated or annotates single in the fee waiver request, the requestor must provide an additional explanation for the inconsistency and the documentation for income. The requestor may provide additional documentation to establish marital status and household size.
+A requestor may use IRS Form 4506-T (PDF) to request:
+- An income tax transcript;
+- A copy of Form W-2; or
+- Form 1099-G.
+Requestors do not need to submit multiple copies of tax returns. If the requestor provided their most recent tax returns as part of the underlying petition or application filed with the Form I-912, such as a naturalization application and tax returns, filed concurrently, the requestor does not need to submit additional tax returns or a transcript.
+Additional Financial Assistance
+To establish the total income, a request must include any additional financial assistance (not otherwise included in a tax return or W-2) including any Social Security income (as reflected on the SSA-1099) to the adjusted gross income in the tax return.
+The table below includes some types of additional financial assistance that USCIS considers household income for a fee waiver request. The requestor must provide documentation of each type of additional financial assistance that applies.
+| Additional Financial Assistance |
+| Parental support |
+| Child support |
+| Pensions |
+| Royalties |
+| Unemployment benefits |
+| Alimony |
+| Educational stipends |
+| Social Security |
+| Veterans benefits |
+| A court order granting any child support or documentation from an agency providing other income or financial assistance |
+| Consistent or regular financial support from adult children, parents, dependents, or other people living in the applicant’s household |
+VAWA, T, and U-Based Requestors
+Requestors seeking a fee waiver for any immigration benefit associated with or based on a pending or approved petition or application for VAWA benefits [30] or T or U nonimmigrant status that are not otherwise fee exempted do not need to list as household members or provide income information for the following people:
+[^ 30] VAWA benefits include VAWA self-petitioners and derivatives as defined under INA 101(a)(51) and anyone otherwise self-petitioning due to battery or extreme cruelty under INA 204(a).
+- Any person in the household who is or was the requestor’s abuser, human trafficker, or perpetrator; or
+- A person who is or was a member of the abuser, human trafficker, or perpetrator’s household.
+In addition, such requestors do not need to list their spouse as a household member or include their spouse’s income in the fee waiver request.
+If a VAWA self-petitioner or recipient [31] (or their derivative(s)) or applicant, petitioner, or recipient of T or U nonimmigrant status does not have any income or cannot provide proof of income, the requestor may:
+[^ 31] Includes VAWA self-petitioners and their derivatives as defined under INA 101(a)(51) and anyone otherwise self-petitioning due to battery or extreme cruelty under INA 204(a).
+- Describe the situation in sufficient detail in the fee waiver request to substantiate lack of income or income at or below 150 percent of the FPG, as well as the inability to obtain the required documentation; and
+- Provide any documentation of the income, such as pay stubs or affidavits from religious institutions, non-profits, or other community-based organizations, verifying that the requestor is currently receiving some benefit or support from that entity and attesting to the financial situation, if available.
+Special Immigrant Juveniles
+A petitioner or recipient of Special Immigrant Juvenile (SIJ) classification who files a fee waiver request for a filing not otherwise fee exempted does not need to provide proof of income. USCIS considers requestors in this category as part of their own household, without including any foster or group home household members.
+Instead of proof of income, the fee waiver request must include documentation showing that the requestor has an approved petition for SIJ classification (for example, a copy of Notice of Action (Form I-797) for Form I-360). [32]
+[^ 32] An officer may verify in the available systems whether the requestor has received SIJ classification.
+### 3. Extreme Financial Hardship
+Even if a requestor has income above 150 percent of the FPG, the requestor may be able to demonstrate that extreme financial hardship makes the requestor unable to pay the fee(s). Extreme financial hardship occurs when a requestor requires substantially all of their current income and liquid assets to meet current ordinary and necessary living expenses. An extreme financial hardship is more than a financial burden caused by paying the filing fee.
+The requestor may demonstrate extreme financial hardship due to extraordinary expenses or other circumstances affecting the requestor’s financial situation to the degree of inability to pay the fee. If the requestor is under extreme financial hardship, the requestor should demonstrate negative financial impact as a result of this hardship in the 12 months preceding the receipt of the fee waiver request that rendered the requestor unable to pay the fee.
+The following list contains some examples of financial hardships for which USCIS may grant a request for fee waiver:
+- A medical emergency or catastrophic illness affecting the alien or the alien’s dependents; [33]
+[^ 33] Dependents include the alien’s spouse, children, parents, or ward.
+- Unemployment;
+- Significant loss of work hours and wages (change in employment status);
+- Eviction;
+- Homelessness;
+- Military deployment of spouse or parent;
+- Natural disaster;
+- Loss of home (destruction such as fire, water, or collapse);
+- Inability to pay basic utilities, rent, childcare, or mortgage (payments and bills for each month are more than the monthly income);
+- Substantial financial losses to small business that affect personal income;
+- Victimization;
+- Divorce or death of a spouse that affects overall income; or
+- Other situations that could not normally be expected in the regular course of life events that would limit a person’s ability to meet necessary living expenses.
+Documentation
+In addition to explaining the financial hardship in the request for fee waiver, a requestor may submit documentation as follows to demonstrate extreme financial hardship:
+- Documentation of income, as provided above;
+- Documentation of all assets owned, possessed, or controlled by the requestor and dependents; or
+- Documentation concerning liabilities and expenses owed by the requestor and dependents, and any other expenses for which the requestor is responsible.
+An officer may grant a request for fee waiver in the absence of some of this documentation as long as the available documentation supports that the requestor is more likely than not unable to pay the fee.
+The table below provides a list of some assets and liabilities that may be identified as part of the fee waiver request.
+Examples of Documentation of Financial Hardship
+| Assets | Liabilities |
+| Real estate; Cash; Checking and savings accounts; and Stocks, bonds, and annuities (except for pension plans, Individual Retirement Accounts (IRAs), and other retirement funds). | Rent; Mortgages; Lease; Average monthly cost of food; Utilities; Child care and elder care; Medical expenses; Tuition costs; Commuting costs; and Monthly payments of lawful debts. |
+In general, if a requestor provides proof of inability to pay the fee based on financial hardship, the request for fee waiver may be approved on this basis and no further information is required.
+### 4. Requestors Without Income
+If the requestor has no income due to unemployment, homelessness, or other factors, the requestor may provide, as applicable:
+- A detailed description of the financial situation that demonstrates eligibility for the fee waiver;
+- Hospital bills;
+- Bankruptcy documents;
+- If the requestor is receiving support services, an affidavit from a religious institution, non-profit, hospital, or community-based organization verifying the person is currently receiving some benefit or support from that entity and attesting to the requestor’s financial situation; or
+- Evidence of unemployment, such as a termination letter or unemployment insurance receipt.
+An officer may grant a request for fee waiver in the absence of some of this documentation, as long as the available documentation supports that the requestor is more likely than not unable to pay the fee.
+VAWA, T, and U-Based Requestors
+USCIS considers whether a requestor is unable to obtain proof of income due to alleged victimization such as trafficking or abuse. If not otherwise eligible for a fee exemption, the requestor should describe the situation in the Form I-912 or written request to substantiate the inability to pay as well as the inability to obtain the required documentation.
+The requestor should provide any available documentation, such as affidavits from religious institutions, non-profits, or other community-based organizations verifying that the requestor is currently receiving some benefit or support from that entity and attesting to the financial situation.
+## E. Emergent Circumstance
+Natural catastrophes and other extreme situations [34] beyond a person’s control may affect the ability to pay USCIS fees. Based on the USCIS Director’s authority to waive a required fee, [35] USCIS may designate certain time periods or events in which a person may file a fee waiver request when not otherwise eligible. [36]
+[^ 34] Including major natural disasters declared in accordance with 44 CFR 206, subpart B.
+[^ 35] See 8 CFR 106.3(c). This discretionary authority may be delegated only to the USCIS Deputy Director.
+[^ 36] See USCIS' Immigration Relief in Emergencies or Unforeseen Circumstances webpage. For example, USCIS allowed for consideration of fee waivers for those affected by South Carolina floods in 2015. See Volume 1, General Policies and Procedures, Part H, Emergencies or Unforeseen Circumstances, Chapter 2, Emergencies or Unforeseen Circumstances-Related Flexibilities, Section A, Immigration Policy Flexibilities, Subsection 10, Fee Waivers and Exemptions [1 USCIS-PM H.2(A)(10)].
+In such cases, the requestor must still file a fee waiver request and establish eligibility under one of the criteria (generally, financial hardship). USCIS may accept the request based on the requestor’s statement even if there is no documentation of the emergencies and unforeseen circumstances.
+Unless otherwise eligible, requestors may only seek a fee waiver under those emergent circumstances described in the Immigration Relief in Emergencies or Unforeseen Circumstances webpage.
+## F. Adjudication
+USCIS may grant a fee waiver request when USCIS determines that the requestor has met the eligibility requirements.
+USCIS adjudicates the fee waiver request based on the information provided in the Request for Fee Waiver (Form I-912) or written statement, as well as any additional documentation submitted in support of the fee waiver request at the time of filing. USCIS does not issue any Requests for Evidence for fee waiver requests.
+The table below provides a general outline to guide the adjudication of a request for a fee waiver.
+Overview of Fee Waiver Eligibility Determination
+| Step | For More Information |
+| 1 | Determine whether the application or petition form was properly signed. | Chapter 2, Signatures [1 USCIS-PM B.2] |
+| 2 | Identify whether the form has a fee, or the requestor falls within a fee exempt category. | Chapter 3, Fees [1 USCIS-PM B.3], Section G, Fee Exemptions [1 USCIS-PM B.4(G)] |
+| 3 | Verify whether the form type is eligible for a fee waiver. | Section B, Forms Eligible for Fee Waiver [1 USCIS-PM B.4(B)] |
+| 4 | If applicable, verify whether the requestor has a pending or approved petition or application for a benefit category eligible for a fee waiver. | Section C, Category of Requestor Eligible for Fee Waiver [1 USCIS-PM B.4(C)] |
+| 5 | Determine whether the requestor or a qualifying member of the requestor’s household receives a means-tested benefit. | Section D, Basis for Inability to Pay, Subsection 1, Means-Tested Benefit [1 USCIS-PM B.4(D)(1)] |
+| 5a | If sufficient proof of a means-tested benefit, the request for fee waiver is approved and no further information is required. | Section D, Basis for Inability to Pay, Subsection 1, Means-Tested Benefit [1 USCIS-PM B.4(D)(1)] |
+| 5b | If no documentation of a means-tested benefit, proceed to 6. | Section D, Basis for Inability to Pay, Subsection 1, Means-Tested Benefit [1 USCIS-PM B.4(D)(1)] |
+| 6 | Determine the household size and the income level at which the requestor may qualify based on the household size. | Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 percent of Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)] |
+| 7 | Identify all valid sources of income applicable to the household and that the requestor submitted the proper documentation of income (or lack of income). | Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 percent of Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)] |
+| 8 | Determine whether the requestor’s adjusted gross income from tax returns (or gross income from W-2) is at or below 150 percent of the relevant FPG level (based on household size). | Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 percent of Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)] |
+| 8a | If sufficient proof of household income at or below 150 percent of the FPG, the request for fee waiver is approved and no further information is required. | Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 percent of Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)] |
+| 8b | If insufficient proof of household income at or below 150 percent of the FPG, proceed to 9. | Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 percent of Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)] |
+| 9 | Determine if the requestor is under extreme financial hardship due to extraordinary expenses or other circumstances that render the individual unable to pay the fee. | Section D, Basis for Inability to Pay, Subsection 3, Financial Hardship [1 USCIS-PM B.4(D)(3)] |
+| 9a | If sufficient proof of extreme financial hardship, the request for fee waiver is approved and no further information is required. | Section D, Basis for Inability to Pay, Subsection 3, Financial Hardship [1 USCIS-PM B.4(D)(3)] |
+| 9b | If insufficient proof of extreme financial hardship such that the requestor is unable to pay the fee, the requestor is not eligible for a fee waiver and the request is rejected. | Section D, Basis for Inability to Pay, Subsection 3, Extreme Financial Hardship [1 USCIS-PM B.4(D)(3)] |
+### 1. Family-Related Applications or Petitions
+In general, a requestor may file one request for fee waiver for all eligible family-related applications or petitions filed together. For example, if the requestor files the Application to Register Permanent Residence or Adjust Status (Form I-485) and the requestor’s spouse and children file separate Forms I-485 at the same time, the requestor, spouse, and children need only file one Form I-912 or written request for fee waiver.
+If eligible family-related applications or petitions are filed separately, each individual family member must separately submit a Form I-912 or written request for fee waiver with the eligible application or petition.
+Each fee waiver request is unique and USCIS considers each request on its own merits. However, where family members separately submit family-related applications or petitions and related requests for fee waiver, USCIS should issue consistent determinations on the family members’ individual requests for fee waiver.
+### 2. Rejection
+If USCIS determines that the requestor is not eligible for a fee waiver, then USCIS rejects the fee waiver request and the benefit request. The rejection notice must provide the requestor detailed reasons for the rejection. The table below provides a non-exhaustive list of common reasons for rejection.
+Reasons for Rejecting Fee Waiver Request
+| Reason | Explanation |
+| Lack of proper filing | Requestor did not submit a Request for Fee Waiver (Form I-912) or written statement. |
+| Ineligible form or category | Requestor does not fall within a category eligible for a fee waiver. Requestor is not filing a form eligible for a fee waiver. |
+| Income is above 150 percent of the FPG and does not otherwise qualify | Income listed on the form or in the documentation is above the 150 percent FPG threshold and did not show receipt of a means-tested benefit or financial hardship. |
+| Unable to determine household income | Identification of household members [37] on the form, but the requestor does not provide sufficient statements or documentation of the household members’ income. Identification of a spouse [38] on the form, but the requestor does not provide sufficient statements or documentation of income or additional support. The requestor’s filing status in the tax returns or transcript (for example, married filing jointly, single, head of household) is inconsistent with the marital status declared on the fee waiver request, the immigration benefit forms, or supporting documents, and the requestor does not provide an explanation or evidence regarding the inconsistency. The requestor’s tax return or transcript indicates that the requestor may be claimed by another person, but the requestor does not provide income information for the tax filer. |
+[^ 37] Applicants for any immigration benefit associated with or based on a pending or approved petition or application for VAWA benefits or T or U nonimmigrant status do not need to list as a member of their household or provide the income of any person who is or was their abuser, human trafficker, or perpetrator or is or was a member of the abuser, human trafficker, or perpetrator’s household. For more information, see Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 Percent of Federal Poverty Guidelines, [1 USCIS-PM B.4(D)(2)].
+[^ 38] Applicants for any immigration benefit associated with or based on a pending or approved petition or application for VAWA benefits or T or U nonimmigrant status do not need to list their spouse as a household member or provide their spouse’s income.
+| Lack of income documentation [39] | Lack of documentation of income (such as tax return or transcript, W-2, or pay statements) and additional income or financial support for the requestor and each household member identified in the fee waiver request or of the person providing additional income, as appropriate. |
+[^ 39] Generally, applicants for any immigration benefit associated with or based on a pending or approved petition or application for VAWA benefits or T or U nonimmigrant status are not rejected for a lack of documentation if the applicant has described the inability to provide the required documentation in sufficient detail and provided any other available documentation. In addition, USCIS does not require SIJs to provide proof of income but does require other documentation for a fee waiver request. See Section D, Basis for Inability to Pay, Subsection 2, Household Income at or Below 150 Percent of the Federal Poverty Guidelines [1 USCIS-PM B.4(D)(2)].
+There is no appeal of a rejection of a fee waiver request. Requestors may, however, file another fee waiver request with the required documentation to establish eligibility. An applicant may also refile the benefit request with the proper fees for USCIS to process the request. The filing of a fee waiver does not toll or pause any other applicable deadlines, such as the deadline for filing an appeal or motion. Therefore, if a fee waiver request is rejected, the requestor must endeavor to re-file within the applicable timeframe. USCIS uses the postmark date of a filing to determine which form version and fees are correct but uses the receipt date for purposes of any regulatory or statutory filing deadlines.
+## G. Fee Exemptions
+Aside from fee exemptions specifically listed in regulations, the USCIS Director may provide an exemption for any fee required. The Director must determine that such action would be in the public interest and the action is consistent with the applicable law.
+Fee exemptions are distinct from fee waivers in that exemptions apply automatically and do not require the requestor to establish eligibility. A benefit requestor may not individually request a fee exemption as they would a fee waiver. The Director may also provide temporary fee exemptions as necessary. A request for a USCIS Director’s fee exemption must be submitted to the Office of the Director for clearance.
+All current fee exemptions can be found in the Fee Schedule (Form G-1055).

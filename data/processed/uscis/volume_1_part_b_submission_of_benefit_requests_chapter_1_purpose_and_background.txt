@@ -1,0 +1,43 @@
+## A. Purpose
+Those seeking immigration benefits in the United States must generally request benefits by filing the appropriate USCIS form(s) with USCIS. Proper submission of benefit requests provides USCIS the opportunity to determine whether a person is initially eligible for the benefit requested and facilitates an efficient management of requests. [2]
+[^ 2] The terms “benefit request” and “immigration benefit request,” as used in this Part, include, but are not limited to, all requests funded by the Immigration Examinations Fee Account (IEFA). These terms may also refer to forms or requests not directly resulting in an immigration benefit, such as those resulting in an exercise of prosecutorial discretion by DHS.
+## B. Background
+With the Immigration Act of 1891, the federal government assumed direct control of inspecting, admitting, rejecting, and processing all immigrants seeking admission to the United States. On January 2, 1892, the Immigration Service opened Ellis Island in New York Harbor. The Immigration Service began collecting arrival manifests from each incoming ship. Inspectors then questioned arrivals about their admissibility and noted their admission or rejection on the manifest records. [4]
+[^ 4] See the USCIS History and Genealogy website for additional information. See Overview of Legacy Immigration and Naturalization Service (INS) History.
+Over the years, different federal government departments and offices have adjudicated immigration benefit requests. The process of submitting benefit requests has also changed over time. Today, requestors generally seek benefits from USCIS by submitting specific forms; the forms also help guide requestors in collecting and submitting necessary evidence. USCIS uses forms to establish the record, verify identity, and adjudicate the benefit request.
+USCIS is primarily funded by immigration and naturalization benefit request fees charged to requestors. Fees collected from individuals and entities filing immigration benefit requests are deposited into the Immigration Examinations Fee Account (IEFA). The fees collected are to ensure recovery of the full cost of providing all USCIS services, including those provided without charge to refugee, asylum, and certain other filers.
+Form Types
+USCIS adjudicates immigration benefit requests in and outside the United States. The table below provides a list of the major benefits USCIS provides, the corresponding form(s), and corresponding Policy Manual guidance for more information. [6]
+[^ 6] See the USCIS All Forms webpage for a complete list of all USCIS forms and form instructions.
+Common USCIS-Issued Immigration Benefits
+| Benefit Sought | Relevant Form(s) | For More Information |
+| Nonimmigrant status | Petition for a Nonimmigrant Worker (Form I-129) | Volume 2, Nonimmigrants [2 USCIS-PM] |
+| Petition for Alien Fiancé(e) (Form I-129F) |
+| Petition for U Nonimmigrant Status (Form I-918) |
+| Petition for Qualifying Family Member of a U-1 Nonimmigrant (Form I-929) |
+| Application to Extend/Change Nonimmigrant Status (Form I-539) |
+| Immigrant status | Petition for Alien Relative (Form I-130) | Volume 6, Immigrants [6 USCIS-PM] |
+| Immigrant Petition for Alien Worker (Form I-140) |
+| Petition for Amerasian, Widow(er), or Special Immigrant (Form I-360) |
+| Immigrant Petition by Alien Investor (Form I-526) | Volume 6, Immigrants, Part G, Investors [6 USCIS-PM G] |
+| Application to Register Permanent Residence or Adjust Status (Form I-485) | Volume 7, Adjustment of Status [7 USCIS-PM] |
+| Refugee or asylee status | Application for Asylum and for Withholding of Removal (Form I-589) | Volume 4, Refugees [4 USCIS-PM] Volume 5, Asylees [5 USCIS-PM] |
+| Refugee/Asylee Relative Petition (Form I-730) |
+| Temporary Protected Status | Application for Temporary Protected Status (Form I-821) | Volume 3, Protection and Parole [3 USCIS-PM] |
+| Employment authorization | Application for Employment Authorization (Form I-765) | Volume 10, Employment Authorization [10 USCIS-PM] |
+| Travel authorization (including reentry permit, humanitarian parole, and advance parole document) | Application for Travel Documents, Parole Documents, and Arrival/Departure Records (Form I-131) | Volume 11, Travel and Identity Documents [11 USCIS-PM] |
+| Citizenship | Application for Naturalization (Form N-400) | Volume 12, Citizenship and Naturalization [12 USCIS-PM] |
+| Application for Certificate of Citizenship (Form N-600) | Volume 12, Citizenship and Naturalization, Part H, Children of U.S. Citizens [12 USCIS-PM H] |
+| Application for Citizenship and Issuance of Certificate Under Section 322 (Form N-600K) |
+| Overcoming Inadmissibility | Application for Permission to Reapply for Admission into the U.S. After Deportation or Removal (Form I-212) | Volume 9, Waivers and Other Forms of Relief [9 USCIS-PM] |
+| Application for Waiver of Grounds of Inadmissibility (Form I-601) |
+| Application by Refugee for Waiver of Grounds of Excludability (Form I-602) |
+| Application for Advance Permission to Enter as a Nonimmigrant (Form I-192) |
+| Application for Waiver of Grounds of Inadmissibility (Form I-690) |
+Each USCIS form has accompanying instructions that explain how to complete the form, as well as the necessary supporting evidence and fees that must be submitted with the completed form. [7] In addition, some forms may require the submission of biometric information and an additional fee for biometric processing.
+[^ 7] See 8 CFR 103.2. For a list of all forms and form instructions, see the USCIS Forms page.
+## C. Legal Authorities
+- INA 103 - Powers and duties of the Secretary, Under Secretary, and Attorney General
+- 8 CFR 103.2 - Submission and adjudication of benefit requests
+- 8 CFR 103.7 - Fees
+- 8 CFR 106 - USCIS fee schedule, including fee requirements, fees, waivers and exemptions, and premium processing service

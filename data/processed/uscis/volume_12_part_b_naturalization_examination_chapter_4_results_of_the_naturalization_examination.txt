@@ -1,0 +1,62 @@
+USCIS has 120 days from the date of the initial naturalization interview to issue a decision. If the decision is not issued within 120 days of the interview, an applicant may request judicial review of his or her application in district court. The officer must base his or her decision on the laws, regulations, precedent decisions, and governing policies.
+The officer may:
+- Approve the application;
+- Continue the examination without making a decision (if more information is needed), if the applicant needs to be rescheduled, or for other relevant reasons; or
+- Deny the application.
+The officer must provide the applicant with a notice of results at the end of the interview regardless of the outcome. The notice should address the outcome of the interview and the next steps involved for continued cases.
+## A. Approval of Naturalization Application
+If an officer approves a naturalization application, the application goes through the appropriate internal procedures before the USCIS office schedules the applicant to appear at a ceremony for the administration of the Oath of Allegiance. The internal procedures include a “re-verification” procedure where all approved applications are reviewed for quality. The officer who conducts the re-verification is not the same officer who conducts the interview. While the officer conducting the re-verification process does not adjudicate the application once again, the officer may raise any substantive eligibility issues.
+USCIS does not schedule an applicant for the Oath of Allegiance in cases where USCIS receives or identifies potentially disqualifying information about the applicant after approval of his or her application. If USCIS cannot resolve the disqualifying information and the adjudicating officer finds the applicant ineligible for naturalization, USCIS then issues a motion to reopen and re-adjudicates the naturalization application.
+## B. Continuation of Examination
+### 1. Continuation to Request Evidence
+An officer issues the applicant a written Request for Evidence if additional information is needed to make an accurate determination on the naturalization application. [4] In general, USCIS permits a period of 30 days for the applicant to respond to a Request for Evidence. [5]
+[^ 4] The officer issues a Request for Evidence on Form N-14.
+[^ 5] See 8 CFR 335.7. The applicant has up to three more days after the 30-day period for responding to an RFE in cases where USCIS has mailed the request. See 8 CFR 103.8(b). For more information on timeframes and responses to Requests for Evidence, see Volume 1, General Policies and Procedures, Part E, Adjudications, Chapter 6, Evidence, Section F, Requests for Evidence and Notices of Intent to Deny [1 USCIS-PM E.6(F)].
+The Request for Evidence should include:
+- The specific documentation or information that the officer is requesting;
+- The ways in which the applicant may respond; and
+- The date by which the applicant has to reply.
+The applicant must respond to the Request for Evidence within the timeframe specified by the officer. If the applicant timely submits the evidence as requested, the officer makes a decision on the applicant’s eligibility. If the applicant fails to submit the evidence as requested, the officer may adjudicate the application based on the available evidence.
+### 2. Scheduling Subsequent Re-examination
+If an applicant fails any portion of the naturalization test, an officer must provide the applicant a second opportunity to pass the test within 60 to 90 days after the initial examination unless the applicant is statutorily ineligible for naturalization based on other grounds. An officer should also schedule a re-examination in order to resolve any issues on eligibility.
+The outcome of the re-examination determines whether the officer conducting the second interview continues, approves, or denies the naturalization application.]
+If the applicant fails to appear for the re-examination and USCIS does not receive a timely or reasonable request to reschedule, the officer should deny the application based on the applicant’s failure to meet the educational requirements for naturalization. The officer also should include any other areas of ineligibility within the denial notice.
+## C. Denial of Naturalization Application
+USCIS must deny a naturalization application when an applicant does not meet all eligibility requirements under the law. Furthermore, USCIS cannot consider the naturalization application of an applicant who is in removal proceedings. Therefore, effective November 18, 2020, when a removal proceeding is pending against a naturalization applicant, USCIS denies the naturalization application under INA 318, except for certain cases involving naturalizations based on military service. [9]
+[^ 9] See INA 328(b)(2) (applicants currently in the U.S. armed forces and eligible for military naturalization under INA 328(a)). See INA 329(b)(1) (applicants eligible for military naturalization under INA 329(a)). See Part D, General Naturalization Requirements, Chapter 2, Lawful Permanent Resident Admission for Naturalization [12 USCIS-PM D.2].
+The officer should deny the naturalization application if the applicant has already received a final order of removal from an immigration judge, unless:
+- The applicant was removed from the United States and later reentered with the proper documentation and authorization; or
+- The applicant is filing for naturalization under the military naturalization provisions.
+If an officer denies a naturalization application, the officer must issue the applicant and his or her attorney or representative a written denial notice no later than 120 days after the initial interview on the application. The written denial notice should include:
+- A clear and concise statement of the facts in support of the decision;
+- Citation of the specific eligibility requirements the applicant failed to demonstrate; and
+- Information on how the applicant may request a hearing on the denial.
+The table below provides certain general grounds for denial of the naturalization application. An officer should review the pertinent parts of this volume that correspond to each ground for denial and its related eligibility requirement for further guidance.
+General Grounds for Denial of Naturalization Application (Form N-400)
+| Failure to Establish… | Citation |
+| Lawful Admission for Permanent Residence | INA 316(a)(1) INA 318 8 CFR 316.2(a)(2) |
+| Continuous Residence | INA 316(a)(2) INA 316(b) 8 CFR 316.2(a)(3) 8 CFR 316.5(c) |
+| Physical Presence | INA 316(a) 8 CFR 316.2(a)(4) |
+| 3 Months of Residence in State or Service District | INA 316(a) 8 CFR 316.2(a)(5) |
+| Good Moral Character | INA 316(a)(3) INA 316(e) INA 101(f) 8 CFR 316.10 |
+| Attachment and Favorable Disposition to the Good Order and Happiness of the United States | INA 316(a)(3) 8 CFR 316.11 |
+| Understanding of English (Including Reading, Writing, and Speaking) | INA 312(a)(1) 8 CFR 312.1 |
+| Knowledge of U.S. History and Government | INA 312(a)(2) 8 CFR 312.2 |
+| Lack of Prosecution | INA 335(e) 8 CFR 335.7 |
+## D. Administrative Closure, Lack of Prosecution, Withdrawal, and Applications Not Held in Abeyance
+### 1. Administrative Closure for Failing to Appear at Initial Interview
+An applicant abandons their application if the applicant fails to appear for their initial naturalization examination without good cause and without notifying USCIS of the reason for non-appearance within 30 days of the scheduled appointment. In the absence of timely notification by the applicant, an officer may administratively close the application without making a decision on the merits. [13]
+[^ 13] See 8 CFR 103.2(b)(13)(ii), 8 CFR 335.6(a), and 8 CFR 335.6(b). For more information on timeframes and responses, see Volume 1, General Policies and Procedures, Part E, Adjudications, Chapter 6, Evidence, Section F, Requests for Evidence and Notices of Intent to Deny [1 USCIS-PM E.6(F)]. Military applicants, however, generally may file a motion to reopen at any time. See Part I, Military Members and their Families [12 USCIS-PM I].
+An applicant may request to reopen an administratively closed application without fee by submitting a written request to USCIS within 1 year from the date the application was closed. The date of the applicant’s request to reopen an application becomes the date of filing the naturalization application for purposes of determining eligibility for naturalization.
+If the applicant does not request reopening of an administratively closed application within 1 year from the date the application was closed, USCIS:
+- Considers the naturalization application abandoned; and
+- Dismisses the application without further notice to the applicant.
+### 2. Failing to Appear for Subsequent Re-examination or to Respond to Request for Evidence
+If the applicant fails to appear at the subsequent re-examination or fails to respond to a Request for Evidence within 30 days, the officer must adjudicate the application on the merits. This includes cases where the applicant fails to appear at a re-examination or to provide evidence as requested.
+An officer should consider any good cause exceptions provided by the applicant for failing to respond or appear for an examination in adjudicating a subsequent motion to reopen.
+### 3. Withdrawal of Application
+The applicant may request, in writing, to withdraw his or her application. The officer must inform the applicant that the withdrawal by the applicant constitutes a waiver of any future hearing on the application. If USCIS accepts the withdrawal, the applicant may submit another application without prejudice. USCIS does not send any further notice regarding the application.
+If the District Director does not consent to the withdrawal, the officer makes a decision on the merits of the application.
+### 4. Applications Not Held in Abeyance if Applicant is in Removal Proceedings
+USCIS cannot consider the naturalization application of an applicant who is in removal proceedings. Effective November 18, 2020, when a removal proceeding is pending against a naturalization applicant, USCIS denies the naturalization application under INA 318 and the naturalization application is not held in abeyance, except for certain applications for naturalization based on military service. [19]
+[^ 19] See INA 328(b)(2) (applicants currently in the U.S. Armed Forces and eligible for military naturalization under INA 328(a)). See INA 329(b)(1) (applicants eligible for military naturalization under INA 329(a)). See Part D, General Naturalization Requirements, Chapter 2, Lawful Permanent Resident Admission for Naturalization [12 USCIS-PM D.2].

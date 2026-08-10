@@ -1,0 +1,48 @@
+## A. Eligibility for Certificate of Citizenship
+In order to obtain a Certificate of Citizenship, an applicant submits to USCIS: [1]
+[^ 1] USCIS automatically issues Certificates of Citizenship for certain adopted children. For information on Certificates of Citizenship for adopted children, see Volume 5, Adoptions, Part F, Citizenship for Adopted Children, Chapter 3, Eligibility, Documentation, and Evidence, Section B, Child Residing in the United States [5 USCIS-PM F.3(B)].
+- An Application for Certificate of Citizenship (Form N-600), if the applicant automatically acquired or derived citizenship at birth or after birth; [2] or
+[^ 2] This volume uses the terms “acquired” or “derived” citizenship in cases where citizenship automatically attaches to a person regardless of any affirmative action by that person to document his or her citizenship. See Part H, Children of U.S. Citizens [12 USCIS-PM H].
+- An Application for Citizenship and Issuance of Certificate Under Section 322 (Form N-600K) for a child of a United States citizen residing outside of the United States.
+The application must be submitted in accordance with the form instructions and with the appropriate fee. In addition, applications must include any supporting evidence. An Application for Citizenship and Issuance of Certificate Under Section 322 may only be filed if the child is under 18 years of age. An Application for Certificate of Citizenship may be filed either before or after the child turns 18 years of age.
+If the person claiming citizenship is 18 years of age or older, the person must establish that he or she has met the eligibility requirements for U.S. citizenship and issuance of the certificate. If the application is for a child under 18 years of age, the person applying on behalf of the child must establish that the child has met the pertinent eligibility requirements.
+## B. Contents of Certificate of Citizenship
+### 1. Information about the Applicant
+The Certificate of Citizenship contains information identifying the person and confirming the person's U.S. citizenship. Specifically, the Certificate of Citizenship contains:
+- USCIS registration number (A-number);
+- Complete name;
+- Marital status;
+- Place of residence;
+- Country of birth; [5]
+[^ 5] An applicant who was born in Taiwan may indicate Taiwan as the country of birth on their Form N-400 if he or she shows supporting evidence. Such applicants’ Certificates of Citizenship are issued showing Taiwan as country of birth. USCIS does not issue certificates showing “Taiwan, PRC,” “Taiwan, China,” “Taiwan, Republic of China,” or “Taiwan, ROC.” People’s Republic of China (PRC) is the country name used for applicants born in the PRC.
+- Photograph;
+- Signature of applicant; and
+- Other descriptors: sex, date of birth, and height.
+### 2. Additional Information on Certificates of Citizenship
+- Certificate number;
+- Statement by the USCIS Director indicating that the applicant has complied with all the eligibility requirements for citizenship under the laws of the United States;
+- Date on which the person became a U.S. citizen;
+- Date of issuance; and
+- DHS seal and Director’s signature as the authority under which the certificate is issued.
+### 3. Changes to Names or Dates of Birth per Court Order
+Change to Date of Birth on Certificate of Citizenship
+USCIS recognizes that the dates of birth of children born abroad are not always accurately recorded in the countries in which they were born. For example, an adopted child whose date of birth (DOB) was unknown may have been assigned an estimated DOB, or the DOB may have been incorrectly recorded or translated from a non-Gregorian calendar. [7]
+[^ 7] Most western countries follow the Gregorian calendar. Other countries follow different calendars including the Hebrew (lunisolar calendar); Islamic (lunar calendar); and Julian (solar calendar). The calendars differ on days, months, and years.
+In these cases, the incorrect or estimated DOB is reported on the child’s foreign record of birth and becomes part of the USCIS record. Once in the United States, parents may obtain medical evidence indicating that the DOB on the foreign record of birth and the USCIS record is incorrect and they may choose to obtain evidence of a corrected DOB from the state of residence.
+USCIS issues a Certificate of Citizenship with the corrected DOB in cases where the applicant (or if the applicant is under age 18, the parent or legal guardian) has obtained a state-issued document from the child’s state of residence with a corrected DOB. [8] A state-issued document includes a:
+[^ 8] See INA 320(d) (relating to cases where persons automatically acquire citizenship under INA 320 based on an adoption or re-adoption in the United States). The Accuracy for Adoptees Act, Pub. L. 113-74 (PDF) (January 16, 2014), added Subsection (d) to INA 320. Cases where the requested DOB would result in the applicant being ineligible for citizenship because the applicant would have aged out should be raised through appropriate channels for consultation with the Office of the Chief Counsel (OCC). Additionally, any cases involving particular concerns based on the corrected DOB should also be raised through appropriate channels for consultation with OCC.
+- Court order;
+- Birth certificate;
+- Certificate recognizing the foreign birth;
+- Certificate of birth abroad; or
+- Other similar state vital record issued by the child’s state of residence.
+In cases where USCIS has already issued the Certificate of Citizenship, the applicant may request a replacement Certificate of Citizenship with a corrected DOB by filing an Application for Replacement Naturalization/Citizenship Document (Form N-565) with the appropriate fee.
+Change of Legal Name on Certificate of Citizenship
+In general, a Certificate of Citizenship includes an applicant’s full legal name [10] as the name appears on the applicant’s foreign record of birth. USCIS will issue a Certificate of Citizenship with a name other than that on the applicant’s foreign record of birth in cases where the applicant, or if the applicant is under age 18, the parent or legal guardian, has obtained a U.S. state court order evidencing a legal name change.
+[^ 10] A full legal name includes the person’s first name, middle name(s) (if any), and family name (or surname) without any initials or nicknames. See 6 CFR 37.3;. See Real ID Act of 2005, Pub. L. 109-13 (May 11, 2005), 49 U.S.C. 30301. See Volume 1, General Policies and Procedures, Part E, Adjudications, Chapter 5, Verification of Identifying Information, Section A, Full Legal Name [1 USCIS-PM E.5(A)].
+If USCIS has already issued the Certificate of Citizenship, the applicant may request a replacement Certificate of Citizenship by filing an Application for Replacement Naturalization/Citizenship Document (Form N-565) with the appropriate fee.
+USCIS does not assist with the processing of name change petitions through the courts for applicants filing an Application for Certificate of Citizenship (Form N-600). An applicant, parent, or legal guardian must file a name change petition with the court having jurisdiction over the matter.
+## C. Issuance of Certificate of Citizenship
+In general, USCIS issues a Certificate of Citizenship after an officer approves the person’s application and the person has taken the Oath of Allegiance, if applicable, before a designated USCIS officer. USCIS will not issue a Certificate of Citizenship to a person who has not surrendered his or her Permanent Resident Card (PRC) or Alien Registration Card (ARC) evidencing the person’s lawful permanent residence. If the person established that his or her card was lost or destroyed, USCIS may waive the requirement of surrendering the card. [13]
+[^ 13] See 8 CFR 341.4. The requirement to surrender the PRC or ARC does not apply to applicants naturalizing under INA 322.
+If USCIS waives the oath requirement for a person, USCIS issues the certificate after approval of his or her application for the certificate. In such cases, USCIS issues the certificate in person or by certified mail to the parent or guardian in cases involving children under 18 years of age, or to the person (or guardian if applicable) in cases involving persons 18 years of age or older.

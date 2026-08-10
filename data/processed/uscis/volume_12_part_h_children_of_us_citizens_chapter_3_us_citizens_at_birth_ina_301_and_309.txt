@@ -1,0 +1,186 @@
+## A. General Requirements for Acquisition of Citizenship at Birth
+A person born in the United States who is subject to the jurisdiction of the United States is a U.S. citizen at birth, to include a child born to a member of an Indian, Eskimo, Aleutian, or other aboriginal tribe. [1]
+[^ 1] See INA 301(a) and INA 301(b). Children of certain diplomats who are born in the United States are not U.S. citizens at birth because they are not subject to the jurisdiction of the United States. See 8 CFR 101.3. For more information, see Volume 7, Adjustment of Status, Part O, Registration, Chapter 3, Children Born in the United States to Accredited Diplomats [7 USCIS-PM O.3]. However, when adjudicating citizenship claims of acquisition or derivation of U.S. citizenship through a U.S. citizen parent who was born in the United States to a parent or parents with diplomatic immunity, officers must review whether such parent naturalized later.
+In general, a person born outside of the United States may acquire citizenship at birth if all of the following requirements are met at the time of the person’s birth:
+- The person is a child of a U.S. citizen parent(s);
+- The U.S. citizen parent meets certain residence or physical presence requirements in the United States or an outlying possession before the person’s birth in accordance with the applicable provision; [3] and
+[^ 3] Any periods of honorable service in the U.S. armed forces, periods of employment with other qualifying organizations, or time spent outside the United States as the dependent unmarried son or daughter and member of the household of a person honorably serving in the U.S. armed forces or employed by another qualifying organization count towards that physical presence requirement. See INA 301(g).
+- The person meets all other applicable requirements under either INA 301 or INA 309.
+Until the Act of October 10, 1978, persons who had acquired U.S. citizenship through birth outside of the United States to one U.S. citizen parent had to meet certain physical presence requirements to retain their citizenship. This legislation eliminated retention requirements for persons who were born after October 10, 1952. There may be cases where a person who was born before that date, and therefore subject to the retention requirements, may have failed to retain citizenship. [4]
+[^ 4] The Act of October 10, 1978, Pub. L. 95-432 (PDF), repealed the retention requirements of former INA 301(b). The amending legislation was prospective only and did not restore citizenship to anyone who, prior to its enactment, had lost citizenship for failing to meet the retention requirements.
+An officer should determine whether a person acquired citizenship at birth by referring to the applicable statutory provisions and conditions that existed at the time of the person’s birth. These provisions have been modified extensively over the years. [5] In some cases, an officer may need to determine whether an applicant’s parent or grandparent acquired citizenship before the officer can determine whether the applicant acquired citizenship. Officers may request additional evidence needed to establish the U.S. citizenship of the applicant’s parent or grandparent. The following sections provide the current law.
+[^ 5] Officers should use the Nationality Charts to assist with the adjudication of these applications.
+## B. Child Born in Wedlock
+USCIS must determine whether a child is born in wedlock or out of wedlock at the time of birth in order to determine which citizenship provision is applicable.
+USCIS considers a child to be born in wedlock when the legal parents are married to one another at the time of the child’s birth and at least one of the legal parents has a genetic or gestational relationship to the child.
+USCIS views post-birth formalization of the legal relationship between a parent and a child as establishing the relationship from the time of the child’s birth. This is because the relevant jurisdiction’s recognition of the legal relationship between the parent and child is based on the circumstances of the child’s conception and birth, including, for example, the existence of a valid surrogacy contract memorializing all parties’ understanding of parental rights pre-conception. This rule applies unless otherwise specified in the law of the relevant jurisdiction or in the applicable court order.
+A child born outside the United States acquires U.S. citizenship at birth under INA 301 if at the time of the child’s birth:
+- The person is a child of a U.S. citizen parent(s);
+- The child’s legal parents are married to each other and at least one legal parent is the genetic or gestational parent of that child at the time of the child’s birth; and
+- The parent meets the residence or physical presence requirements under the applicable law and the child meets all other applicable requirements under INA 301.
+The tables below provide examples of different relationships and whether USCIS considers the child to be born in or out of wedlock at the time of birth in each scenario.
+In-Wedlock Determinations Sample Scenarios: Legal Genetic and Gestational Mother
+| Marriage Between [9] … | … and | In or Out of Wedlock? |
+[^ 9] Marriage must have existed at the time of birth.
+| Legal genetic and gestational mother | Legal genetic father | In wedlock |
+| Legal genetic and gestational mother | Non-genetic legal mother or father | In wedlock |
+| Legal genetic and gestational mother | Non-legal mother or father | Out of wedlock |
+In-Wedlock Determinations Sample Scenarios: Legal Genetic and Non-Gestational Mother [10]
+[^ 10] In addition, see the chart entitled In-Wedlock Determinations: Cases Involving Gestational Carriers.
+| Marriage Between [11] … | … and | In or Out of Wedlock? |
+[^ 11] Marriage must have existed at the time of birth.
+| Legal genetic and non-gestational mother | Legal genetic father | In wedlock |
+| Legal genetic and non-gestational mother | Non-genetic legal mother or father | In wedlock |
+| Legal genetic and non-gestational mother | Legal gestational mother | In wedlock |
+| Legal genetic and non-gestational mother | Non-genetic and non-legal mother or father | Out of wedlock |
+In-Wedlock Determinations Sample Scenarios: Legal Gestational Mother
+| Marriage Between [12] … | … and | In or Out of Wedlock? |
+[^ 12] Marriage must have existed at the time of birth.
+| Legal gestational mother | Legal genetic mother or father | In wedlock |
+| Legal gestational mother | Non-genetic legal mother or father | In wedlock |
+| Legal gestational mother | Non-genetic and non-legal mother or father | Out of wedlock |
+In-Wedlock Determinations Sample Scenarios: Legal Genetic Father [13]
+[^ 13] In addition, see the chart entitled In-Wedlock Determinations: Cases Involving Gestational Carriers.
+| Marriage Between [14] … | … and | In or Out of Wedlock? |
+[^ 14] Marriage must have existed at the time of birth.
+| Legal genetic father | Legal genetic mother or legal gestational mother (or both) | In wedlock |
+| Legal genetic father | Non-genetic, non-gestational legal mother or father | In wedlock |
+| Legal genetic father | Non-genetic, non-gestational, and non-legal mother or father | Out of wedlock |
+In-Wedlock Determinations: Cases Involving Gestational Carriers [15]
+[^ 15] Persons using ART may use a gestational carrier who is a person who gestates, or carries, an embryo that was formed from the egg of another person on behalf of the intended parent or parents. The gestational carrier is genetically unrelated to the child and usually has a contractual obligation to return the infant to his or her intended legal parents. For additional information on ART, see the Centers for Disease Control (CDC) website. A non-genetic gestational parent who is not the legally recognized parent may not transmit U.S. citizenship to the child (for example, a gestational carrier who is not a legal parent). USCIS follows any applicable court judgment of the relevant jurisdiction if parentage is disputed. In addition, USCIS does not adjudicate cases involving children whose legal parentage remains in dispute unless there has been a final determination by a proper authority.
+| Marriage Between [16] … | … and | In or Out of Wedlock? |
+[^ 16] Marriage must have existed at the time of birth.
+| Legal genetic mother or father | Legal genetic mother or father | In wedlock |
+| Legal genetic mother or father | Legal non-genetic mother or father | In wedlock |
+| Legal non-genetic mother or father | Legal non-genetic mother or father | Out of wedlock [17] |
+[^ 17] An unmarried non-genetic, non-gestational legal parent may not transmit U.S. citizenship to the child.
+Parent’s Residence and Physical Presence Requirements
+Depending on the law applicable at the time, the U.S. citizen parent(s) also have residency or physical presence requirements in the United States to transmit citizenship to a child. [18] The following table provides the current requirements under INA 301 based on the parents' citizenship.
+[^ 18] Some children may also have retention requirements. See Appendix: Nationality Chart 1 - Children Born Outside the United States in Wedlock [12 USCIS-PM H.3, Appendices Tab] for additional information.
+Residence and Physical Presence Requirements for Parents Before the Child's Birth
+| Parents' Citizenship Status | Residence or Physical Presence Requirement |
+| Child of Two U.S. Citizen Parents | At least one parent had resided in the United States or one of its outlying possessions. |
+| Child of a U.S. Citizen Parent and a U.S. national (but not citizen) of the United States | The U.S. citizen parent was physically present in the United States or one of its outlying possessions for a continuous period of at least 1 year. |
+| Child of a U.S. Citizen Parent and Alien Parent | The U.S. citizen parent was physically present in the United States for at least 5 years, including at least 2 years after 14 years of age. [19] |
+[^ 19] Time outside the United States counts as physical presence in the United States if the time spent outside the United States was: - As a member of the U.S. armed forces in honorable status; - Under the employment of the U.S. government or other qualifying organizations; or - As a dependent unmarried son or daughter of the household of a person described in one of the above categories of such persons.
+## C. Child Born Out of Wedlock
+### 1. Child of U.S. Citizen Father
+General Requirements for Fathers of Children Born Out of Wedlock
+The general requirements for acquisition of citizenship at birth for a child born in wedlock also apply to a child born out of wedlock outside of the United States (or one of its outlying possessions) who claims citizenship through a U.S. citizen father. Specifically, the provisions apply in cases where:
+- A blood relationship between the child and the father is established by clear and convincing evidence;
+- The child’s father was a U.S. citizen at the time of the child’s birth;
+- The child’s father (unless deceased) has agreed in writing to provide financial support for the child until the child reaches 18 years of age; and
+- One of the following criteria is met before the child reaches 18 years of age: The child is legitimated under the law of his or her residence or domicile; The father acknowledges in writing and under oath the paternity of the child; or The paternity of the child is established by adjudication of a competent court.
+- The child is legitimated under the law of his or her residence or domicile;
+- The father acknowledges in writing and under oath the paternity of the child; or
+- The paternity of the child is established by adjudication of a competent court.
+In addition, the residence or physical presence requirements contained in the relevant paragraph of INA 301 continue to apply to children born out of wedlock, who are claiming citizenship through their fathers.
+Written Agreement to Provide Financial Support
+In order for a child born out of wedlock outside of the United States (or one of its outlying possessions) to acquire U.S. citizenship through his or her father, Congress included a requirement that the father agree in writing to provide financial support for the child until the child reaches the age of 18. [22] Congress included the language to prevent children from becoming public charges. [23] USCIS interprets the phrase in the statute “has agreed in writing to provide financial support” to mean that there must be documentary evidence that supports a finding that the father accepted the legal obligation to support the child until the age of 18.
+[^ 22] A separate agreement or contract is not required for the father to satisfy the requirement. See INA 309(a)(3). See the Immigration and Nationality Act Amendments of 1986, Pub. L. 99–653 (PDF) (November 14, 1986).
+[^ 23] See the Immigration and Nationality Act Amendments of 1986, Pub. L. 99–653 (PDF) (November 14, 1986). The Immigration and Nationality Act (INA) was intended to keep families together and generally construed in favor of family unity and the acceptance of responsibility by family members. See Solis-Espinoza v. Gonzales, 401 F.3d 1090 (9th Cir. 2005).
+The written agreement of financial support may be dated at any time before the child’s 18th birthday. If the child is under the age of 18 at the time of filing an Application for Certificate of Citizenship, the father may provide the written agreement of financial support either concurrently with the filing of the application or prior to the adjudication of the application. USCIS may request the written agreement of financial support at the time of issuance of a Request for Evidence or at the time of an interview (unless the interview is waived).
+Alternatively, if the applicant is already over the age of 18, he or she may meet the requirement if one or more documents support a finding that the father accepted his legal obligation to support the child. In such cases, the evidence must have existed (and have been finalized) prior to the child’s 18th birthday and must have met any applicable foreign law or U.S. law governing the child’s or father’s residence to establish acceptance of financial responsibility. [25]
+[^ 25] In many cases, the issue of whether the father agreed to provide financial support depends on foreign law. The applicant bears the burden of proving the father has met any applicable requirements to make a binding agreement under the law. See Matter of Annang (PDF), 14 I&N Dec. 502 (BIA 1973). Officers should consult USCIS counsel about any requirements under the law.
+In all cases, the applicant has the burden of proving the father has met any applicable requirements under the law to make an agreement to provide financial support. A written agreement of financial support is not required if the father died before the child’s 18th birthday.
+Written Agreement Requirements
+In order for a document to qualify as a written agreement of financial support under INA 309(a)(3), the document:
+- Must be in writing and acknowledged by the father; [27]
+[^ 27] A court document may be signed by a judge rather than the father, but may still serve as evidence to meet this requirement if there is an indication in the record of proceedings that the father consented to the determination of paternity.
+- Must indicate the father’s agreement to provide financial support for the child; [28] and
+[^ 28] Since the statute only provides for the agreement of the father to provide support and does not provide for any loss of citizenship if the agreement is not met, USCIS does not consider whether the father actually provided financial support.
+- Must be dated before the child’s 18th birthday.
+In addition, USCIS considers whether the agreement was voluntary.
+Other Acceptable Documentation
+A written agreement of financial support may come in different forms and documents. USCIS may consider other similar documentation in which the father accepts financial responsibility of the child until the age of 18. Some examples of documents USCIS may consider include:
+- A previously submitted Affidavit of Support (Form I-134) or Affidavit of Support Under Section 213A of the INA (Form I-864);
+- Military Defense Enrollment Eligibility Reporting System (DEERS) enrollment;
+- Written voluntary acknowledgement of a child in a jurisdiction where there is a legal requirement that the father provide financial support; [29]
+[^ 29] For example, a birth certificate or acknowledgement document submitted and certified by the father. Under U.S. jurisdictions, a written voluntary acknowledgement of a child generally triggers a legal obligation to support the child. However, under foreign jurisdictions, a voluntary written agreement may not always trigger a legal obligation to support the child. The officer may consult with local USCIS counsel for questions regarding the effect of the law.
+- Documentation establishing paternity by a court or administrative agency with jurisdiction over the child’s personal status, if accompanied by evidence from the record of proceeding establishing the father initiated the paternity proceeding and the jurisdiction legally requires the father to provide financial support; or
+- A petition by the father seeking child custody or visitation with the court of jurisdiction with an agreement to provide financial support and the jurisdiction legally requires the father to provide financial support.
+### 2. Child of U.S. Citizen Mother
+The rules that determine whether a child born out of wedlock outside of the United States derives citizenship at birth from the U.S. citizen mother vary depending on when the child was born.
+Child Born On or After December 23, 1952 and Before June 12, 2017
+A child born between December 23, 1952 and June 12, 2017 who is born out of wedlock outside of the United States and its outlying possessions acquires citizenship at birth if:
+- The person is a child of a U.S. citizen parent(s);
+- The child’s mother was a U.S. citizen at the time of the child’s birth; and
+- The child’s U.S. citizen mother was physically present in the United States or one of its outlying possessions for 1 continuous year before the child’s birth.
+Child Born On or After June 12, 2017
+A child born on or after June 12, 2017, who is born out of wedlock outside of the United States or one of its outlying possessions acquires citizenship at birth if:
+- The person is a child of a U.S. citizen parent(s);
+- The child’s mother was a U.S. citizen at the time of the child’s birth; and
+- The child’s U.S. citizen mother was physically present in the United States or one of its outlying possessions for at least 5 years before the child’s birth (at least 2 years of which were after age 14).
+Effect of Sessions v. Morales-Santana Decision
+Prior to the U.S. Supreme Court’s decision in Sessions v. Morales-Santana, the physical presence requirements for children born out of wedlock were different for a child acquiring citizenship through a U.S. citizen mother than for those acquiring through a U.S. citizen father. An unwed U.S. citizen mother could transmit citizenship to her child if the mother was physically present in the United States for 1 continuous year prior to the child's birth. An unwed U.S. citizen father, by contrast, was held to the longer physical presence requirement of 5 years (at least 2 years of which were after age 14) in the United States or one of its outlying possessions.
+On June 12, 2017, the U.S. Supreme Court held, in Sessions v. Morales-Santana, that the different physical presence requirements for an unwed U.S. citizen father and an unwed U.S. citizen mother violated the U.S. Constitution’s Equal Protection Clause. [37] The U.S. Supreme Court indicated that the 5 years of physical presence (at least 2 years of which were after age 14) requirement should apply prospectively to all cases involving a child born out of wedlock outside the United States to one U.S. citizen parent and one alien parent, regardless of the sex of the parent.
+[^ 37] See Sessions v. Morales-Santana (PDF), 137 S.Ct. 1678 (2017). See U.S. Constitution, amend. XIV.
+The U.S. Supreme Court decision effectively eliminated, prospectively, the 1 year continuous physical presence requirement that previously applied to unwed U.S. citizen mothers, and replaced it with the higher physical presence requirement that previously applied to unwed U.S. citizen fathers. After Sessions v. Morales-Santana, the 1-year continuous physical presence requirement remains in effect only for those children born prior to June 12, 2017 outside of the United States to unwed U.S. citizen mothers.
+### 3. Child of Two U.S. Citizen Parents
+For children born out of wedlock to two U.S. citizen parents, USCIS determines whether the child acquired citizenship from either parent individually. Once the child acquired from one of the parents, the child is a U.S. citizen, and the officer need not determine whether the child also acquired from the other U.S. citizen parent. Whether a child born out of wedlock outside the United States acquires citizenship at birth from two U.S. citizen parents depends on when the child was born.
+Child Born Out of Wedlock On or After November 14, 1986 [42]
+[^ 42] For periods before November 14, 1986, see Appendix: Nationality Chart 2 - Children Born Outside the United States Out of Wedlock [12 USCIS-PM H.3, Appendices Tab].
+A child born out of wedlock on or after November 14, 1986, is a U.S. citizen at birth, if:
+- The person is the child of two U.S. citizen parents;
+- Both of the child’s parents were U.S. citizens at the time of the child’s birth; and
+- Either the U.S. citizen father meets the requirements to transmit citizenship under INA 309 or the U.S. citizen mother was physically present in the United States or one of its outlying possessions for a continuous [45] period of 1 year before the child’s birth. [46]
+[^ 45] The term “continuous” means that the physical presence in the United States is uninterrupted, without any absence.
+[^ 46] If both parents of a child born out of wedlock are U.S. citizens, the mother’s physical presence requirement continues to be 1 year of continuous physical presence in the United States or outlying possessions (OLP) as INA 309(c) required before Sessions v. Morales-Santana (PDF), 582 U.S. 47 (2017). The Supreme Court decision in Morales-Santana did not address the situation where a child is born out of wedlock to two U.S. citizen parents.
+### 4. Summary of Physical Presence Requirements for Parents of Children Born Out of Wedlock
+The following table outlines the physical presence requirements under INA 309 based on the parents’ citizenship.
+Physical Presence Requirements for U.S. Citizen Parents Before the Child's Birth
+| Parents’ Citizenship Status | Period Child was Born | Physical Presence Requirement |
+| U.S. Citizen Father and Alien Parent | On or after December 24, 1952, and before November 14, 1986 | The U.S. citizen father was physically present in the United States or its outlying possessions (OLP) for at least 10 years before the child’s birth, including at least 5 years after the age of 14. |
+| On or after November 14, 1986 | The U.S. citizen father was physically present in the United States or OLP for at least 5 years before the child’s birth, including at least 2 years after the age of 14. |
+| U.S. Citizen Mother and Alien Parent | On or after December 24, 1952, and before June 12, 2017 | The child’s U.S. citizen mother was physically present in the United States or OLP for 1 continuous year before the child’s birth. |
+| On or after June 12, 2017 | The child’s U.S. citizen mother was physically present in the United States or OLP for at least 5 years before the child’s birth, including at least 2 years after age 14. |
+| Two U.S. Citizen Parents | On or after November 14, 1986, and before June 12, 2017 | The child’s U.S. citizen mother was physically present in the United States or OLP for 1 continuous year before the child’s birth; or The child’s U.S. citizen father satisfies all of the requirements in INA 309(a), and at least one parent resided in the United States or OLP before the child was born. If the U.S. citizen father does not meet all the requirements for the child to acquire through the U.S. citizen father, then the U.S. citizen mother must satisfy 1 continuous year of physical presence in the United States or OLP before the child’s birth. If the U.S. citizen mother does not meet the physical presence requirements, then the U.S. citizen father must satisfy all the requirements in INA 309(a), and at least one parent must have resided in the United States or OLP before the child was born. |
+| On or after June 12, 2017 | The child’s U.S. citizen mother was physically present in the United States or OLP for 1 continuous year before the child’s birth; or The child’s U.S. citizen mother was physically present in the United States or OLP for at least 5 years before the child’s birth, including at least 2 years after age 14; [47] or The child’s U.S. citizen father satisfies all of the requirements in INA 309(a), and at least one parent resided in the United States or OLP before the child was born. If the U.S. citizen father does not meet all the requirements for the child to acquire through the U.S. citizen father, then the U.S. citizen mother must satisfy 1 continuous year of physical presence in the United States or OLP before the child’s birth, or 5 years of physical presence in the United States or OLP, at least 2 years of which were after age 14, before the child was born. If the U.S. citizen mother does not meet the physical presence requirements, then the U.S. citizen father must satisfy all the requirements in INA 309(a), and at least one parent must have resided in the United States or OLP before the child was born. |
+[^ 47] On or after June 12, 2017, if the child’s U.S. citizen mother does not meet the requirement of being physically present in the United States or OLP for 1 continuous year before the child’s birth, the U.S. citizen mother may meet this requirement if she was physically present in the United States or OLP for at least 5 years before the child’s birth, including at least 2 years after age 14, consistent with Sessions v. Morales-Santana (PDF), 582 U.S. 47 (2017).
+## D. Application for Certificate of Citizenship (Form N-600)
+### 1. Submission of Application
+A person born outside the United States who acquires U.S. citizenship at birth is not required to have evidence of such status. However, if the person seeks documentation of U.S. citizenship status, the person may file an Application for Certificate of Citizenship (Form N-600) with USCIS.
+The Secretary of Homeland Security has jurisdiction over the administration and enforcement of the Immigration and Nationality Act (INA) within the United States, and the Secretary of State has jurisdiction over claims of U.S. citizenship made by persons who are abroad. Therefore, generally, an Application for Certificate of Citizenship is submitted by persons who claim U.S. citizenship and are present within the United States. However, USCIS accepts a Form N-600 filed by a person who does not live in the United States, but USCIS does not adjudicate the application on the merits until the person is present in the United States in order to ensure that USCIS has jurisdiction over the application.
+A person who is at least 18 years of age may submit the Application for Certificate of Citizenship on their own behalf. A parent or a legal guardian may submit the application for a child who has not reached 18 years of age.
+USCIS issues proof of U.S. citizenship in the form of a Certificate of Citizenship if the Application for Certificate of Citizenship is approved and the person takes the Oath of Allegiance, if required to do so.
+USCIS does not mail Certificates of Citizenship outside the United States except when a military member is issued a Certificate of Citizenship under INA 320 or a military member’s dependent child naturalizes under INA 322(d).
+### 2. U.S. Passport or Consular Report of Birth Abroad as Evidence of Citizenship
+A person may also apply for a U.S. passport with the U.S. Department of State (DOS) to serve as evidence of their U.S. citizenship. A parent or legal guardian of a U.S. citizen child born outside the United States may also apply to the local U.S. embassy or consulate for a Consular Report of Birth Abroad (CRBA or Form FS-240). [53] A U.S. passport is valid for a limited time as established by DOS policies and standards on passport issuance. [54] Once a passport is expired, it is no longer conclusive evidence of citizenship. Neither a CRBA nor a Certificate of Citizenship expires.
+[^ 53] See 22 CFR 50.5. See 8 FAM 101.1-2, Introduction to Consular Reports of Birth Abroad.
+[^ 54] See 8 FAM 101.1, Introduction to U.S. Passports and Consular Reports of Birth Abroad.
+A valid, unexpired U.S. passport or a CRBA serves as evidence of a person’s U.S. citizenship. [56] An applicant for a Certificate of Citizenship may submit a valid and unexpired U.S. passport or a CRBA as evidence of U.S. citizenship. [57] The officer must review the valid U.S. passport or CRBA and the documentation submitted with the application and contained in the record to determine if it was issued properly.
+[^ 56] See Matter of Villanueva (PDF), 19 I&N Dec. 101 (BIA 1984) (Unless void on its face, a valid U.S. passport issued to a person as a citizen of the United States constitutes conclusive proof of the person’s U.S. citizenship). See 22 U.S.C. 2705 (A valid U.S. passport or CRBA has the same force and effect as proof of U.S. citizenship as Certificates of Naturalization or Certificates of Citizenship issued by USCIS). See 22 CFR 50.2.
+[^ 57] A U.S. passport or CRBA does not serve as evidence of citizenship for nationals who are not U.S. citizens.
+The officer approves the Application for Certificate of Citizenship if the applicant is a U.S. citizen and meets all requirements.
+### 3. Request to Revoke U.S. Passport or Cancel Consular Report of Birth Abroad
+If the officer determines that the applicant is not a U.S. citizen or has evidence indicating that a U.S. passport or CRBA submitted as evidence was obtained or issued illegally, fraudulently, or erroneously, the officer reviews the case with USCIS counsel. Then, if appropriate, the officer may request that DOS revoke the U.S. passport or cancel the CRBA. [58]
+[^ 58] See 22 U.S.C. 211a. See 22 CFR 51.60. See INA 361. See Rules Governing the Granting, Issuing, and Verifying of United States Passports, 31 FR 10603 (PDF) (Aug. 5, 1966).
+Only DOS has the authority to revoke a U.S. passport or cancel a CRBA. [59] DOS may revoke a U.S. passport or cancel a CRBA in cases where the passport or CRBA was obtained or issued illegally, fraudulently, or erroneously.
+[^ 59] The process to request cancellation of a CRBA to DOS is the same as that for a passport revocation. The same process should be followed to request the revocation of a parent’s or grandparent’s U.S. passport or CRBA, when USCIS, while adjudicating an Application for Certificate of Citizenship, determines that it was issued illegally, fraudulently, or erroneously.
+USCIS provides the following information to DOS in the passport revocation or CRBA cancellation request:
+- The applicant’s complete biographic information, including name and any known aliases;
+- The applicant’s last known address;
+- All previous unexpired U.S. passport numbers and alien registration numbers (A-numbers);
+- A copy of the CRBA or of the biographical page of the U.S. passport submitted as evidence (if available);
+- An explanation for requesting revocation or cancellation, including reasons for the request, analysis of the facts and dates used in determining that the passport or CRBA should be revoked or cancelled, and evaluation of evidence indicating that the applicant did not acquire U.S. citizenship;
+- Copies of all documentary evidence in support of the request, including certified translations of any documents written or originally prepared in a foreign language; and
+- The contact information of the USCIS office making the request.
+Adjudication of Application with a U.S. Passport Revocation or Cancellation Request
+After reviewing the case on the merits and requesting a revocation of a U.S. passport or a cancellation of a CRBA from DOS, the officer generally may not complete the adjudication of the Application for Certificate of Citizenship until DOS responds.
+If DOS notifies USCIS that it does not intend to revoke the passport or cancel the CRBA, USCIS approves the Application for Certificate of Citizenship. However, in cases with unusual or complex circumstances, USCIS may further consult with DOS.
+If USCIS has evidence indicating that a U.S. passport submitted as evidence was obtained or issued illegally, fraudulently, or erroneously, and the passport was valid at the time of filing, but is expired at the time of adjudication, the officer should review the case with USCIS counsel and DOS before adjudicating. [62]
+[^ 62] An expired U.S. passport may not be accepted as sufficient evidence of citizenship. In these cases, officers may need to request other evidence of U.S. citizenship.
+If DOS revokes the U.S. passport or cancels the CRBA, the officer denies the application in cases where the applicant does not otherwise meet the eligibility requirements for issuance of a Certificate of Citizenship.
+## E. Citizenship Interview and Waiver
+In general, an applicant must appear in person for an interview before a USCIS officer after filing an Application for Certificate of Citizenship. This includes the U.S. citizen parent or legal guardian if the application is filed on behalf of a child under 18 years of age. USCIS, however, may waive the interview requirement if all the required documentation necessary to establish the applicant's eligibility is already included in USCIS administrative records, or if the application is accompanied by one of the following:
+- Consular Report of Birth Abroad (FS-240);
+- Applicant’s unexpired U.S. passport issued initially for a full 5 or 10-year period; or
+- Certificate of Naturalization of the applicant's parent or parents.
+## F. Decision and Oath of Allegiance
+### 1. Approval of Application, Oath of Allegiance, and Waiver for Children under 14 Years of Age
+If an officer approves the Form N-600, USCIS administers the Oath of Allegiance before issuing a Certificate of Citizenship.
+However, the Immigration and Nationality Act (INA) permits USCIS to waive the taking of the Oath of Allegiance if USCIS determines the person is unable to understand its meaning. USCIS has determined that children under the age of 14 are generally unable to understand the meaning of the oath.
+Accordingly, USCIS waives the oath requirement for a child younger than 14 years of age. If USCIS waives the oath requirement, USCIS issues a Certificate of Citizenship after the officer approves the application.
+If an applicant does not take the Oath of Allegiance and is not eligible for a waiver, USCIS cannot issue a Certificate of Citizenship.
+### 2. Denial of Application
+If an officer denies the Certificate of Citizenship application, the officer must notify the applicant in writing of the reasons for denial and include information on the right to appeal in the notice. An applicant may file an appeal within 30 calendar days after service of the decision (33 days if the decision was mailed).

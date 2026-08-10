@@ -1,0 +1,36 @@
+## A. Purpose
+United States laws allow for children to acquire U.S. citizenship other than through birth in the United States. Persons who were born outside of the United States to a U.S. citizen parent or parents may acquire or derive U.S. citizenship at birth. Persons, including adopted children, [2] may also acquire citizenship after birth, but before the age of 18, through their U.S. citizen parents.
+[^ 2] For guidance on citizenship for adopted children, see Volume 5, Adoptions, Part F, Citizenship for Adopted Children [5 USCIS-PM F].
+Previously, acquisition of citizenship generally related to those persons who became U.S. citizens at the time of birth, and derivation of citizenship to those who became U.S. citizens after birth due to the naturalization of a parent.
+In general, current nationality laws only refer to acquisition of citizenship for persons who automatically become U.S. citizens either at the time of birth or after. In general, a person must meet the applicable definition of child at the time he or she acquires citizenship and must be under 18 years of age.
+## B. Background
+The law in effect at the time of birth determines whether someone born outside the United States to a U.S. citizen parent or parents is a U.S. citizen at birth. In general, these laws require a combination of at least one parent being a U.S. citizen when the child was born and having lived in the United States for a period of time. In addition, children born abroad may become U.S. citizens after birth. Citizenship laws have changed extensively over time with two major changes coming into effect in 1978 and 2001.
+Before the Act of October 10, 1978, U.S. citizens who had acquired citizenship through birth abroad to one citizen parent had to meet certain physical presence requirements to retain citizenship. This legislation removed all retention requirements.
+Before the Child Citizenship Act of 2000 (CCA), [4] effective February 27, 2001, the Immigration and Nationality Act (INA) had two provisions for derivation of citizenship, former INA 320 and former INA 321. [5] The CCA removed INA 321 and revised INA 320 making it the only statutory provision for children under 18 years of age in the United States to automatically acquire citizenship after birth. The CCA also amended INA 322 to provide for applications for naturalization on behalf of foreign-born children who did not automatically acquire citizenship and who reside outside the United States with a U.S. citizen parent.
+[^ 4] See Section 101 of the Child Citizenship Act (CCA) of 2000, Pub. L. 106-395 (PDF), 114 Stat 1631 (October 30, 2000). The amendments made under the CCA became effective on February 27, 2001.
+[^ 5] These two provisions remain applicable to someone who already turned 18 years old before the CCA took effect on February 27, 2001, as the CCA is not retroactive. See Matter of Rodriguez-Tejedor (PDF), 23 I&N Dec. 153 (BIA 2001).
+## C. Table of General Provisions
+Children born outside the United States may acquire U.S. citizenship in multiple ways. The table below serves as a quick reference guide to the acquisition of citizenship provisions. [8] The chapters that follow the table provide further guidance.
+[^ 8] Except for INA 321, the references in the table are to the current statutory requirements for citizenship. Previous versions of the law may apply.
+General Provisions for Acquisition of Citizenship for Children Born Abroad
+| INA Section | Status of Parents | Residence or Physical Presence Requirements | Child is a U.S. Citizen |
+| 301(c) (Born in wedlock) | Both parents are U.S. citizens at the time of child’s birth | At least one U.S. citizen parent has resided in the United States or its outlying possessions before child's birth | At birth |
+| 301(d) | One parent is a U.S. citizen; other parent is a U.S. national (but not citizen) of the United States | U.S. citizen parent was physically present in the United States or its outlying possessions for one year before child’s birth | At birth |
+| 301(f) | Unknown parentage | Child is found in the United States while under 5 years of age | At birth |
+| 301(g) | One parent is a U.S. citizen; other parent is an alien | U.S. citizen parent was physically present in United States or its outlying possessions for at least 5 years (2 after age 14) before child’s birth | At birth |
+| 301(h) | Mother is a U.S. citizen and father is an alien | U.S. citizen mother resided in the United States before child’s birth | At birth (only applies to birth before 1934) |
+| 309(a) (Born out of wedlock) | Father is a U.S. citizen and mother is an alien at the time of child’s birth | Requirements depend on applicable provision: INA 301(e) or INA 301(g) | At birth |
+| 309(c) (Born out of wedlock after December 23, 1952, and before June 12, 2017) [9] | Mother is a U.S. citizen and father is an alien at the time of child’s birth | U.S. citizen mother continuously physically present in the United States or its outlying possessions for 1 year before the child’s birth | At birth |
+[^ 9] For births before December 23, 1952, see Appendix: Nationality Chart 2 - Children Born Outside the United States Out of Wedlock [12 USCIS-PM H.3, Appendices Tab].
+| 309(c) (Born out of wedlock on or after June 12, 2017) | Mother is a U.S. citizen and father is an alien at the time of child’s birth | U.S. citizen mother physically present in the United States or its outlying possessions for at least 5 years (2 after age 14) before the child’s birth | At birth |
+| 320 | At least one parent is a U.S. citizen (through birth or naturalization) | Child resides in the United States [11] as a lawful permanent resident | On the date all conditions are met before the child reaches the age of 18 |
+[^ 11] For residence requirements of children of armed forces members or U.S. government employees or for children of the spouses of armed forces members or U.S. government employees, see Chapter 4, Automatic Acquisition of Citizenship after Birth (INA 320), Section C, Children of Armed Forces Members or U.S. Government Employees (or their Spouses) [12 USCIS-PM H.4(C)].
+| 321 Repealed by CCA on February 27, 2001 | Both parents naturalize, or in certain cases, one parent naturalizes | Child resides in the United States as a lawful permanent resident [12] | On the date all conditions are met before the child reaches the age of 18 |
+[^ 12] For cases in the Second Circuit or the Ninth Circuit, see Appendix: Nationality Chart 3 - Derivative Citizenship of Children [12 USCIS-PM H.3, Appendices Tab].
+| 322 | At least one parent is a U.S. citizen (through birth or naturalization) | Child resides outside of the United States and child’s parent (or grandparent) was physically present in the United States or its outlying possessions for at least 5 years (2 after age 14) | At time oath is administered |
+## D. Legal Authorities
+- INA 101(c) – Definition of child for citizenship and naturalization
+- INA 301 – Nationals and citizens of the United States at birth
+- INA 309 – Children born out of wedlock
+- INA 320; 8 CFR 320 – Children residing permanently in the United States
+- INA 322; 8 CFR 322 – Children residing outside the United States

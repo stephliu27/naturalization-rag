@@ -1,0 +1,46 @@
+## A. Hearing Request
+An applicant or his or her authorized representative [1] may request a USCIS hearing before an officer on the denial of the applicant’s naturalization application. The applicant or authorized representative must file the request with USCIS within 30 days after the applicant receives the notice of denial. [2]
+[^ 1] See Chapter 3, Naturalization Interview, Section A, Roles and Responsibilities [12 USCIS-PM B.3(A)], for a list of authorized representatives. See 8 CFR 292.1.
+[^ 2] See INA 336(a). See 8 CFR 336.2. See the Request for Hearing on a Decision in Naturalization Proceedings under Section 336 of the INA (Form N-336).
+## B. Review of Timely Filed Hearing Request
+### 1. Hearing Scheduled within 180 Days
+Upon receipt of a timely hearing request, USCIS schedules the hearing within 180 days. The hearing should be conducted by an officer other than the officer who conducted the original examination or the officer who denied the application. The officer conducting the hearing must be classified at a grade level equal to or higher than the grade of the examining officer.
+### 2. Review of Application
+An officer may conduct a de novo review of the applicant’s naturalization application or may utilize a less formal review procedure based on:
+- The complexity of the issues to be reviewed or determined; and
+- The necessity of conducting further examinations essential to the naturalization requirements.
+A de novo review means that the officer makes a new and full review of the naturalization application. [5]
+[^ 5] The term “de novo” is Latin for “anew.” In this context, it means the starting over of the application’s review.
+An officer conducting the hearing has the authority and discretion to:
+- Review all aspects of the naturalization application and examine the applicant anew;
+- Review any record, file or report created as part of the examination;
+- Receive new evidence and testimony relevant to the applicant's eligibility; and
+- Affirm the previous officer’s denial or re-determine the decision in whole or in part.
+The officer conducting the hearing:
+- Affirms the findings in the denial and sustains the original decision to deny;
+- Re-determines the original decision but denies the application on newly discovered grounds of ineligibility; [6] or
+[^ 6] In re-determining the decision, the officer may take any action necessary, including issuing a Request for Evidence (RFE) or a Notice of Intent to Deny (NOID).
+- Re-determines the original decision and reverses the original decision to deny, and approves the naturalization application.
+### 3. English and Civics Testing at Hearing
+In hearings involving naturalization applications denied on the basis of failing to meet the educational requirements (English and civics), officers must administer any portion of the English or civics tests that the applicant previously failed. Officers provide only one opportunity to pass the failed portion of the tests at the hearing.
+## C. Improperly Filed Hearing Request
+### 1. Untimely Filed Request
+If an applicant files a hearing request over 30 days after receiving the denial notice (33 days if notice was mailed by USCIS), USCIS considers the request improperly filed. If an applicant’s untimely hearing request meets either the motion to reopen or motion to reconsider requirements, USCIS will treat the hearing request as a motion. USCIS renders a decision on the merits of the case in such instances. If the request does not meet the motion requirements, USCIS rejects the request without refund of filing fee.
+Hearing Request Treated as a Motion to Reopen
+USCIS treats an untimely request for a hearing as a motion to reopen if the applicant presents new facts and evidence. If the application or petition was denied due to abandonment, the request must be filed with evidence that the decision was in error because:
+- The requested evidence leading to the denial was not material to the issue of eligibility;
+- The required initial evidence was submitted with the application, or the request for initial evidence or additional information or appearance was complied with during the allotted period; or
+- USCIS sent the relevant correspondence to the wrong address or the applicant filed a timely change of address before USCIS sent the correspondence.
+Hearing Request Treated as a Motion to Reconsider
+USCIS handles an untimely hearing request for a hearing as a motion to reconsider if:
+- The applicant explains the reasons for reconsideration;
+- Pertinent precedent decisions establish that the decision to deny was based on an incorrect application of law or USCIS policy; and
+- The applicant establishes that the decision to deny was incorrect based on the evidence of record at the time of the decision.
+### 2. Requests Improperly Filed by Unauthorized Persons or Entities
+USCIS considers a hearing request improperly filed if an unauthorized person or entity files the request. [13] USCIS rejects these requests without refund of filing fee.
+[^ 13] See Chapter 3, Naturalization Interview, Section A, Roles and Responsibilities [12 USCIS-PM B.3(A)], for a list of authorized representatives. See 8 CFR 292.1.
+### 3. Requests Improperly Filed by Attorneys or Authorized Representatives
+USCIS considers a hearing request improperly filed if an attorney or representative files the request without properly filing a notice of entry of appearance entitling that person to represent the applicant. The officer must ask the attorney or representative to submit a proper filed notice within 15 days.
+If the attorney or representative replies with a properly executed notice within 15 days, the officer should handle the hearing request as properly filed. If the attorney or representative fails to do so, the officer may nevertheless make a new decision favorable to the applicant through the officer’s own motion to reopen without notifying the attorney or representative.
+## D. Judicial Review
+A naturalization applicant may request judicial review before a United States district court of his or her denied naturalization application after USCIS issues the decision following the hearing with a USCIS officer. The applicant must file the request before the United States District Court having jurisdiction over the applicant’s place of residence. The district court reviews the case de novo and makes its own findings of fact and conclusions of law.

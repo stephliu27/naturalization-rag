@@ -1,0 +1,77 @@
+Unlike most government agencies, U.S. Citizenship and Immigration Services (USCIS) is not dependent on taxpayer dollars. USCIS is authorized to recover the full cost of providing immigration and naturalization services (screening, vetting, and adjudicating applicants and their benefit requests). USCIS receives 96 percent of its funding from filing fees and not from congressional appropriations. [1] USCIS has a fiduciary responsibility to manage its financial resources wisely and to eliminate any fraud, waste, or abuse.
+[^ 1] See 89 FR 6194 (PDF), 6195 (Jan. 31, 2024).
+INA 286(m), 8 U.S.C. 1356(m), authorizes the Department of Homeland Security (DHS) to charge fees for adjudication and naturalization services at a level to ensure recovery of the full costs of providing all such services, including the costs of similar services provided without charge. USCIS is not required to charge a fee for all its services, and it may set certain fees at less than full cost.
+On a biennial basis, USCIS reviews the fees for its services. If the review determines the current fees are inadequate to recover costs, or that they otherwise need to be adjusted, USCIS may initiate a rulemaking to adjust its fees. USCIS sets the fee amounts for benefit requests through regulation [3] and publishes its fees in the Fee Schedule (Form G-1055).
+[^ 3] See 8 CFR 106.2. See the USCIS All Forms webpage for a complete list of all forms and form instructions.
+Requestors must include any required fees with the submission of a benefit request to USCIS. This payment must be in U.S. currency.
+The fee amount for each benefit request is controlled by regulation [5] or statute, and is published in Form G-1055. The total fee amount for each request is not determined solely by the fee required for the associated form. Additional fees may be required, such as a biometric services fee [7] or the fraud detection and prevention fee.
+[^ 5] See 8 CFR 106.2. See the USCIS All Forms webpage for a complete list of all forms and form instructions.
+[^ 7] See 8 CFR 103.17. Most forms no longer require a separate biometric services fee. See the form instructions for specific information about biometric services fee requirements.
+The additional services needed in a given situation dictate which additional fees, if any, are added to the total amount. Form G-1055 indicates which fees are required.
+USCIS may waive the fee for certain immigration benefit requests if the individual requests that the fee be waived and meets the eligibility criteria for the fee waiver. Certain forms and categories of requestors are exempt from fees. In addition to Form G-1055, the Filing Fees webpage provides information about how to pay USCIS fees. Requestors can use the Fee Calculator to determine the exact filing fee for any form.
+## A. Fee Submission
+### 1. Submission of Benefit Request with Fee
+USCIS rejects submissions that do not contain valid payment of the correct fee amount or otherwise do not meet the acceptance criteria. All payments must be made from a U.S. bank and payable in U.S. currency. USCIS rejects any payment issued from a foreign bank including Automated Clearing House (ACH), credit payments, debit card payments, or paper-based payments.
+An ACH payment on Authorization for ACH Transactions (Form G-1650) is rejected if the requestor:
+- Submits a Form G-1650 and a credit card authorization to split the payment for the transaction;
+- Does not identify whether it is a Business or Personal Account;
+- Does not identify whether it is a Checking Account or Savings Account;
+- Does not provide the correct Authorized Payment Amount; or
+- Does not provide the correct Routing Number and Account Number.
+A credit card payment on Authorization for Credit Card Transactions (Form G-1450) is rejected if the requestor:
+- Submits one Form G-1450 for multiple benefit requests;
+- Submits a Form G-1650 and a credit card authorization to split the payment for a single benefit request;
+- Does not provide the card holder’s first name;
+- Does not provide the card holder’s last name;
+- Does not provide the card holder’s credit card number or provides an invalid number;
+- Does not provide the card expiration date; or
+- Does not provide any authorized payment amount or does not authorize the total amount of the Form G-1450 or multiple Forms G-1450 to cover the required fee or fees.
+Once USCIS receives the proper fee [12] and determines the benefit request meets all other acceptance criteria, [13] USCIS accepts the submission of the benefit request and sends the benefit requestor a receipt notice. The USCIS online system guides those benefit requestors filing online through the process of paying fees online. Once the form is ready for submission, the system directs the benefit requestor to Pay.gov to pay. If the payment is declined, the request cannot be submitted due to lack of payment. [14]
+[^ 12] Unless the requestor is otherwise exempt from the fees or has an approved fee waiver.
+[^ 13] For more information, see the Filing Guidance and Tips for Filing Forms by Mail webpages. For forms that are available for online filing, see the Tips for Filing Forms Online webpage.
+[^ 14] For more information on submitting an online payment, see the Tips for Filing Forms Online webpage.
+If the payment is not collectable and USCIS has approved the benefit request, USCIS may revoke, rescind, or cancel the approval with notice.
+### 2. Unfunded Payments
+USCIS fees are generally non-refundable and must be paid when the benefit request is filed. If the requestor pays a fee by credit card and the credit card is declined for any reason, USCIS does not attempt to process the credit card payment a second time and may reject the associated request for lack of payment.
+If an ACH transaction is used to pay a fee, and the ACH payment is returned as unpayable because of insufficient funds, USCIS resubmits the payment to the remitter institution one time. If the remitter institution returns the form of payment as unpayable a second time, USCIS may reject or deny the filing. USCIS does not resubmit payments returned as unpayable for a reason other than insufficient funds.
+If a payment is unfunded at the time of filing, USCIS does not generally issue a receipt. However, if a receipt was issued, the unfunded payment renders it void and the requestor does not retain the receipt date.
+If a payment was unfunded after the benefit request was approved, USCIS may revoke, rescind, or cancel the approval with notice, typically in the form of a Notice of Intent to Revoke (NOIR). USCIS may at its discretion separately bill the requestor for the unpaid fee instead of sending a NOIR. If a requestor receives such a NOIR, the requestor may respond with payment of the correct fee amount.
+USCIS does not ultimately revoke, rescind, or cancel the approval on the basis of an unfunded fee payment if the requestor cures the deficiency noted in the NOIR with payment of the correct fee amount. USCIS may revoke the approval with notice of an approved benefit request that required multiple fees if any single fee is unfunded. In such cases, any other fees paid for the approved benefit request are non-refundable.
+## B. Forms of Payment
+USCIS accepts different payment methods depending on whether the benefit requestor resides inside or outside of the United States or the nature of the request. Details regarding acceptable forms and methods of payment can be found on the Filing Fees webpage.
+Benefit requestors filing from inside the United States may pay their fees in one of the following ways, depending on the form that is being submitted:
+- Online using a credit card, debit card, or bank withdrawal; or
+- By mail with a Form G-1450 or Form G-1650.
+In limited circumstances, an individual may submit a benefit request directly at a USCIS field office. In such cases, the benefit requestor may submit his or her request and appropriate fee by mail to the field office using either Form G-1450 or Form G-1650. [24]
+[^ 24] Applicants submitting an Application for Travel Documents, Parole Documents, and Arrival/Departure Records (Form I-131) with an emergency advance parole request must make an appointment with the USCIS Contact Center, apply in person with their payment (if applicable) and supporting documentation, and pay the application fee by credit card with Form G-1450 or a U.S. bank account with Form G-1650 at the field office.
+Benefit requestors filing from outside the United States should go to the All Forms webpage to determine whether a form may be filed from outside of the United States. Depending on the form, the benefit requestor may pay fees online, by mail, or in person at a U.S. embassy or consulate. [25]
+[^ 25] For information on how to pay USCIS fees outside of the United States, see the International Immigration Offices webpage or contact the appropriate U.S. Embassy or Consulate.
+### 1. Credit Card, Debit Card, or Pre-paid Card
+USCIS accepts payments by credit card, debit card, or pre-paid card for fees associated with benefit requests filed with one of the USCIS Lockbox facilities, the appropriate Service Center, and most USCIS field office locations.
+Requestors filing by mail must use Form G-1450 to pay with a credit card, debit card, or pre-paid card. USCIS uses the information provided on Form G-1450 to process a credit card, debit card, or pre-paid card payment through either the U.S. Department of Treasury Pay.gov Collection Control Panel (CCP) or the Trusted Collections Service (TCS).
+CCP and TCS are web-based applications that allow federal government agencies to process payments by credit, debit, or prepaid cards. After USCIS processes Form G-1450, USCIS destroys the authorization, regardless of whether USCIS accepts or rejects the associated benefit request.
+### 2. Automated Clearing House (ACH) Payment
+USCIS accepts bank payments [26] from U.S. bank accounts, for fees associated with benefit requests when filed through Pay.gov, the proper USCIS Lockbox facility, appropriate Service Center, and most USCIS field office locations. For requestors who do not have access to a U.S. bank account, payment must be made using a credit card or pre-paid card (in U.S. dollars) or by submitting the Exemption for Paper Fee Payment (Form G-1651) to submit a paper-based payment issued in U.S. dollars.
+[^ 26] USCIS began accepting Form G-1650 on August 29, 2025. As of October 28, 2025, USCIS no longer accepts paper-based forms of payment for benefit requests. Benefit requestors can file Exemption for Paper Fee Payment (Form G-1651) if they meet one of the exemptions and would like to pay by check.
+Requestors filing by mail must use Form G-1650 to pay with a U.S. bank account. USCIS uses the information provided on the Form G-1650 to process an ACH payment through either the U.S. Department of Treasury Pay.gov CCP or the TCS. Requestors filing benefit requests electronically may enter their account information directly into Pay.gov through the CCP.
+ACH Debit Block
+Some requestors may have placed a debit block on his or her U.S. bank account to prevent unauthorized individuals from withdrawing funds through ACH. These blocks are placed by the requestor and the requestor must contact his or her bank and provide the appropriate Agency Location Code (ALC+2) prior to the ACH transaction to allow funds to be withdrawn. The Form G-1650 Instructions provide the complete list of ALC+2 codes and USCIS suggests that the benefit requestor provide the complete list to his or her bank to have all the codes unblocked.
+### 3. Paper-Based Payments
+USCIS does not accept payment with bank drafts, cashier’s checks, certified checks, personal checks, or money orders to pay fees associated with benefit requests [27] unless an exception applies.
+[^ 27] See Executive Order 14247, Modernizing Payments To and From America's Bank Account, 90 FR 14001 (PDF) (Mar. 25, 2025).
+USCIS provides an exemption accommodation which allows a benefit requestor to submit a paper-based payment with the Exemption for Paper Fee Payment (Form G-1651) in the form of a bank draft, cashier’s check, certified check, personal check or money order where one of the exceptions applies including:
+- Individuals who do not have access to banking services or electronic payment systems;
+- Electronic disbursement would cause undue hardship, as contemplated in 31 CFR Part 208;
+- National security or law enforcement related activities where non-EFT transactions are necessary or desirable; and
+- Other circumstances as determined by the Secretary of the Treasury, as reflected in regulations or other guidance.
+To request an exemption under one of these accommodations, the benefit requestor must sign the Exemption for Paper Fee Payment (Form G-1651) and mail it to the appropriate lockbox with the benefit request and correct fee (see Form G-1055).
+If a check or other paper-based method of payment is used to pay a fee, and is dated more than 365 days before USCIS receives the request, USCIS may reject the payment and benefit request.
+Only personal and business checks are accepted at a Field Office as a form of accepted paper-based payments when filing the Application for Travel Documents, Parole Documents, and Arrival/Departure Records (Form I-131) for emergency advance parole. Other forms of paper-based payments are not accepted at Field Office locations.
+### 4. Cash
+USCIS does not accept payment by cash to pay fees associated with benefit requests.
+## C. Refunds
+Fees submitted to USCIS are generally non-refundable regardless of the ultimate decision on the benefit request or how much time is required to issue a decision. There are a few exceptions to this rule, such as if USCIS makes an error that results in the inappropriate filing of a form or if USCIS collects the wrong fee. [30]
+[^ 30] For example, when USCIS requests that an applicant file a waiver application for a ground of inadmissibility that was not necessary.
+If a benefit requestor believes they are entitled to a refund of a fee, the requestor should contact the USCIS Contact Center or submit a written request for a refund to the USCIS office with jurisdiction over the benefit request.
+USCIS reviews the request for a refund and either approves or denies the request based on the available information. If the officer finds USCIS made an error, the officer should complete a Request for Refund of Fee (Form G-266). USCIS then notifies the requestor of its decision on the request. All Forms G-266 must be signed by a District or Service Center Director, or a person within the chain of command that has been delegated that authority.
+Fees paid to USCIS using a credit card, debit card, or pre-paid card are not subject to dispute, chargeback, forced refund, or return to the cardholder for any reason except at the discretion of USCIS.

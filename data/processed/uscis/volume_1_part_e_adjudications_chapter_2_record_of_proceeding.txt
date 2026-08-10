@@ -1,0 +1,8 @@
+## A. Maintaining a Record of Proceeding
+A record of proceeding is the organized, official material constituting the record of any application, petition, hearing, or other proceeding before USCIS. A record of proceeding is typically contained within an Alien Registration File (A-File) or other agency file or electronic case management system, or a hybrid paper and electronic file. [1]
+[^ 1] Information contained in a record of proceeding is protected by the Privacy Act. For more information on the Privacy Act and confidentiality provisions, see Part A, Public Services, Chapter 7, Privacy and Confidentiality, [1 USCIS-PM A.7].
+## B. A-Files
+A-files are a series of records maintained on a person that document the person's immigration history. A-files are created when an application or petition for a long-term or permanent benefit is received, or when enforcement action is initiated.
+A-files may exist in physical format, or they may be created in digital format in various electronic case management systems, or they may be a hybrid of both paper and electronic files. [2]
+[^ 2] Digitized A-files may exist in the Enterprise Document Management System (EDMS) or STACKS.
+A-files are stored and maintained by Department of Homeland Security (DHS) for persons born less than 100 years ago. For persons born 100 years ago or more, A-files are transferred to and stored by the National Archives and Records Administration (NARA).
