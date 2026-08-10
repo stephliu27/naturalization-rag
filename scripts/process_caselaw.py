@@ -8,8 +8,9 @@ unrelated markups, and which one you get is an accident of who digitized the rep
 
   - `xml_harvard` populated => Harvard CAP. Real <p> elements, explicit footnote labels.
     16 of 26.
-  - `xml_harvard` empty     => PDF text in `plain_text`, hard-wrapped with page furniture.
-    10 of 26. Not extracted yet; reported, not silently skipped.
+  - `xml_harvard` empty     => PDF text in `plain_text`, hard-wrapped with page furniture
+    and no markup at all. 10 of 26, so every structure the CAP half reads off an attribute
+    has to be inferred from layout here.
 
 Neither payload carries a case name, court, or date, so all of that joins from the
 committed manifest. Output is the corpus-wide format process_uscis.py already emits — one
@@ -109,6 +110,47 @@ NOTE_LEAD = re.compile(r"^[.\s]+")
 # mid-word — "Castr<em>acani</em>", "complaint be<a>*459</a>cause" — and " " would make every
 # one of them two words. The opposite of the USCIS default, and the reason it is a parameter.
 JOIN = ""
+
+# ---------------------------------------------------------------------------
+# The PDF half. Nothing below here is markup — it is a flattened page image, so every
+# structure the CAP side reads off an attribute has to be inferred from layout instead.
+# ---------------------------------------------------------------------------
+
+# Form feed. Present in all 10, which is what makes the page the unit of work.
+PAGE_BREAK = "\x0c"
+
+# A printed line number in the left margin, and the share of lines that has to carry one
+# before a document counts as pleading paper. Moya measures 39%, everything else 0-2%.
+#
+# Horizontal whitespace only, never \s: the form feed is whitespace too, so \s{0,3} happily
+# consumed the page break sitting in front of a margin number and deleted it along with the
+# digit. That collapsed Moya's 62 pages into a handful, and a footnote block then ran to the
+# end of a 26,000-character "page" — swallowing the conclusion of the opinion into note 3.
+PLEADING_LINE_NUMBER = re.compile(r"(?m)^[ \t]{0,3}\d{1,2}(?:[ \t]{2,}|[ \t]*$)")
+PLEADING_THRESHOLD = 0.30
+
+# Page numbers, printed bare ("6") by most and dashed ("-4-") by the Eighth Circuit, at the
+# bottom by most and at the top by Miriyeva.
+PAGE_NUMBER_LINE = re.compile(r"^\s*-?\s*\d{1,3}\s*-?\s*$")
+
+# The rule some courts print above a footnote block. Furniture, but a useful confirmation
+# that the block below it is what we think it is.
+HORIZONTAL_RULE = re.compile(r"^\s*[_\-–—]{5,}\s*$")
+
+# A footnote's opening line: its number, then either the text or a line break before it.
+# The indent runs to 12 spaces once Moya's margin numbers are gone, hence the generous
+# allowance — the ascending-number check in split_page_footnotes is what keeps it honest.
+NOTE_START = re.compile(r"^\s{0,16}(\d{1,2})(?:\s*$|\s+(\S.*))")
+
+# Used to normalize a line before asking whether it repeats: the page number is the part
+# that varies, so without this every running head looks unique.
+DIGITS = re.compile(r"\d+")
+
+# How much repetition makes a line furniture rather than prose. Both floors matter: the
+# share catches long documents, the minimum stops a 3-page opinion from calling its own
+# first sentence a running head.
+RUNNING_HEAD_MIN_PAGES = 3
+RUNNING_HEAD_SHARE = 0.35
 
 # Top-level elements we know how to emit, and what each becomes. Blockquotes take "> ",
 # which is reserved corpus-wide for exactly this: 44 real block quotes of statute and
@@ -240,13 +282,226 @@ def extract_cap(xml):
     }
 
 
+def is_pleading_paper(text):
+    """True for a document with printed line numbers down the left margin.
+
+    Moya is the only one, but detected rather than named: the number is what makes every
+    other rule here misfire, since a bare "2" in the margin is indistinguishable from a
+    footnote marker. Measured at 39% of non-empty lines against 0-2% everywhere else, so
+    the threshold is nowhere near anything.
+    """
+    lines = [line for line in text.split("\n") if line.strip()]
+    if not lines:
+        return False
+    numbered = sum(1 for line in lines if PLEADING_LINE_NUMBER.match(line))
+    return numbered / len(lines) > PLEADING_THRESHOLD
+
+
+def head_key(line):
+    """A line reduced to its shape, for asking whether it repeats across pages.
+
+    Both normalizations are needed and each was found by one leaking without the other.
+    Digits go because the page number is the part that changes. Internal whitespace goes
+    because these heads are column-aligned, so the padding shifts when the number gains a
+    digit: "Page: 3 of 18" and "Page: 13 of 18" are the same head printed one space apart,
+    and comparing them literally leaves the whole run below the repetition floor.
+    """
+    return DIGITS.sub("#", re.sub(r"\s+", " ", line.strip()))
+
+
+def running_heads(pages):
+    """Boilerplate that repeats at the top or bottom of most pages, as normalized patterns.
+
+    Learned per document instead of enumerated, because every court prints something
+    different: "No. 22-3053 Ebu v. USCIS, et al. Page 3", "YITH V. NIELSEN 27", the
+    "USCA11 Case: 21-11055 Date Filed: 08/05/2022" ECF stamp. Hardcoding ten formats would
+    be ten things to get wrong, and the eleventh court would still slip through.
+
+    Digits are normalized away first — the page number is the part that changes, so the
+    literal line is unique per page and only the shape repeats.
+    """
+    seen = {}
+    for page in pages:
+        lines = [line.strip() for line in page.split("\n") if line.strip()]
+        if not lines:
+            continue
+        # Only the outermost line at each end: a repeated line in the middle of a page is
+        # prose the opinion happens to say twice, not furniture.
+        for position, line in (("head", lines[0]), ("foot", lines[-1])):
+            key = (position, head_key(line))
+            seen[key] = seen.get(key, 0) + 1
+
+    floor = max(RUNNING_HEAD_MIN_PAGES, len(pages) * RUNNING_HEAD_SHARE)
+    return {key for key, count in seen.items() if count >= floor}
+
+
+def strip_furniture(lines, heads):
+    """Drop the page's own chrome, keeping everything that could be text.
+
+    Position is load-bearing, not decoration. A lone "2" is a page number at the very top or
+    bottom of a page and a footnote marker anywhere else, and they are the same three
+    characters — so the page-number test only ever runs against the outermost non-empty line
+    at each end. Applying it line-by-line instead deleted 52 of the 61 footnotes, silently,
+    because every one of them opens with exactly the string it was looking for.
+    """
+    non_empty = [index for index, line in enumerate(lines) if line.strip()]
+    if not non_empty:
+        return []
+
+    drop = set()
+    for position, index in (("head", non_empty[0]), ("foot", non_empty[-1])):
+        stripped = lines[index].strip()
+        if (PAGE_NUMBER_LINE.match(stripped)
+                or (position, head_key(stripped)) in heads):
+            drop.add(index)
+
+    # A rule of underscores is never prose, so this one is safe anywhere on the page.
+    return [line for index, line in enumerate(lines)
+            if index not in drop and not HORIZONTAL_RULE.match(line.strip())]
+
+
+def split_page_footnotes(lines, expected):
+    """(body_lines, [(number, text)], next_expected) for one page.
+
+    The footnote block runs from its first note to the bottom of the page, so finding where
+    it starts is the whole problem. There is no reliable inline marker to work back from —
+    a superscript digit is indistinguishable from "§ 1429" or "697 F.3d 666" once the PDF is
+    flattened — so the block is found by its own numbering instead: footnotes count upward
+    across the whole opinion, and a line whose leading digit is the next number we are
+    waiting for is the start of that note.
+
+    That one condition is what makes the rule safe. Donnelly's notes sit inline as
+    "1 Congress transferred authority ..." on the same shape of line as the body's
+    "8 U.S.C. § 1429" — but 8 is not the number we are expecting, so only the real one
+    matches. Failure is one-directional too: a note we do not recognise stays in the body
+    text rather than disappearing, which is the direction to fail in.
+    """
+    non_empty = [index for index, line in enumerate(lines) if line.strip()]
+    if not non_empty:
+        return [], [], expected
+
+    start = None
+    for index in non_empty:
+        match = NOTE_START.match(lines[index])
+        # Never the first line on the page: that is a continuing paragraph, or a page number
+        # printed at the top, which Miriyeva does on 19 of its 21 pages.
+        if match and index != non_empty[0] and int(match.group(1)) == expected:
+            start = index
+            break
+
+    if start is None:
+        return lines, [], expected
+
+    body = lines[:start]
+    notes = []
+    current = None
+
+    for line in lines[start:]:
+        match = NOTE_START.match(line)
+        if match and int(match.group(1)) == expected:
+            if current:
+                notes.append(current)
+            current = [expected, match.group(2) or ""]
+            expected += 1
+        elif current is not None and line.strip():
+            current[1] += " " + line.strip()
+
+    if current:
+        notes.append(current)
+
+    return body, [(number, text) for number, text in notes], expected
+
+
+def join_wrapped(lines):
+    """Hard-wrapped lines back into one run of prose.
+
+    Paragraph breaks are not reconstructed — that was cut deliberately, and the page is the
+    unit instead. Sentences do survive, which is the part that matters for retrieval.
+
+    A line ending in a hyphen joins with no space: these PDFs wrap at hyphens that are
+    already in the word ("beneficiary-\\npays model"), so keeping the hyphen and closing the
+    gap is right far more often than dropping it would be.
+    """
+    text = ""
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if text.endswith("-"):
+            text += stripped
+        elif text:
+            text += " " + stripped
+        else:
+            text = stripped
+    return re.sub(r"\s{2,}", " ", text)
+
+
+def extract_pdf(plain_text):
+    """PDF-derived plain text -> (lines, report).
+
+    One line per page of prose, each followed by that page's footnotes. Page-level parking
+    is deliberate: the median page is ~1,800 characters and a 300-500 token chunk is
+    1,200-2,000, so a page already is roughly a chunk, and a note lands within about one
+    chunk of whatever it annotates. Recovering the exact sentence was rejected as costing
+    more than the placement is worth.
+    """
+    text = normalize_unicode(plain_text)
+
+    # Before anything else, or every later rule reads margin numbers as content.
+    pleading = is_pleading_paper(text)
+    if pleading:
+        text = PLEADING_LINE_NUMBER.sub("", text)
+
+    pages = text.split(PAGE_BREAK)
+    heads = running_heads(pages)
+
+    lines = []
+    notes_found = 0
+    expected = 1
+
+    for page in pages:
+        kept = strip_furniture(page.split("\n"), heads)
+        if not kept:
+            continue
+
+        body, notes, expected = split_page_footnotes(kept, expected)
+
+        prose = join_wrapped(body)
+        if prose:
+            lines.append(prose)
+        for number, note_text in notes:
+            lines.append("[^ {}] {}".format(number, join_wrapped([note_text])))
+        notes_found += len(notes)
+
+    return lines, {
+        "pages": len(pages),
+        "pleading_paper": pleading,
+        "running_heads": sorted(pattern for _, pattern in heads),
+        "footnotes_kept": notes_found,
+        "unhandled_tags": {},
+    }
+
+
 def process_opinion(payload):
-    """One raw payload -> (text, report). Raises ValueError on a payload we cannot read."""
+    """One raw payload -> (text, report). Raises ValueError on a payload we cannot read.
+
+    Which extractor runs is decided by the payload, not the manifest: `xml_harvard` is
+    populated iff the opinion came through Harvard CAP.
+    """
     xml = (payload.get("xml_harvard") or "").strip()
     if not xml:
-        # The PDF half. Reported by the caller so the count is visible every run rather
-        # than looking like 16 of 16 succeeded.
-        raise NotImplementedError("PDF-text opinion; the plain_text extractor is not written yet")
+        plain = (payload.get("plain_text") or "").strip()
+        if not plain:
+            raise ValueError("neither xml_harvard nor plain_text — nothing to extract")
+
+        lines, report = extract_pdf(plain)
+        report.update({
+            "orphan_marks": [],
+            "unplaced_footnotes": [],
+            "footnotes_dropped": 0,
+            "lines": len(lines),
+        })
+        return "\n".join(tidy_spacing(lines)), report
 
     body_lines, notes, report = extract_cap(xml)
 
@@ -337,7 +592,7 @@ def write_opinion(output_dir, source_id, processed_text, sidecar):
         json.dump(sidecar, f, indent=2)
 
 
-def print_summary(written, total, deferred, excluded, failures, anomalies, kept, unhandled):
+def print_summary(written, total, layout, excluded, failures, anomalies, kept, unhandled):
     """What happened, and loudly when the run was partial.
 
     Same shape as process_uscis.py's, for the same reason: a count of successes with no
@@ -348,11 +603,18 @@ def print_summary(written, total, deferred, excluded, failures, anomalies, kept,
     if kept:
         print(f"Footnotes: {kept} kept (case law keeps all).")
 
-    if deferred:
-        print(f"\n{len(deferred)} PDF-text opinion(s) not extracted — plain_text extractor "
-              f"still to write:")
-        for source_id in deferred:
-            print(f"  {source_id}")
+    # What the PDF half inferred, because it inferred rather than read it. A running head
+    # this pass fails to learn ends up welded into the prose, and a document wrongly called
+    # pleading paper loses a digit off the front of every line — both are quiet, and this is
+    # where they would show.
+    if layout:
+        print(f"\n{len(layout)} PDF-text opinion(s), furniture learned per document:")
+        for source_id in sorted(layout):
+            pleading, heads = layout[source_id]
+            note = " [pleading paper: margin line numbers stripped]" if pleading else ""
+            print(f"  {source_id}{note}")
+            for head in heads:
+                print(f"      dropped: {head[:100]}")
 
     if excluded:
         print(f"\n{len(excluded)} opinion(s) skipped as non-Article III "
@@ -398,7 +660,7 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     failures = []
-    deferred = []    # the PDF half, until its extractor exists
+    layout = {}      # source_id -> (pleading paper?, running heads dropped) for the PDF half
     excluded = []    # non-Article III, dropped on purpose
     anomalies = {}   # source_id -> (orphan marks, unplaced definitions)
     unhandled = {}   # tag -> count, across the whole run
@@ -423,9 +685,6 @@ def main():
                 continue
 
             processed_text, report = process_opinion(payload)
-        except NotImplementedError:
-            deferred.append(source_id)
-            continue
         except (OSError, ValueError, KeyError) as error:
             failures.append({"source_id": source_id,
                              "error": f"{error.__class__.__name__}: {error}"})
@@ -435,13 +694,15 @@ def main():
                       build_sidecar(source_id, record, payload, path))
         written += 1
 
+        if "running_heads" in report:
+            layout[source_id] = (report["pleading_paper"], report["running_heads"])
         if report["orphan_marks"] or report["unplaced_footnotes"]:
             anomalies[source_id] = (report["orphan_marks"], report["unplaced_footnotes"])
         for tag, count in report["unhandled_tags"].items():
             unhandled[tag] = unhandled.get(tag, 0) + count
         kept += report["footnotes_kept"]
 
-    print_summary(written, len(opinions), deferred, excluded, failures,
+    print_summary(written, len(opinions), layout, excluded, failures,
                   anomalies, kept, unhandled)
 
 
