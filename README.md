@@ -56,6 +56,8 @@ CourtListener API ────┘                  (+ metadata)                 
 
 The case law is a deliberate selection rather than a scrape. Five searches, one per barrier type, with the top results read by hand; `data/caselaw_opinion_ids.json` records every opinion's ID alongside the reason it was included, and `fetch_caselaw.py` refuses to fetch a record without one. Committing IDs rather than text keeps the corpus reproducible — CourtListener's ranking shifts over time, so re-running the searches would not.
 
+The full selection method, the five queries, the rejected cases and the reasoning behind each call are written up in [docs/corpus-selection.md](docs/corpus-selection.md).
+
 ---
 
 ## Roadmap
