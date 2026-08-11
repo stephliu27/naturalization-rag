@@ -1,0 +1,1681 @@
+{
+  "config": {
+    "model": "gemini-3.1-flash-lite",
+    "k": 8,
+    "thinking": "high",
+    "provider": "gemini",
+    "questions": 16,
+    "run": 1
+  },
+  "totals": {
+    "questions": 15,
+    "answered": 15,
+    "degraded": {},
+    "citations": 90,
+    "fabricated": 0,
+    "malformed": 0,
+    "off_target_cites": 17,
+    "sources_cited": 62,
+    "sources_shown": 120,
+    "anchors": 35,
+    "anchors_in_cited": 15,
+    "anchors_in_context": 18,
+    "refused_verbatim": 0,
+    "truncated": 0,
+    "expected_retrieved": 14,
+    "expected_cited": 13,
+    "prompt_tokens": 61508,
+    "answer_tokens": 2093,
+    "thought_tokens": 15935,
+    "seconds": 175.0
+  },
+  "questions": [
+    {
+      "id": "fee-waiver",
+      "question": "can I get a fee waiver for naturalization?",
+      "probe": false,
+      "seconds": 11.8,
+      "answer": "Fee waivers are available for the Application for Naturalization (Form N-400) for requestors who demonstrate an inability to pay [S3]. USCIS evaluates this inability based on whether the requestor or a household member receives a means-tested benefit, has a household income at or below 150% of the Federal Poverty Guidelines (FPG), or is experiencing extreme financial hardship [S6]. However, eligibility standards have changed over time and sources provide conflicting information regarding income requirements. For instance, a 2020 rule permitted fee waivers only if household income was 125% or less of the FPG [S2], while an October 2019 revision restricted waivers to those with income at or below 150% of the FPG or those establishing financial hardship [S5]. Additionally, there are no fees for filing an N-400 under INA 328 or 329 (military service) [S7].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4296,
+        "candidatesTokenCount": 204,
+        "totalTokenCount": 5981,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4296
+          }
+        ],
+        "thoughtsTokenCount": 1481,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S2",
+        "S3",
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S4",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 5,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.702
+        },
+        {
+          "label": "S2",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.69
+        },
+        {
+          "label": "S3",
+          "citation": "1 USCIS-PM B.4, nn.8, 9",
+          "source_id": "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions",
+          "score": 0.673
+        },
+        {
+          "label": "S4",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.671
+        },
+        {
+          "label": "S5",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.656
+        },
+        {
+          "label": "S6",
+          "citation": "1 USCIS-PM B.4",
+          "source_id": "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions",
+          "score": 0.643
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM I.5",
+          "source_id": "volume_12_part_i_military_members_and_their_families_chapter_5_application_and_filing_for_service_members_ina_328_and_329",
+          "score": 0.638
+        },
+        {
+          "label": "S8",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.637
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 1,
+      "anchors_in_cited": 1,
+      "missing_from_cited": [
+        "receiving a means-tested benefit at the time of filing the request for fee waiver"
+      ],
+      "expected_retrieved": [
+        "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions"
+      ],
+      "expected_cited": [
+        "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions"
+      ],
+      "off_target_cites": [
+        "S7"
+      ]
+    },
+    {
+      "id": "english-test-disability",
+      "question": "I have a disability and cannot learn English. Is there an exception to the English test?",
+      "probe": false,
+      "seconds": 6.47,
+      "answer": "Yes, an exception to the English and civics requirements is available for applicants who are unable to comply due to a \"medically determinable\" physical or developmental disability or mental impairment that has lasted, or is expected to last, at least 12 months [S1]. To request this, a licensed medical doctor, doctor of osteopathy, or clinical psychologist must complete Form N-648, certifying that the disability prevents the applicant from meeting the requirements even with reasonable accommodations [S1][S7]. This exception is distinct from a \"reasonable accommodation,\" which modifies the manner in which an applicant takes the test but does not waive the English or civics requirements [S3][S4].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3470,
+        "candidatesTokenCount": 142,
+        "totalTokenCount": 4248,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3470
+          }
+        ],
+        "thoughtsTokenCount": 636,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S3",
+        "S4",
+        "S7"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S2",
+        "S5",
+        "S6",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 5,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM E.3, nn.2, 4",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+          "score": 0.64
+        },
+        {
+          "label": "S2",
+          "citation": "12 USCIS-PM C.3, n.10",
+          "source_id": "volume_12_part_c_accommodations_chapter_3_types_of_accommodations",
+          "score": 0.635
+        },
+        {
+          "label": "S3",
+          "citation": "12 USCIS-PM E.3, n.15",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+          "score": 0.629
+        },
+        {
+          "label": "S4",
+          "citation": "12 USCIS-PM E.3",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+          "score": 0.618
+        },
+        {
+          "label": "S5",
+          "citation": "12 USCIS-PM E.2",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.608
+        },
+        {
+          "label": "S6",
+          "citation": "12 USCIS-PM C.3, n.9",
+          "source_id": "volume_12_part_c_accommodations_chapter_3_types_of_accommodations",
+          "score": 0.598
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM E.3",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+          "score": 0.597
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM E.3",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+          "score": 0.593
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 2,
+      "missing_from_cited": [],
+      "expected_retrieved": [
+        "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
+      ],
+      "expected_cited": [
+        "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
+      ],
+      "off_target_cites": []
+    },
+    {
+      "id": "age-exemption",
+      "question": "I am 68 and have had a green card for 22 years. Do I still have to take the English test?",
+      "probe": false,
+      "seconds": 10.69,
+      "answer": "According to the provided sources, an alien who is 65 years of age or older and has resided in the United States as a lawful permanent resident for at least 20 years at the time of filing is exempt from the English language requirement [S3]. While you are exempt from the English test, you are still required to meet the civics requirement, though officers will administer specially designated test forms for this purpose [S3].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3276,
+        "candidatesTokenCount": 88,
+        "totalTokenCount": 4310,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3276
+          }
+        ],
+        "thoughtsTokenCount": 946,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S3"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S2",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 2,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM E.2",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.648
+        },
+        {
+          "label": "S2",
+          "citation": "12 USCIS-PM E.2",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.606
+        },
+        {
+          "label": "S3",
+          "citation": "12 USCIS-PM E.2",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.593
+        },
+        {
+          "label": "S4",
+          "citation": "12 USCIS-PM E.2, n.17",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.587
+        },
+        {
+          "label": "S5",
+          "citation": "12 USCIS-PM E.3",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+          "score": 0.586
+        },
+        {
+          "label": "S6",
+          "citation": "12 USCIS-PM B.3, n.36",
+          "source_id": "volume_12_part_b_naturalization_examination_chapter_3_naturalization_interview",
+          "score": 0.586
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM E.2",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.586
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM E.2, n.1",
+          "source_id": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+          "score": 0.584
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 0,
+      "missing_from_cited": [
+        "The alien is age 50 or older at the time of filing for naturalization and has lived as an LPR in the United States for at least 20 years",
+        "An alien receives special consideration in the civics test if, at the time of filing the application, the alien is 65 years of age or older"
+      ],
+      "expected_retrieved": [
+        "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
+      ],
+      "expected_cited": [
+        "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
+      ],
+      "off_target_cites": []
+    },
+    {
+      "id": "long-trip-abroad",
+      "question": "I was outside the United States for eight months. Does that break my continuous residence?",
+      "probe": false,
+      "seconds": 10.2,
+      "answer": "An absence of eight months is considered an absence of more than 6 months but less than 1 year [S2][S4]. This length of absence creates a presumption that the continuity of your residence has been broken [S2][S4]. However, this is a rebuttable presumption, and you may provide evidence to establish that you did not disrupt your residence, such as documentation that you did not terminate your employment in the United States, your immediate family remained in the United States, or you retained access to a home in the United States [S2].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3111,
+        "candidatesTokenCount": 114,
+        "totalTokenCount": 3907,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3111
+          }
+        ],
+        "thoughtsTokenCount": 682,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S2",
+        "S4"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S3",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 5,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM D.3",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.725
+        },
+        {
+          "label": "S2",
+          "citation": "12 USCIS-PM D.3",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.667
+        },
+        {
+          "label": "S3",
+          "citation": "12 USCIS-PM D.3, nn.15, 16",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.665
+        },
+        {
+          "label": "S4",
+          "citation": "12 USCIS-PM D.3, nn.15, 17",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.661
+        },
+        {
+          "label": "S5",
+          "citation": "12 USCIS-PM D.3",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.656
+        },
+        {
+          "label": "S6",
+          "citation": "12 USCIS-PM D.3, n.27",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.649
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM G.3",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+          "score": 0.643
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM D.3",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+          "score": 0.642
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 1,
+      "missing_from_cited": [
+        "absent from the United States for more than 6 months but less than 1 year"
+      ],
+      "expected_retrieved": [
+        "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
+      ],
+      "expected_cited": [
+        "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
+      ],
+      "off_target_cites": []
+    },
+    {
+      "id": "delay-after-interview",
+      "question": "USCIS interviewed me over a year ago and still has not decided my case. What can I do?",
+      "probe": false,
+      "seconds": 7.52,
+      "answer": "USCIS is required to issue a decision within 120 days of the initial naturalization interview [S1]. If USCIS fails to make a determination within this 120-day period following the examination, an applicant may apply to the United States district court for the district in which they reside for a hearing on the matter [S2][S4][S6]. The district court has jurisdiction to either determine the matter or remand it to USCIS with instructions [S2][S4].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4310,
+        "candidatesTokenCount": 103,
+        "totalTokenCount": 5275,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4310
+          }
+        ],
+        "thoughtsTokenCount": 862,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S2",
+        "S4",
+        "S6"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S3",
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 6,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM B.4",
+          "source_id": "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
+          "score": 0.702
+        },
+        {
+          "label": "S2",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.631
+        },
+        {
+          "label": "S3",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.614
+        },
+        {
+          "label": "S4",
+          "citation": "Haroun v. U.S. Department of Homeland Security, 929 F.3d 1007 (8th Cir. 2019)",
+          "source_id": "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
+          "score": 0.61
+        },
+        {
+          "label": "S5",
+          "citation": "Shawuti v. USCIS, 273 F. Supp. 3d 260 (D.D.C. 2017), n.1",
+          "source_id": "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+          "score": 0.609
+        },
+        {
+          "label": "S6",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.606
+        },
+        {
+          "label": "S7",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.603
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM B.6",
+          "source_id": "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review",
+          "score": 0.6
+        }
+      ],
+      "anchors": 3,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 2,
+      "missing_from_cited": [
+        "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency"
+      ],
+      "expected_retrieved": [
+        "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination"
+      ],
+      "expected_cited": [
+        "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination"
+      ],
+      "off_target_cites": []
+    },
+    {
+      "id": "appeal-denial",
+      "question": "My naturalization application was denied. Can I appeal it?",
+      "probe": false,
+      "seconds": 13.33,
+      "answer": "If your naturalization application is denied, you may request a hearing before an immigration officer, which functions as an administrative appeal [S4][S7][S8]. If that administrative appeal results in a denial, you may seek judicial review of the decision in the United States district court for the district in which you reside [S2][S4][S7][S8]. You must exhaust these administrative remedies before seeking judicial review [S2][S6]. Additionally, you may potentially seek mandamus relief under 28 U.S.C. \u00a7 1361 for a failure to perform a clear, nondiscretionary duty, though this is considered an extraordinary remedy [S5].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4410,
+        "candidatesTokenCount": 143,
+        "totalTokenCount": 5914,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4410
+          }
+        ],
+        "thoughtsTokenCount": 1361,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S2",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S3"
+      ],
+      "malformed": [],
+      "citations": 10,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.705
+        },
+        {
+          "label": "S2",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.682
+        },
+        {
+          "label": "S3",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018), n.2",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.679
+        },
+        {
+          "label": "S4",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.678
+        },
+        {
+          "label": "S5",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.674
+        },
+        {
+          "label": "S6",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.661
+        },
+        {
+          "label": "S7",
+          "citation": "Miriyeva v. USCIS (D.C. Cir. 2021)",
+          "source_id": "opinion_4766320_gunay_miriyeva_v_uscis",
+          "score": 0.66
+        },
+        {
+          "label": "S8",
+          "citation": "Moya v. U.S. Department of Homeland Security, 975 F.3d 120 (2d Cir. 2020)",
+          "source_id": "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+          "score": 0.658
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 0,
+      "anchors_in_cited": 0,
+      "missing_from_cited": [
+        "A naturalization applicant may request judicial review before a United States district court of his or her denied naturalization application",
+        "The district court reviews the case de novo and makes its own findings of fact and conclusions of law"
+      ],
+      "expected_retrieved": [],
+      "expected_cited": [],
+      "off_target_cites": [
+        "S8"
+      ]
+    },
+    {
+      "id": "spouse-three-years",
+      "question": "How long do I have to be married to a U.S. citizen before I can apply for citizenship?",
+      "probe": false,
+      "seconds": 5.58,
+      "answer": "The length of time you must be married depends on the specific naturalization provision under which you are applying:\n\n*   **Spouses of U.S. citizens residing in the United States:** You must have been living in marital union with your citizen spouse for at least 3 years immediately preceding the time of filing the naturalization application [S1][S2][S4][S8].\n*   **Spouses of U.S. citizens employed abroad:** You must be married prior to filing [S7][S8].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3263,
+        "candidatesTokenCount": 109,
+        "totalTokenCount": 4283,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3263
+          }
+        ],
+        "thoughtsTokenCount": 911,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S2",
+        "S4",
+        "S7",
+        "S8"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S3",
+        "S5",
+        "S6"
+      ],
+      "malformed": [],
+      "citations": 6,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM G.3",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+          "score": 0.737
+        },
+        {
+          "label": "S2",
+          "citation": "12 USCIS-PM G.3",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+          "score": 0.709
+        },
+        {
+          "label": "S3",
+          "citation": "12 USCIS-PM G.2",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_2_marriage_and_marital_union_for_naturalization",
+          "score": 0.684
+        },
+        {
+          "label": "S4",
+          "citation": "12 USCIS-PM G.3, n.4",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+          "score": 0.681
+        },
+        {
+          "label": "S5",
+          "citation": "12 USCIS-PM G.4",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad",
+          "score": 0.675
+        },
+        {
+          "label": "S6",
+          "citation": "12 USCIS-PM G.2",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_2_marriage_and_marital_union_for_naturalization",
+          "score": 0.668
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM G.4",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad",
+          "score": 0.664
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM G.1, n.8",
+          "source_id": "volume_12_part_g_spouses_of_us_citizens_chapter_1_purpose_and_background",
+          "score": 0.655
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 2,
+      "missing_from_cited": [],
+      "expected_retrieved": [
+        "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states"
+      ],
+      "expected_cited": [
+        "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states"
+      ],
+      "off_target_cites": [
+        "S7"
+      ]
+    },
+    {
+      "id": "false-testimony",
+      "question": "I gave a wrong answer at my interview. Can that count against my good moral character?",
+      "probe": false,
+      "seconds": 10.67,
+      "answer": "Providing a false answer during an interview can preclude a finding of good moral character. Under 8 U.S.C. \u00a7 1101(f)(6), a person is not regarded as having good moral character if they have given false testimony for the purpose of obtaining immigration or naturalization benefits [S4][S5][S8]. This applies to oral statements made under oath, provided they were made with the subjective intent of obtaining such benefits [S4][S7]. The misrepresentation does not need to be material to prevent a finding of good moral character [S4].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4310,
+        "candidatesTokenCount": 121,
+        "totalTokenCount": 5372,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4310
+          }
+        ],
+        "thoughtsTokenCount": 941,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S4",
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S2",
+        "S3",
+        "S6"
+      ],
+      "malformed": [],
+      "citations": 6,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM F.1, n.17",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+          "score": 0.544
+        },
+        {
+          "label": "S2",
+          "citation": "12 USCIS-PM F.1, nn.18, 19",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+          "score": 0.519
+        },
+        {
+          "label": "S3",
+          "citation": "Hassan v. Johnson, 93 F. Supp. 3d 457 (E.D. Va. 2015)",
+          "source_id": "opinion_7230471_hassan_v_johnson",
+          "score": 0.494
+        },
+        {
+          "label": "S4",
+          "citation": "Yemer v. USCIS, 359 F. Supp. 3d 423 (E.D. Va. 2019)",
+          "source_id": "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+          "score": 0.488
+        },
+        {
+          "label": "S5",
+          "citation": "Yemer v. USCIS, 359 F. Supp. 3d 423 (E.D. Va. 2019)",
+          "source_id": "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+          "score": 0.476
+        },
+        {
+          "label": "S6",
+          "citation": "Rico v. INS, 262 F. Supp. 2d 6 (E.D.N.Y. 2003)",
+          "source_id": "opinion_2391590_rico_v_immigration_naturalization_service",
+          "score": 0.47
+        },
+        {
+          "label": "S7",
+          "citation": "Dos Reis v. McCleary, 200 F. Supp. 3d 291 (D. Mass. 2016)",
+          "source_id": "opinion_7239370_dos_reis_v_mccleary",
+          "score": 0.466
+        },
+        {
+          "label": "S8",
+          "citation": "Kariuki v. Tarango, 709 F.3d 495 (5th Cir. 2013), n.5",
+          "source_id": "opinion_821040_anthony_kariuki_v_tracy_tarango",
+          "score": 0.461
+        }
+      ],
+      "anchors": 3,
+      "anchors_in_context": 0,
+      "anchors_in_cited": 0,
+      "missing_from_cited": [
+        "False testimony occurs when the alien deliberately intends to deceive the U.S. Government while under oath in order to obtain an immigration benefit",
+        "False statements in a written application and falsified documents, whether or not under oath, do not constitute",
+        "Kariuki claimed under oath that he never had falsely represented himself"
+      ],
+      "expected_retrieved": [
+        "opinion_821040_anthony_kariuki_v_tracy_tarango"
+      ],
+      "expected_cited": [
+        "opinion_821040_anthony_kariuki_v_tracy_tarango"
+      ],
+      "off_target_cites": [
+        "S7"
+      ]
+    },
+    {
+      "id": "removal-proceedings",
+      "question": "Can I still naturalize if I am in removal proceedings?",
+      "probe": false,
+      "seconds": 13.5,
+      "answer": "USCIS generally lacks the authority to grant naturalization to an applicant against whom removal proceedings are pending, except for certain applications based on military service [S1][S7].\n\nThere is a disagreement among federal courts regarding whether this restriction applies to district courts:\n*   Many circuits have held that the statute precludes district courts from granting naturalization while removal proceedings are pending [S2][S3][S4].\n*   The 9th Circuit has held that the statute restricts only the Attorney General and does not limit a district court's power to naturalize an applicant during pending removal proceedings [S6][S8].\n*   The 3rd and 7th Circuits have held that while a district court cannot order the Attorney General to naturalize an applicant during pending removal proceedings, it may grant declaratory relief by declaring the applicant eligible for naturalization [S3].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3958,
+        "candidatesTokenCount": 179,
+        "totalTokenCount": 5487,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3958
+          }
+        ],
+        "thoughtsTokenCount": 1350,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S5"
+      ],
+      "malformed": [],
+      "citations": 8,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM D.2, nn.146, 147",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+          "score": 0.677
+        },
+        {
+          "label": "S2",
+          "citation": "Akpovi v. Douglas, 43 F.4th 832 (8th Cir. 2022)",
+          "source_id": "opinion_7798290_hafils_akpovi_v_david_douglas",
+          "score": 0.654
+        },
+        {
+          "label": "S3",
+          "citation": "Akpovi v. Douglas, 43 F.4th 832 (8th Cir. 2022)",
+          "source_id": "opinion_7798290_hafils_akpovi_v_david_douglas",
+          "score": 0.628
+        },
+        {
+          "label": "S4",
+          "citation": "Ebu v. USCIS (6th Cir. 2025)",
+          "source_id": "opinion_10846400_joseph_ebu_v_uscis",
+          "score": 0.624
+        },
+        {
+          "label": "S5",
+          "citation": "12 USCIS-PM F.2, n.46",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
+          "score": 0.62
+        },
+        {
+          "label": "S6",
+          "citation": "Ebu v. USCIS (6th Cir. 2025)",
+          "source_id": "opinion_10846400_joseph_ebu_v_uscis",
+          "score": 0.604
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM D.2",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+          "score": 0.603
+        },
+        {
+          "label": "S8",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.603
+        }
+      ],
+      "anchors": 3,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 2,
+      "missing_from_cited": [
+        "the limitation imposed by \u00a7 1429 applies only to the executive branch"
+      ],
+      "expected_retrieved": [
+        "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+        "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+      ],
+      "expected_cited": [
+        "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+        "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+      ],
+      "off_target_cites": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "id": "dui-good-moral-character",
+      "question": "Will two DUI convictions stop me from becoming a citizen?",
+      "probe": false,
+      "seconds": 8.3,
+      "answer": "Having two or more DUI convictions during the statutory period establishes a rebuttable presumption that an individual lacks good moral character [S1][S6]. This presumption is not an automatic bar, as it may be overcome if the individual provides \"substantial relevant and credible contrary evidence\" that they possessed good moral character during the period the offenses were committed and that the convictions were an \"aberration\" [S1]. An individual's efforts to reform or rehabilitate themselves after multiple DUI convictions do not, by themselves, demonstrate good moral character [S1].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4238,
+        "candidatesTokenCount": 110,
+        "totalTokenCount": 5011,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4238
+          }
+        ],
+        "thoughtsTokenCount": 663,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S6"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 4,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "12 USCIS-PM F.5, n.52",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+          "score": 0.598
+        },
+        {
+          "label": "S2",
+          "citation": "Dar v. Olivares, 956 F. Supp. 2d 1287 (N.D. Okla. 2013), n.8",
+          "source_id": "opinion_8709858_dar_v_olivares",
+          "score": 0.561
+        },
+        {
+          "label": "S3",
+          "citation": "12 USCIS-PM F.2, n.26",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
+          "score": 0.555
+        },
+        {
+          "label": "S4",
+          "citation": "Rico v. INS, 262 F. Supp. 2d 6 (E.D.N.Y. 2003)",
+          "source_id": "opinion_2391590_rico_v_immigration_naturalization_service",
+          "score": 0.54
+        },
+        {
+          "label": "S5",
+          "citation": "12 USCIS-PM F.5, nn.114, 116",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+          "score": 0.535
+        },
+        {
+          "label": "S6",
+          "citation": "12 USCIS-PM F.5",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+          "score": 0.534
+        },
+        {
+          "label": "S7",
+          "citation": "12 USCIS-PM D.2",
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+          "score": 0.532
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM F.5",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+          "score": 0.526
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 1,
+      "anchors_in_cited": 1,
+      "missing_from_cited": [
+        "the alien may be able to later naturalize if able to establish good moral character"
+      ],
+      "expected_retrieved": [
+        "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+      ],
+      "expected_cited": [
+        "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+      ],
+      "off_target_cites": []
+    },
+    {
+      "id": "court-decides-or-remands",
+      "question": "If I sue because USCIS never decided, can the judge grant my citizenship, or does it go back to USCIS?",
+      "probe": false,
+      "seconds": 21.55,
+      "answer": "If you sue under 8 U.S.C. \u00a7 1447(b) because USCIS failed to make a determination within the required timeframe, the district court has the authority to either determine the matter itself or remand the case to USCIS with instructions to determine the matter [S2][S5][S7]. Even if a district court grants a naturalization application, USCIS retains the \"sole authority\" to complete the final steps of the process, which include administering the oath of allegiance and issuing the certificate of naturalization [S5].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4889,
+        "candidatesTokenCount": 115,
+        "totalTokenCount": 6001,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4889
+          }
+        ],
+        "thoughtsTokenCount": 997,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S2",
+        "S5",
+        "S7"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S3",
+        "S4",
+        "S6",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 4,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Dar v. Olivares, 956 F. Supp. 2d 1287 (N.D. Okla. 2013), n.4",
+          "source_id": "opinion_8709858_dar_v_olivares",
+          "score": 0.661
+        },
+        {
+          "label": "S2",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.652
+        },
+        {
+          "label": "S3",
+          "citation": "Martinez v. Johnson, 104 F. Supp. 3d 835 (W.D. Tex. 2015)",
+          "source_id": "opinion_7231393_martinez_v_johnson",
+          "score": 0.652
+        },
+        {
+          "label": "S4",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.649
+        },
+        {
+          "label": "S5",
+          "citation": "Ebu v. USCIS (6th Cir. 2025)",
+          "source_id": "opinion_10846400_joseph_ebu_v_uscis",
+          "score": 0.638
+        },
+        {
+          "label": "S6",
+          "citation": "Shawuti v. USCIS, 273 F. Supp. 3d 260 (D.D.C. 2017), n.1",
+          "source_id": "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+          "score": 0.632
+        },
+        {
+          "label": "S7",
+          "citation": "Haroun v. U.S. Department of Homeland Security, 929 F.3d 1007 (8th Cir. 2019)",
+          "source_id": "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
+          "score": 0.629
+        },
+        {
+          "label": "S8",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.627
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 1,
+      "anchors_in_cited": 1,
+      "missing_from_cited": [
+        "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency"
+      ],
+      "expected_retrieved": [
+        "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security"
+      ],
+      "expected_cited": [
+        "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security"
+      ],
+      "off_target_cites": [
+        "S5"
+      ]
+    },
+    {
+      "id": "notice-to-appear-warrant",
+      "question": "Is a notice to appear the same thing as a warrant of arrest for naturalization purposes?",
+      "probe": false,
+      "seconds": 15.81,
+      "answer": "Whether a \"notice to appear\" is the same as a \"warrant of arrest\" for naturalization purposes is a subject of disagreement among courts and authorities [S7]. Under 8 C.F.R. \u00a7 318.1, the Department of Homeland Security (DHS) interprets a \"notice to appear\" as a \"warrant of arrest\" for the purposes of 8 U.S.C. \u00a7 1429 [S3][S8]. The Seventh Circuit has upheld this interpretation, reasoning that an agency may define its own vocabulary [S5][S7]. Conversely, the Ninth Circuit has concluded that a \"warrant of arrest\" is a distinct document from a \"notice to appear\" and has rejected the Seventh Circuit's position [S1][S6][S7]. DHS forms also distinguish between the two, with Form I-200 serving as a \"Warrant of Arrest\" and Form I-862 as a \"Notice to Appear\" [S4].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4063,
+        "candidatesTokenCount": 212,
+        "totalTokenCount": 5357,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4063
+          }
+        ],
+        "thoughtsTokenCount": 1082,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S2"
+      ],
+      "malformed": [],
+      "citations": 9,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.786
+        },
+        {
+          "label": "S2",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018), nn.5, 6",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.773
+        },
+        {
+          "label": "S3",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.736
+        },
+        {
+          "label": "S4",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.736
+        },
+        {
+          "label": "S5",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.734
+        },
+        {
+          "label": "S6",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.733
+        },
+        {
+          "label": "S7",
+          "citation": "Akpovi v. Douglas, 43 F.4th 832 (8th Cir. 2022), n.3",
+          "source_id": "opinion_7798290_hafils_akpovi_v_david_douglas",
+          "score": 0.729
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM F.5, n.128",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+          "score": 0.692
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 1,
+      "anchors_in_cited": 1,
+      "missing_from_cited": [
+        "An NTA is a warrant of arrest for purposes of INA 318, except in the 9th Circuit"
+      ],
+      "expected_retrieved": [
+        "opinion_7798290_hafils_akpovi_v_david_douglas"
+      ],
+      "expected_cited": [
+        "opinion_7798290_hafils_akpovi_v_david_douglas"
+      ],
+      "off_target_cites": [
+        "S8"
+      ]
+    },
+    {
+      "id": "apa-instead",
+      "question": "Can I sue under the Administrative Procedure Act instead of the naturalization review statute?",
+      "probe": false,
+      "seconds": 16.0,
+      "answer": "The Immigration and Nationality Act (INA) provides an \"exhaustively detailed\" review process for naturalization application denials, and Congress intended for these sections to collectively and exclusively direct that process [S7]. APA suits are subject to statutes that preclude judicial review, including exhaustion requirements, and there is no general exception to these requirements for constitutional claims when the statute at issue provides for judicial review [S1]. Allowing a suit without first exhausting administrative remedies is inconsistent with Congress's purpose of streamlining the naturalization process [S2]. While 8 U.S.C. \u00a7 1421(c) specifies that judicial review is conducted \"in accordance with chapter 7 of title 5\" (the Administrative Procedure Act), the statutory scheme for naturalization is the required path for review [S5][S7].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 5268,
+        "candidatesTokenCount": 166,
+        "totalTokenCount": 6909,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5268
+          }
+        ],
+        "thoughtsTokenCount": 1475,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S2",
+        "S5",
+        "S7"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S3",
+        "S4",
+        "S6",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 5,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Moya v. U.S. Department of Homeland Security, 975 F.3d 120 (2d Cir. 2020)",
+          "source_id": "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+          "score": 0.627
+        },
+        {
+          "label": "S2",
+          "citation": "Moya v. U.S. Department of Homeland Security, 975 F.3d 120 (2d Cir. 2020)",
+          "source_id": "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+          "score": 0.614
+        },
+        {
+          "label": "S3",
+          "citation": "Kariuki v. Tarango, 709 F.3d 495 (5th Cir. 2013)",
+          "source_id": "opinion_821040_anthony_kariuki_v_tracy_tarango",
+          "score": 0.605
+        },
+        {
+          "label": "S4",
+          "citation": "Gonzalez v. Secretary of Department of Homeland Security, 678 F.3d 254 (3d Cir. 2012), n.3",
+          "source_id": "opinion_625607_gonzalez_v_secretary_of_department_of_homeland_security",
+          "score": 0.599
+        },
+        {
+          "label": "S5",
+          "citation": "Miriyeva v. USCIS (D.C. Cir. 2021)",
+          "source_id": "opinion_4766320_gunay_miriyeva_v_uscis",
+          "score": 0.593
+        },
+        {
+          "label": "S6",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.589
+        },
+        {
+          "label": "S7",
+          "citation": "Miriyeva v. USCIS (D.C. Cir. 2021)",
+          "source_id": "opinion_4766320_gunay_miriyeva_v_uscis",
+          "score": 0.58
+        },
+        {
+          "label": "S8",
+          "citation": "Rivera v. USCIS, 5 F. Supp. 3d 439 (S.D.N.Y. 2014)",
+          "source_id": "opinion_7223114_rivera_v_us_citizenship_immigration_services",
+          "score": 0.58
+        }
+      ],
+      "anchors": 2,
+      "anchors_in_context": 2,
+      "anchors_in_cited": 2,
+      "missing_from_cited": [],
+      "expected_retrieved": [
+        "opinion_4766320_gunay_miriyeva_v_uscis"
+      ],
+      "expected_cited": [
+        "opinion_4766320_gunay_miriyeva_v_uscis"
+      ],
+      "off_target_cites": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "must-attend-hearing",
+      "question": "Do I have to go to the USCIS hearing before I can take my denial to court?",
+      "probe": false,
+      "seconds": 14.62,
+      "answer": "Generally, you must exhaust administrative remedies\u2014which includes requesting a hearing before an immigration officer\u2014before you can seek judicial review of a denied naturalization application [S5][S6]. Section 1421(c) is the sole procedure for challenging a denial, and it requires the exhaustion of these remedies [S5][S6]. However, if USCIS fails to make a determination on your initial application within 120 days of your examination, you may apply to a district court for a hearing on the matter without having received a denial [S2][S3][S7]. This 120-day rule does not apply to the administrative appeal stage [S5][S7].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3893,
+        "candidatesTokenCount": 145,
+        "totalTokenCount": 5389,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3893
+          }
+        ],
+        "thoughtsTokenCount": 1351,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S2",
+        "S3",
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S4",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 9,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Donnelly v. CARRP (2d Cir. 2022)",
+          "source_id": "opinion_6349504_donnelly_v_carrp",
+          "score": 0.749
+        },
+        {
+          "label": "S2",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.742
+        },
+        {
+          "label": "S3",
+          "citation": "Yith v. Nielsen, 881 F.3d 1155 (9th Cir. 2018)",
+          "source_id": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+          "score": 0.73
+        },
+        {
+          "label": "S4",
+          "citation": "12 USCIS-PM B.6, nn.1, 2",
+          "source_id": "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review",
+          "score": 0.708
+        },
+        {
+          "label": "S5",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.707
+        },
+        {
+          "label": "S6",
+          "citation": "Moya v. U.S. Department of Homeland Security, 975 F.3d 120 (2d Cir. 2020)",
+          "source_id": "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+          "score": 0.697
+        },
+        {
+          "label": "S7",
+          "citation": "Iqbal v. Secretary, U.S. Department of Homeland Security, 190 F. Supp. 3d 322 (W.D.N.Y. 2016)",
+          "source_id": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+          "score": 0.689
+        },
+        {
+          "label": "S8",
+          "citation": "12 USCIS-PM B.3, n.37",
+          "source_id": "volume_12_part_b_naturalization_examination_chapter_3_naturalization_interview",
+          "score": 0.683
+        }
+      ],
+      "anchors": 3,
+      "anchors_in_context": 0,
+      "anchors_in_cited": 0,
+      "missing_from_cited": [
+        "We hold that it is instead a mandatory claim-processing rule",
+        "we agree with the district court that Donnelly did not satisfy",
+        "We answer the question in the negative and conclude that the district court erred in determining that it lacked subject-matter jurisdiction"
+      ],
+      "expected_retrieved": [
+        "opinion_6349504_donnelly_v_carrp"
+      ],
+      "expected_cited": [],
+      "off_target_cites": [
+        "S2",
+        "S3",
+        "S5",
+        "S6",
+        "S7"
+      ]
+    },
+    {
+      "id": "conduct-before-applying",
+      "question": "Does something I did before I applied count against my good moral character?",
+      "probe": false,
+      "seconds": 8.92,
+      "answer": "Yes, conduct occurring before the application period may be considered. Although the statutory period for assessing good moral character is generally the five years preceding the application, the Attorney General is not limited to that timeframe and may consider an applicant's conduct at any time prior to that period to determine present moral conduct [S2]. Regulations allow for the consideration of prior conduct to determine if an applicant has reformed [S2][S5]. Additionally, good moral character is described as a concept derived from the \"sum total of all his actions in the community\" [S3]. Please note that these sources are from 2003 and earlier, and these rules may not be current [S2][S5].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 4753,
+        "candidatesTokenCount": 142,
+        "totalTokenCount": 6092,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4753
+          }
+        ],
+        "thoughtsTokenCount": 1197,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S1",
+        "S4",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 6,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Hassan v. Johnson, 93 F. Supp. 3d 457 (E.D. Va. 2015)",
+          "source_id": "opinion_7230471_hassan_v_johnson",
+          "score": 0.611
+        },
+        {
+          "label": "S2",
+          "citation": "Rico v. INS, 262 F. Supp. 2d 6 (E.D.N.Y. 2003)",
+          "source_id": "opinion_2391590_rico_v_immigration_naturalization_service",
+          "score": 0.603
+        },
+        {
+          "label": "S3",
+          "citation": "12 USCIS-PM F.1, n.17",
+          "source_id": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+          "score": 0.603
+        },
+        {
+          "label": "S4",
+          "citation": "Dar v. Olivares, 956 F. Supp. 2d 1287 (N.D. Okla. 2013)",
+          "source_id": "opinion_8709858_dar_v_olivares",
+          "score": 0.588
+        },
+        {
+          "label": "S5",
+          "citation": "Rico v. INS, 262 F. Supp. 2d 6 (E.D.N.Y. 2003)",
+          "source_id": "opinion_2391590_rico_v_immigration_naturalization_service",
+          "score": 0.586
+        },
+        {
+          "label": "S6",
+          "citation": "Hassan v. Johnson, 93 F. Supp. 3d 457 (E.D. Va. 2015)",
+          "source_id": "opinion_7230471_hassan_v_johnson",
+          "score": 0.585
+        },
+        {
+          "label": "S7",
+          "citation": "Yemer v. USCIS, 359 F. Supp. 3d 423 (E.D. Va. 2019)",
+          "source_id": "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+          "score": 0.585
+        },
+        {
+          "label": "S8",
+          "citation": "Dos Reis v. McCleary, 200 F. Supp. 3d 291 (D. Mass. 2016)",
+          "source_id": "opinion_7239370_dos_reis_v_mccleary",
+          "score": 0.585
+        }
+      ],
+      "anchors": 3,
+      "anchors_in_context": 0,
+      "anchors_in_cited": 0,
+      "missing_from_cited": [
+        "USCIS is not limited to reviewing the applicant",
+        "conduct prior to the GMC period may affect the",
+        "conduct that preceded the filing of his application by more than one year"
+      ],
+      "expected_retrieved": [],
+      "expected_cited": [],
+      "off_target_cites": [
+        "S2",
+        "S5"
+      ]
+    },
+    {
+      "id": "n400-filing-fee",
+      "question": "what is the current filing fee for Form N-400?",
+      "probe": true,
+      "seconds": 11.46,
+      "answer": "As of August 2020, the filing fee for Form N-400 was $1,170 [S1][S5]. This figure is dated and may not be current [S1][S5].",
+      "degraded": null,
+      "degraded_category": null,
+      "refused_verbatim": false,
+      "truncated": false,
+      "usage": {
+        "promptTokenCount": 3560,
+        "candidatesTokenCount": 49,
+        "totalTokenCount": 4475,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3560
+          }
+        ],
+        "thoughtsTokenCount": 866,
+        "serviceTier": "standard"
+      },
+      "cited": [
+        "S1",
+        "S5"
+      ],
+      "unknown": [],
+      "uncited": [
+        "S2",
+        "S3",
+        "S4",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "malformed": [],
+      "citations": 4,
+      "sources": [
+        {
+          "label": "S1",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.606
+        },
+        {
+          "label": "S2",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.604
+        },
+        {
+          "label": "S3",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.6
+        },
+        {
+          "label": "S4",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.567
+        },
+        {
+          "label": "S5",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.551
+        },
+        {
+          "label": "S6",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.551
+        },
+        {
+          "label": "S7",
+          "citation": "1 USCIS-PM B.4, n.9",
+          "source_id": "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions",
+          "score": 0.55
+        },
+        {
+          "label": "S8",
+          "citation": "Northwest Immigrant Rights Project v. USCIS (D.D.C. 2020)",
+          "source_id": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+          "score": 0.533
+        }
+      ],
+      "anchors": 0,
+      "anchors_in_context": 0,
+      "anchors_in_cited": 0,
+      "missing_from_cited": [],
+      "expected_retrieved": [],
+      "expected_cited": [],
+      "off_target_cites": []
+    }
+  ]
+}
