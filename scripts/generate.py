@@ -387,14 +387,24 @@ def check_citations(answer, sources):
     known = {source["label"] for source in sources}
 
     cited, unknown, malformed = [], [], []
-    for group in BRACKETED.findall(answer):
-        labels = LABEL.findall(group)
-        if not labels:
-            malformed.append(group.strip())
+    for match in BRACKETED.finditer(answer):
+        labels = LABEL.findall(match.group(1))
+        if labels:
+            for number in labels:
+                label = "S{}".format(number)
+                (cited if label in known else unknown).append(label)
             continue
-        for number in labels:
-            label = "S{}".format(number)
-            (cited if label in known else unknown).append(label)
+
+        # A label-less bracket glued to a word is not a citation attempt: it is the legal
+        # convention for altering a letter inside a quotation — `detail[ed]`, `"[s]ole
+        # procedure"`. The model writes that way because the corpus does. Decided by adjacency
+        # rather than by a list of known fragments, which would never end, and applied only
+        # after label extraction so a real citation can never be discarded by it.
+        before = answer[match.start() - 1] if match.start() else " "
+        after = answer[match.end()] if match.end() < len(answer) else " "
+        if before.isalnum() or after.isalnum():
+            continue
+        malformed.append(match.group(1).strip())
 
     return {
         "cited": sorted(set(cited), key=lambda l: int(l[1:])),
