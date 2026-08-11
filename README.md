@@ -46,7 +46,7 @@ CourtListener API ────┘                  (+ metadata)                 
 
 **Processing** is where the corpus is actually made. The three sources arrive in three unrelated markups — USCIS HTML, Harvard CAP XML, and PDF text with no markup at all — and are collapsed into one line-oriented format so the indexer never branches on where a document came from. Substantive footnotes are kept and moved beneath the paragraph that cites them; citation-only ones are dropped.
 
-**Indexing** chunks to 300–500 tokens, embeds locally with `all-MiniLM-L6-v2`, and stores the vectors in ChromaDB with metadata on every chunk.
+**Indexing** chunks the corpus, embeds it locally with `all-MiniLM-L6-v2`, and stores the vectors in ChromaDB with the full metadata sidecar on every chunk. Chunk sizing is set by the model rather than by convention: MiniLM reads at most 256 tokens and silently ignores the rest, so anything longer would be stored and displayed intact while half of it stayed unmatchable. Chunks therefore target 220 tokens against a hard 256 ceiling, with 40 tokens of overlap, and a chunk closes early at a section heading so it covers one topic rather than two. **105 documents become 3,210 chunks** — median 196 tokens, none over the ceiling, about four and a half minutes to embed on a laptop CPU.
 
 **Retrieval and generation** embeds the question, retrieves the top-k chunks with a neighbouring-chunk window for context, and prompts the model to answer only from those chunks and cite them.
 
@@ -68,8 +68,8 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Volume-agnostic scraping; Vol. 1 added alongside Vol. 12 | Shipped |
 | Case-law ingestion via CourtListener API (`scripts/fetch_caselaw.py`) | Shipped |
 | Text extraction and cleaning into `data/processed/` | Shipped |
-| Chunking and embedding layer (ChromaDB) | Next |
-| RAG query loop with forced citation | Planned |
+| Chunking and embedding layer (`scripts/build_index.py`, ChromaDB) | Shipped |
+| RAG query loop with forced citation | Next |
 | Barrier-type tagging (financial, linguistic, procedural, timeline) | Planned |
 | Streamlit interface | Planned |
 
@@ -102,6 +102,17 @@ A CourtListener token is free at https://www.courtlistener.com/profile/api-token
 Scraping and indexing need no key at all — embeddings are computed locally.
 
 `.env` is gitignored and should never be committed.
+
+### Building the index
+
+`data/processed/` is committed, so the index builds without re-scraping anything:
+
+```bash
+venv/bin/python scripts/build_index.py            # ~4.5 min, writes data/chroma/
+venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~3 sec
+```
+
+The model downloads itself on first use (~90 MB). `--dry-run` skips the model entirely and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds instead of minutes.
 
 ---
 

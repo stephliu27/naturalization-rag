@@ -138,7 +138,7 @@ FUNCTION_WORDS = frozenset(
 # low: over-keeping costs one short noisy chunk, over-dropping loses policy text and cannot
 # be noticed later. Hand-audited 36 notes from the drop side across three rounds, zero of
 # them substantive; the keep side does admit pointer-only notes near the floor, which is the
-# direction we chose. Tune in Week 4 against the eval set, not by guessing here.
+# direction we chose. Tune against the eval set, not by guessing here.
 SUBSTANTIVE_WORD_FLOOR = 3
 
 
@@ -313,10 +313,11 @@ def build_sidecar(stem, scrape_metadata, txt_path):
                              scrape_metadata["part_title"],
                              scrape_metadata["chapter_title"]]),
         "citation": None,           # TODO decide: the "12 USCIS-PM B.3" form is real and the
-                                    # corpus cites itself that way. Week 4 enforces citations.
+                                    # corpus cites itself that way. Citation enforcement is
+                                    # weaker while this stays null.
         "court_id": None,           # not a court
         "date": None,               # effective_date was cut; scraped_date answers reproducibility
-        "barrier": None,            # USCIS has no labels — that is Week 5's actual work
+        "barrier": None,            # USCIS has no labels — labelling is its own piece of work
         "url": scrape_metadata["chapter_url"],
         "retrieved": scrape_metadata["scraped_date"],
         "extracted_from": txt_path,  # which raw file this text came from

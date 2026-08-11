@@ -3,5 +3,6 @@ venv/
 .DS_Store
 __pycache__/
 data/raw/
+data/chroma/
 CLAUDE.local.md
 drafts/
