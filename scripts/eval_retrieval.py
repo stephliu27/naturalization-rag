@@ -195,7 +195,12 @@ def score_question(collection, model, question, headline_k, max_k):
     expected_ids = [entry["source_id"] for entry in question["expected"]]
     allowed = set(expected_ids) | set(question.get("acceptable", []))
 
-    recall = {cutoff: recall_of(ranked[:cutoff], expected_ids) for cutoff in CUTOFFS}
+    # The fixed curve, plus the headline k if it is not already one of them. Without the
+    # union, `-k 15` computed a curve at 1/3/5/10 and then looked up recall[15], which
+    # raised KeyError from inside the results loop — every k outside CUTOFFS crashed, and
+    # nothing exercised one until a comparison run wanted k=15.
+    recall = {cutoff: recall_of(ranked[:cutoff], expected_ids)
+              for cutoff in sorted(set(CUTOFFS) | {headline_k})}
 
     # Rank of the first expected document, 1-based. None if it never appears — reported
     # rather than folded into a mean, since a made-up rank for a miss would flatter the
@@ -287,9 +292,10 @@ def print_report(results, headline_k):
             print("       off     {}".format(", ".join(sorted(set(result["off_target"])))))
 
     total = len(results)
+    cutoffs = sorted(set(CUTOFFS) | {headline_k})
     print("\n{:<12}{}".format("recall@k", "  ".join(
         "@{}: {:.0%}".format(cutoff, sum(r["recall"][cutoff] for r in results) / total)
-        for cutoff in CUTOFFS)))
+        for cutoff in cutoffs)))
 
     full = sum(1 for r in results if r["recall"][headline_k] == 1)
     any_hit = sum(1 for r in results if r["hit"])
