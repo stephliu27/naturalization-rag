@@ -22,6 +22,7 @@ import os
 import re
 import sys
 import time
+
 import chromadb
 from sentence_transformers import SentenceTransformer
 
@@ -49,7 +50,7 @@ MODEL_TOKEN_LIMIT = 256
 TARGET_TOKENS = 220
 
 # Carried from the end of one chunk into the start of the next, so a sentence split across
-# a boundary is still wholly present somewhere. Small on purpose: the neighbour window
+# a boundary is still wholly present somewhere. Small on purpose: the neighbor window
 # (chunk_index +/- 1, see query.py) is the real answer to fragmentation, and overlap is
 # just insurance against a boundary landing mid-thought.
 OVERLAP_TOKENS = 40
@@ -289,7 +290,7 @@ def chunk_units(units):
 
 
 def chunk_metadata(units, sidecar, index, total):
-    """One chunk's Chroma metadata: the whole sidecar, flattened and scalarised, plus position.
+    """One chunk's Chroma metadata: the whole sidecar, flattened and scalarized, plus position.
 
     Everything here is stored whether or not v1 reads it, because adding a field later
     means re-embedding while a field already present is a metadata write. `section` is the
@@ -299,7 +300,7 @@ def chunk_metadata(units, sidecar, index, total):
     metadata = {field: (sidecar.get(field) or "") for field in SIDECAR_FIELDS}
 
     # Which document and where in it. Without source_id you cannot tell that five results
-    # are five fragments of one opinion; without the index pair you cannot fetch neighbours
+    # are five fragments of one opinion; without the index pair you cannot fetch neighbors
     # or say "3 of 12".
     metadata["chunk_index"] = index
     metadata["chunk_total"] = total
@@ -399,7 +400,7 @@ def write_index(records):
     texts = [text for _, text, _ in records]
     print(f"Embedding {len(texts)} chunks on CPU...")
     started = time.time()
-    # Normalised here so cosine distance is a dot product, matching the collection's space.
+    # Normalized here so cosine distance is a dot product, matching the collection's space.
     embeddings = model.encode(texts, batch_size=64, show_progress_bar=True,
                               normalize_embeddings=True, convert_to_numpy=True)
     print(f"Embedded in {time.time() - started:.1f}s "
@@ -409,7 +410,7 @@ def write_index(records):
     client = chromadb.PersistentClient(path=INDEX_DIR)
     if COLLECTION in [c.name for c in client.list_collections()]:
         client.delete_collection(COLLECTION)
-    # Cosine, not the L2 default: MiniLM is trained for cosine similarity, and on normalised
+    # Cosine, not the L2 default: MiniLM is trained for cosine similarity, and on normalized
     # vectors the two rank identically — but only the cosine distance is readable as a score.
     collection = client.create_collection(COLLECTION, metadata={"hnsw:space": "cosine"})
 
@@ -449,7 +450,7 @@ def main():
 
     def count_tokens(text):
         # Same lines get counted repeatedly through packing and reporting; the corpus is
-        # small enough that memoising is simpler than restructuring to count once.
+        # small enough that memoizing is simpler than restructuring to count once.
         if text not in cache:
             cache[text] = len(tokenizer.tokenize(text))
         return cache[text]

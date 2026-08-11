@@ -84,7 +84,7 @@ FOOTNOTE_MARKER = re.compile(r"\s*\[\s*(\d+)\s*\]")
 
 def clean_text(element, separator=" "):
     """Visible text with word boundaries kept, then punctuation pulled back onto its word.
-    Without the " " separator inline links weld to their neighbours: "an initialForm N-648as".
+    Without the " " separator inline links weld to their neighbors: "an initialForm N-648as".
 
     The separator is a parameter because the two markups disagree about whose job the space
     is. USCIS HTML drops it at tag boundaries, so " " has to put it back — 1293 welds on the

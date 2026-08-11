@@ -373,7 +373,7 @@ def split_page_footnotes(lines, expected):
     That one condition is what makes the rule safe. Donnelly's notes sit inline as
     "1 Congress transferred authority ..." on the same shape of line as the body's
     "8 U.S.C. § 1429" — but 8 is not the number we are expecting, so only the real one
-    matches. Failure is one-directional too: a note we do not recognise stays in the body
+    matches. Failure is one-directional too: a note we do not recognize stays in the body
     text rather than disappearing, which is the direction to fail in.
     """
     non_empty = [index for index, line in enumerate(lines) if line.strip()]
