@@ -8,19 +8,26 @@ it, on two checks that cost nothing beyond the requests themselves:
 
 The second is the stronger one, and the reason the question set was written with verbatim
 anchors. "The anchor was somewhere in the context" is a claim about retrieval and is already
-measured; "the anchor is in a source the answer leaned on" is a claim about grounding. It is
-the closest thing to scoring correctness that does not involve reading every answer.
+measured; "the anchor is in a source the answer leaned on" is a claim about grounding.
+
+**It is a lower bound on correctness, not a proxy for it.** An answer can be sound and score
+zero: on `fee-waiver` the case law recites the same policy, so the model cites that instead
+and the expected chapter's anchors appear nowhere in what it cited. A number this cheap earns
+a floor, not a verdict — where the score and an answer you have read disagree, the answer wins.
 
 Neither check says the answer is *right*. Nothing free does — that is the head-to-head's job,
 by hand. What these catch is the failure mode that matters most here: a fluent answer citing
 sources that do not support it.
 
 One configuration per run, written to its own JSON, compared afterward. Never two variables at
-once: `--compare` says so out loud when the two files differ in more than one field.
+once: `--compare` says so out loud when the two files differ in more than one field. Run every
+configuration twice — the gap between two runs of the *same* config is the noise floor, and a
+cross-config difference smaller than it is not a result. Temperature 0 is not determinism on a
+thinking model.
 
 Run:  venv/bin/python scripts/eval_generation.py --dry-run          # free; the ceiling at this k
-      venv/bin/python scripts/eval_generation.py --thinking low
-      venv/bin/python scripts/eval_generation.py --thinking high --questions movers
+      venv/bin/python scripts/eval_generation.py --thinking low --run 1
+      venv/bin/python scripts/eval_generation.py --thinking low --run 2   # the noise floor
       venv/bin/python scripts/eval_generation.py --compare a.json b.json
       set -a; . ./.env; set +a                                      # GEMINI_API_KEY
 """
@@ -363,14 +370,20 @@ def print_report(records, totals, config):
         "coverage", totals["sources_cited"], totals["sources_shown"]))
 
     # The headline. Both columns always, for the same reason the diversity simulation prints
-    # two: the gap between them is the whole diagnosis.
+    # two: the gap between them is the whole diagnosis. The caveat is printed rather than
+    # left in the docstring because this is the number that will get quoted out of context.
     print("{:<16}{}/{} in the sources the answer cited, {}/{} anywhere in the context".format(
         "anchors", totals["anchors_in_cited"], totals["anchors"],
         totals["anchors_in_context"], totals["anchors"]))
+    print("{:<16}a lower bound — an answer can be sound and cite a different document that "
+          "recites the same rule".format(""))
     print("{:<16}{}/{} expected documents that retrieval returned were cited".format(
         "documents", totals["expected_cited"], totals["expected_retrieved"]))
-    print("{:<16}{} of {} citations point outside the answer key".format(
-        "off-target", totals["off_target_cites"], totals["citations"]))
+    # Denominator is *distinct sources cited*, not label mentions: off_target_cites counts
+    # sources and `citations` counts every `[S2]` typed, so pairing them read as a far lower
+    # rate than the truth — 11 of 71 rather than 11 of 42.
+    print("{:<16}{} of {} cited sources are neither expected nor acceptable".format(
+        "off-target", totals["off_target_cites"], totals["sources_cited"]))
     print("{:<16}{} used the verbatim refusal{}".format(
         "refusals", totals["refused_verbatim"],
         "; hand-count the ones that declined in other words" if answered else ""))
@@ -448,9 +461,15 @@ def compare(paths):
     for field in differ:
         print("  {:<12} {} -> {}".format(field, left["config"].get(field),
                                          right["config"].get(field)))
-    if len(differ) != 1:
+    # Two runs of one config is the one comparison where nothing differing is the point: the
+    # only variable is the sample, so whatever gap appears here is noise by construction, and
+    # every other comparison has to clear it before it counts as a result.
+    if differ == ["run"]:
+        print("  same config, different sample — this gap is the noise floor")
+    elif len(differ) != 1:
         print("  ! {} config fields differ; this measures more than one variable at once"
-              .format(len(differ)) if differ else "  ! identical configs")
+              .format(len(differ)) if differ else "  ! identical configs, including the run "
+                                                  "number — is one of these a stale file?")
 
     by_id = {record["id"]: record for record in right["questions"]}
     print("\n{:<26} {:>13} {:>13} {:>11} {:>13}".format(
@@ -478,8 +497,8 @@ def compare(paths):
 
 def default_path(args):
     """Config in the filename, so two runs cannot quietly overwrite each other."""
-    return os.path.join(RESULTS_DIR, "{}_k{}_{}.json".format(
-        args.model, args.k, args.thinking))
+    return os.path.join(RESULTS_DIR, "{}_k{}_{}_r{}.json".format(
+        args.model, args.k, args.thinking, args.run))
 
 
 def main():
@@ -492,6 +511,9 @@ def main():
                         default=THINKING_LEVEL,
                         help="reasoning effort (default %s)" % THINKING_LEVEL)
     parser.add_argument("--provider", default="gemini", choices=("gemini", "ollama"))
+    parser.add_argument("--run", type=int, default=1,
+                        help="repeat number for this config; two runs of one config give the "
+                             "noise floor every other comparison is read against")
     parser.add_argument("--questions", help="comma-separated ids or subset names: {}".format(
         ", ".join(sorted(SUBSETS))))
     parser.add_argument("--no-probes", action="store_true",
@@ -525,9 +547,9 @@ def main():
         return
 
     config = {"model": args.model, "k": args.k, "thinking": args.thinking,
-              "provider": args.provider, "questions": len(questions)}
-    print("\n{} questions, {}, k={}, thinking {}, {:.0f}s between requests\n".format(
-        len(questions), args.model, args.k, args.thinking, args.pace))
+              "provider": args.provider, "questions": len(questions), "run": args.run}
+    print("\n{} questions, {}, k={}, thinking {}, run {}, {:.0f}s between requests\n".format(
+        len(questions), args.model, args.k, args.thinking, args.run, args.pace))
 
     records = run(collection, encoder, questions, args)
     totals = summarize(records)
