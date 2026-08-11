@@ -109,10 +109,10 @@ Scraping and indexing need no key at all — embeddings are computed locally.
 
 ```bash
 venv/bin/python scripts/build_index.py            # ~4.5 min, writes data/chroma/
-venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~3 sec
+venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~12 sec
 ```
 
-The model downloads itself on first use (~90 MB). `--dry-run` skips the model entirely and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds instead of minutes.
+The model downloads itself on first use (~90 MB). `--dry-run` skips the embedding pass and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds rather than minutes. Most of its runtime is importing torch; the chunking itself is about 2.5 seconds.
 
 ---
 

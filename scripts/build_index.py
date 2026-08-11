@@ -8,9 +8,11 @@ Re-running is minutes and costs nothing, which is why this rebuilds the collecti
 scratch instead of trying to update it in place.
 
 Run:  venv/bin/python scripts/build_index.py [--dry-run]
-      --dry-run chunks and reports without loading the model or writing the index. That is
+      --dry-run chunks and reports without embedding anything or writing the index. That is
       how you tune the sizes below: the chunking is the part worth iterating on, and paying
-      the embedding cost to see a chunk-count histogram is a waste of three minutes.
+      4.5 minutes of embedding to see a chunk-size histogram is a waste. It still loads the
+      model, because the tokenizer that counts chunk sizes comes with it — ~12s wall clock
+      against ~2.5s of actual chunking.
 """
 
 import glob
@@ -20,6 +22,8 @@ import os
 import re
 import sys
 import time
+import chromadb
+from sentence_transformers import SentenceTransformer
 
 INPUT_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
 INDEX_DIR = "data/chroma"
@@ -95,7 +99,7 @@ EXCLUDED_COURTS = ("bia", "olc")
 SIDECAR_FIELDS = ("source_id", "source_type", "title", "citation", "court_id",
                   "date", "barrier", "url", "retrieved", "extracted_from")
 
-# Chroma's per-call cap is in the low thousands; the whole corpus is ~2,000 chunks, so this
+# Chroma's per-call cap is in the low thousands; the whole corpus is 3,210 chunks, so this
 # is really just a guard against a future corpus tripping a limit mid-run.
 ADD_BATCH = 1000
 
@@ -389,9 +393,6 @@ def write_index(records):
     the index, silently, where they will be retrieved and believed. Re-embedding the whole
     corpus is a few minutes on CPU and costs nothing, so the safe option is also the cheap one.
     """
-    import chromadb
-    from sentence_transformers import SentenceTransformer
-
     print(f"\nLoading {MODEL_NAME} (downloads ~90 MB on first use)...")
     model = SentenceTransformer(MODEL_NAME)
 
@@ -437,7 +438,6 @@ def main():
     # The tokenizer, not a word count or a chars/4 estimate. The ceiling this whole file is
     # built around is measured in the model's own WordPiece tokens, so counting them any
     # other way reintroduces exactly the truncation the ceiling exists to prevent.
-    from sentence_transformers import SentenceTransformer
     tokenizer = SentenceTransformer(MODEL_NAME).tokenizer
     cache = {}
 
