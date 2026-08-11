@@ -30,6 +30,10 @@ v1 covers three decision points:
 
 Asylum is out of scope for v1 and may be added later.
 
+**Current dollar amounts are out of scope, because the source puts them elsewhere.** The Policy Manual states who qualifies for a waiver and what documents establish it, but routes the amounts themselves to a separate fee schedule (Form G-1055) and to regulation at 8 CFR 106, so fees can change without policy being rewritten. Court opinions in the corpus do quote fee tables, but as of the date they were decided — one recites a fee schedule the same opinion went on to block from taking effect.
+
+So a fee question returns dated figures with the date attached and a caveat that they may not be current, which is accurate but weaker than it should be: the chapters that name the fee schedule as the authority rank just outside the default depth, so the answer does not yet point there. It is the clearest case for a deeper default that the evaluation has produced.
+
 ---
 
 ## Architecture
@@ -54,7 +58,9 @@ CourtListener API ────┘                  (+ metadata)                 
 
 **Evaluation** scores retrieval against a hand-written question set before any model is involved. Fifteen questions, each keyed to the documents that should come back and to verbatim sentences those documents contain, so a run reports both whether the right chapter arrived and whether the right paragraph did. Keys are checked against the corpus before they are scored — an answer key naming a document that does not exist scores zero and is indistinguishable from a retrieval failure.
 
-**Generation** is the next layer and is not built yet: the retrieved passages become the only context a model is allowed to answer from, with the citations carried through to the answer. Retrieval is deliberately usable and measurable without it — whether the right source came back is a question no model needs to answer.
+**Generation** hands the retrieved passages to a model as the only context it may answer from, labeled `[S1]`, `[S2]` and so on, and then checks the citations by arithmetic. The label-to-chunk map never leaves the caller, so a citation naming a source that was never supplied is caught by counting rather than by reading, and a bracketed group holding no label at all — a statute cited as though it were one of the sources — is caught the same way. Refusal is a fixed sentence rather than a phrasing the model chooses, which makes "did it decline" a boolean. Retrieval stays usable and measurable without any of this: whether the right source came back is a question no model needs to answer.
+
+Generation is a single HTTP request rather than a provider SDK. The current SDK requires a newer Python than the pinned environment, and talking to the API directly also reaches request fields the SDK does not expose — the reasoning-effort control used here is documented for a different endpoint and works anyway. Retries, backoff and error categories are shared with the scrapers, so a rate-limit response means the same thing in both.
 
 ### Corpus
 
@@ -77,13 +83,16 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Chunking and embedding layer (`scripts/build_index.py`, ChromaDB) | Shipped |
 | Retrieval with citations (`scripts/query.py`, `scripts/citations.py`) | Shipped |
 | Retrieval evaluation against a hand-built question set (`scripts/eval_retrieval.py`) | Shipped |
-| Answer generation constrained to retrieved passages | Next |
-| Barrier-type tagging (financial, linguistic, procedural, timeline) | Planned |
+| Answer generation constrained to retrieved passages, with mechanical citation checking (`scripts/generate.py`) | Shipped |
+| Evaluation of generated answers, including retrieval depth | Next |
+| Barrier-type tagging extended to the Policy Manual half | Planned |
 | Streamlit interface | Planned |
 
 ### Barrier tagging
 
-A planned layer tags each passage by the kind of barrier it describes: financial, linguistic, procedural, or timeline. Knowing you're blocked by a documentation requirement rather than an income threshold changes what you do next.
+Each passage carries a tag for the kind of barrier it describes: financial, linguistic, procedural, or timeline. Knowing you're blocked by a documentation requirement rather than an income threshold changes what you do next, and `--barrier` restricts a search to one kind.
+
+The tags currently cover the case-law half, where they come from the hand-verified holding recorded for each opinion in `data/caselaw_opinion_ids.json`. Extending them to the Policy Manual half is a term-frequency pass over a small vocabulary, checked against those hand labels — the cheap method gets tried and measured before an expensive one.
 
 ---
 
@@ -105,7 +114,7 @@ GEMINI_API_KEY=your_key_here
 COURTLISTENER_API_TOKEN=your_token_here
 ```
 
-A CourtListener token is free at https://www.courtlistener.com/profile/api-token/. Generation runs on Gemini's free tier; a local Ollama model is supported as a no-key fallback, so the repo is runnable without signing up for anything.
+A CourtListener token is free at https://www.courtlistener.com/profile/api-token/, and a Gemini key is free at https://aistudio.google.com/apikey with no card. Generation runs on Gemini's free tier, whose daily request limit is visible only in AI Studio rather than in the published documentation; a local Ollama model is supported as a no-key fallback, so the repo is runnable without signing up for anything.
 
 Scraping and indexing need no key at all — embeddings are computed locally.
 
@@ -133,6 +142,23 @@ venv/bin/python scripts/query.py            # no question: prompt in a loop
 Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
 
 Several of the top five often come from the same document, because chunk counts per document run from 1 to 248 and the ranking is over chunks rather than documents. That reads like a defect and mostly is not: the document taking the most slots is usually the one that answers the question, and its adjacent chunks are how the neighbor window ends up covering a continuous stretch of the relevant section. No cap is applied — see below for what capping was measured to cost.
+
+### Generating an answer
+
+```bash
+venv/bin/python scripts/generate.py "can I get a fee waiver for naturalization?"
+venv/bin/python scripts/generate.py "..." --dry-run           # assemble the prompt, call nothing
+venv/bin/python scripts/generate.py "..." -k 8 --thinking low
+venv/bin/python scripts/generate.py "..." --provider ollama    # local model, no key
+```
+
+The retrieved passages are labeled `[S1]`, `[S2]` and so on, and the model is instructed to cite one after every factual claim, to flag disagreement between sources rather than choose a side, to date any figure a source supports only as of some past time, and to refuse with a fixed sentence when the passages do not answer the question. Output marks which sources were actually cited, and warns when a citation names a source that was never supplied.
+
+`--dry-run` prints the assembled prompt without spending a request, which is how prompt changes get inspected for free. `--thinking` sets reasoning effort; it shares one budget with the answer, so a large reasoning pass under a small ceiling truncates the reply rather than the reasoning.
+
+A failure never raises. A rate-limited or unavailable model returns the retrieved passages under an explanation instead, because on a free tier quota exhaustion is ordinary and a demo that hard-fails on it is worse than one that shows five citable passages and says why.
+
+Passage text repeated across two labels is removed before the prompt is built — two hits from one document can widen onto the same neighbor, and adjacent chunks share their overlap besides. Left in, the same paragraph arrives under two labels and there is no basis for citing one over the other.
 
 ---
 
