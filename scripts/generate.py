@@ -59,6 +59,12 @@ TEMPERATURE = 0
 # *output* budget below. Measured: default thinking took 979 tokens on the fee-waiver probe,
 # "low" took 58.
 #
+# Inherited from a constraint that no longer binds (the output ceiling was 1024), so it is a
+# leftover rather than a measured choice. eval_generation.py settles it as low vs high — two
+# values that can be pinned. Omitting the field to take the model's own default is not a
+# candidate: it is an alias, and would change under a recorded score the way
+# `gemini-flash-latest` would.
+#
 # This field is documented only for the newer Interactions API, and works here anyway —
 # verified by sending an invalid value and getting "Invalid value at
 # generation_config.thinking_config.thinking_level" rather than "Cannot find field". Reaching
@@ -118,6 +124,10 @@ BRACKETED = re.compile(r"\[([^\]]*)\]")
 LABEL = re.compile(r"S(\d+)")
 
 WRAP = 94
+
+# One connection reused across a run, the way the case law fetcher does it. A single question
+# does not care; a 15-question eval pays 15 TLS handshakes against one host without it.
+SESSION = requests.Session()
 
 
 def api_key():
@@ -268,7 +278,7 @@ def post_with_retries(url, headers, body):
     for attempt in range(1, MAX_ATTEMPTS + 1):
         wait = None
         try:
-            response = requests.post(url, headers=headers, json=body, timeout=TIMEOUT)
+            response = SESSION.post(url, headers=headers, json=body, timeout=TIMEOUT)
             response.raise_for_status()
             return response.json()
 
