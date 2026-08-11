@@ -1,0 +1,420 @@
+[
+  {
+    "id": "fee-waiver",
+    "question": "can I get a fee waiver for naturalization?",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "hit": true,
+    "first_rank": 3,
+    "top_score": 0.702,
+    "anchors": 2,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "household income level is at or below 150 percent of the Federal Poverty Guidelines",
+      "receiving a means-tested benefit at the time of filing the request for fee waiver"
+    ],
+    "expected": [
+      "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions"
+    ],
+    "found": [
+      "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions"
+    ],
+    "off_target": [],
+    "crowding": 4,
+    "crowded_by": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+    "crowded_off_target": false,
+    "ranked": [
+      "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+      "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+      "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions",
+      "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+      "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services"
+    ]
+  },
+  {
+    "id": "english-test-disability",
+    "question": "I have a disability and cannot learn English. Is there an exception to the English test?",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.64,
+    "anchors": 2,
+    "anchors_in_chunk": 2,
+    "anchors_in_window": 2,
+    "missing_anchors": [],
+    "expected": [
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
+    ],
+    "found": [
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
+    ],
+    "off_target": [],
+    "crowding": 3,
+    "crowded_by": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+      "volume_12_part_c_accommodations_chapter_3_types_of_accommodations",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
+    ]
+  },
+  {
+    "id": "age-exemption",
+    "question": "I am 68 and have had a green card for 22 years. Do I still have to take the English test?",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.648,
+    "anchors": 2,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 2,
+    "missing_anchors": [],
+    "expected": [
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
+    ],
+    "found": [
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
+    ],
+    "off_target": [],
+    "crowding": 4,
+    "crowded_by": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
+    ]
+  },
+  {
+    "id": "long-trip-abroad",
+    "question": "I was outside the United States for eight months. Does that break my continuous residence?",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.725,
+    "anchors": 2,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 2,
+    "missing_anchors": [],
+    "expected": [
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
+    ],
+    "found": [
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
+    ],
+    "off_target": [],
+    "crowding": 5,
+    "crowded_by": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
+    ]
+  },
+  {
+    "id": "delay-after-interview",
+    "question": "USCIS interviewed me over a year ago and still has not decided my case. What can I do?",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    },
+    "capped_recall": {
+      "1": 0.5,
+      "2": 0.5,
+      "3": 0.5
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.702,
+    "anchors": 3,
+    "anchors_in_chunk": 2,
+    "anchors_in_window": 2,
+    "missing_anchors": [
+      "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency"
+    ],
+    "expected": [
+      "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
+      "opinion_8412814_aljabri_v_holder"
+    ],
+    "found": [
+      "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination"
+    ],
+    "off_target": [],
+    "crowding": 1,
+    "crowded_by": "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
+      "opinion_7245087_shawuti_v_us_citizenship_immigration_services"
+    ]
+  },
+  {
+    "id": "appeal-denial",
+    "question": "My naturalization application was denied. Can I appeal it?",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "capped_recall": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "hit": false,
+    "first_rank": null,
+    "top_score": 0.705,
+    "anchors": 2,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "A naturalization applicant may request judicial review before a United States district court of his or her denied naturalization application",
+      "The district court reviews the case de novo and makes its own findings of fact and conclusions of law"
+    ],
+    "expected": [
+      "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review"
+    ],
+    "found": [],
+    "off_target": [
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+    ],
+    "crowding": 4,
+    "crowded_by": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+    "crowded_off_target": false,
+    "ranked": [
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
+    ]
+  },
+  {
+    "id": "spouse-three-years",
+    "question": "How long do I have to be married to a U.S. citizen before I can apply for citizenship?",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.737,
+    "anchors": 2,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 2,
+    "missing_anchors": [],
+    "expected": [
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states"
+    ],
+    "found": [
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states"
+    ],
+    "off_target": [
+      "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad"
+    ],
+    "crowding": 3,
+    "crowded_by": "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_2_marriage_and_marital_union_for_naturalization",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad"
+    ]
+  },
+  {
+    "id": "false-testimony",
+    "question": "I gave a wrong answer at my interview. Can that count against my good moral character?",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    },
+    "capped_recall": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "hit": false,
+    "first_rank": 8,
+    "top_score": 0.544,
+    "anchors": 3,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "False testimony occurs when the alien deliberately intends to deceive the U.S. Government while under oath in order to obtain an immigration benefit",
+      "False statements in a written application and falsified documents, whether or not under oath, do not constitute",
+      "Kariuki claimed under oath that he never had falsely represented himself"
+    ],
+    "expected": [
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+      "opinion_821040_anthony_kariuki_v_tracy_tarango"
+    ],
+    "found": [],
+    "off_target": [
+      "opinion_7230471_hassan_v_johnson"
+    ],
+    "crowding": 2,
+    "crowded_by": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+      "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+      "opinion_7230471_hassan_v_johnson",
+      "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+      "opinion_7252103_yemer_v_us_citizenship_immigration_servs"
+    ]
+  },
+  {
+    "id": "removal-proceedings",
+    "question": "Can I still naturalize if I am in removal proceedings?",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 0.5,
+      "3": 0.5
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.677,
+    "anchors": 3,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 1,
+    "missing_anchors": [
+      "USCIS may not consider the merits of any application for naturalization for an applicant in removal proceedings",
+      "the limitation imposed by \u00a7 1429 applies only to the executive branch"
+    ],
+    "expected": [
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+    ],
+    "found": [
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization"
+    ],
+    "off_target": [
+      "opinion_7798290_hafils_akpovi_v_david_douglas",
+      "opinion_7798290_hafils_akpovi_v_david_douglas",
+      "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors"
+    ],
+    "crowding": 2,
+    "crowded_by": "opinion_7798290_hafils_akpovi_v_david_douglas",
+    "crowded_off_target": true,
+    "ranked": [
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+      "opinion_7798290_hafils_akpovi_v_david_douglas",
+      "opinion_7798290_hafils_akpovi_v_david_douglas",
+      "opinion_10846400_joseph_ebu_v_uscis",
+      "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors"
+    ]
+  },
+  {
+    "id": "dui-good-moral-character",
+    "question": "Will two DUI convictions stop me from becoming a citizen?",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped_recall": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.598,
+    "anchors": 2,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 1,
+    "missing_anchors": [
+      "the alien may be able to later naturalize if able to establish good moral character"
+    ],
+    "expected": [
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+    ],
+    "found": [
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+    ],
+    "off_target": [
+      "opinion_2391590_rico_v_immigration_naturalization_service"
+    ],
+    "crowding": 2,
+    "crowded_by": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+    "crowded_off_target": false,
+    "ranked": [
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+      "opinion_8709858_dar_v_olivares",
+      "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+    ]
+  }
+]
