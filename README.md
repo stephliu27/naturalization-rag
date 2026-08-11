@@ -48,7 +48,7 @@ CourtListener API ────┘                  (+ metadata)                 
 
 **Indexing** chunks the corpus, embeds it locally with `all-MiniLM-L6-v2`, and stores the vectors in ChromaDB with the full metadata sidecar on every chunk. Chunk sizing is set by the model rather than by convention: MiniLM reads at most 256 tokens and silently ignores the rest, so anything longer would be stored and displayed intact while half of it stayed unmatchable. Chunks therefore target 220 tokens against a hard 256 ceiling, with 40 tokens of overlap, and a chunk closes early at a section heading so it covers one topic rather than two. **105 documents become 3,210 chunks** — median 196 tokens, none over the ceiling, about four and a half minutes to embed on a laptop CPU.
 
-**Retrieval and generation** embeds the question, retrieves the top-k chunks with a neighbouring-chunk window for context, and prompts the model to answer only from those chunks and cite them.
+**Retrieval and generation** embeds the question, retrieves the top-k chunks with a neighboring-chunk window for context, and prompts the model to answer only from those chunks and cite them.
 
 ### Corpus
 
@@ -69,7 +69,9 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Case-law ingestion via CourtListener API (`scripts/fetch_caselaw.py`) | Shipped |
 | Text extraction and cleaning into `data/processed/` | Shipped |
 | Chunking and embedding layer (`scripts/build_index.py`, ChromaDB) | Shipped |
-| RAG query loop with forced citation | Next |
+| Retrieval with citations (`scripts/query.py`, `scripts/citations.py`) | Shipped |
+| Retrieval evaluation against a hand-built question set | Next |
+| Answer generation constrained to retrieved passages | Next |
 | Barrier-type tagging (financial, linguistic, procedural, timeline) | Planned |
 | Streamlit interface | Planned |
 
@@ -109,10 +111,22 @@ Scraping and indexing need no key at all — embeddings are computed locally.
 
 ```bash
 venv/bin/python scripts/build_index.py            # ~4.5 min, writes data/chroma/
-venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~12 sec
+venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~13 sec
 ```
 
-The model downloads itself on first use (~90 MB). `--dry-run` skips the embedding pass and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds rather than minutes. Most of its runtime is importing torch; the chunking itself is about 2.5 seconds.
+The model downloads itself on first use (~90 MB). `--dry-run` skips the embedding pass and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds rather than minutes. Almost all of its runtime is startup — importing sentence-transformers is about 5 seconds and building the tokenizer another 2.5 — while the chunking itself is about 2.3.
+
+### Querying
+
+```bash
+venv/bin/python scripts/query.py "can I get a fee waiver for naturalization?"
+venv/bin/python scripts/query.py --type uscis --barrier financial -k 10
+venv/bin/python scripts/query.py            # no question: prompt in a loop
+```
+
+Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Dep't of Homeland Sec., 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
+
+Results are also checked for crowding: when three or more of the top five come from a single document, the tool says so. Chunk counts per document run from 1 to 248, so a long opinion gets proportionally more chances at the top of the ranking regardless of relevance — a real effect on this corpus, reported rather than silently corrected until the evaluation set can measure a fix.
 
 ---
 
