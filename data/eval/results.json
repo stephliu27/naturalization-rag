@@ -250,7 +250,7 @@
     ],
     "off_target": [],
     "crowding": 1,
-    "crowded_by": "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
+    "crowded_by": "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
     "crowded_off_target": false,
     "ranked": [
       "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
@@ -535,6 +535,288 @@
       "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
       "opinion_2391590_rico_v_immigration_naturalization_service",
       "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+    ]
+  },
+  {
+    "id": "court-decides-or-remands",
+    "question": "If I sue because USCIS never decided, can the judge grant my citizenship, or does it go back to USCIS?",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    },
+    "capped": {
+      "1": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "3": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      }
+    },
+    "hit": false,
+    "first_rank": 7,
+    "top_score": 0.661,
+    "anchors": 2,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency",
+      "deny a naturalization application after the applicant has already initiated the court proceeding"
+    ],
+    "expected": [
+      "opinion_8412814_aljabri_v_holder",
+      "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security"
+    ],
+    "found": [],
+    "off_target": [
+      "opinion_8709858_dar_v_olivares",
+      "opinion_10846400_joseph_ebu_v_uscis"
+    ],
+    "crowding": 2,
+    "crowded_by": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+    "crowded_off_target": false,
+    "ranked": [
+      "opinion_8709858_dar_v_olivares",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_7231393_martinez_v_johnson",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_10846400_joseph_ebu_v_uscis"
+    ]
+  },
+  {
+    "id": "notice-to-appear-warrant",
+    "question": "Is a notice to appear the same thing as a warrant of arrest for naturalization purposes?",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    },
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "2": {
+        "recall": 0.5,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
+      },
+      "3": {
+        "recall": 0.5,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
+      }
+    },
+    "hit": false,
+    "first_rank": 7,
+    "top_score": 0.786,
+    "anchors": 2,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "disagree as to whether a \u201cwarrant of arrest\u201d includes a notice to appear",
+      "An NTA is a warrant of arrest for purposes of INA 318, except in the 9th Circuit"
+    ],
+    "expected": [
+      "opinion_7798290_hafils_akpovi_v_david_douglas",
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization"
+    ],
+    "found": [],
+    "off_target": [],
+    "crowding": 5,
+    "crowded_by": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+    "crowded_off_target": false,
+    "ranked": [
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+    ]
+  },
+  {
+    "id": "apa-instead",
+    "question": "Can I sue under the Administrative Procedure Act instead of the naturalization review statute?",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      }
+    },
+    "hit": true,
+    "first_rank": 5,
+    "top_score": 0.627,
+    "anchors": 2,
+    "anchors_in_chunk": 2,
+    "anchors_in_window": 2,
+    "missing_anchors": [],
+    "expected": [
+      "opinion_4766320_gunay_miriyeva_v_uscis"
+    ],
+    "found": [
+      "opinion_4766320_gunay_miriyeva_v_uscis"
+    ],
+    "off_target": [
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+      "opinion_821040_anthony_kariuki_v_tracy_tarango",
+      "opinion_625607_gonzalez_v_secretary_of_department_of_homeland_security"
+    ],
+    "crowding": 2,
+    "crowded_by": "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+    "crowded_off_target": true,
+    "ranked": [
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+      "opinion_821040_anthony_kariuki_v_tracy_tarango",
+      "opinion_625607_gonzalez_v_secretary_of_department_of_homeland_security",
+      "opinion_4766320_gunay_miriyeva_v_uscis"
+    ]
+  },
+  {
+    "id": "must-attend-hearing",
+    "question": "Do I have to go to the USCIS hearing before I can take my denial to court?",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    },
+    "capped": {
+      "1": {
+        "recall": 0.5,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 0.5,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "3": {
+        "recall": 0.5,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      }
+    },
+    "hit": true,
+    "first_rank": 1,
+    "top_score": 0.749,
+    "anchors": 3,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "We hold that it is instead a mandatory claim-processing rule",
+      "we agree with the district court that Donnelly did not satisfy",
+      "We answer the question in the negative and conclude that the district court erred in determining that it lacked subject-matter jurisdiction"
+    ],
+    "expected": [
+      "opinion_6349504_donnelly_v_carrp",
+      "opinion_1035207_mazen_shweika_v_dept_of_homeland_security"
+    ],
+    "found": [
+      "opinion_6349504_donnelly_v_carrp"
+    ],
+    "off_target": [
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
+    ],
+    "crowding": 2,
+    "crowded_by": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+    "crowded_off_target": true,
+    "ranked": [
+      "opinion_6349504_donnelly_v_carrp",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
+    ]
+  },
+  {
+    "id": "conduct-before-applying",
+    "question": "Does something I did before I applied count against my good moral character?",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "capped": {
+      "1": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "3": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      }
+    },
+    "hit": false,
+    "first_rank": 17,
+    "top_score": 0.611,
+    "anchors": 3,
+    "anchors_in_chunk": 0,
+    "anchors_in_window": 0,
+    "missing_anchors": [
+      "USCIS is not limited to reviewing the applicant",
+      "conduct prior to the GMC period may affect the",
+      "conduct that preceded the filing of his application by more than one year"
+    ],
+    "expected": [
+      "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
+      "opinion_821040_anthony_kariuki_v_tracy_tarango"
+    ],
+    "found": [],
+    "off_target": [
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "opinion_2391590_rico_v_immigration_naturalization_service"
+    ],
+    "crowding": 2,
+    "crowded_by": "opinion_2391590_rico_v_immigration_naturalization_service",
+    "crowded_off_target": true,
+    "ranked": [
+      "opinion_7230471_hassan_v_johnson",
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+      "opinion_8709858_dar_v_olivares",
+      "opinion_2391590_rico_v_immigration_naturalization_service"
     ]
   }
 ]

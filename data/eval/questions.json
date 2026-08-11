@@ -5,7 +5,8 @@
     "expected": "Documents a correct answer needs. Scored: recall is found/total, hit is any.",
     "anchors": "Verbatim substrings of that document. Scored separately — coming back from the right chapter is weaker than coming back from the right paragraph.",
     "acceptable": "Not wrong to return and not required. Excluded from the off-target count so that number means something.",
-    "note": "Why these documents and not others. The part that is judgment, kept next to the part that is mechanical."
+    "note": "Why these documents and not others. The part that is judgment, kept next to the part that is mechanical.",
+    "head_to_head": "Absent means yes. Set to false on the five questions added to raise the case-law sample, which are scored for retrieval only. The by-hand comparison against a chat interface costs roughly ten minutes per question across both sides, so growing the retrieval set and growing the comparison set are separate decisions with very different prices."
   },
   "questions": [
     {
@@ -243,6 +244,138 @@
         "opinion_7252103_yemer_v_us_citizenship_immigration_servs"
       ],
       "note": "The first anchor was originally the Markdown table row listing DUI as a conditional bar, on the theory that this question doubles as a check that table text survived the chunker. It does survive — validation finds it in one chunk — but it never ranks, and the substantive DUI section does, so the anchor moved to the prose. A summary table row embeds as a citation list with no sentence in it; presence in the index is not the same as reachability by a question, and that is validation's job rather than this metric's. The second anchor is the word `conditional` doing its work: two DUIs are a bar for a period, not forever, and an answer that omits that is wrong in the direction that matters to the person asking."
+    },
+    {
+      "id": "court-decides-or-remands",
+      "question": "If I sue because USCIS never decided, can the judge grant my citizenship, or does it go back to USCIS?",
+      "head_to_head": false,
+      "expected": [
+        {
+          "source_id": "opinion_8412814_aljabri_v_holder",
+          "anchors": [
+            "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency"
+          ]
+        },
+        {
+          "source_id": "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
+          "anchors": [
+            "deny a naturalization application after the applicant has already initiated the court proceeding"
+          ]
+        }
+      ],
+      "acceptable": [
+        "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+        "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+        "opinion_7231393_martinez_v_johnson",
+        "opinion_7252016_dilone_v_nielsen",
+        "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+        "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination"
+      ],
+      "note": "Answerable only from case law: the Policy Manual states the 120-day clock but has no reason to say what a court may then do with the application, still less that USCIS loses the power to act on it. Aljabri is the exclusive-jurisdiction holding and Haroun is the same rule applied to an agency that denied five days after being sued, which is the fact pattern a person in this situation is actually in."
+    },
+    {
+      "id": "notice-to-appear-warrant",
+      "question": "Is a notice to appear the same thing as a warrant of arrest for naturalization purposes?",
+      "head_to_head": false,
+      "expected": [
+        {
+          "source_id": "opinion_7798290_hafils_akpovi_v_david_douglas",
+          "anchors": [
+            "disagree as to whether a “warrant of arrest” includes a notice to appear"
+          ]
+        },
+        {
+          "source_id": "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+          "anchors": [
+            "An NTA is a warrant of arrest for purposes of INA 318, except in the 9th Circuit"
+          ]
+        }
+      ],
+      "acceptable": [
+        "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+        "opinion_7252016_dilone_v_nielsen",
+        "opinion_10846400_joseph_ebu_v_uscis",
+        "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination"
+      ],
+      "note": "A narrow doctrinal question with a real consequence — whether § 1429 bars the agency at all turns on it — and the corpus answers it from both sides: Akpovi names the circuit split in a footnote, and 12 D.2 states the agency's own position along with the 9th Circuit carve-out. The Akpovi anchor is inside a footnote, which makes this the one question that tests whether the decision to keep substantive footnotes bought anything retrievable."
+    },
+    {
+      "id": "apa-instead",
+      "question": "Can I sue under the Administrative Procedure Act instead of the naturalization review statute?",
+      "head_to_head": false,
+      "expected": [
+        {
+          "source_id": "opinion_4766320_gunay_miriyeva_v_uscis",
+          "anchors": [
+            "she will enjoy in her home district APA-like review and relief",
+            "a codified portion of the Administrative Procedure Act"
+          ]
+        }
+      ],
+      "acceptable": [
+        "opinion_1035207_mazen_shweika_v_dept_of_homeland_security",
+        "opinion_6349504_donnelly_v_carrp",
+        "opinion_1980523_gizzo_v_immigration_naturalization_service",
+        "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review"
+      ],
+      "note": "Nothing in the Policy Manual addresses what other causes of action exist, so this is case-law-only by construction. Miriyeva holds § 1421(c) forecloses parallel district-court jurisdiction, and the second anchor is the reason it is not a harsh result — § 1421(c) review already runs under chapter 7 of title 5, so the applicant gets APA-like relief through the route the statute names."
+    },
+    {
+      "id": "must-attend-hearing",
+      "question": "Do I have to go to the USCIS hearing before I can take my denial to court?",
+      "head_to_head": false,
+      "expected": [
+        {
+          "source_id": "opinion_6349504_donnelly_v_carrp",
+          "anchors": [
+            "We hold that it is instead a mandatory claim-processing rule",
+            "we agree with the district court that Donnelly did not satisfy"
+          ]
+        },
+        {
+          "source_id": "opinion_1035207_mazen_shweika_v_dept_of_homeland_security",
+          "anchors": [
+            "We answer the question in the negative and conclude that the district court erred in determining that it lacked subject-matter jurisdiction"
+          ]
+        }
+      ],
+      "acceptable": [
+        "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review",
+        "volume_12_part_b_naturalization_examination_chapter_5_motion_to_reopen",
+        "opinion_4766320_gunay_miriyeva_v_uscis",
+        "opinion_7798290_hafils_akpovi_v_david_douglas",
+        "opinion_1980523_gizzo_v_immigration_naturalization_service"
+      ],
+      "note": "The two opinions agree on the law and split on what it costs you, which is the whole point of asking: the hearing requirement is not jurisdictional, so a court is not stripped of power by a missed hearing — and Donnelly still lost, because the government raised the failure to exhaust and the rule is mandatory when invoked. An answer that retrieves only the first half tells someone the hearing is optional. 12 B.6 covers the procedure and is acceptable; it does not address what happens when you skip a step."
+    },
+    {
+      "id": "conduct-before-applying",
+      "question": "Does something I did before I applied count against my good moral character?",
+      "head_to_head": false,
+      "expected": [
+        {
+          "source_id": "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
+          "anchors": [
+            "USCIS is not limited to reviewing the applicant",
+            "conduct prior to the GMC period may affect the"
+          ]
+        },
+        {
+          "source_id": "opinion_821040_anthony_kariuki_v_tracy_tarango",
+          "anchors": [
+            "conduct that preceded the filing of his application by more than one year"
+          ]
+        }
+      ],
+      "acceptable": [
+        "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+        "volume_12_part_f_good_moral_character_chapter_3_evidence_and_the_record",
+        "volume_12_part_f_good_moral_character_chapter_4_permanent_bars_to_good_moral_character",
+        "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+        "opinion_7230471_hassan_v_johnson",
+        "opinion_8709858_dar_v_olivares"
+      ],
+      "note": "The statutory period is the thing every applicant has heard of and the thing that misleads them — 12 F.2 section B says outright that USCIS is not confined to it, and Kariuki is that rule losing someone their case over conduct predating the filing by more than a year. Deliberately phrased without the words `statutory period` or `good moral character period`, since an applicant would not know to use them."
     }
   ]
 }
