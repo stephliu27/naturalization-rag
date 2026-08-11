@@ -44,12 +44,6 @@ TOP_K = 5
 # from. So: match small, read wide. Deterministic IDs make this a lookup, not a second search.
 NEIGHBORS = 1
 
-# The imbalance this corpus actually has: chunk counts per document run 1 to 248, and the
-# longest 3 documents are 17% of the index. Top-k ranks chunks, so a long opinion gets more
-# chances before relevance is considered. Printed as a warning rather than corrected — the
-# fix is a diversity filter, and it should be tuned against the eval set, not against a hunch.
-CROWDING_THRESHOLD = 3
-
 WRAP = 94
 
 
@@ -187,21 +181,6 @@ def print_hit(rank, hit, window, hit_ids):
                 print("   {} {}".format(marker, wrapped))
 
 
-def print_crowding(hits):
-    """Warn when one document owns the results. A known failure mode, not a hypothetical."""
-    counts = {}
-    for hit in hits:
-        counts[hit["metadata"]["source_id"]] = counts.get(hit["metadata"]["source_id"], 0) + 1
-    for source_id, count in sorted(counts.items(), key=lambda kv: -kv[1]):
-        if count >= CROWDING_THRESHOLD:
-            metadata = next(h["metadata"] for h in hits
-                            if h["metadata"]["source_id"] == source_id)
-            print("\n   !! {} of {} results are from one document — {}, {} chunks. Long "
-                  "documents get more chances at top-k."
-                  .format(count, len(hits), format_citation(metadata, with_footnotes=False),
-                          metadata["chunk_total"]))
-
-
 def answer(collection, model, question, k, where):
     hits = search(collection, model, question, k, where)
     if not hits:
@@ -212,7 +191,6 @@ def answer(collection, model, question, k, where):
     window = fetch_window(collection, hits)
     for rank, hit in enumerate(hits, 1):
         print_hit(rank, hit, window, hit_ids)
-    print_crowding(hits)
 
 
 def main():

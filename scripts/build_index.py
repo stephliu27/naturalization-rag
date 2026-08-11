@@ -367,9 +367,10 @@ def print_summary(records, skipped, documents, count_tokens, elapsed):
         print(f"  {source_type}: {by_type[source_type]} chunks "
               f"({by_type[source_type] / len(records):.0%})")
 
-    # The imbalance to watch. Top-k retrieves chunks, not documents, so a long opinion gets
-    # proportionally more chances before relevance is considered. Printed every run so the
-    # number is in front of you before the eval set blames retrieval.
+    # How lopsided the corpus is. Printed as a corpus statistic and nothing more: the
+    # ranking is over chunks, so a long document does hold more of them, but capping a
+    # document's share of the results was measured against the question set and made
+    # retrieval worse — it returns fewer of the expected passages, not more.
     ranked = sorted(per_document.items(), key=lambda kv: -kv[1])
     share = sum(count for _, count in ranked[:3]) / len(records)
     print(f"  longest 3 documents are {share:.0%} of all chunks:")

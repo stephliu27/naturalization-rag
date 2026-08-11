@@ -130,7 +130,7 @@ venv/bin/python scripts/query.py            # no question: prompt in a loop
 
 Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
 
-Results are also checked for crowding: when three or more of the top five come from a single document, the tool says so. Chunk counts per document run from 1 to 248, so a long opinion gets proportionally more chances at the top of the ranking regardless of relevance — a real effect on this corpus, reported rather than silently corrected until the evaluation set can measure a fix.
+Several of the top five often come from the same document, because chunk counts per document run from 1 to 248 and the ranking is over chunks rather than documents. That reads like a defect and measurement says it usually is not: on the question set, the document taking most of the slots is normally the one that answers the question, and its adjacent chunks are how the neighbor window covers a continuous stretch of the relevant section. Capping any single document to one slot raises document-level recall by one question and cuts the number of expected passages returned from 12 of 23 to 7, so no cap is applied.
 
 ---
 
