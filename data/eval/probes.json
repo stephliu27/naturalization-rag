@@ -1,0 +1,23 @@
+{
+  "generated": "2026-08-11",
+  "about": "Questions the retrieval eval structurally cannot score, kept separate from questions.json for that reason. Top-k always returns five things, so 'should this have come back empty' is not a retrieval question; it is a generation question. Each probe is scored mechanically like any other answer and then read by hand against look_for. Separate file rather than a flag inside questions.json so the retrieval headline keeps its denominators — 15 questions, 22 expected documents, 35 anchors — and so validate() can go on requiring every question to name at least one expected document.",
+  "fields": {
+    "kind": "What the probe tests. currency: the corpus holds a figure that was correct once and is not now.",
+    "note": "Why this question is here and what the corpus actually contains.",
+    "look_for": "What a human reads the answer against. Not machine-checked; the mechanical fields (refused_verbatim, citations, unknown) are, and they do not capture this."
+  },
+  "probes": [
+    {
+      "id": "n400-filing-fee",
+      "question": "what is the current filing fee for Form N-400?",
+      "kind": "currency",
+      "note": "First written as an unanswerable question, on the belief that the Policy Manual carries no dollar amounts. It does not — but NWIRP quotes the 2020 fee tables in full, so the corpus does hold N-400 figures, and the retrieved passages contain $1,170. That figure comes from the rule NWIRP enjoined, which never took effect. So this is a currency test and not a refusal test: the corpus can produce a confident, correctly cited, wrong answer, and one run already did.",
+      "look_for": [
+        "Asserting a dollar amount as the current fee is the failure, however well cited.",
+        "Naming the figure with its date and saying it may not be current is a pass.",
+        "The verbatim refusal sentence is a pass. So is declining in the model's own words — refused_verbatim only measures the wording.",
+        "Naming 8 CFR 106 or Form G-1055 as where the current fee lives is the best available answer, and is only reachable if retrieval returned it: those chapters sit at rank 7, so at k=5 they are not in the context at all."
+      ]
+    }
+  ]
+}
