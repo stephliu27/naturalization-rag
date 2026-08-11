@@ -42,13 +42,17 @@ CourtListener API ────┘                  (+ metadata)                 
                        answer + citations ◄── Gemini ◄── retrieved context ◄── query
 ```
 
-**Ingestion** scrapes Policy Manual chapters and pulls federal opinions into plain text, each with a metadata sidecar (source, title, citation, court, date, URL).
+**Ingestion** scrapes Policy Manual chapters and pulls federal opinions into plain text, each with a metadata sidecar on the same ten-field schema for both halves — id, type, title, citation, court, date, barrier, URL, retrieval date, and the file it was extracted from.
 
 **Processing** is where the corpus is actually made. The three sources arrive in three unrelated markups — USCIS HTML, Harvard CAP XML, and PDF text with no markup at all — and are collapsed into one line-oriented format so the indexer never branches on where a document came from. Substantive footnotes are kept and moved beneath the paragraph that cites them; citation-only ones are dropped.
 
 **Indexing** chunks the corpus, embeds it locally with `all-MiniLM-L6-v2`, and stores the vectors in ChromaDB with the full metadata sidecar on every chunk. Chunk sizing is set by the model rather than by convention: MiniLM reads at most 256 tokens and silently ignores the rest, so anything longer would be stored and displayed intact while half of it stayed unmatchable. Chunks therefore target 220 tokens against a hard 256 ceiling, with 40 tokens of overlap, and a chunk closes early at a section heading so it covers one topic rather than two. **105 documents become 3,210 chunks** — median 196 tokens, none over the ceiling, about four and a half minutes to embed on a laptop CPU.
 
-**Retrieval and generation** embeds the question, retrieves the top-k chunks with a neighboring-chunk window for context, and prompts the model to answer only from those chunks and cite them.
+**Retrieval** embeds the question with the same model, takes the top-k chunks, and widens each one to its immediate neighbors before showing it — small passages match a question better than whole chapters do, but a small passage is a bad thing to reason from. The neighbor window is a lookup rather than a second search: chunk IDs are `{source_id}_{chunk_index}`, so the surrounding text is fetched by ID and cannot come from another document.
+
+**Citations** are derived, not stored. A Policy Manual URL already encodes its own citation, so `/volume-12-part-a-chapter-1` becomes `12 USCIS-PM A.1` by regex; opinions combine a court map and the date into `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`, falling back to the court and year alone for the five opinions too recent to have a reporter citation. Where a chunk contains a footnote, the citation names it — `12 USCIS-PM B.4, n.8`.
+
+**Generation** is the next layer and is not built yet: the retrieved passages become the only context a model is allowed to answer from, with the citations carried through to the answer. Retrieval is deliberately usable and measurable without it — whether the right source came back is a question no model needs to answer.
 
 ### Corpus
 
@@ -124,7 +128,7 @@ venv/bin/python scripts/query.py --type uscis --barrier financial -k 10
 venv/bin/python scripts/query.py            # no question: prompt in a loop
 ```
 
-Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Dep't of Homeland Sec., 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
+Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
 
 Results are also checked for crowding: when three or more of the top five come from a single document, the tool says so. Chunk counts per document run from 1 to 248, so a long opinion gets proportionally more chances at the top of the ranking regardless of relevance — a real effect on this corpus, reported rather than silently corrected until the evaluation set can measure a fix.
 
