@@ -52,6 +52,8 @@ CourtListener API ────┘                  (+ metadata)                 
 
 **Citations** are derived, not stored. A Policy Manual URL already encodes its own citation, so `/volume-12-part-a-chapter-1` becomes `12 USCIS-PM A.1` by regex; opinions combine a court map and the date into `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`, falling back to the court and year alone for the five opinions too recent to have a reporter citation. Where a chunk contains a footnote, the citation names it — `12 USCIS-PM B.4, n.8`.
 
+**Evaluation** scores retrieval against a hand-written question set before any model is involved. Fifteen questions, each keyed to the documents that should come back and to verbatim sentences those documents contain, so a run reports both whether the right chapter arrived and whether the right paragraph did. Keys are checked against the corpus before they are scored — an answer key naming a document that does not exist scores zero and is indistinguishable from a retrieval failure.
+
 **Generation** is the next layer and is not built yet: the retrieved passages become the only context a model is allowed to answer from, with the citations carried through to the answer. Retrieval is deliberately usable and measurable without it — whether the right source came back is a question no model needs to answer.
 
 ### Corpus
@@ -74,7 +76,7 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Text extraction and cleaning into `data/processed/` | Shipped |
 | Chunking and embedding layer (`scripts/build_index.py`, ChromaDB) | Shipped |
 | Retrieval with citations (`scripts/query.py`, `scripts/citations.py`) | Shipped |
-| Retrieval evaluation against a hand-built question set | Next |
+| Retrieval evaluation against a hand-built question set (`scripts/eval_retrieval.py`) | Shipped |
 | Answer generation constrained to retrieved passages | Next |
 | Barrier-type tagging (financial, linguistic, procedural, timeline) | Planned |
 | Streamlit interface | Planned |
@@ -130,7 +132,38 @@ venv/bin/python scripts/query.py            # no question: prompt in a loop
 
 Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
 
-Several of the top five often come from the same document, because chunk counts per document run from 1 to 248 and the ranking is over chunks rather than documents. That reads like a defect and measurement says it usually is not: on the question set, the document taking most of the slots is normally the one that answers the question, and its adjacent chunks are how the neighbor window covers a continuous stretch of the relevant section. Capping any single document to one slot raises document-level recall by one question and cuts the number of expected passages returned from 12 of 23 to 7, so no cap is applied.
+Several of the top five often come from the same document, because chunk counts per document run from 1 to 248 and the ranking is over chunks rather than documents. That reads like a defect and mostly is not: the document taking the most slots is usually the one that answers the question, and its adjacent chunks are how the neighbor window ends up covering a continuous stretch of the relevant section. No cap is applied — see below for what capping was measured to cost.
+
+---
+
+## Evaluation
+
+```bash
+venv/bin/python scripts/eval_retrieval.py             # score the question set
+venv/bin/python scripts/eval_retrieval.py --validate  # check the question set only, ~1 sec
+venv/bin/python scripts/eval_retrieval.py -k 10 --json results.json
+```
+
+`data/eval/questions.json` holds fifteen questions written in an applicant's voice. Each names the documents a correct answer needs, verbatim sentences from those documents, and the documents that are acceptable to return without being required. Keys are text and document IDs, never chunk IDs — chunk sizing is still tunable and every chunk ID would shift beneath a stored key, leaving an eval that keeps reporting while measuring nothing.
+
+Two things get scored, because they fail separately. **Recall** asks whether the right document ranked in the top k. **Anchors** ask whether the specific paragraph came back, checked as exact text, and are scored twice: once against the matched chunks and once against the neighbor window a reader actually sees.
+
+At k=5 over 15 questions and 35 anchors:
+
+| | |
+|---|---|
+| recall@1 / @3 / @5 / @10 | 43% / 50% / 57% / 70% |
+| questions finding every expected document | 7 / 15 |
+| anchors in a matched chunk | 10 / 35 |
+| anchors once widened to the neighbor window | 14 / 35 |
+
+Three results worth stating plainly, because they set what is worth building next:
+
+**Case law is the weak half.** Policy Manual chapters are found 8 times in 12; court opinions 2 times in 10. It is not that opinions are returned rarely — they take 59% of the returned slots against a 47% share of the index. The wrong opinions come back. The 26 opinions all concern naturalization procedure and cite the same statutes, so they sit close together and close to any procedural question.
+
+**Most of that is a cutoff, not a ranking failure.** At k=10, case law goes from 2 of 10 to 6 of 10 while the Policy Manual half does not move at all — the right opinion is usually just under the line. The default stays at k=5 because a larger k also feeds a generator more passages that are, by construction, worse matches, and whether that helps or hurts an answer is not something a retrieval metric can decide.
+
+**Capping how many slots one document may hold was measured and rejected.** Limiting any document to a single slot raises recall from 57% to 67% and drops expected passages from 14 of 35 to 11 — more chapters, fewer paragraphs, which is the wrong trade for a tool whose output is passages someone reads. Limits of two or three change recall by three points and passages by two, which is inside the noise of a fifteen-question set.
 
 ---
 
