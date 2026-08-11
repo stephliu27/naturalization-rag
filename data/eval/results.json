@@ -8,10 +8,22 @@
       "5": 1.0,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 1
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 1
+      }
     },
     "hit": true,
     "first_rank": 3,
@@ -50,10 +62,22 @@
       "5": 1.0,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      }
     },
     "hit": true,
     "first_rank": 1,
@@ -89,10 +113,22 @@
       "5": 1.0,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
+      }
     },
     "hit": true,
     "first_rank": 1,
@@ -128,10 +164,22 @@
       "5": 1.0,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
+      }
     },
     "hit": true,
     "first_rank": 1,
@@ -167,10 +215,22 @@
       "5": 0.5,
       "10": 0.5
     },
-    "capped_recall": {
-      "1": 0.5,
-      "2": 0.5,
-      "3": 0.5
+    "capped": {
+      "1": {
+        "recall": 0.5,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "2": {
+        "recall": 0.5,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      },
+      "3": {
+        "recall": 0.5,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
+      }
     },
     "hit": true,
     "first_rank": 1,
@@ -190,7 +250,7 @@
     ],
     "off_target": [],
     "crowding": 1,
-    "crowded_by": "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+    "crowded_by": "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
     "crowded_off_target": false,
     "ranked": [
       "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
@@ -209,10 +269,22 @@
       "5": 0.0,
       "10": 0.0
     },
-    "capped_recall": {
-      "1": 0.0,
-      "2": 0.0,
-      "3": 0.0
+    "capped": {
+      "1": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "3": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      }
     },
     "hit": false,
     "first_rank": null,
@@ -251,10 +323,22 @@
       "5": 1.0,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
+      }
     },
     "hit": true,
     "first_rank": 1,
@@ -292,10 +376,22 @@
       "5": 0.0,
       "10": 0.5
     },
-    "capped_recall": {
-      "1": 0.0,
-      "2": 0.0,
-      "3": 0.0
+    "capped": {
+      "1": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "2": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      },
+      "3": {
+        "recall": 0.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 0
+      }
     },
     "hit": false,
     "first_rank": 8,
@@ -317,7 +413,7 @@
       "opinion_7230471_hassan_v_johnson"
     ],
     "crowding": 2,
-    "crowded_by": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
+    "crowded_by": "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
     "crowded_off_target": false,
     "ranked": [
       "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
@@ -336,10 +432,22 @@
       "5": 0.5,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 0.5,
-      "3": 0.5
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 1
+      },
+      "2": {
+        "recall": 0.5,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 1
+      },
+      "3": {
+        "recall": 0.5,
+        "anchors_in_chunk": 0,
+        "anchors_in_window": 1
+      }
     },
     "hit": true,
     "first_rank": 1,
@@ -383,10 +491,22 @@
       "5": 1.0,
       "10": 1.0
     },
-    "capped_recall": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+    "capped": {
+      "1": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
+      },
+      "2": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
+      },
+      "3": {
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
+      }
     },
     "hit": true,
     "first_rank": 1,

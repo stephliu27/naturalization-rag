@@ -86,9 +86,7 @@ def chunk_texts(collection, source_id):
 def validate(collection, questions):
     """Check the question set against the corpus and the index. Returns a list of problems.
 
-    Written because the last session's silent failure was exactly this shape: 25 of 26
-    hand-written source_id keys were invented, and every lookup fell back to a default
-    instead of raising. An eval keyed to a source_id that does not exist would score 0 and
+    An eval keyed to a source_id that does not exist would score 0 and
     read as a retrieval failure forever, so the keys are machine-checked before they are
     trusted. Four separate things can be wrong, and each has its own message:
 
@@ -145,20 +143,25 @@ def validate(collection, questions):
     return problems
 
 
-def capped(ranked, cap, k):
-    """The top k after no document may occupy more than `cap` slots.
+def capped_indices(ranked, cap, k):
+    """Positions of the top k after no document may occupy more than `cap` slots.
 
     Exactly what a post-retrieval diversity filter would do, and deliberately nothing more:
     it walks the existing ranking, skips a document that has had its share, and stops at k.
     Relevance order is untouched, so this cannot invent a result — it can only promote one
     that the crowding pushed below the cutoff.
+
+    Positions rather than source_ids so the caller can index back into either the document
+    list or the hits themselves. That is not a convenience: scoring a cap on recall alone is
+    what made cap=1 look like a win when it was quietly discarding the chunk that held the
+    answer, and the fix needs the chunk text, not just the document name.
     """
     kept, counts = [], {}
-    for source_id in ranked:
+    for position, source_id in enumerate(ranked):
         if counts.get(source_id, 0) >= cap:
             continue
         counts[source_id] = counts.get(source_id, 0) + 1
-        kept.append(source_id)
+        kept.append(position)
         if len(kept) == k:
             break
     return kept
@@ -167,6 +170,21 @@ def capped(ranked, cap, k):
 def recall_of(ranked, expected_ids):
     """Fraction of the expected documents present in a ranked list."""
     return sum(1 for source_id in expected_ids if source_id in ranked) / len(expected_ids)
+
+
+def anchors_found(collection, hits, anchors):
+    """(anchors inside a matched chunk, anchors inside the printed neighbor window).
+
+    The window is scored too because it is what a reader and a generator actually see — an
+    anchor one chunk away from a match is not a retrieval failure. Called once per cap as
+    well as for the uncapped top k, which costs one small `get` each and is what lets the
+    diversity simulation answer "at what price" rather than only "how much".
+    """
+    matched = "\n".join(hit["text"] for hit in hits)
+    window = fetch_window(collection, hits)
+    widened = matched + "\n" + "\n".join(
+        window.get(id_, "") for hit in hits for id_ in neighbor_ids(hit["metadata"]))
+    return ([a for a in anchors if a in matched], [a for a in anchors if a in widened])
 
 
 def score_question(collection, model, question, headline_k, max_k):
@@ -179,28 +197,33 @@ def score_question(collection, model, question, headline_k, max_k):
 
     recall = {cutoff: recall_of(ranked[:cutoff], expected_ids) for cutoff in CUTOFFS}
 
-    # What a diversity cap would have bought on this question, at the headline k.
-    capped_recall = {cap: recall_of(capped(ranked, cap, headline_k), expected_ids)
-                     for cap in CAPS}
-
     # Rank of the first expected document, 1-based. None if it never appears — reported
     # rather than folded into a mean, since a made-up rank for a miss would flatter the
     # reciprocal-rank average.
     first = next((i for i, source_id in enumerate(ranked, 1) if source_id in expected_ids),
                  None)
 
-    # Anchors, at the headline k only. Scored against the matched chunk text and again
-    # against the neighbor window, because the window is what a reader and a generator
-    # actually see — an anchor one chunk away from the match is not a retrieval failure.
+    # Anchors, at the headline k. Scored against the matched chunk text and again against
+    # the neighbor window, because the window is what a reader and a generator actually see.
     top = hits[:headline_k]
-    matched = "\n".join(hit["text"] for hit in top)
-    window = fetch_window(collection, top)
-    widened = matched + "\n" + "\n".join(
-        window.get(id_, "") for hit in top for id_ in neighbor_ids(hit["metadata"]))
-
     anchors = [a for entry in question["expected"] for a in entry["anchors"]]
-    in_chunk = [a for a in anchors if a in matched]
-    in_window = [a for a in anchors if a in widened]
+    in_chunk, in_window = anchors_found(collection, top, anchors)
+
+    # What a diversity cap would have done to this question — scored on *both* metrics.
+    # Recall alone said cap=1 was the best setting; it is the setting that throws away a
+    # document's second chunk, which is frequently the one holding the paragraph. A cap that
+    # gains a chapter and loses the page is not an improvement, and a simulation that cannot
+    # express that is worse than none, because it recommends with confidence.
+    capped_scores = {}
+    for cap in CAPS:
+        positions = capped_indices(ranked, cap, headline_k)
+        cap_chunk, cap_window = anchors_found(collection, [hits[i] for i in positions],
+                                              anchors)
+        capped_scores[cap] = {
+            "recall": recall_of([ranked[i] for i in positions], expected_ids),
+            "anchors_in_chunk": len(cap_chunk),
+            "anchors_in_window": len(cap_window),
+        }
 
     # Off-target and crowding, both at the headline k. Off-target counts results that are
     # neither expected nor merely acceptable, so `acceptable` is what keeps this number from
@@ -221,14 +244,14 @@ def score_question(collection, model, question, headline_k, max_k):
         "id": question["id"],
         "question": question["question"],
         "recall": recall,
-        "capped_recall": capped_recall,
+        "capped": capped_scores,
         "hit": recall[headline_k] > 0,
         "first_rank": first,
         "top_score": round(hits[0]["score"], 3) if hits else 0.0,
         "anchors": len(anchors),
         "anchors_in_chunk": len(in_chunk),
         "anchors_in_window": len(in_window),
-        "missing_anchors": [a for a in anchors if a not in widened],
+        "missing_anchors": [a for a in anchors if a not in in_window],
         "expected": expected_ids,
         "found": [source_id for source_id in expected_ids if source_id in top_ids],
         "off_target": off_target,
@@ -289,25 +312,37 @@ def print_report(results, headline_k):
           "document that is not a source for the question".format(
               "crowding", len(crowded), total, headline_k, len(harmful)))
 
-    # The line that decides whether the diversity filter gets written. Crowding is only a
-    # problem to the extent that capping it recovers an expected document; if these numbers
-    # match the uncapped recall, the crowding is ugly and harmless and the fix is a no-op.
-    baseline = sum(r["recall"][headline_k] for r in results) / total
-    print("{:<12}recall@{} if one document may hold at most N of the {} slots:  {}  (uncapped "
-          "{:.0%})".format(
-              "diversity", headline_k, headline_k,
-              "  ".join("N={}: {:.0%}".format(
-                  cap, sum(r["capped_recall"][cap] for r in results) / total)
-                  for cap in CAPS),
-              baseline))
-    for result in results:
-        gained = [cap for cap in CAPS if result["capped_recall"][cap] > result["recall"][headline_k]]
-        lost = [cap for cap in CAPS if result["capped_recall"][cap] < result["recall"][headline_k]]
-        if gained or lost:
-            print("            {:<26} {}{}".format(
-                result["id"],
-                "recovered at N={}".format(min(gained)) if gained else "",
-                "  worse at N={}".format(",".join(str(c) for c in lost)) if lost else ""))
+    # The block that decides whether the diversity filter gets written, and the reason it
+    # reports two columns rather than one. Scored on recall alone, cap=1 reads as the best
+    # setting available; scored on anchors as well, it is the worst, because the chunk it
+    # discards is often the one holding the paragraph. Both columns or neither.
+    baseline_recall = sum(r["recall"][headline_k] for r in results) / total
+    baseline_chunk = sum(r["anchors_in_chunk"] for r in results)
+    baseline_window = sum(r["anchors_in_window"] for r in results)
+    print("\n{:<12}what a per-document cap would do to the top {}:".format(
+        "diversity", headline_k))
+    print("            {:<10} {:>8} {:>10} {:>10}".format("", "recall", "anchors", "window"))
+    print("            {:<10} {:>8.0%} {:>7}/{:<2} {:>7}/{:<2}".format(
+        "uncapped", baseline_recall, baseline_chunk, anchors, baseline_window, anchors))
+    for cap in sorted(CAPS, reverse=True):
+        cap_recall = sum(r["capped"][cap]["recall"] for r in results) / total
+        cap_chunk = sum(r["capped"][cap]["anchors_in_chunk"] for r in results)
+        cap_window = sum(r["capped"][cap]["anchors_in_window"] for r in results)
+        # The trap gets a sentence; everything else gets its deltas and no adjective. A cap
+        # that gains documents while losing paragraphs is the one failure a reader of this
+        # table can talk themselves past, and it is the one that actually happened.
+        if cap_recall > baseline_recall and cap_window < baseline_window:
+            verdict = "  <- more chapters, fewer paragraphs"
+        else:
+            deltas = []
+            if cap_recall != baseline_recall:
+                deltas.append("{:+.0f}pp recall".format((cap_recall - baseline_recall) * 100))
+            if cap_window != baseline_window:
+                deltas.append("{:+d} window".format(cap_window - baseline_window))
+            verdict = "  ({})".format(", ".join(deltas)) if deltas else ""
+        print("            N={:<8} {:>8.0%} {:>7}/{:<2} {:>7}/{:<2}{}".format(
+            cap, cap_recall, cap_chunk, anchors, cap_window, anchors, verdict))
+
     off = sum(len(r["off_target"]) for r in results)
     print("{:<12}{} of {} results are neither expected nor acceptable".format(
         "off-target", off, total * headline_k))
