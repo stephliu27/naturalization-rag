@@ -411,7 +411,7 @@ def generate(question, sources, provider="gemini", model=None, thinking=THINKING
     # English out of a message someone may reword.
     result = {"question": question, "provider": provider, "model": model, "answer": None,
               "degraded": None, "degraded_category": None,
-              "declined": False, "truncated": False, "usage": {},
+              "refused_verbatim": False, "truncated": False, "usage": {},
               "sources": [{k: source[k] for k in ("label", "citation", "id", "source_id",
                                                   "source_type", "score")}
                           for source in sources]}
@@ -431,7 +431,13 @@ def generate(question, sources, provider="gemini", model=None, thinking=THINKING
 
     result["answer"] = answer
     result["usage"] = usage
-    result["declined"] = answer.startswith(INSUFFICIENT)
+    # Named for what it measures, which is instruction-following and not judgment. A model can
+    # reach the right conclusion and word it its own way: Flash-Lite answered "The provided
+    # sources do not state the current filing fee" — a refusal by any reading, and False here.
+    # Do not treat False as "it answered"; it means either that or "it declined in other words."
+    # The looser notion is not mechanically decidable, so it gets hand-counted rather than
+    # approximated by a keyword list that would make a fuzzy number look exact.
+    result["refused_verbatim"] = answer.startswith(INSUFFICIENT)
     # A truncated answer's last citation may be missing rather than absent, so the citation
     # check is only trustworthy when the model finished.
     result["truncated"] = finish == "MAX_TOKENS"
@@ -475,8 +481,8 @@ def print_result(result, sources, show_sources=False):
                 ", ".join(repr(m) for m in result["malformed"])))
         if result["truncated"]:
             flags.append("answer hit maxOutputTokens, so citations may be cut")
-        if result["declined"]:
-            flags.append("declined to answer from these sources")
+        if result["refused_verbatim"]:
+            flags.append("used the required refusal sentence")
         for flag in flags:
             print("  ! {}".format(flag))
 
