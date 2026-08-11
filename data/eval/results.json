@@ -6,6 +6,7 @@
       "1": 0.0,
       "3": 1.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -60,6 +61,7 @@
       "1": 1.0,
       "3": 1.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -111,6 +113,7 @@
       "1": 1.0,
       "3": 1.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -162,6 +165,7 @@
       "1": 1.0,
       "3": 1.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -213,6 +217,7 @@
       "1": 0.5,
       "3": 0.5,
       "5": 0.5,
+      "8": 0.5,
       "10": 0.5
     },
     "capped": {
@@ -250,7 +255,7 @@
     ],
     "off_target": [],
     "crowding": 1,
-    "crowded_by": "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
+    "crowded_by": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
     "crowded_off_target": false,
     "ranked": [
       "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
@@ -267,6 +272,7 @@
       "1": 0.0,
       "3": 0.0,
       "5": 0.0,
+      "8": 0.0,
       "10": 0.0
     },
     "capped": {
@@ -321,6 +327,7 @@
       "1": 1.0,
       "3": 1.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -374,6 +381,7 @@
       "1": 0.0,
       "3": 0.0,
       "5": 0.0,
+      "8": 0.5,
       "10": 0.5
     },
     "capped": {
@@ -413,7 +421,7 @@
       "opinion_7230471_hassan_v_johnson"
     ],
     "crowding": 2,
-    "crowded_by": "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+    "crowded_by": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
     "crowded_off_target": false,
     "ranked": [
       "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
@@ -430,6 +438,7 @@
       "1": 0.5,
       "3": 0.5,
       "5": 0.5,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -489,6 +498,7 @@
       "1": 1.0,
       "3": 1.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -544,6 +554,7 @@
       "1": 0.0,
       "3": 0.0,
       "5": 0.0,
+      "8": 0.5,
       "10": 0.5
     },
     "capped": {
@@ -600,6 +611,7 @@
       "1": 0.0,
       "3": 0.0,
       "5": 0.0,
+      "8": 0.5,
       "10": 0.5
     },
     "capped": {
@@ -653,6 +665,7 @@
       "1": 0.0,
       "3": 0.0,
       "5": 1.0,
+      "8": 1.0,
       "10": 1.0
     },
     "capped": {
@@ -709,6 +722,7 @@
       "1": 0.5,
       "3": 0.5,
       "5": 0.5,
+      "8": 0.5,
       "10": 0.5
     },
     "capped": {
@@ -769,6 +783,7 @@
       "1": 0.0,
       "3": 0.0,
       "5": 0.0,
+      "8": 0.0,
       "10": 0.0
     },
     "capped": {

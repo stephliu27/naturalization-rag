@@ -37,10 +37,13 @@ QUESTIONS_PATH = "data/eval/questions.json"
 PROCESSED_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
 
 # Reported as a curve rather than a single number. One query at the largest cutoff answers
-# all four — the ranked list is a prefix of itself — so the curve is free, and it says
+# all of them — the ranked list is a prefix of itself — so the curve is free, and it says
 # something a single number cannot: recall@1 is what a generator with a tight context sees,
 # recall@10 is the ceiling retrieval could reach if reranking were added.
-CUTOFFS = (1, 3, 5, 10)
+# 8 is here because it is where the curve stops climbing: 8 and 10 return the same recall on
+# the same questions, so depth past 8 buys nothing and only adds passages that dilute. Keeping
+# 10 in the report is what makes that visible rather than asserted.
+CUTOFFS = (1, 3, 5, 8, 10)
 
 # The k the headline numbers use, and the k query.py prints at.
 HEADLINE_K = 5

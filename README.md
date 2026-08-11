@@ -152,7 +152,7 @@ At k=5 over 15 questions and 35 anchors:
 
 | | |
 |---|---|
-| recall@1 / @3 / @5 / @10 | 43% / 50% / 57% / 70% |
+| recall@1 / @3 / @5 / @8 / @10 | 43% / 50% / 57% / 70% / 70% |
 | questions finding every expected document | 7 / 15 |
 | anchors in a matched chunk | 10 / 35 |
 | anchors once widened to the neighbor window | 14 / 35 |
@@ -161,7 +161,9 @@ Three results worth stating plainly, because they set what is worth building nex
 
 **Case law is the weak half.** Policy Manual chapters are found 8 times in 12; court opinions 2 times in 10. It is not that opinions are returned rarely — they take 59% of the returned slots against a 47% share of the index. The wrong opinions come back. The 26 opinions all concern naturalization procedure and cite the same statutes, so they sit close together and close to any procedural question.
 
-**Most of that is a cutoff, not a ranking failure.** At k=10, case law goes from 2 of 10 to 6 of 10 while the Policy Manual half does not move at all — the right opinion is usually just under the line. The default stays at k=5 because a larger k also feeds a generator more passages that are, by construction, worse matches, and whether that helps or hurts an answer is not something a retrieval metric can decide.
+**Most of that is a cutoff, not a ranking failure.** At k=10, case law goes from 2 of 10 to 6 of 10 while the Policy Manual half does not move at all — the right opinion is usually just under the line. The Policy Manual misses are far misses instead, at ranks 17, 38 and 66, which no cutoff reaches; they are a vocabulary gap between how an applicant asks and how policy is written.
+
+**Depth past 8 buys nothing.** Recall at 8 and at 10 is the same 70% over the same questions, so the two extra slots add only passages that dilute. That narrows the open question from k=5 against k=10 to k=5 against k=8, and it was settled by a metric that costs nothing to run. The default stays at 5 for now, because a larger k feeds a generator more passages that are by construction worse matches, and whether that helps or hurts an answer is not something a retrieval metric can decide.
 
 **Capping how many slots one document may hold was measured and rejected.** Limiting any document to a single slot raises recall from 57% to 67% and drops expected passages from 14 of 35 to 11 — more chapters, fewer paragraphs, which is the wrong trade for a tool whose output is passages someone reads. Limits of two or three change recall by three points and passages by two, which is inside the noise of a fifteen-question set.
 
