@@ -110,8 +110,10 @@ Python · BeautifulSoup · lxml · CourtListener REST API · onnxruntime · Chro
 
 ## Setup
 
+**Python 3.9 through 3.12.** Every version in `requirements.txt` is pinned, and the newest of those pins with a prebuilt wheel tops out at 3.12 — on 3.13 or later, `pip` falls back to compiling NumPy and ONNX Runtime from source, which is slow and fails outright on a memory-limited host. The pins are exact rather than ranges because ONNX Runtime is what turns text into vectors: the committed index was embedded by a specific version of it, and a query embedded by a different one is being compared against vectors it did not produce. The deployed app runs 3.12 for the same reason.
+
 ```bash
-python -m venv venv && source venv/bin/activate
+python3.12 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 ```
 
