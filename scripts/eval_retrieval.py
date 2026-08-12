@@ -238,7 +238,11 @@ def score_question(collection, model, question, headline_k, max_k):
     top_ids = ranked[:headline_k]
     off_target = [source_id for source_id in top_ids if source_id not in allowed]
     crowding = max((top_ids.count(source_id) for source_id in set(top_ids)), default=0)
-    crowded_by = max(set(top_ids), key=top_ids.count) if top_ids else ""
+    # Over the list, not over a `set` of it. Both pick a document with the most slots, but a
+    # set has no order and its iteration order varies between processes, so on a tie — which
+    # is every question where no document repeats — this field changed from run to run while
+    # nothing else did. Over the list, ties go to the highest-ranked document, deterministically.
+    crowded_by = max(top_ids, key=top_ids.count) if top_ids else ""
 
     # Whether the crowding is the problem or just what a focused question looks like. One
     # chapter taking all 5 slots on a question that chapter answers is a correct result;
