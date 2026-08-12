@@ -90,9 +90,11 @@ The full selection method, the five queries, the rejected cases and the reasonin
 
 ### Barrier tagging
 
-Each passage carries a tag for the kind of barrier it describes: financial, linguistic, procedural, or timeline. Knowing you're blocked by a documentation requirement rather than an income threshold changes what you do next, and `--barrier` restricts a search to one kind.
+Each passage carries a tag for the kind of barrier it describes: `procedural`, `character`, `delay`, `linguistic`, or `financial`. Knowing you're blocked by a documentation requirement rather than an income threshold changes what you do next, and `--barrier` restricts a search to one kind.
 
-The tags currently cover the case-law half, where they come from the hand-verified holding recorded for each opinion in `data/caselaw_opinion_ids.json`. Extending them to the Policy Manual half is a term-frequency pass over a small vocabulary, checked against those hand labels — the cheap method gets tried and measured before an expensive one.
+The tags cover the case-law half — 1,511 chunks — where they come from the hand-verified holding recorded for each opinion in `data/caselaw_opinion_ids.json`. The 1,699 Policy Manual chunks are untagged.
+
+That asymmetry is why `--barrier` is a command-line filter and not a control in the interface. Restricting to one barrier type currently removes the entire Policy Manual half, so asking about fee waivers under `financial` returns litigation over the fee rule and drops the chapter that states the eligibility grounds. A filter that silently makes answers worse is worse than no filter. Extending the tags is a term-frequency pass over a small vocabulary, checked against the hand labels — the cheap method measured before an expensive one — and the control belongs in the interface only once both halves are covered.
 
 ---
 
