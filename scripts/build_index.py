@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import tarfile
 import time
 
 import chromadb
@@ -31,6 +32,12 @@ from encoder import (  # noqa: E402  (after the path fix, by necessity)
 INPUT_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
 INDEX_DIR = "data/chroma"
 COLLECTION = "naturalization"
+
+# The archive that ships the index; see pack_index() and query.py's
+# INDEX_ARCHIVE, which reads it back. Repeated rather than imported because
+# query.py imports the encoder, and the indexer should not depend on the
+# querier to know where it writes.
+INDEX_ARCHIVE = "data/chroma.tar.gz"
 
 METADATA_SUFFIX = "_metadata.json"
 
@@ -428,6 +435,25 @@ def write_index(records):
           f"(collection '{COLLECTION}').")
 
 
+def pack_index():
+    """Write `INDEX_DIR` to the committed archive that ships the index.
+
+    Runs immediately after the index is written, and not as a separate command, because the two
+    have to agree: `data/chroma/` is gitignored, so the archive is the only copy anyone else
+    sees, and a rebuild that skipped this step would leave every cloner and the deployed app on
+    the previous index while everything here looked correct.
+
+    Compression is why this is worth doing at all rather than committing the directory — 35 MB
+    of sqlite and HNSW binaries pack to about 17 — but the reason it *has* to be an archive is
+    that Chroma writes to its sqlite file on read, so a tracked directory is dirty after every
+    query. See INDEX_ARCHIVE in query.py.
+    """
+    print(f"Packing {INDEX_DIR}/ into {INDEX_ARCHIVE}...")
+    with tarfile.open(INDEX_ARCHIVE, "w:gz") as archive:
+        archive.add(INDEX_DIR)
+    print(f"Wrote {INDEX_ARCHIVE} ({os.path.getsize(INDEX_ARCHIVE) / 1e6:.1f} MB).")
+
+
 def main():
     dry_run = "--dry-run" in sys.argv[1:]
 
@@ -458,6 +484,7 @@ def main():
         print("\n--dry-run: nothing embedded, nothing written.")
         return
     write_index(records)
+    pack_index()
 
 
 if __name__ == "__main__":

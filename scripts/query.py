@@ -18,6 +18,7 @@ Run:  venv/bin/python scripts/query.py "can I get a fee waiver for naturalizatio
 import argparse
 import os
 import sys
+import tarfile
 import textwrap
 
 import chromadb
@@ -28,6 +29,16 @@ from encoder import MODEL_NAME, load_encoder  # noqa: E402
 
 INDEX_DIR = "data/chroma"
 COLLECTION = "naturalization"
+
+# The index ships as an archive and is unpacked on first use, rather than being committed as a
+# directory. The reason is that **Chroma writes to its sqlite file when you only read from it**:
+# opening the collection for a query bumps SQLite's change counter and rewrites a page or two,
+# measured at 18 bytes, so a tracked directory reports itself modified after every single query
+# and each of those is another 29 MB blob in history. The archive is 17 MB rather than 35, never
+# changes unless the index is genuinely rebuilt, and unpacks in about a tenth of a second — so
+# `data/chroma/` goes back to being gitignored, regenerable data, the way the rest of the repo
+# treats it. `build_index.py` writes the archive as its last step, so the two cannot diverge.
+INDEX_ARCHIVE = "data/chroma.tar.gz"
 
 # Measured on generated answers, not chosen. `eval_generation.py` scored k=5 against k=8 across
 # both thinking levels, twice each: k=8 puts 4 more expected paragraphs in front of the model
@@ -46,10 +57,37 @@ NEIGHBORS = 1
 WRAP = 94
 
 
+def ensure_index():
+    """Unpack the shipped index if it is not already on disk. Whether one is now present.
+
+    Neither exits nor raises, deliberately, because the two callers want different failures:
+    the command line prints the build command and stops, while the app renders the same fact as
+    page content. `sys.exit` here would take that choice away from both — and a `SystemExit`
+    inside Streamlit's cached loader surfaces as a stack trace rather than as a message.
+    """
+    if os.path.isdir(INDEX_DIR):
+        return True
+    if not os.path.isfile(INDEX_ARCHIVE):
+        return False
+
+    print("Unpacking {}...".format(INDEX_ARCHIVE))
+    with tarfile.open(INDEX_ARCHIVE) as archive:
+        # Extracted against the working directory because the member paths are already
+        # `data/chroma/...`, the same relative-path assumption INDEX_DIR itself makes.
+        #
+        # `extractall` is unsafe on an *untrusted* archive — a member named `../../x` writes
+        # outside the target — and this one is written by `build_index.py` in this repo, never
+        # downloaded. Python 3.9 has no `filter="data"` argument to enforce that; it arrives in
+        # 3.12, and is worth adding whenever this venv moves.
+        archive.extractall(".")
+    return os.path.isdir(INDEX_DIR)
+
+
 def load_collection():
     """The Chroma collection, or a message explaining how to make one."""
-    if not os.path.isdir(INDEX_DIR):
-        sys.exit("No index at {}/. Run: venv/bin/python scripts/build_index.py".format(INDEX_DIR))
+    if not ensure_index():
+        sys.exit("No index at {}/ and no archive at {}. Run: venv/bin/python "
+                 "scripts/build_index.py".format(INDEX_DIR, INDEX_ARCHIVE))
     client = chromadb.PersistentClient(path=INDEX_DIR)
     try:
         return client.get_collection(COLLECTION)
