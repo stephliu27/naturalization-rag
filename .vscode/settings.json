@@ -1,0 +1,4 @@
+{
+  "// scripts/ is an import root at runtime, not a package": "app.py, query.py and eval_retrieval.py all insert it into sys.path before importing. The editor's analyzer reads imports statically and cannot see that, so it reports every one of them as unresolvable. This tells it where to look; it changes nothing at runtime.",
+  "python.analysis.extraPaths": ["scripts"]
+}

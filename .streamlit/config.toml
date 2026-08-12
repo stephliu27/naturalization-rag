@@ -1,0 +1,5 @@
+# Streamlit reports usage statistics to its own servers unless told not to. The app asks
+# visitors not to enter personal information; sending telemetry they were never told about,
+# on the same page, is the wrong shape whatever the payload turns out to contain.
+[browser]
+gatherUsageStats = false

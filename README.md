@@ -124,12 +124,18 @@ Scraping and indexing need no key at all — embeddings are computed locally.
 
 ### Building the index
 
-`data/processed/` is committed, so the index builds without re-scraping anything:
+**Usually you don't have to.** The built index ships as `data/chroma.tar.gz` (17 MB) and unpacks itself into `data/chroma/` the first time anything queries it, which takes about a tenth of a second. Querying a fresh clone works immediately.
+
+It ships as an archive rather than as a committed directory because Chroma writes to its SQLite file when you only read from it — opening the collection for a query bumps the change counter and rewrites a page or two — so a tracked directory reports itself modified after every query, and each of those would be another 29 MB blob in the history. The archive is half the size, changes only when the index is genuinely rebuilt, and lets `data/chroma/` stay gitignored like the regenerable data it is.
+
+To rebuild it from scratch — `data/processed/` is committed, so this needs no re-scraping:
 
 ```bash
-venv/bin/python scripts/build_index.py            # writes data/chroma/
+venv/bin/python scripts/build_index.py            # writes data/chroma/, then repacks the archive
 venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~2 sec
 ```
+
+Repacking is the last step of the build rather than a separate command, because the archive is the only copy anyone else sees: a rebuild that skipped it would leave every clone and the deployed app on the previous index while everything here looked correct.
 
 The model downloads itself on first use (~80 MB). `--dry-run` skips the embedding pass and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds rather than minutes.
 
@@ -161,6 +167,22 @@ The retrieved passages are labeled `[S1]`, `[S2]` and so on, and the model is in
 A failure never raises. A rate-limited or unavailable model returns the retrieved passages under an explanation instead, because on a free tier quota exhaustion is ordinary and a demo that hard-fails on it is worse than one that shows eight citable passages and says why.
 
 Passage text repeated across two labels is removed before the prompt is built — two hits from one document can widen onto the same neighbor, and adjacent chunks share their overlap besides. Left in, the same paragraph arrives under two labels and there is no basis for citing one over the other.
+
+### The app
+
+```bash
+venv/bin/streamlit run app.py
+```
+
+A question box, the cited answer, and the passages it was written from underneath it, each expandable and marked when the answer cited it. The sidebar reports the corpus and evaluation numbers, read out of `data/eval/` rather than typed in, so the page cannot claim a score the committed results do not support.
+
+Each `[S1]` in the answer links to the primary source — the Policy Manual chapter or the opinion on CourtListener — with its citation on hover. The label rather than the citation stays in the prose deliberately: citations are document-level, so five of the eight passages on a fee-waiver question carry the same one, and only the label says which passage a claim rests on.
+
+`app.py` is a view over the same functions the command line calls, at the same measured defaults — it re-implements no retrieval, no chunking and no citation checking. The encoder and the index load once per container rather than once per interaction, and the index ships prebuilt, so a fresh host unpacks it in a fraction of a second instead of embedding 3,210 chunks before answering anything.
+
+Generation is capped per session, so one visitor cannot spend the day's free-tier requests; past the cap, and on any provider failure, the app keeps retrieving and shows the cited passages without an answer. The key is read from Streamlit secrets or from `.env`, never from the repo.
+
+**Questions are sent to a third-party model to write the answer, so the app says not to enter personal information** — no names, case numbers or facts about your own situation. Retrieval alone never leaves the machine it runs on.
 
 ---
 
