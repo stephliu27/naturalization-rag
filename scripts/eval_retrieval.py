@@ -29,7 +29,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from encoder import load_encoder  # noqa: E402  (after the path fix, by necessity)
-from query import fetch_window, load_collection, neighbor_ids, search  # noqa: E402
+from query import TOP_K, fetch_window, load_collection, neighbor_ids, search  # noqa: E402
 
 QUESTIONS_PATH = "data/eval/questions.json"
 PROCESSED_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
@@ -43,8 +43,10 @@ PROCESSED_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
 # 10 in the report is what makes that visible rather than asserted.
 CUTOFFS = (1, 3, 5, 8, 10)
 
-# The k the headline numbers use, and the k query.py prints at.
-HEADLINE_K = 5
+# The k the headline numbers use. Imported rather than repeated: it is the k that ships, and a
+# headline measured at a depth the system does not use describes something nobody runs. Moved
+# 5 -> 8 with TOP_K, by the generation grid rather than by this file's own numbers.
+HEADLINE_K = TOP_K
 
 # How deep the ranked list is fetched. Larger than the largest cutoff so the diversity
 # simulation below has something to promote — a cap can only pull up a document that ranked

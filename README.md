@@ -174,14 +174,15 @@ venv/bin/python scripts/eval_retrieval.py -k 10 --json results.json
 
 Two things get scored, because they fail separately. **Recall** asks whether the right document ranked in the top k. **Anchors** ask whether the specific paragraph came back, checked as exact text, and are scored twice: once against the matched chunks and once against the neighbor window a reader actually sees.
 
-At k=5 over 15 questions and 35 anchors:
+At k=8 over 15 questions and 35 anchors:
 
 | | |
 |---|---|
 | recall@1 / @3 / @5 / @8 / @10 | 43% / 50% / 57% / 70% / 70% |
-| questions finding every expected document | 7 / 15 |
-| anchors in a matched chunk | 10 / 35 |
-| anchors once widened to the neighbor window | 14 / 35 |
+| questions finding every expected document | 8 / 15 |
+| questions finding at least one | 13 / 15 |
+| anchors in a matched chunk | 14 / 35 |
+| anchors once widened to the neighbor window | 18 / 35 |
 
 Three results worth stating plainly, because they set what is worth building next:
 
@@ -189,9 +190,9 @@ Three results worth stating plainly, because they set what is worth building nex
 
 **Most of that is a cutoff, not a ranking failure.** At k=10, case law goes from 2 of 10 to 6 of 10 while the Policy Manual half does not move at all — the right opinion is usually just under the line. The Policy Manual misses are far misses instead, at ranks 17, 38 and 66, which no cutoff reaches; they are a vocabulary gap between how an applicant asks and how policy is written.
 
-**Depth past 8 buys nothing.** Recall at 8 and at 10 is the same 70% over the same questions, so the two extra slots add only passages that dilute. That narrows the open question from k=5 against k=10 to k=5 against k=8, and it was settled by a metric that costs nothing to run. The default stays at 5 for now, because a larger k feeds a generator more passages that are by construction worse matches, and whether that helps or hurts an answer is not something a retrieval metric can decide.
+**Depth past 8 buys nothing, and 8 was then checked against 5 on generated answers.** Recall at 8 and at 10 is the same 70% over the same questions, so the two extra slots add only passages that dilute — which ruled out k=10 before a single model call. What a retrieval metric could not decide was whether the extra passages help or hurt an *answer*, since they are by construction worse matches. Scoring both depths on generated output settled it: k=8 puts four more expected paragraphs in front of the model, and the two questions that scored lower turned out to have cited a different chunk of the same chapter, with answers as good or better. The default is 8.
 
-**Capping how many slots one document may hold was measured and rejected.** Limiting any document to a single slot raises recall from 57% to 67% and drops expected passages from 14 of 35 to 11 — more chapters, fewer paragraphs, which is the wrong trade for a tool whose output is passages someone reads. Limits of two or three change recall by three points and passages by two, which is inside the noise of a fifteen-question set.
+**Capping how many slots one document may hold was measured and rejected.** Limiting any document to a single slot raises recall from 70% to 77% and drops expected passages from 18 of 35 to 12 — more chapters, fewer paragraphs, which is the wrong trade for a tool whose output is passages someone reads. Limits of two or three move recall by three points and passages by one, inside the noise of a fifteen-question set.
 
 ---
 

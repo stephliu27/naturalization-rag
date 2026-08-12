@@ -31,9 +31,8 @@
     "top_score": 0.702,
     "anchors": 2,
     "anchors_in_chunk": 0,
-    "anchors_in_window": 0,
+    "anchors_in_window": 1,
     "missing_anchors": [
-      "household income level is at or below 150 percent of the Federal Poverty Guidelines",
       "receiving a means-tested benefit at the time of filing the request for fee waiver"
     ],
     "expected": [
@@ -42,8 +41,10 @@
     "found": [
       "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions"
     ],
-    "off_target": [],
-    "crowding": 4,
+    "off_target": [
+      "volume_12_part_i_military_members_and_their_families_chapter_5_application_and_filing_for_service_members_ina_328_and_329"
+    ],
+    "crowding": 5,
     "crowded_by": "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
     "crowded_off_target": false,
     "ranked": [
@@ -51,6 +52,9 @@
       "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
       "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions",
       "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+      "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services",
+      "volume_1_part_b_submission_of_benefit_requests_chapter_4_fee_waivers_and_fee_exemptions",
+      "volume_12_part_i_military_members_and_their_families_chapter_5_application_and_filing_for_service_members_ina_328_and_329",
       "opinion_4574859_northwest_immigrant_rights_project_v_united_states_citizenship_and_immigration_services"
     ]
   },
@@ -95,7 +99,7 @@
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
     ],
     "off_target": [],
-    "crowding": 3,
+    "crowding": 5,
     "crowded_by": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
     "crowded_off_target": false,
     "ranked": [
@@ -103,7 +107,10 @@
       "volume_12_part_c_accommodations_chapter_3_types_of_accommodations",
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
-      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+      "volume_12_part_c_accommodations_chapter_3_types_of_accommodations",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
     ]
   },
   {
@@ -137,7 +144,7 @@
     "first_rank": 1,
     "top_score": 0.648,
     "anchors": 2,
-    "anchors_in_chunk": 1,
+    "anchors_in_chunk": 2,
     "anchors_in_window": 2,
     "missing_anchors": [],
     "expected": [
@@ -146,8 +153,10 @@
     "found": [
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
     ],
-    "off_target": [],
-    "crowding": 4,
+    "off_target": [
+      "volume_12_part_b_naturalization_examination_chapter_3_naturalization_interview"
+    ],
+    "crowding": 6,
     "crowded_by": "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
     "crowded_off_target": false,
     "ranked": [
@@ -155,7 +164,10 @@
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
       "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
-      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648"
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_3_medical_certification_for_disability_exceptions_form_n648",
+      "volume_12_part_b_naturalization_examination_chapter_3_naturalization_interview",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing",
+      "volume_12_part_e_english_and_civics_testing_and_exceptions_chapter_2_english_and_civics_testing"
     ]
   },
   {
@@ -198,8 +210,10 @@
     "found": [
       "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
     ],
-    "off_target": [],
-    "crowding": 5,
+    "off_target": [
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states"
+    ],
+    "crowding": 7,
     "crowded_by": "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
     "crowded_off_target": false,
     "ranked": [
@@ -207,6 +221,9 @@
       "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
       "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
       "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
       "volume_12_part_d_general_naturalization_requirements_chapter_3_continuous_residence"
     ]
   },
@@ -254,15 +271,18 @@
       "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination"
     ],
     "off_target": [],
-    "crowding": 1,
-    "crowded_by": "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
+    "crowding": 2,
+    "crowded_by": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
     "crowded_off_target": false,
     "ranked": [
       "volume_12_part_b_naturalization_examination_chapter_4_results_of_the_naturalization_examination",
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
       "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
-      "opinion_7245087_shawuti_v_us_citizenship_immigration_services"
+      "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review"
     ]
   },
   {
@@ -307,9 +327,10 @@
     ],
     "found": [],
     "off_target": [
-      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security"
     ],
-    "crowding": 4,
+    "crowding": 5,
     "crowded_by": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
     "crowded_off_target": false,
     "ranked": [
@@ -317,7 +338,10 @@
       "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
-      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_4766320_gunay_miriyeva_v_uscis",
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security"
     ]
   },
   {
@@ -361,6 +385,7 @@
       "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states"
     ],
     "off_target": [
+      "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad",
       "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad"
     ],
     "crowding": 3,
@@ -371,7 +396,10 @@
       "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
       "volume_12_part_g_spouses_of_us_citizens_chapter_2_marriage_and_marital_union_for_naturalization",
       "volume_12_part_g_spouses_of_us_citizens_chapter_3_spouses_of_us_citizens_residing_in_the_united_states",
-      "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad"
+      "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_2_marriage_and_marital_union_for_naturalization",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_4_spouses_of_us_citizens_employed_abroad",
+      "volume_12_part_g_spouses_of_us_citizens_chapter_1_purpose_and_background"
     ]
   },
   {
@@ -386,22 +414,22 @@
     },
     "capped": {
       "1": {
-        "recall": 0.0,
+        "recall": 0.5,
         "anchors_in_chunk": 0,
         "anchors_in_window": 0
       },
       "2": {
-        "recall": 0.0,
+        "recall": 0.5,
         "anchors_in_chunk": 0,
         "anchors_in_window": 0
       },
       "3": {
-        "recall": 0.0,
+        "recall": 0.5,
         "anchors_in_chunk": 0,
         "anchors_in_window": 0
       }
     },
-    "hit": false,
+    "hit": true,
     "first_rank": 8,
     "top_score": 0.544,
     "anchors": 3,
@@ -416,9 +444,13 @@
       "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
       "opinion_821040_anthony_kariuki_v_tracy_tarango"
     ],
-    "found": [],
+    "found": [
+      "opinion_821040_anthony_kariuki_v_tracy_tarango"
+    ],
     "off_target": [
-      "opinion_7230471_hassan_v_johnson"
+      "opinion_7230471_hassan_v_johnson",
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "opinion_7239370_dos_reis_v_mccleary"
     ],
     "crowding": 2,
     "crowded_by": "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
@@ -428,7 +460,10 @@
       "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
       "opinion_7230471_hassan_v_johnson",
       "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
-      "opinion_7252103_yemer_v_us_citizenship_immigration_servs"
+      "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "opinion_7239370_dos_reis_v_mccleary",
+      "opinion_821040_anthony_kariuki_v_tracy_tarango"
     ]
   },
   {
@@ -448,24 +483,23 @@
         "anchors_in_window": 1
       },
       "2": {
-        "recall": 0.5,
-        "anchors_in_chunk": 0,
-        "anchors_in_window": 1
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
       },
       "3": {
-        "recall": 0.5,
-        "anchors_in_chunk": 0,
-        "anchors_in_window": 1
+        "recall": 1.0,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 2
       }
     },
     "hit": true,
     "first_rank": 1,
     "top_score": 0.677,
     "anchors": 3,
-    "anchors_in_chunk": 0,
-    "anchors_in_window": 1,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 2,
     "missing_anchors": [
-      "USCIS may not consider the merits of any application for naturalization for an applicant in removal proceedings",
       "the limitation imposed by \u00a7 1429 applies only to the executive branch"
     ],
     "expected": [
@@ -473,7 +507,8 @@
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
     ],
     "found": [
-      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization"
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
     ],
     "off_target": [
       "opinion_7798290_hafils_akpovi_v_david_douglas",
@@ -481,14 +516,17 @@
       "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors"
     ],
     "crowding": 2,
-    "crowded_by": "opinion_7798290_hafils_akpovi_v_david_douglas",
-    "crowded_off_target": true,
+    "crowded_by": "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+    "crowded_off_target": false,
     "ranked": [
       "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
       "opinion_7798290_hafils_akpovi_v_david_douglas",
       "opinion_7798290_hafils_akpovi_v_david_douglas",
       "opinion_10846400_joseph_ebu_v_uscis",
-      "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors"
+      "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
+      "opinion_10846400_joseph_ebu_v_uscis",
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
     ]
   },
   {
@@ -534,9 +572,10 @@
       "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
     ],
     "off_target": [
-      "opinion_2391590_rico_v_immigration_naturalization_service"
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization"
     ],
-    "crowding": 2,
+    "crowding": 4,
     "crowded_by": "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
     "crowded_off_target": false,
     "ranked": [
@@ -544,6 +583,9 @@
       "opinion_8709858_dar_v_olivares",
       "volume_12_part_f_good_moral_character_chapter_2_adjudicative_factors",
       "opinion_2391590_rico_v_immigration_naturalization_service",
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period",
+      "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization",
       "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
     ]
   },
@@ -559,41 +601,42 @@
     },
     "capped": {
       "1": {
-        "recall": 0.0,
-        "anchors_in_chunk": 0,
-        "anchors_in_window": 0
+        "recall": 0.5,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
       },
       "2": {
-        "recall": 0.0,
-        "anchors_in_chunk": 0,
-        "anchors_in_window": 0
+        "recall": 0.5,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
       },
       "3": {
-        "recall": 0.0,
-        "anchors_in_chunk": 0,
-        "anchors_in_window": 0
+        "recall": 0.5,
+        "anchors_in_chunk": 1,
+        "anchors_in_window": 1
       }
     },
-    "hit": false,
+    "hit": true,
     "first_rank": 7,
     "top_score": 0.661,
     "anchors": 2,
-    "anchors_in_chunk": 0,
-    "anchors_in_window": 0,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 1,
     "missing_anchors": [
-      "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency",
-      "deny a naturalization application after the applicant has already initiated the court proceeding"
+      "that court has exclusive jurisdiction over the naturalization application unless and until the matter is remanded to the agency"
     ],
     "expected": [
       "opinion_8412814_aljabri_v_holder",
       "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security"
     ],
-    "found": [],
+    "found": [
+      "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security"
+    ],
     "off_target": [
       "opinion_8709858_dar_v_olivares",
       "opinion_10846400_joseph_ebu_v_uscis"
     ],
-    "crowding": 2,
+    "crowding": 3,
     "crowded_by": "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
     "crowded_off_target": false,
     "ranked": [
@@ -601,7 +644,10 @@
       "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
       "opinion_7231393_martinez_v_johnson",
       "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
-      "opinion_10846400_joseph_ebu_v_uscis"
+      "opinion_10846400_joseph_ebu_v_uscis",
+      "opinion_7245087_shawuti_v_us_citizenship_immigration_services",
+      "opinion_4416725_emad_haroun_v_us_dept_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
     ]
   },
   {
@@ -621,33 +667,36 @@
         "anchors_in_window": 2
       },
       "2": {
-        "recall": 0.5,
-        "anchors_in_chunk": 1,
-        "anchors_in_window": 1
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
       },
       "3": {
-        "recall": 0.5,
-        "anchors_in_chunk": 1,
-        "anchors_in_window": 1
+        "recall": 1.0,
+        "anchors_in_chunk": 2,
+        "anchors_in_window": 2
       }
     },
-    "hit": false,
+    "hit": true,
     "first_rank": 7,
     "top_score": 0.786,
     "anchors": 2,
-    "anchors_in_chunk": 0,
-    "anchors_in_window": 0,
+    "anchors_in_chunk": 1,
+    "anchors_in_window": 1,
     "missing_anchors": [
-      "disagree as to whether a \u201cwarrant of arrest\u201d includes a notice to appear",
       "An NTA is a warrant of arrest for purposes of INA 318, except in the 9th Circuit"
     ],
     "expected": [
       "opinion_7798290_hafils_akpovi_v_david_douglas",
       "volume_12_part_d_general_naturalization_requirements_chapter_2_lawful_permanent_resident_admission_for_naturalization"
     ],
-    "found": [],
-    "off_target": [],
-    "crowding": 5,
+    "found": [
+      "opinion_7798290_hafils_akpovi_v_david_douglas"
+    ],
+    "off_target": [
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
+    ],
+    "crowding": 6,
     "crowded_by": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
     "crowded_off_target": false,
     "ranked": [
@@ -655,7 +704,10 @@
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
-      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen"
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
+      "opinion_7798290_hafils_akpovi_v_david_douglas",
+      "volume_12_part_f_good_moral_character_chapter_5_conditional_bars_for_acts_in_statutory_period"
     ]
   },
   {
@@ -702,7 +754,9 @@
       "opinion_4565506_moya_v_united_states_department_of_homeland_security",
       "opinion_4565506_moya_v_united_states_department_of_homeland_security",
       "opinion_821040_anthony_kariuki_v_tracy_tarango",
-      "opinion_625607_gonzalez_v_secretary_of_department_of_homeland_security"
+      "opinion_625607_gonzalez_v_secretary_of_department_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_7223114_rivera_v_us_citizenship_immigration_services"
     ],
     "crowding": 2,
     "crowded_by": "opinion_4565506_moya_v_united_states_department_of_homeland_security",
@@ -712,7 +766,10 @@
       "opinion_4565506_moya_v_united_states_department_of_homeland_security",
       "opinion_821040_anthony_kariuki_v_tracy_tarango",
       "opinion_625607_gonzalez_v_secretary_of_department_of_homeland_security",
-      "opinion_4766320_gunay_miriyeva_v_uscis"
+      "opinion_4766320_gunay_miriyeva_v_uscis",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_4766320_gunay_miriyeva_v_uscis",
+      "opinion_7223114_rivera_v_us_citizenship_immigration_services"
     ]
   },
   {
@@ -763,7 +820,10 @@
     "off_target": [
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
-      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "volume_12_part_b_naturalization_examination_chapter_3_naturalization_interview"
     ],
     "crowding": 2,
     "crowded_by": "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
@@ -773,7 +833,10 @@
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "opinion_4243031_seanlim_yith_v_kirstjen_nielsen",
       "volume_12_part_b_naturalization_examination_chapter_6_uscis_hearing_and_judicial_review",
-      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security"
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "opinion_4565506_moya_v_united_states_department_of_homeland_security",
+      "opinion_7238503_iqbal_v_secretary_us_department_of_homeland_security",
+      "volume_12_part_b_naturalization_examination_chapter_3_naturalization_interview"
     ]
   },
   {
@@ -788,7 +851,7 @@
     },
     "capped": {
       "1": {
-        "recall": 0.0,
+        "recall": 0.5,
         "anchors_in_chunk": 0,
         "anchors_in_window": 0
       },
@@ -821,17 +884,22 @@
     "found": [],
     "off_target": [
       "opinion_2391590_rico_v_immigration_naturalization_service",
-      "opinion_2391590_rico_v_immigration_naturalization_service"
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+      "opinion_7239370_dos_reis_v_mccleary"
     ],
     "crowding": 2,
-    "crowded_by": "opinion_2391590_rico_v_immigration_naturalization_service",
-    "crowded_off_target": true,
+    "crowded_by": "opinion_7230471_hassan_v_johnson",
+    "crowded_off_target": false,
     "ranked": [
       "opinion_7230471_hassan_v_johnson",
       "opinion_2391590_rico_v_immigration_naturalization_service",
       "volume_12_part_f_good_moral_character_chapter_1_purpose_and_background",
       "opinion_8709858_dar_v_olivares",
-      "opinion_2391590_rico_v_immigration_naturalization_service"
+      "opinion_2391590_rico_v_immigration_naturalization_service",
+      "opinion_7230471_hassan_v_johnson",
+      "opinion_7252103_yemer_v_us_citizenship_immigration_servs",
+      "opinion_7239370_dos_reis_v_mccleary"
     ]
   }
 ]

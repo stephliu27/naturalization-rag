@@ -29,7 +29,13 @@ from encoder import MODEL_NAME, load_encoder  # noqa: E402
 INDEX_DIR = "data/chroma"
 COLLECTION = "naturalization"
 
-TOP_K = 5
+# Measured on generated answers, not chosen. `eval_generation.py` scored k=5 against k=8 across
+# both thinking levels, twice each: k=8 puts 4 more expected paragraphs in front of the model
+# and costs ~1,300 prompt tokens a question. The dilution this was held at 5 to avoid did not
+# appear — the two questions that scored lower cited a different chunk of the *same* chapter,
+# and their answers were as good or better. Recall is flat from 8 through 12, so 8 is where the
+# free retrieval metric stops improving and the paid one stops disagreeing with it.
+TOP_K = 8
 
 # A hit is printed with its immediate neighbors from the same document. Retrieval works
 # best on small passages — a 220-token chunk about fee waivers matches a fee-waiver question
