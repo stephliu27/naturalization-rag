@@ -24,13 +24,12 @@ import textwrap
 import time
 
 import requests
-from sentence_transformers import SentenceTransformer
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from citations import format_citation  # noqa: E402  (after the path fix, by necessity)
+from encoder import load_encoder  # noqa: E402
 from query import (  # noqa: E402
-    MODEL_NAME, TOP_K, build_where, fetch_window, load_collection, neighbor_ids, search,
-    strip_overlap)
+    TOP_K, build_where, fetch_window, load_collection, neighbor_ids, search, strip_overlap)
 from scraping import (  # noqa: E402
     FetchError, ParseError, backoff_seconds, category_for_status, retry_after_seconds)
 
@@ -550,7 +549,7 @@ def main():
     question = " ".join(args.question)
     collection = load_collection()
     where = build_where(collection, args.type, args.barrier)
-    encoder = SentenceTransformer(MODEL_NAME)
+    encoder = load_encoder()
 
     if args.dry_run:
         hits = search(collection, encoder, question, k=args.k, where=where)

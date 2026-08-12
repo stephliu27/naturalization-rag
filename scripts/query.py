@@ -21,20 +21,13 @@ import sys
 import textwrap
 
 import chromadb
-from sentence_transformers import SentenceTransformer
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from citations import format_citation  # noqa: E402  (after the path fix, by necessity)
+from encoder import MODEL_NAME, load_encoder  # noqa: E402
 
 INDEX_DIR = "data/chroma"
 COLLECTION = "naturalization"
-
-# Must match build_index.py. Embedding a question with a different model than the corpus
-# gives two vectors in unrelated spaces — every distance would be meaningless, and nothing
-# would look broken. Duplicated as a literal rather than imported from build_index, so that
-# querying does not depend on the indexer; the cost of the duplication is that changing the
-# model means changing it in two places, and the two places must be changed together.
-MODEL_NAME = "all-MiniLM-L6-v2"
 
 TOP_K = 5
 
@@ -204,7 +197,7 @@ def main():
     collection = load_collection()
     where = build_where(collection, args.type, args.barrier)
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = load_encoder()
 
     if args.question:
         answer(collection, model, " ".join(args.question), args.k, where)

@@ -39,12 +39,11 @@ import sys
 import textwrap
 import time
 
-from sentence_transformers import SentenceTransformer
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from eval_retrieval import load_questions  # noqa: E402  (after the path fix, by necessity)
 from generate import THINKING_LEVEL, answer_question, build_sources, build_prompt  # noqa: E402
-from query import MODEL_NAME, TOP_K, load_collection, search  # noqa: E402
+from encoder import load_encoder  # noqa: E402
+from query import TOP_K, load_collection, search  # noqa: E402
 
 PROBES_PATH = "data/eval/probes.json"
 RESULTS_DIR = "data/eval/generation"
@@ -540,7 +539,7 @@ def main():
                        not args.no_probes)
 
     collection = load_collection()
-    encoder = SentenceTransformer(MODEL_NAME)
+    encoder = load_encoder()
 
     if args.dry_run:
         dry_run(collection, encoder, questions, args)

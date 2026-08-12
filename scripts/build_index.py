@@ -17,22 +17,22 @@ Run:  venv/bin/python scripts/build_index.py [--dry-run]
 
 import glob
 import json
-import logging
 import os
 import re
 import sys
 import time
 
 import chromadb
-from sentence_transformers import SentenceTransformer
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from encoder import (  # noqa: E402  (after the path fix, by necessity)
+    MODEL_NAME, load_encoder, load_tokenizer, token_length)
 
 INPUT_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
 INDEX_DIR = "data/chroma"
 COLLECTION = "naturalization"
 
 METADATA_SUFFIX = "_metadata.json"
-
-MODEL_NAME = "all-MiniLM-L6-v2"
 
 # The number that set every other number in this file. all-MiniLM-L6-v2 has
 # max_seq_length 256 and silently truncates past it: the text stays whole in Chroma and
@@ -395,8 +395,8 @@ def write_index(records):
     the index, silently, where they will be retrieved and believed. Re-embedding the whole
     corpus is a few minutes on CPU and costs nothing, so the safe option is also the cheap one.
     """
-    print(f"\nLoading {MODEL_NAME} (downloads ~90 MB on first use)...")
-    model = SentenceTransformer(MODEL_NAME)
+    print(f"\nLoading {MODEL_NAME} (downloads ~80 MB on first use)...")
+    model = load_encoder()
 
     texts = [text for _, text, _ in records]
     print(f"Embedding {len(texts)} chunks on CPU...")
@@ -440,20 +440,14 @@ def main():
     # The tokenizer, not a word count or a chars/4 estimate. The ceiling this whole file is
     # built around is measured in the model's own WordPiece tokens, so counting them any
     # other way reintroduces exactly the truncation the ceiling exists to prevent.
-    tokenizer = SentenceTransformer(MODEL_NAME).tokenizer
+    tokenizer = load_tokenizer()
     cache = {}
-
-    # Counting an over-long line makes the tokenizer warn that running it through the model
-    # "will result in indexing errors". Correct in general, wrong here: we count precisely
-    # so those lines get split before anything reaches the model. Silenced so it does not
-    # read as a failure in the summary — this script's own ceiling check is the real alarm.
-    logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
 
     def count_tokens(text):
         # Same lines get counted repeatedly through packing and reporting; the corpus is
         # small enough that memoizing is simpler than restructuring to count once.
         if text not in cache:
-            cache[text] = len(tokenizer.tokenize(text))
+            cache[text] = token_length(tokenizer, text)
         return cache[text]
 
     started = time.time()

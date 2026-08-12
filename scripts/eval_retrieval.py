@@ -27,11 +27,9 @@ import json
 import os
 import sys
 
-from sentence_transformers import SentenceTransformer
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from query import (  # noqa: E402  (after the path fix, by necessity)
-    MODEL_NAME, fetch_window, load_collection, neighbor_ids, search)
+from encoder import load_encoder  # noqa: E402  (after the path fix, by necessity)
+from query import fetch_window, load_collection, neighbor_ids, search  # noqa: E402
 
 QUESTIONS_PATH = "data/eval/questions.json"
 PROCESSED_DIRS = ["data/processed/uscis", "data/processed/caselaw"]
@@ -387,7 +385,7 @@ def main():
     if args.validate:
         return
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = load_encoder()
     max_k = max(POOL, max(CUTOFFS), args.k)
     results = [score_question(collection, model, question, args.k, max_k)
                for question in questions]
