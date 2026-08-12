@@ -35,15 +35,24 @@ from scraping import (  # noqa: E402
 
 GEMINI_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 
-# Free-tier Flash. The id is a path segment, not a library feature, so switching model is a
-# `--model` flag and nothing else. Google no longer publishes free-tier RPD in the docs — it
-# routes you to AI Studio — so treat the daily budget as unknown and check it there.
+# Free-tier Flash-Lite. The id is a path segment, not a library feature, so switching model is
+# a `--model` flag and nothing else.
+#
+# Not the larger gemini-3.6-flash, and the reason is quota rather than quality: free-tier
+# limits are per model, and 3.6-flash gets **20 requests a day** against Flash-Lite's 500. At
+# the planned per-session cap that is two visitors, so it cannot serve a deployed demo whatever
+# it scores — which makes scoring it a measurement of something unshippable. Every number in
+# `data/eval/generation/` is Flash-Lite, so the model that ships is the model that was scored.
+# The one head-to-head answer there was on 3.6-flash also went the wrong way: it asserted a
+# dollar figure from a rule that had been enjoined, where Flash-Lite declined.
+#
+# Read the real limits in AI Studio, not the docs, which no longer publish them.
 #
 # A pinned version, not the `gemini-flash-latest` alias: an alias would change the model
 # under a recorded eval score without changing a line of code, which is the same reason
 # temperature is 0. Note that ListModels is not an availability check — it still lists
 # gemini-2.5-flash, which now 404s for new keys with "no longer available to new users".
-GEMINI_MODEL = "gemini-3.6-flash"
+GEMINI_MODEL = "gemini-3.1-flash-lite"
 
 OLLAMA_ROOT = "http://localhost:11434"
 OLLAMA_MODEL = "llama3.2:3b"
