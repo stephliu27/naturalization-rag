@@ -2,6 +2,10 @@
 
 A retrieval-augmented generation (RAG) tool that answers questions about U.S. naturalization eligibility and cites the policy text behind every answer.
 
+**[Try it → naturalization-rag.streamlit.app](https://naturalization-rag.streamlit.app)**
+
+Ask a question, read the answer, and open the passages it was written from. Every claim carries a link to the Policy Manual chapter or court opinion behind it, and the sidebar reports what the retrieval and generation actually score.
+
 **Status:** In active development. See [Roadmap](#roadmap).
 
 ---
@@ -85,7 +89,9 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Retrieval evaluation against a hand-built question set (`scripts/eval_retrieval.py`) | Shipped |
 | Answer generation constrained to retrieved passages, with mechanical citation checking (`scripts/generate.py`) | Shipped |
 | Evaluation of generated answers, including retrieval depth (`scripts/eval_generation.py`) | Shipped |
-| Streamlit interface | Next |
+| Deployed interface over the same functions the CLI calls (`app.py`) | Shipped |
+| Unit tests over the pure functions, run in CI | Next |
+| Scored comparison against a no-retrieval baseline on the same question set | Planned |
 | Barrier-type tagging extended to the Policy Manual half | Planned |
 
 ### Barrier tagging
@@ -149,7 +155,7 @@ venv/bin/python scripts/query.py            # no question: prompt in a loop
 
 Retrieval only — no model is called to write an answer, and none is needed to tell whether the right source came back. Each hit prints its citation (`12 USCIS-PM B.4, n.8`, `Shweika v. Department of Homeland Security, 723 F.3d 710 (6th Cir. 2013)`), its position in the document, its section heading, and the passage itself widened to the chunks either side so nothing is read as a fragment. `--type` and `--barrier` restrict the search; omitting the question opens a prompt loop, which loads the model once instead of once per question.
 
-Several of the top five often come from the same document, because chunk counts per document run from 1 to 248 and the ranking is over chunks rather than documents. That reads like a defect and mostly is not: the document taking the most slots is usually the one that answers the question, and its adjacent chunks are how the neighbor window ends up covering a continuous stretch of the relevant section. No cap is applied — see below for what capping was measured to cost.
+Several of the top eight often come from the same document — three or more on nine of the fifteen evaluation questions — because chunk counts per document run from 1 to 248 and the ranking is over chunks rather than documents. That reads like a defect and mostly is not: the document taking the most slots is usually the one that answers the question, and its adjacent chunks are how the neighbor window ends up covering a continuous stretch of the relevant section. No cap is applied — see below for what capping was measured to cost.
 
 ### Generating an answer
 
@@ -170,11 +176,13 @@ Passage text repeated across two labels is removed before the prompt is built �
 
 ### The app
 
+Deployed at **[naturalization-rag.streamlit.app](https://naturalization-rag.streamlit.app)**, or run it locally:
+
 ```bash
 venv/bin/streamlit run app.py
 ```
 
-A question box, the cited answer, and the passages it was written from underneath it, each expandable and marked when the answer cited it. The sidebar reports the corpus and evaluation numbers, read out of `data/eval/` rather than typed in, so the page cannot claim a score the committed results do not support.
+A question box, the cited answer, and the passages it was written from underneath it. Each passage is expandable; the ones the answer actually cited are bold and open, so which passages carry the answer stays readable no matter what a reader collapses. The sidebar reports the corpus and evaluation numbers, read out of `data/eval/` rather than typed in, so the page cannot claim a score the committed results do not support — and it selects the scored configuration by matching the retrieval depth and reasoning effort the app is running, rather than by filename, so changing a default moves the reported numbers instead of silently keeping the old ones.
 
 Each `[S1]` in the answer links to the primary source — the Policy Manual chapter or the opinion on CourtListener — with its citation on hover. The label rather than the citation stays in the prose deliberately: citations are document-level, so five of the eight passages on a fee-waiver question carry the same one, and only the label says which passage a claim rests on.
 
