@@ -50,7 +50,7 @@ CourtListener API ────┘                  (+ metadata)                 
 
 **Processing** is where the corpus is actually made. The three sources arrive in three unrelated markups — USCIS HTML, Harvard CAP XML, and PDF text with no markup at all — and are collapsed into one line-oriented format so the indexer never branches on where a document came from. Substantive footnotes are kept and moved beneath the paragraph that cites them; citation-only ones are dropped.
 
-**Indexing** chunks the corpus, embeds it locally with `all-MiniLM-L6-v2`, and stores the vectors in ChromaDB with the full metadata sidecar on every chunk. Chunk sizing is set by the model rather than by convention: MiniLM reads at most 256 tokens and silently ignores the rest, so anything longer would be stored and displayed intact while half of it stayed unmatchable. Chunks therefore target 220 tokens against a hard 256 ceiling, with 40 tokens of overlap, and a chunk closes early at a section heading so it covers one topic rather than two. **105 documents become 3,210 chunks** — median 196 tokens, none over the ceiling, about four and a half minutes to embed on a laptop CPU.
+**Indexing** chunks the corpus, embeds it locally with `all-MiniLM-L6-v2`, and stores the vectors in ChromaDB with the full metadata sidecar on every chunk. Chunk sizing is set by the model rather than by convention: MiniLM reads at most 256 tokens and silently ignores the rest, so anything longer would be stored and displayed intact while half of it stayed unmatchable. Chunks therefore target 220 tokens against a hard 256 ceiling, with 40 tokens of overlap, and a chunk closes early at a section heading so it covers one topic rather than two. **105 documents become 3,210 chunks** — median 196 tokens, none over the ceiling, a few minutes to embed on a laptop CPU. The model runs on `onnxruntime` rather than PyTorch: the weights are identical, so every number below is unchanged, but the install drops from 863 MB to 310 MB — which is mostly cold-start time on a host that has to rebuild its environment when it wakes.
 
 **Retrieval** embeds the question with the same model, takes the top-k chunks, and widens each one to its immediate neighbors before showing it — small passages match a question better than whole chapters do, but a small passage is a bad thing to reason from. The neighbor window is a lookup rather than a second search: chunk IDs are `{source_id}_{chunk_index}`, so the surrounding text is fetched by ID and cannot come from another document.
 
@@ -84,9 +84,9 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Retrieval with citations (`scripts/query.py`, `scripts/citations.py`) | Shipped |
 | Retrieval evaluation against a hand-built question set (`scripts/eval_retrieval.py`) | Shipped |
 | Answer generation constrained to retrieved passages, with mechanical citation checking (`scripts/generate.py`) | Shipped |
-| Evaluation of generated answers, including retrieval depth | Next |
+| Evaluation of generated answers, including retrieval depth (`scripts/eval_generation.py`) | Shipped |
+| Streamlit interface | Next |
 | Barrier-type tagging extended to the Policy Manual half | Planned |
-| Streamlit interface | Planned |
 
 ### Barrier tagging
 
@@ -98,7 +98,7 @@ The tags currently cover the case-law half, where they come from the hand-verifi
 
 ## Stack
 
-Python · BeautifulSoup · lxml · CourtListener REST API · sentence-transformers · ChromaDB · Gemini · Streamlit
+Python · BeautifulSoup · lxml · CourtListener REST API · onnxruntime · ChromaDB · Gemini · Streamlit
 
 ## Setup
 
@@ -125,11 +125,11 @@ Scraping and indexing need no key at all — embeddings are computed locally.
 `data/processed/` is committed, so the index builds without re-scraping anything:
 
 ```bash
-venv/bin/python scripts/build_index.py            # ~4.5 min, writes data/chroma/
-venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~13 sec
+venv/bin/python scripts/build_index.py            # writes data/chroma/
+venv/bin/python scripts/build_index.py --dry-run  # chunk and report only, ~2 sec
 ```
 
-The model downloads itself on first use (~90 MB). `--dry-run` skips the embedding pass and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds rather than minutes. Almost all of its runtime is startup — importing sentence-transformers is about 5 seconds and building the tokenizer another 2.5 — while the chunking itself is about 2.3.
+The model downloads itself on first use (~80 MB). `--dry-run` skips the embedding pass and prints the chunk-size distribution, the per-source split, and the documents contributing the most chunks — it exists so chunk sizing can be tuned in seconds rather than minutes.
 
 ### Querying
 
@@ -148,7 +148,7 @@ Several of the top five often come from the same document, because chunk counts 
 ```bash
 venv/bin/python scripts/generate.py "can I get a fee waiver for naturalization?"
 venv/bin/python scripts/generate.py "..." --dry-run           # assemble the prompt, call nothing
-venv/bin/python scripts/generate.py "..." -k 8 --thinking low
+venv/bin/python scripts/generate.py "..." -k 5 --thinking high     # override the defaults
 venv/bin/python scripts/generate.py "..." --provider ollama    # local model, no key
 ```
 
@@ -156,7 +156,7 @@ The retrieved passages are labeled `[S1]`, `[S2]` and so on, and the model is in
 
 `--dry-run` prints the assembled prompt without spending a request, which is how prompt changes get inspected for free. `--thinking` sets reasoning effort; it shares one budget with the answer, so a large reasoning pass under a small ceiling truncates the reply rather than the reasoning.
 
-A failure never raises. A rate-limited or unavailable model returns the retrieved passages under an explanation instead, because on a free tier quota exhaustion is ordinary and a demo that hard-fails on it is worse than one that shows five citable passages and says why.
+A failure never raises. A rate-limited or unavailable model returns the retrieved passages under an explanation instead, because on a free tier quota exhaustion is ordinary and a demo that hard-fails on it is worse than one that shows eight citable passages and says why.
 
 Passage text repeated across two labels is removed before the prompt is built — two hits from one document can widen onto the same neighbor, and adjacent chunks share their overlap besides. Left in, the same paragraph arrives under two labels and there is no basis for citing one over the other.
 
@@ -193,6 +193,34 @@ Three results worth stating plainly, because they set what is worth building nex
 **Depth past 8 buys nothing, and 8 was then checked against 5 on generated answers.** Recall at 8 and at 10 is the same 70% over the same questions, so the two extra slots add only passages that dilute — which ruled out k=10 before a single model call. What a retrieval metric could not decide was whether the extra passages help or hurt an *answer*, since they are by construction worse matches. Scoring both depths on generated output settled it: k=8 puts four more expected paragraphs in front of the model, and the two questions that scored lower turned out to have cited a different chunk of the same chapter, with answers as good or better. The default is 8.
 
 **Capping how many slots one document may hold was measured and rejected.** Limiting any document to a single slot raises recall from 70% to 77% and drops expected passages from 18 of 35 to 12 — more chapters, fewer paragraphs, which is the wrong trade for a tool whose output is passages someone reads. Limits of two or three move recall by three points and passages by one, inside the noise of a fifteen-question set.
+
+
+### Scoring the answers
+
+```bash
+venv/bin/python scripts/eval_generation.py --dry-run   # free; the anchor ceiling at this k
+venv/bin/python scripts/eval_generation.py --thinking low --run 1
+venv/bin/python scripts/eval_generation.py --compare a.json b.json
+```
+
+Retrieval evaluation asks whether the right passage arrived. This asks what the model did with it, on two checks that cost nothing beyond the requests themselves. **Mechanical:** fabricated labels, brackets that cite something never supplied, sources left uncited, whether the fixed refusal sentence was used. **Anchor coverage:** whether the sources the answer *cited* contain the expected paragraph — a stronger claim than the anchor merely being somewhere in the context, and it reuses the question set already written for retrieval.
+
+Neither check says the answer is *right*, and the second is a floor rather than a verdict: it is sensitive to which chunk of a document got the citation, so an answer can be sound and score zero. Where the score and an answer someone has read disagree, the answer wins.
+
+Four configurations on Gemini Flash-Lite — retrieval depth 5 and 8, reasoning effort low and high — over 15 questions plus one probe, each run twice, 128 requests:
+
+| | |
+|---|---|
+| fabricated citations, all 128 answers | **0** |
+| anchors inside a cited source (k=8, low) | 16 of 18 available, 35 total |
+| expected documents cited, of those retrieved | 12 of 14 |
+| answers produced | 15 of 15, no degradation |
+
+**Two runs of the same configuration were byte-identical on 64 of 64 answer pairs**, so the measurement's own noise floor is zero and any difference between configurations is a real one. That is worth half the request budget: without it, a two-anchor gap between settings cannot be told apart from the weather.
+
+**Reasoning effort was set by measurement, not inherited.** The default had been chosen for an output-budget constraint that no longer existed. Scored both ways, the higher setting is worse: on a question the corpus can only answer with a dated figure, it states a dollar amount from a rule a court blocked from taking effect, where the lower setting declines and says what is missing. It also costs about 60% more reasoning tokens for that.
+
+**Retrieval depth was settled the same way**, and the result corrected the assumption behind it. Going deeper was expected to dilute; it did not. The extra passages are cited on 13 of 15 questions, and where a score dropped, the model had cited a different chunk of the same chapter while giving an equal or better answer. One question shows the subtler effect: three added passages, none of them cited, changed which of the five unchanged passages the model leaned on.
 
 ---
 
