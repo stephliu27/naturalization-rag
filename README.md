@@ -1,5 +1,7 @@
 # Naturalization Barrier Navigator
 
+[![tests](https://github.com/stephliu27/naturalization-rag/actions/workflows/tests.yml/badge.svg)](https://github.com/stephliu27/naturalization-rag/actions/workflows/tests.yml)
+
 A retrieval-augmented generation (RAG) tool that answers questions about U.S. naturalization eligibility and cites the policy text behind every answer.
 
 **[Try it → naturalization-rag.streamlit.app](https://naturalization-rag.streamlit.app)**
@@ -90,7 +92,7 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Answer generation constrained to retrieved passages, with mechanical citation checking (`scripts/generate.py`) | Shipped |
 | Evaluation of generated answers, including retrieval depth (`scripts/eval_generation.py`) | Shipped |
 | Deployed interface over the same functions the CLI calls (`app.py`) | Shipped |
-| Unit tests over the pure functions, run in CI | Next |
+| Unit tests over the pure functions, run in CI (`tests/`, GitHub Actions) | Shipped |
 | Scored comparison against a no-retrieval baseline on the same question set | Planned |
 | Barrier-type tagging extended to the Policy Manual half | Planned |
 
@@ -129,6 +131,19 @@ A CourtListener token is free at https://www.courtlistener.com/profile/api-token
 Scraping and indexing need no key at all — embeddings are computed locally.
 
 `.env` is gitignored and should never be committed.
+
+### Tests
+
+```bash
+pip install -r requirements-dev.txt
+venv/bin/python -m pytest tests/ -q
+```
+
+42 tests over the pure functions — the text helpers, the retry math, the footnote keep/drop rule, the alert verdicts, and the table-of-contents label parsing. No network, no filesystem, no model, so the suite runs in well under a second.
+
+They exist to pin down decisions rather than to raise a coverage number, so the cases are the ones from the real audits: `See 8 CFR 318.1.` scores zero content words while `Marriage must have existed at the time of birth.` clears the floor; a 95-character note that is nothing but pointers is still not substantive, which is why the rule measures residual prose instead of length. The two `clean_text` separator tests are the two opposite failures it has to straddle — `" "` unwelds USCIS inline links, and `""` avoids splitting a word Harvard CAP broke across an italic run.
+
+GitHub Actions runs them on every push, on Python 3.9 and 3.12, installing the full pinned runtime rather than only what the tests import — a pin that fails to resolve is a claim this README makes, and it should break the build rather than a stranger's clone.
 
 ### Building the index
 

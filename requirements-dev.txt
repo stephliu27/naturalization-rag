@@ -1,0 +1,3 @@
+# Test-only dependencies, kept out of requirements.txt so the deployed app does not install
+# them. Pinned exactly, for the same reason everything else is.
+pytest==8.4.2

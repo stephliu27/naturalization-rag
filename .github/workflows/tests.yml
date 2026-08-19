@@ -1,0 +1,42 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      # Both ends of the range the README claims to support. 3.9 is the floor the local
+      # environment runs, 3.12 is what the deployed app runs; a pin that only resolves on one
+      # of them is a claim the README is making and CI is not checking.
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          # Keyed off both files, so adding a pin invalidates the cache rather than reusing a
+          # stale wheel set.
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      # The full runtime pins, not just what the tests import. Installing everything is what
+      # makes a red badge mean "the pins do not resolve on this Python" — the failure mode
+      # that actually breaks a fresh clone and the deploy host.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest tests/ -q
