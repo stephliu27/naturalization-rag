@@ -139,9 +139,9 @@ pip install -r requirements-dev.txt
 venv/bin/python -m pytest tests/ -q
 ```
 
-42 tests over the pure functions — the text helpers, the retry math, the footnote keep/drop rule, the alert verdicts, and the table-of-contents label parsing. No network, no filesystem, no model, so the suite runs in well under a second.
+62 tests over the pure functions — the text helpers, the retry math, the footnote keep/drop rule, the alert verdicts, table-of-contents label parsing, and every citation shape the tool prints. No network, no filesystem, no model, so the suite runs in well under a second.
 
-They exist to pin down decisions rather than to raise a coverage number, so the cases are the ones from the real audits: `See 8 CFR 318.1.` scores zero content words while `Marriage must have existed at the time of birth.` clears the floor; a 95-character note that is nothing but pointers is still not substantive, which is why the rule measures residual prose instead of length. The two `clean_text` separator tests are the two opposite failures it has to straddle — `" "` unwelds USCIS inline links, and `""` avoids splitting a word Harvard CAP broke across an italic run.
+They exist to pin down decisions rather than to raise a coverage number, so the cases are the ones from the real audits: `See 8 CFR 318.1.` scores zero content words while `Marriage must have existed at the time of birth.` clears the floor; a 95-character note that is nothing but pointers is still not substantive, which is why the rule measures residual prose instead of length. The two `clean_text` separator tests are the two opposite failures it has to straddle — `" "` unwelds USCIS inline links, and `""` avoids splitting a word Harvard CAP broke across an italic run. The citation tests hold the shapes a reader checks the tool against, including the three multi-word surnames — Morfa Diaz, De Dandrade, Dos Reis — that are the reason the case-name map is hand-written rather than derived by rule.
 
 GitHub Actions runs them on every push, on Python 3.9 and 3.12, installing the full pinned runtime rather than only what the tests import — a pin that fails to resolve is a claim this README makes, and it should break the build rather than a stranger's clone.
 
