@@ -93,6 +93,7 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Evaluation of generated answers, including retrieval depth (`scripts/eval_generation.py`) | Shipped |
 | Deployed interface over the same functions the CLI calls (`app.py`) | Shipped |
 | Unit tests over the pure functions, run in CI (`tests/`, GitHub Actions) | Shipped |
+| Custom web interface over the retrieval service as a containerized API | Planned |
 | Scored comparison against a no-retrieval baseline on the same question set | Planned |
 | Barrier-type tagging extended to the Policy Manual half | Planned |
 
