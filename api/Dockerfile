@@ -44,6 +44,14 @@ raise SystemExit(0 if ensure_index() else 'no index and no archive to unpack')"
 # Non-root, and the UID is fixed rather than left to the distro so the numeric owner of anything
 # written at run time is predictable.
 RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin app
+
+# The index must be **writable**, not merely readable, and that is not obvious. Chroma writes
+# about eighteen bytes to its sqlite file on every *read* — the same fact that made committing
+# `data/chroma/` as a tracked directory untenable. Everything above ran as root, so without this
+# the `app` user gets a directory it can only read and the first query fails with
+# `(code: 8) attempt to write a readonly database`, while `/health` still reports a live process.
+RUN chown -R app:app /app/data
+
 USER app
 ENV HOME=/home/app
 
