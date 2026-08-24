@@ -74,7 +74,8 @@ provider call, so concurrent visitors queue only on the cheap half.
 ## Building the image
 
 Built from the repository root, because the image needs `scripts/`, `data/processed/` and
-`data/chroma.tar.gz`, all of which live above this directory.
+`data/chroma.tar.gz`, all of which live above this directory. CI does this on every push that
+touches them; the commands below are only for reproducing a build locally.
 
 ```bash
 docker build -f api/Dockerfile -t naturalization-api .
@@ -86,8 +87,29 @@ started container needs no network to serve its first request. Without that, the
 after every restart waits on a download, and a network blip at that moment takes down an app
 that is otherwise entirely self-contained.
 
-No local Docker daemon is required to deploy: `az acr build` uploads the context and builds it
-in Azure.
+No local Docker daemon is required anywhere in the deploy: the image is built by GitHub Actions.
+
+## Where the image is built, and why not in Azure
+
+`az acr build` is the obvious way to build without a local daemon — upload the context, build it
+in Azure Container Registry. **It is blocked here.** Azure pauses ACR Tasks for any subscription
+funded by trial credits, which includes Azure for Students:
+
+```
+(TasksOperationsNotAllowed) ACR Tasks requests for the registry <name> and <subscription>
+are not permitted.
+```
+
+The documented fix is upgrading to Pay-As-You-Go, which means a credit card — the specific thing
+this hosting choice was made to avoid. So the build moved to
+[`.github/workflows/image.yml`](../.github/workflows/image.yml), which publishes to the GitHub
+Container Registry. That turned out better than the original plan on every axis: free rather than
+$5.07/month for a registry, no daemon on anyone's machine, and the build is reproducible in CI
+rather than from one laptop.
+
+The image must be **public** for Container Apps to pull it without credentials. GitHub creates
+packages private, so the first successful workflow run needs a one-time visibility change under
+*Packages → naturalization-api → Package settings*.
 
 ## Deploying to Container Apps
 
@@ -103,27 +125,28 @@ az provider register --namespace Microsoft.App
 az provider register --namespace Microsoft.OperationalInsights
 ```
 
-`az containerapp up` then does the whole thing in one command — resource group, registry, a
-**remote** image build, the environment, and the app:
+Then the environment and the app:
 
 ```bash
-az containerapp up \
-  --name naturalization-api --resource-group naturalization --location westus2 \
+az group create --name naturalization --location westus2
+
+az containerapp env create \
+  --name naturalization-env --resource-group naturalization --location westus2
+
+az containerapp create \
+  --name naturalization-api --resource-group naturalization \
   --environment naturalization-env \
-  --source . --dockerfile api/Dockerfile \
+  --image ghcr.io/<owner>/naturalization-api:latest \
   --target-port 8000 --ingress external \
   --cpu 0.5 --memory 1.0Gi --min-replicas 1 --max-replicas 1 \
   --secrets gemini-key=<key> \
-  --env-vars GEMINI_API_KEY=secretref:gemini-key ALLOWED_ORIGINS=https://<site>
+  --env-vars GEMINI_API_KEY=secretref:gemini-key
 ```
 
-Run it from the repository root, not from `api/`: the image needs `scripts/`, `data/processed/`
-and `data/chroma.tar.gz`. `--source .` uploads the build context and builds it in Azure, so no
-local Docker daemon is needed. The context is about 20 MB with `.dockerignore` applied, well
-under the 200 MB upload ceiling — without it, `venv/` alone is 1.1 GB and the upload is refused.
-
-Confirm the flag names against `az containerapp up --help` before running; the CLI is the
-authoritative source and its parameters move between versions.
+`az containerapp up` is *not* used, despite reading like the one-command version of this: in the
+current CLI it accepts no `--cpu`, `--memory`, `--min-replicas` or `--secrets`, and no
+`--dockerfile` to find a Dockerfile that is not at the context root. Check `--help` rather than
+the docs page; the two disagree.
 
 `--min-replicas 1` keeps the container warm, which removes the cold start without any scheduler.
 `--max-replicas 1` is deliberate: the rate-limit counters live in process memory, so a second
