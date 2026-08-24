@@ -91,17 +91,39 @@ in Azure.
 
 ## Deploying to Container Apps
 
-```bash
-az acr build --registry <registry> --image naturalization-api:latest --file api/Dockerfile .
+Nothing in this repository references an Azure account. The only link is `az login`, which caches
+a token locally; the deploy then creates everything under whichever subscription that account
+owns.
 
-az containerapp create \
-  --name naturalization-api --resource-group <group> --environment <env> \
-  --image <registry>.azurecr.io/naturalization-api:latest \
+```bash
+brew install azure-cli
+az login
+az extension add --name containerapp --upgrade
+az provider register --namespace Microsoft.App
+az provider register --namespace Microsoft.OperationalInsights
+```
+
+`az containerapp up` then does the whole thing in one command — resource group, registry, a
+**remote** image build, the environment, and the app:
+
+```bash
+az containerapp up \
+  --name naturalization-api --resource-group naturalization --location westus2 \
+  --environment naturalization-env \
+  --source . --dockerfile api/Dockerfile \
   --target-port 8000 --ingress external \
   --cpu 0.5 --memory 1.0Gi --min-replicas 1 --max-replicas 1 \
   --secrets gemini-key=<key> \
   --env-vars GEMINI_API_KEY=secretref:gemini-key ALLOWED_ORIGINS=https://<site>
 ```
+
+Run it from the repository root, not from `api/`: the image needs `scripts/`, `data/processed/`
+and `data/chroma.tar.gz`. `--source .` uploads the build context and builds it in Azure, so no
+local Docker daemon is needed. The context is about 20 MB with `.dockerignore` applied, well
+under the 200 MB upload ceiling — without it, `venv/` alone is 1.1 GB and the upload is refused.
+
+Confirm the flag names against `az containerapp up --help` before running; the CLI is the
+authoritative source and its parameters move between versions.
 
 `--min-replicas 1` keeps the container warm, which removes the cold start without any scheduler.
 `--max-replicas 1` is deliberate: the rate-limit counters live in process memory, so a second
@@ -110,3 +132,7 @@ replica would hand out a second copy of the day's budget.
 The key goes in as a secret and is referenced by name. It never appears in the image, the repo,
 or the front end — the browser talks only to this service, and only this service talks to the
 provider.
+
+`ALLOWED_ORIGINS` cannot be known until the front end is deployed, and the front end needs this
+service's URL, so the two are deployed in two passes: this first, the site with the URL Azure
+prints, then `az containerapp update --set-env-vars ALLOWED_ORIGINS=...` with the site's origin.
