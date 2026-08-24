@@ -4,9 +4,9 @@
 
 A retrieval-augmented generation (RAG) tool that answers questions about U.S. naturalization eligibility and cites the policy text behind every answer.
 
-**[Try it → naturalization-rag.streamlit.app](https://naturalization-rag.streamlit.app)**
+**[Try it → naturalization-rag.vercel.app](https://naturalization-rag.vercel.app)**
 
-Ask a question, read the answer, and open the passages it was written from. Every claim carries a link to the Policy Manual chapter or court opinion behind it, and the sidebar reports what the retrieval and generation actually score.
+Ask a question, read the answer, and open the passages it was written from. Every claim carries a link to the Policy Manual chapter or court opinion behind it, and [a second page](https://naturalization-rag.vercel.app/evaluation) reports what the retrieval and generation actually score.
 
 **Status:** In active development. See [Roadmap](#roadmap).
 
@@ -93,7 +93,7 @@ The full selection method, the five queries, the rejected cases and the reasonin
 | Evaluation of generated answers, including retrieval depth (`scripts/eval_generation.py`) | Shipped |
 | Deployed interface over the same functions the CLI calls (`app.py`) | Shipped |
 | Unit tests over the pure functions, run in CI (`tests/`, GitHub Actions) | Shipped |
-| Custom web interface over the retrieval service as a containerized API | Planned |
+| Custom web interface over the retrieval service as a containerized API (`web/`, `api/`) | Shipped |
 | Scored comparison against a no-retrieval baseline on the same question set | Planned |
 | Barrier-type tagging extended to the Policy Manual half | Planned |
 
@@ -109,7 +109,9 @@ That asymmetry is why `--barrier` is a command-line filter and not a control in 
 
 ## Stack
 
-Python · BeautifulSoup · lxml · CourtListener REST API · onnxruntime · ChromaDB · Gemini · Streamlit
+Python · BeautifulSoup · lxml · CourtListener REST API · onnxruntime · ChromaDB · Gemini · FastAPI · Streamlit
+
+TypeScript · Next.js · Tailwind CSS · Docker · GitHub Actions · Azure Container Apps · Vercel
 
 ## Setup
 
@@ -118,6 +120,13 @@ Python · BeautifulSoup · lxml · CourtListener REST API · onnxruntime · Chro
 ```bash
 python3.12 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
+```
+
+The pipeline and the command line need nothing else. The HTTP service and the site add their own, kept in separate files so a deploy of one does not install the other's dependencies:
+
+```bash
+pip install -r api/requirements.txt   # FastAPI, on top of the pins above
+cd web && npm install                 # Next.js and Tailwind
 ```
 
 Create a `.env` file in the project root:
@@ -192,23 +201,47 @@ A failure never raises. A rate-limited or unavailable model returns the retrieve
 
 Passage text repeated across two labels is removed before the prompt is built — two hits from one document can widen onto the same neighbor, and adjacent chunks share their overlap besides. Left in, the same paragraph arrives under two labels and there is no basis for citing one over the other.
 
-### The app
+### The interface
 
-Deployed at **[naturalization-rag.streamlit.app](https://naturalization-rag.streamlit.app)**, or run it locally:
+Two front ends over one backend, both calling the same `answer_question()` the command line calls, at the same measured defaults. Neither re-implements retrieval, chunking or citation checking.
+
+**[naturalization-rag.vercel.app](https://naturalization-rag.vercel.app)** is the current one: a static Next.js page on Vercel talking to a FastAPI service in a container. **[naturalization-rag.streamlit.app](https://naturalization-rag.streamlit.app)** is the original, still running and unchanged, because links to it are already in circulation.
 
 ```bash
-venv/bin/streamlit run app.py
+venv/bin/uvicorn api.main:app --reload --port 8000   # the API
+cd web && npm run dev                                # the site
+venv/bin/streamlit run app.py                        # or the Streamlit version
 ```
 
-A question box, the cited answer, and the passages it was written from underneath it. Each passage is expandable; the ones the answer actually cited are bold and open, so which passages carry the answer stays readable no matter what a reader collapses. The sidebar reports the corpus and evaluation numbers, read out of `data/eval/` rather than typed in, so the page cannot claim a score the committed results do not support — and it selects the scored configuration by matching the retrieval depth and reasoning effort the app is running, rather than by filename, so changing a default moves the reported numbers instead of silently keeping the old ones.
+A question box, the cited answer, and the passages it was written from underneath it. Each passage is expandable, and the ones the answer actually cited are highlighted and open, so which passages carry the answer stays readable no matter what a reader collapses.
 
-Each `[S1]` in the answer links to the primary source — the Policy Manual chapter or the opinion on CourtListener — with its citation on hover. The label rather than the citation stays in the prose deliberately: citations are document-level, so five of the eight passages on a fee-waiver question carry the same one, and only the label says which passage a claim rests on.
+Each `[S1]` in the answer links to the passage it names, with its citation on hover. The label rather than the citation stays in the prose deliberately: citations are document-level, so five of the eight passages on a fee-waiver question carry the same one, and only the label says which passage a claim rests on.
 
-`app.py` is a view over the same functions the command line calls, at the same measured defaults — it re-implements no retrieval, no chunking and no citation checking. The encoder and the index load once per container rather than once per interaction, and the index ships prebuilt, so a fresh host unpacks it in a fraction of a second instead of embedding 3,210 chunks before answering anything.
+**Retrieval and generation are separate requests, because they cost different things.** `POST /search` is local, keyless and deterministic and returns in about a third of a second; `POST /answer` is a round trip to a hosted model and takes around ten. The page fires both at once and paints twice, so a reader has the passages in front of them while the answer is still being written rather than watching a spinner for the whole duration. `/answer` re-runs its own retrieval instead of accepting passages from the client, which costs that third of a second and means the client cannot forge the sources an answer claims to rest on.
 
-Generation is capped per session, so one visitor cannot spend the day's free-tier requests; past the cap, and on any provider failure, the app keeps retrieving and shows the cited passages without an answer. The key is read from Streamlit secrets or from `.env`, never from the repo.
+Every number the site states is read out of `data/eval/` when the site is built, and the retrieval depth and reasoning effort it names are parsed from the Python that defines them, so the page cannot report a score for a configuration the service is not running. Each of those reads throws rather than defaulting: a build that cannot see the results fails instead of rendering a page of zeroes that looks measured.
 
-**Questions are sent to a third-party model to write the answer, so the app says not to enter personal information** — no names, case numbers or facts about your own situation. Retrieval alone never leaves the machine it runs on.
+Generation is capped per client and per day, so one visitor cannot spend the day's free-tier requests. Past the cap, and on any provider failure, both front ends keep retrieving and show the cited passages without an answer. The key lives only on the container, never in the repository, the image, or anything the browser receives.
+
+**Questions are sent to a third-party model to write the answer, so the interface says not to enter personal information** — no names, case numbers or facts about your own situation. Retrieval alone never leaves the machine it runs on.
+
+### Deployment
+
+```
+browser ──► Vercel (static Next.js)
+                │  fetch
+                ▼
+         Azure Container Apps ──► Gemini
+         FastAPI + onnxruntime + ChromaDB
+```
+
+The container image is built by GitHub Actions and published to the GitHub Container Registry, not built in the cloud provider that runs it. `az acr build` is the obvious way to build without a local Docker daemon and it is unavailable on a trial-credit subscription, which is where this started. Building in CI turned out better anyway: the registry is free for a public repository, no machine needs a Docker daemon, and the image that ships is the one CI produced rather than whatever was on somebody's laptop.
+
+The container holds one Chroma index and one encoder behind a lock. ChromaDB writes a few bytes to its SQLite file on every read, so concurrent queries are concurrent writers to a single connection; the lock covers retrieval and is released before the model call, so simultaneous visitors queue only on the fast half. Replicas are pinned to one for the same class of reason: the rate-limit counters live in process memory, and a second replica would hand out a second copy of the day's budget.
+
+A model call is bounded well under the ingress timeout. The retry policy that makes the command line robust — three attempts, a ninety-second read timeout, honored `Retry-After` between them — can outlast the proxy in front of the container, at which point the work continues against a connection that has already closed. Past the deadline the request degrades to its passages instead. **A retry policy is only correct relative to the deadline of whatever is calling it.**
+
+`api/README.md` has the deploy commands and the configuration variables.
 
 ---
 
