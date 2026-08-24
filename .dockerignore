@@ -1,0 +1,25 @@
+# The build context is uploaded before anything runs — to the Docker daemon locally, or over
+# the network to ACR when the image is built in the cloud — so what is excluded here is time
+# saved on every single build, not just image size.
+venv/
+.git/
+node_modules/
+web/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Regenerable by the scrapers and never read at serve time. 844 KB of source HTML text against
+# an image that already carries the processed corpus and the built index.
+data/raw/
+# Unpacked from data/chroma.tar.gz at image build time. Copying both would ship the index twice.
+data/chroma/
+
+# Personal and gitignored; would be baked into a public image otherwise.
+drafts/
+CLAUDE.local.md
+.env
+.streamlit/
+.claude/
+.vscode/
+.DS_Store

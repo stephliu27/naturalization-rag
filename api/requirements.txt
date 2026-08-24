@@ -1,0 +1,13 @@
+# Serving the API. Everything the pipeline itself needs is in the repo-root requirements.txt,
+# which this is installed alongside rather than instead of — the pins that protect the recorded
+# numbers live in exactly one file, and duplicating them here is how they drift.
+#
+# Short list because chromadb already brings most of a web stack: `uvicorn`, `pydantic` and
+# `starlette` are its dependencies, already pinned transitively, and only `fastapi` itself is
+# genuinely new.
+fastapi==0.128.8
+uvicorn==0.39.0
+# One line of `main.py` needs it: the request counters roll over at midnight Pacific to match
+# the provider's own free-tier reset, and a slim container image carries no zone database, so
+# `zoneinfo.ZoneInfo("America/Los_Angeles")` raises there while working fine on macOS.
+tzdata==2026.3
