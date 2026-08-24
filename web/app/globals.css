@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* A serious, typographic palette rather than a product-launch one. The subject is immigration
+   law and the reader may be anxious about their own case, so the page reads like a reference
+   document: warm paper, near-black ink, one restrained accent that is only ever used to mean
+   "this is a citation you can follow." */
+@theme {
+  --color-paper: #fbfaf7;
+  --color-ink: #1a1a18;
+  --color-muted: #6b6862;
+  --color-rule: #e4e0d8;
+  --color-accent: #1e4d6b;
+  --color-accent-soft: #eaf1f5;
+  --color-flag: #8a3324;
+  --font-serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Legal prose is read, not skimmed. Slightly open leading across the whole page. */
+  line-height: 1.65;
+}
+
+/* Passages are quoted source text, so they keep the line breaks the corpus gave them and never
+   get justified or hyphenated — a statute reflowed to look tidy is a statute misquoted. */
+.passage {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+.vercel
+*.tsbuildinfo
+
+# The API base URL for local development. `.env.local.example` is committed in its place.
+.env.local
+
+# Written by `next dev` on every run, not by hand. Ignored rather than committed: they
+# regenerate locally the moment anyone starts the dev server, so tracking them adds a pair of
+# vendor-authored files to the tree and buys nothing that running the project does not already.
+AGENTS.md
+CLAUDE.md
