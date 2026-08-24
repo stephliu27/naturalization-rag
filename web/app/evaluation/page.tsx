@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { MODEL, THINKING, TOP_K, corpus, generation, retrieval } from "@/lib/evals";
 
 export const metadata: Metadata = {
-  title: "How it was tested — Naturalization Barrier Navigator",
+  title: "How it was tested | Naturalization Barrier Navigator",
   description:
     "Retrieval and generation scores against a hand-written question set with verbatim " +
     "expected passages.",
@@ -27,9 +27,22 @@ export default function Evaluation() {
   return (
     <article className="mt-10">
       <h1 className="font-serif text-3xl font-semibold">How it was tested</h1>
+      <p className="mt-4 text-lg text-muted">
+        Most AI tools ask you to take their word for it. This one was graded against an answer
+        key.
+      </p>
       <p className="mt-4 text-muted">
-        Every number on this page is read from the recorded results at build time, not typed in.
-        Re-running an evaluation and pushing the results is what changes them.
+        {r.questions} questions were written by hand, in the words a real applicant would use.
+        For each one, the documents a correct answer has to rely on were written down in
+        advance, down to the specific sentences. That turns &ldquo;is it any good?&rdquo; from an impression into a
+        score, and it makes a bad change visible immediately instead of six months later.
+      </p>
+      <p className="mt-4 text-muted">
+        Two things get graded separately, because they fail for different reasons:{" "}
+        <strong className="font-medium text-ink">finding</strong> the right passage, and{" "}
+        <strong className="font-medium text-ink">writing</strong> an answer that sticks to it.
+        Every number below is read straight from the saved test results. None of it is typed
+        in by hand, so nothing on this page can drift from what was actually measured.
       </p>
 
       <h2 className="mt-10 font-serif text-xl font-semibold">The corpus</h2>
@@ -47,10 +60,10 @@ export default function Evaluation() {
 
       <h2 className="mt-10 font-serif text-xl font-semibold">Finding the right passage</h2>
       <p className="mt-3 text-muted">
-        {r.questions} questions were written by hand in an applicant&rsquo;s voice. Each one names
-        the documents a correct answer needs, plus verbatim sentences that must appear. That makes
-        retrieval scorable without a model and without spending anything, which is why it is the
-        signal this project leans on.
+        Before it can answer anything, the tool has to pull the right passages out of{" "}
+        {c.documents} documents. This half is graded on its own, and it is the half that matters
+        most: no amount of good writing rescues an answer built on the wrong chapter. Grading it
+        needs no AI and costs nothing, so it can be re-run on every change.
       </p>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         <Stat value={`${Math.round(r.recall * 100)}%`} label={`of expected documents found at k=${r.k}`} />
@@ -102,9 +115,10 @@ export default function Evaluation() {
 
       <h2 className="mt-10 font-serif text-xl font-semibold">Writing an honest answer</h2>
       <p className="mt-3 text-muted">
-        The claim worth making is not that the answers are good — it is that they are{" "}
-        <em>checkable</em>. Each passage goes to the model under a label, and a label the model
-        invents is caught by arithmetic: no judgment, no second model, no reading.
+        The claim worth making is not that the answers sound good. It is that they are{" "}
+        <em>checkable</em>. Every passage is handed to the model with a numbered label, so a
+        citation either points at a real passage or it does not. Catching an invented one is
+        arithmetic, not opinion: no human reading, no second AI grading the first.
       </p>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         <Stat value={String(g.fabricated)} label={`invented citations across ${g.citations} total`} />
@@ -150,7 +164,7 @@ export default function Evaluation() {
                 <td className="py-1.5">{cell.k}</td>
                 <td className="py-1.5">
                   {cell.thinking}
-                  {isShipping && " — in use"}
+                  {isShipping && " (in use)"}
                 </td>
                 <td className="py-1.5 text-right tabular-nums">
                   {cell.totals.anchors_in_cited}/{cell.totals.anchors_in_context}
@@ -171,12 +185,12 @@ export default function Evaluation() {
         reasoning effort.
       </p>
 
-      <h2 className="mt-10 font-serif text-xl font-semibold">What it does badly</h2>
+      <h2 className="mt-10 font-serif text-xl font-semibold">Areas for improvement</h2>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-muted">
         <li>
           <strong className="font-medium text-ink">Case law is the weaker half.</strong> The
           opinions all cite the same statutes, so a procedural question tends to retrieve{" "}
-          <em>an</em> opinion rather than <em>the</em> opinion — sometimes one on the opposite
+          <em>an</em> opinion rather than <em>the</em> opinion, sometimes one on the opposite
           side of a circuit split.
         </li>
         <li>
@@ -185,7 +199,7 @@ export default function Evaluation() {
           </strong>{" "}
           &ldquo;Can I appeal it&rdquo; finds the right chapter at rank 66. The corpus writes
           &ldquo;request a hearing on a denial&rdquo; and the two share almost no words, so
-          keyword matching does not rescue it either — that was tested and rejected.
+          keyword matching does not rescue it either. That was tested and rejected.
         </li>
         <li>
           <strong className="font-medium text-ink">Sources go out of date.</strong> A 2020 opinion
@@ -194,8 +208,9 @@ export default function Evaluation() {
         </li>
       </ul>
       <p className="mt-4 text-sm text-muted">
-        Listed because a tool that names its failure modes is easier to trust than one that
-        doesn&rsquo;t, and because each of these was found by measuring rather than by guessing.
+        Each of these was found by measuring rather than by guessing, which is the point of
+        having an answer key: it tells you where to work next. They are listed here because a
+        tool that knows its own weak spots is easier to trust than one that claims none.
       </p>
     </article>
   );

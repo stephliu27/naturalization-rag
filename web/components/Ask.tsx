@@ -6,12 +6,23 @@ import { Answer } from "@/components/Answer";
 import { Sources } from "@/components/Sources";
 import { answer, search, warm, type Result, type Source } from "@/lib/api";
 
+// Every one of these is a question from `data/eval/questions.json` that was actually scored, so
+// nothing offered as an example is unmeasured. Ordered by how well it demonstrates the corpus,
+// not by how common the question is.
+//
+// The first is the default for a reason: of the fifteen scored questions it is the only
+// top-scorer that draws on **both halves** of the corpus, citing two Policy Manual chapters
+// alongside three separate circuit courts. 100% recall, 2/2 expected paragraphs inside cited
+// sources, 12 citations, 0 fabricated. Synthesizing policy with three circuits — each claim
+// individually checkable — is the thing a model without retrieval cannot do.
 const EXAMPLES = [
+  "Can I still naturalize if I am in removal proceedings?",
   "Can I get a fee waiver for naturalization?",
-  "Do I still qualify if I was arrested but never charged?",
-  "What happens if I fail the English test?",
-  "How long can USCIS take to decide my application?",
+  "I have a disability and cannot learn English. Is there an exception to the English test?",
+  "How long do I have to be married to a U.S. citizen before I can apply for citizenship?",
 ];
+
+const DEFAULT_EXAMPLE = EXAMPLES[0];
 
 export function Ask() {
   const [question, setQuestion] = useState("");
@@ -88,7 +99,7 @@ export function Ask() {
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             maxLength={500}
-            placeholder="e.g. Can I get a fee waiver for naturalization?"
+            placeholder={`e.g. ${DEFAULT_EXAMPLE}`}
             className="flex-1 rounded border border-rule bg-white px-3 py-2.5 text-ink outline-none placeholder:text-muted/60 focus:border-accent focus:ring-1 focus:ring-accent"
           />
           <button
