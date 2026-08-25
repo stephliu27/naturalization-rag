@@ -23,6 +23,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               route to the page carrying the evaluation numbers. */}
           <nav className="flex items-center gap-3 text-sm">
             <Link
+              href="/about"
+              className="text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+            >
+              About
+            </Link>
+            <span aria-hidden="true" className="text-rule select-none">
+              |
+            </span>
+            <Link
               href="/evaluation"
               className="text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
             >
