@@ -17,9 +17,9 @@ import { answer, search, warm, type Result, type Source } from "@/lib/api";
 // individually checkable — is the thing a model without retrieval cannot do.
 const EXAMPLES = [
   "Can I still naturalize if I am in removal proceedings?",
-  "Can I get a fee waiver for naturalization?",
-  "I have a disability and cannot learn English. Is there an exception to the English test?",
   "How long do I have to be married to a U.S. citizen before I can apply for citizenship?",
+  "I was outside the United States for eight months. Does that break my continuous residence?",
+  "Can I get a fee waiver for naturalization?",
 ];
 
 const DEFAULT_EXAMPLE = EXAMPLES[0];
